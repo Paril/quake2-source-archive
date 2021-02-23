@@ -1,0 +1,32 @@
+These are Known bugs in Chaotic Dreams v1
+-----------------------------------------------------------------------------
+
+* Airgun can push players through physical objects and get them stuck in walls
+
+* Turrents are not destroyed by the Vortex
+
+* Game occasionally sig11's in Linux and Segfaults in Win95, possibly memory
+  leak somewhere (this will be painfull to fix)
+// FWP One segfault cause (turret crash) fixed.  May be others.
+
+* Bot AI needs improoved (supposed to be fixed by flash in some side code,
+  need to intigrate this code into the main tree)
+
+* Occasionally a Vortex grabs a player and pulls them through a wall
+
+* Grapple hook can get stuck through a wall
+
+* If you fakedeath while having the jetpack active the model animation is
+  screwed up and locked into a STANDING position.  The problem is that i am
+  not certain which is the bug, the model animation beeing screwed or the fact
+  that they can fakedeath while using a jetpack.
+
+* When a player reconnects with flashlight on the flashlight stays on
+
+* Bugs with CTF spectator modes
+
+* Changing a map during map rotation forces the rotation to stop
+  (Partially fixed by "sv nextmap")
+
+* Error messages appearing to clients "yada yada no such oldframe",seems to happen when player runs out of ammo and autoswitches to new weapon, also appears to be harmless.
+

@@ -1,0 +1,14 @@
+Items listed in this file are unconfirmed bugs in Chaotic Dreams
+--------------------------------------------------------------------------
+
+* Turrents attack team members and can slaughter an entire team due to an
+  accidental shot
+
+* When spawning players into a level, clients get reports of pic not found,
+  also, this shows up sometimes while moving through out the level
+
+* Vortex grabs items that are near by, but it's radius for grabbing players is
+  much much closer, need to balance out this so that items and players are
+  grabbed by Vortex from same distance
+
+* Game resets players FOV after player has died
