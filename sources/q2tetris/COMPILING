@@ -1,0 +1,16 @@
+*** COMPILING Q2TETRIS ***
+
+Unix/Linux:
+	Move "Makefile.unix" to "Makefile".
+	"make dep" to build dependencies.
+	"make" will build the gamei386.so.
+	This makefile assumes you have gcc and makedepend installed on your
+	system.  (If you're running linux and aren't sure, you probably do.)
+	
+WindowsNT/95:
+	MSDev build-- Jim Davis <hippie@multipro.com>
+	LCC build-- Dustin Reyes <dareyes@tamu.edu>
+	The lcc makefile is "Makefile.lcc"; the msdev project is "game.prj". 
+	Thanks to these two gentlemen for their efforts.
+	
+-phooky <phooky@gyral.com>

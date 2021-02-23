@@ -1,0 +1,29 @@
+
+# LCC-WIN32 makefile for Quake II Game DLL <rballard@aracnet.com>
+
+CC=lcc
+CFLAGS=-O2 -w -DC_ONLY
+OBJS=\
+        g_cmds.obj \
+        g_main.obj \
+        g_save.obj \
+        g_spawn.obj \
+        g_utils.obj \
+        p_client.obj \
+        p_hud.obj \
+        p_view.obj \
+        q_shared.obj \
+        tet_game.obj \
+
+all:	gamex86.dll
+
+gamex86.dll:    $(OBJS)
+	lcclnk -subsystem windows -dll -entry DLLMain $(OBJS) game.def -o gamex86.dll
+	dllfix
+
+clean:
+	erase *.obj
+	erase gamex86.dll
+
+%.obj: %.c
+	$(CC) $(CFLAGS) $<

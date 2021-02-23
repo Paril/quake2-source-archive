@@ -1,0 +1,28 @@
+** LEGALISCIOUS: **
+Disclaimer: This program is provided with absolutely no warranty. The
+author and distributors shall not be held accountable for any problems it
+may cause you. USE AT YOUR OWN RISK!
+
+Furthermore, this code/.so is distributed under the terms of the
+license.txt file included with this .zip file.  Do not distribute this
+software without this file and license.txt.
+
+** STORY: **
+
+Remember playing Quake2?  Remember running into your buddies?  Remember how
+they were all clutching at their heads, moaning, and pleading for death?
+
+This was the game that _they_ were playing...
+
+** INSTRUCTIONS: **
+
+Unzip q2tet.zip in your quake2 directory.  Start quake2 with the option
+
++set game tetris
+
+on the command line.  Tetris should start directly.  Oh happy day.
+
+*** CREDITS: ***
+
+Original game engine by id Software; tetris coding, models and maps by phooky.
+Special thanks to Jim Davis and Dustin Reyes for their WinNT/95 porting work.
