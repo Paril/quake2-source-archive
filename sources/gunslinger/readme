@@ -1,0 +1,35 @@
+ Gunslinger 1.2 source code
+ 
+ Gunslinger Quake 2 replaces the standard Quake 2 weapons with period pieces of the old west. Each weapon has two firing modes, and most only carry a small number of rounds before players have to reload.
+
+Read the README.TXT, FAQ, and visit the Discussion Board.
+
+Features:
+
+10 brand new cowboy-action weapons
+5 new ammo types
+4 new items
+7 artifacts for multiplayer
+2 playmodes
+2 firing modes for each weapon
+Over 20 options in the server config file
+Full VWEP support for the 4 standard player models
+Bullet ricochet and through-and-throughs
+Colored team identifiers
+No armor whatsoever
+There are server settings specified in an INI file that will allow you to make all weapons unique (no respawn), exclude any item you want (such as the badges for more realism), and toggle weight settings. Make as many config files as you want; specify one at playtime on the command line or in a shortcut.
+
+Key bindings - bind keys to the following commands in order to utilize Gunslinger Quake 2 special commands:
+
++alt_fire - Activates your weapon's secondary firing mode
++reload - Initiates reloading of the weapon in hand
+drop weapon - Drops your current weapon
+menu - Access the team/spectator menu
+settings - View current game settings (set by the INI file)
+Available play modes:
+
+Deathmatch [Free For All and Teamplay]
+Badge Wars (Kill The Guy With The Badge) [Free For All]
+The Big Heist (similar to CTF) [Teamplay]
+Last Man Standing [Free For All and Teamplay]
+ 
