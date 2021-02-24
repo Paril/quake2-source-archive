@@ -177,7 +177,7 @@ typedef struct
 	// about the world state and the clients.
 	// WriteGame is called every time a level is exited.
 	// ReadGame is called on a loadgame.
-	void		(*WriteGame) (char *filename);
+	void		(*WriteGame) (char *filename, qboolean autosave);
 	void		(*ReadGame) (char *filename);
 
 	// ReadLevel is called after the default map information has been
@@ -186,8 +186,8 @@ typedef struct
 	void		(*WriteLevel) (char *filename);
 	void		(*ReadLevel) (char *filename);
 
-	qboolean	(*ClientConnect) (edict_t *ent, char *userinfo, qboolean loadgame);
-	void		(*ClientBegin) (edict_t *ent, qboolean loadgame);
+	qboolean	(*ClientConnect) (edict_t *ent, char *userinfo);
+	void		(*ClientBegin) (edict_t *ent);
 	void		(*ClientUserinfoChanged) (edict_t *ent, char *userinfo);
 	void		(*ClientDisconnect) (edict_t *ent);
 	void		(*ClientCommand) (edict_t *ent);

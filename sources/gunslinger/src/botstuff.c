@@ -38,8 +38,13 @@ and thanks to all the ppl that scrounged up all the auto aimers for us to test i
 
 regards
 RaVeN
+*/
 
-***********************************************
+float move_bot_time;
+float bot_next_msg;
+qboolean antibot;
+
+/**********************************************
 rav_open opens a file with correct path ..
 (not really bot detection but usefull)
 **********************************************/
@@ -76,7 +81,7 @@ void addEntry (char *filename, char ip[20])
 	// add user to file
 	strcat (ip, "\n");
 
-	if (ipfile=rav_open(filename, "a"))
+	if ((ipfile=rav_open(filename, "a")))
 	{
 		fputs(ip, ipfile);
 		fclose (ipfile);
@@ -358,7 +363,7 @@ void Random_Userinfo(edict_t *ent, char *userinfo) {
 	static char skin[256];
 
 //	debugmsg("Func: Random_Userinfo\n");
-	memset(userinfo, 0, sizeof(userinfo)); // Clear userinfo
+	memset(userinfo, 0, MAX_INFO_STRING); // Clear userinfo
 
 	sprintf(handstr,"%d", rand()&2);
 	sprintf(namestr,"Bot CRuSHer"); //playername

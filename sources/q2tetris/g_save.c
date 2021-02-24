@@ -152,7 +152,6 @@ void WriteField2 (FILE *f, field_t *field, byte *base)
 			fwrite (*(char **)p, len, 1, f);
 		}
 		break;
-	default:
 	}
 }
 
@@ -278,7 +277,7 @@ A single player death will automatically restore from the
 last save position.
 ============
 */
-void WriteGame (char *filename)
+void WriteGame (char *filename, qboolean autosave)
 {
 	FILE	*f;
 	int		i;

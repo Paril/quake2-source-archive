@@ -1119,7 +1119,7 @@ void fire_rail (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick
 		{
 			//ZOID--added so rail goes through SOLID_BBOX entities (gibs, etc)
 			if (((tr.ent->svflags & SVF_MONSTER) || (tr.ent->client) ||
-				(tr.ent->solid == SOLID_BBOX)) && (!tr.ent->flags & FL_ANTIBOT))
+				(tr.ent->solid == SOLID_BBOX)) && !(tr.ent->flags & FL_ANTIBOT))
 				ignore = tr.ent;
 			else
 				ignore = NULL;

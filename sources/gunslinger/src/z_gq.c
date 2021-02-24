@@ -972,7 +972,7 @@ void GQ_MOTD(edict_t *ent) {
 
 	sprintf(motd,"Welcome to Gunslinger Quake 2!\nBuild: %s\n\n", GAMEVERSION);
 
-	if (motd_file = fopen(filename, "r"))
+	if ((motd_file = fopen(filename, "r")))
 	{
 		// we successfully opened the file "motd.txt"
 		if ( fgets(line, 500, motd_file) )
@@ -1700,7 +1700,7 @@ go to a random point, but NOT the two points closest
 to other players
 ================
 */
-float	PlayersRangeFromSpot (edict_t *spot);
+float	PlayersRangeFromSpot (edict_t *spot, edict_t *ent);
 
 edict_t *GQ_SelectTeamSpawnPoint (edict_t *player)
 {
@@ -1724,7 +1724,7 @@ edict_t *GQ_SelectTeamSpawnPoint (edict_t *player)
 	while ((spot = G_Find (spot, FOFS(classname), object)) != NULL)
 	{
 		count++;
-		range = PlayersRangeFromSpot(spot);
+		range = PlayersRangeFromSpot(spot, player);
 		if (range < range1)
 		{
 			range1 = range;

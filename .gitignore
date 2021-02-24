@@ -1,0 +1,6 @@
+*.ncb
+*.opt
+*.001
+/bin
+/wasm/wasi-sysroot
+/wasm/__pycache__

@@ -1,0 +1,3 @@
+[submodule "wasm/quake2-wasm"]
+	path = wasm/quake2-wasm
+	url = https://github.com/Paril/quake2-wasm.git

@@ -21,13 +21,13 @@ cvar_t	*highscore;
 
 void SpawnEntities (char *mapname, char *entities, char *spawnpoint);
 void ClientThink (edict_t *ent, usercmd_t *cmd);
-qboolean ClientConnect (edict_t *ent, char *userinfo, qboolean loadgame);
+qboolean ClientConnect (edict_t *ent, char *userinfo);
 void ClientUserinfoChanged (edict_t *ent, char *userinfo);
 void ClientDisconnect (edict_t *ent);
-void ClientBegin (edict_t *ent, qboolean loadgame);
+void ClientBegin (edict_t *ent);
 void ClientCommand (edict_t *ent);
 void RunEntity (edict_t *ent);
-void WriteGame (char *filename);
+void WriteGame (char *filename, qboolean autosave);
 void ReadGame (char *filename);
 void WriteLevel (char *filename);
 void ReadLevel (char *filename);
@@ -236,6 +236,7 @@ void G_RunFrame (void)
 void ServerCommand(void) {
 }
 
+#ifdef _WIN32
 /* DLLMain appended by CrusadeR (dareyes@tamu.edu)
 	DLL entry point
 */
@@ -244,4 +245,4 @@ int _stdcall DLLMain(void *hinstDLL, unsigned long dwReason, void *reserved)
 {
         return(1);
 }
-
+#endif

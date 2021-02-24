@@ -144,6 +144,8 @@ edict_t *random_player (edict_t *notme)
 				count++;
 		}
 	}
+	
+	return NULL;
 } 
 
 

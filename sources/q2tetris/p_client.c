@@ -31,7 +31,7 @@ void SP_info_player_deathmatch(edict_t *self)
 The deathmatch intermission point will be at one of these
 Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
 */
-void SP_info_player_intermission(void)
+void SP_info_player_intermission(edict_t *self)
 {
 }
 
@@ -189,7 +189,7 @@ called when a client has finished connecting, and is ready
 to be placed into the game.  This will happen every level load.
 ============
 */
-void ClientBegin (edict_t *ent, qboolean loadgame)
+void ClientBegin (edict_t *ent)
 {
 	int		i;
 
@@ -199,7 +199,7 @@ void ClientBegin (edict_t *ent, qboolean loadgame)
 		// sorry, charlie.  Not enough arenas to go around, so you get the boot for
 		// now.
 	}
-	if (loadgame && ent->classname && !strcmp(ent->classname, "player") )
+	if (ent->inuse == true && ent->classname && !strcmp(ent->classname, "player") )
 	{
 		// a loadgame will just use the entity exactly as it is
 		// if more clients connect than were saved, they will be
@@ -271,7 +271,7 @@ and eventually get to ClientBegin()
 Changing levels will NOT cause this to be called again.
 ============
 */
-qboolean ClientConnect (edict_t *ent, char *userinfo, qboolean loadgame)
+qboolean ClientConnect (edict_t *ent, char *userinfo)
 {
 	int index;
 	T_arena_t *arena;

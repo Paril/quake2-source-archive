@@ -930,7 +930,7 @@ void G_SetStats (edict_t *ent)
 					tie=true;
 				}
 //				if ((index>0) && (game.clients[playerlist[index]].resp.score == game.clients[playerlist[index+1]].resp.score))
-				if ((game.clients[playerlist[index]].resp.score == game.clients[playerlist[index+1]].resp.score))
+				if (game.clients[playerlist[index]].resp.score == game.clients[playerlist[index+1]].resp.score)
 					tie=true;
 				ent->client->ps.stats[STAT_RANKING]=index+1;
 			}
