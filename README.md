@@ -1,5 +1,6 @@
-# quake2-source-archive
+# Quake II Source Archive
 This is an archive of Quake II game/mod sources. The repo will be used to compile cross-platform/cross-arch WASM binaries.
+This is a sister project to https://github.com/Paril/quake2-wasm which provides an implementation of a game library that hosts a WebAssembly runtime, which can then load WASM binaries as game libraries. This allows game libraries to be cross-platform and compatible, no matter where they are run. As of this writing, the game DLL is the only implementation available, but the goal is to allow engines to implement this system down the road.
 
 # Licenses
 Licenses per-mod are included in the mods' source folders.
