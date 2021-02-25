@@ -1,0 +1,257 @@
+--------------------Configuration: game - Win32 Release--------------------
+Begining build with project "E:\Linux Backup\Nt151\game.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /G5 /MT /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp".\release/game.pch" /YX /Fo".\release/" /Fd".\release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"..\release/game.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:"..\release\gamex86.dll" /implib:"..\release/gamex86.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP3F.tmp" with contents </nologo /G5 /MT /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp".\release/game.pch" /YX /Fo".\release/" /Fd".\release/" /FD /c 
+"E:\Linux Backup\Nt151\nhcommon\flashlight.c"
+"E:\Linux Backup\Nt151\g_ai.c"
+"E:\Linux Backup\Nt151\g_chase.c"
+"E:\Linux Backup\Nt151\nhcommon\g_cmd_misc.c"
+"E:\Linux Backup\Nt151\nhcommon\g_cmd_observe.c"
+"E:\Linux Backup\Nt151\nhcommon\g_cmd_overload.c"
+"E:\Linux Backup\Nt151\nhcommon\g_cmd_scopetoggle.c"
+"E:\Linux Backup\Nt151\nhcommon\g_cmd_setup.c"
+"E:\Linux Backup\Nt151\nhcommon\g_cmd_spotrep.c"
+"E:\Linux Backup\Nt151\nhcommon\g_cmd_teleport.c"
+"E:\Linux Backup\Nt151\g_cmds.c"
+"E:\Linux Backup\Nt151\g_combat.c"
+"E:\Linux Backup\Nt151\nhcommon\g_ctf.c"
+"E:\Linux Backup\Nt151\nhcommon\g_cvars.c"
+"E:\Linux Backup\Nt151\nhcommon\g_flare.c"
+"E:\Linux Backup\Nt151\g_func.c"
+"E:\Linux Backup\Nt151\nhcommon\g_IRgoggles.c"
+"E:\Linux Backup\Nt151\g_items.c"
+"E:\Linux Backup\Nt151\nhcommon\g_lightning.c"
+"E:\Linux Backup\Nt151\g_main.c"
+"E:\Linux Backup\Nt151\g_misc.c"
+"E:\Linux Backup\Nt151\g_monster.c"
+"E:\Linux Backup\Nt151\nhcommon\g_nh.c"
+"E:\Linux Backup\Nt151\nhcommon\g_nh_light.c"
+"E:\Linux Backup\Nt151\g_phys.c"
+"E:\Linux Backup\Nt151\nhcommon\g_safety.c"
+"E:\Linux Backup\Nt151\g_save.c"
+"E:\Linux Backup\Nt151\g_spawn.c"
+"E:\Linux Backup\Nt151\g_svcmds.c"
+"E:\Linux Backup\Nt151\g_target.c"
+"E:\Linux Backup\Nt151\g_trigger.c"
+"E:\Linux Backup\Nt151\g_turret.c"
+"E:\Linux Backup\Nt151\g_utils.c"
+"E:\Linux Backup\Nt151\g_weapon.c"
+"E:\Linux Backup\Nt151\m_actor.c"
+"E:\Linux Backup\Nt151\m_berserk.c"
+"E:\Linux Backup\Nt151\m_boss2.c"
+"E:\Linux Backup\Nt151\m_boss3.c"
+"E:\Linux Backup\Nt151\m_boss31.c"
+"E:\Linux Backup\Nt151\m_boss32.c"
+"E:\Linux Backup\Nt151\m_brain.c"
+"E:\Linux Backup\Nt151\m_chick.c"
+"E:\Linux Backup\Nt151\m_flash.c"
+"E:\Linux Backup\Nt151\m_flipper.c"
+"E:\Linux Backup\Nt151\m_float.c"
+"E:\Linux Backup\Nt151\m_flyer.c"
+"E:\Linux Backup\Nt151\m_gladiator.c"
+"E:\Linux Backup\Nt151\m_gunner.c"
+"E:\Linux Backup\Nt151\m_hover.c"
+"E:\Linux Backup\Nt151\m_infantry.c"
+"E:\Linux Backup\Nt151\m_insane.c"
+"E:\Linux Backup\Nt151\m_medic.c"
+"E:\Linux Backup\Nt151\m_move.c"
+"E:\Linux Backup\Nt151\m_mutant.c"
+"E:\Linux Backup\Nt151\m_parasite.c"
+"E:\Linux Backup\Nt151\m_soldier.c"
+"E:\Linux Backup\Nt151\m_supertank.c"
+"E:\Linux Backup\Nt151\m_tank.c"
+"E:\Linux Backup\Nt151\p_client.c"
+"E:\Linux Backup\Nt151\p_hud.c"
+"E:\Linux Backup\Nt151\nhcommon\p_menu.c"
+"E:\Linux Backup\Nt151\nhcommon\p_motd.c"
+"E:\Linux Backup\Nt151\nhcommon\p_nhmenu.c"
+"E:\Linux Backup\Nt151\nhcommon\p_nhscoreboard.c"
+"E:\Linux Backup\Nt151\nhcommon\p_predator.c"
+"E:\Linux Backup\Nt151\p_trail.c"
+"E:\Linux Backup\Nt151\p_view.c"
+"E:\Linux Backup\Nt151\p_weapon.c"
+"E:\Linux Backup\Nt151\nhcommon\q_devels.c"
+"E:\Linux Backup\Nt151\nhcommon\q_model.c"
+"E:\Linux Backup\Nt151\q_shared.c"
+"E:\Linux Backup\Nt151\strsep\strsep.c"
+>
+Creating command line "cl.exe @C:\TEMP\RSP3F.tmp" 
+Creating temp file "C:\TEMP\RSP40.tmp" with contents <kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:"..\release\gamex86.dll" /implib:"..\release/gamex86.lib" 
+".\release\flashlight.obj"
+".\release\g_ai.obj"
+".\release\g_chase.obj"
+".\release\g_cmd_misc.obj"
+".\release\g_cmd_observe.obj"
+".\release\g_cmd_overload.obj"
+".\release\g_cmd_scopetoggle.obj"
+".\release\g_cmd_setup.obj"
+".\release\g_cmd_spotrep.obj"
+".\release\g_cmd_teleport.obj"
+".\release\g_cmds.obj"
+".\release\g_combat.obj"
+".\release\g_ctf.obj"
+".\release\g_cvars.obj"
+".\release\g_flare.obj"
+".\release\g_func.obj"
+".\release\g_IRgoggles.obj"
+".\release\g_items.obj"
+".\release\g_lightning.obj"
+".\release\g_main.obj"
+".\release\g_misc.obj"
+".\release\g_monster.obj"
+".\release\g_nh.obj"
+".\release\g_nh_light.obj"
+".\release\g_phys.obj"
+".\release\g_safety.obj"
+".\release\g_save.obj"
+".\release\g_spawn.obj"
+".\release\g_svcmds.obj"
+".\release\g_target.obj"
+".\release\g_trigger.obj"
+".\release\g_turret.obj"
+".\release\g_utils.obj"
+".\release\g_weapon.obj"
+".\release\m_actor.obj"
+".\release\m_berserk.obj"
+".\release\m_boss2.obj"
+".\release\m_boss3.obj"
+".\release\m_boss31.obj"
+".\release\m_boss32.obj"
+".\release\m_brain.obj"
+".\release\m_chick.obj"
+".\release\m_flash.obj"
+".\release\m_flipper.obj"
+".\release\m_float.obj"
+".\release\m_flyer.obj"
+".\release\m_gladiator.obj"
+".\release\m_gunner.obj"
+".\release\m_hover.obj"
+".\release\m_infantry.obj"
+".\release\m_insane.obj"
+".\release\m_medic.obj"
+".\release\m_move.obj"
+".\release\m_mutant.obj"
+".\release\m_parasite.obj"
+".\release\m_soldier.obj"
+".\release\m_supertank.obj"
+".\release\m_tank.obj"
+".\release\p_client.obj"
+".\release\p_hud.obj"
+".\release\p_menu.obj"
+".\release\p_motd.obj"
+".\release\p_nhmenu.obj"
+".\release\p_nhscoreboard.obj"
+".\release\p_predator.obj"
+".\release\p_trail.obj"
+".\release\p_view.obj"
+".\release\p_weapon.obj"
+".\release\q_devels.obj"
+".\release\q_model.obj"
+".\release\q_shared.obj"
+".\release\strsep.obj">
+Creating command line "link.exe @C:\TEMP\RSP40.tmp" 
+Compiling...
+flashlight.c
+g_ai.c
+g_chase.c
+g_cmd_misc.c
+g_cmd_observe.c
+g_cmd_overload.c
+g_cmd_scopetoggle.c
+g_cmd_setup.c
+g_cmd_spotrep.c
+g_cmd_teleport.c
+g_cmds.c
+g_combat.c
+g_ctf.c
+g_cvars.c
+g_flare.c
+g_func.c
+g_IRgoggles.c
+g_items.c
+g_lightning.c
+g_main.c
+E:\Linux Backup\Nt151\g_main.c(325) : warning C4047: 'function' : 'const char *' differs in levels of indirection from 'int '
+E:\Linux Backup\Nt151\g_main.c(325) : warning C4024: 'strcpy' : different types for formal and actual parameter 2
+E:\Linux Backup\Nt151\g_main.c(327) : warning C4047: 'function' : 'const char *' differs in levels of indirection from 'int '
+E:\Linux Backup\Nt151\g_main.c(327) : warning C4024: 'strcpy' : different types for formal and actual parameter 2
+E:\Linux Backup\Nt151\g_main.c(332) : warning C4047: 'function' : 'const char *' differs in levels of indirection from 'int '
+E:\Linux Backup\Nt151\g_main.c(332) : warning C4024: 'strcpy' : different types for formal and actual parameter 2
+E:\Linux Backup\Nt151\g_main.c(334) : warning C4047: 'function' : 'const char *' differs in levels of indirection from 'int '
+E:\Linux Backup\Nt151\g_main.c(334) : warning C4024: 'strcpy' : different types for formal and actual parameter 2
+E:\Linux Backup\Nt151\g_main.c(340) : warning C4047: 'function' : 'const char *' differs in levels of indirection from 'int '
+E:\Linux Backup\Nt151\g_main.c(340) : warning C4024: 'strcpy' : different types for formal and actual parameter 2
+E:\Linux Backup\Nt151\g_main.c(342) : warning C4047: 'function' : 'const char *' differs in levels of indirection from 'int '
+E:\Linux Backup\Nt151\g_main.c(342) : warning C4024: 'strcpy' : different types for formal and actual parameter 2
+g_misc.c
+g_monster.c
+g_nh.c
+g_nh_light.c
+g_phys.c
+g_safety.c
+g_save.c
+g_spawn.c
+g_svcmds.c
+g_target.c
+g_trigger.c
+g_turret.c
+g_utils.c
+g_weapon.c
+m_actor.c
+m_berserk.c
+m_boss2.c
+m_boss3.c
+m_boss31.c
+m_boss32.c
+m_brain.c
+m_chick.c
+m_flash.c
+m_flipper.c
+m_float.c
+m_flyer.c
+m_gladiator.c
+m_gunner.c
+m_hover.c
+m_infantry.c
+m_insane.c
+m_medic.c
+m_move.c
+m_mutant.c
+m_parasite.c
+m_soldier.c
+m_supertank.c
+m_tank.c
+p_client.c
+p_hud.c
+p_menu.c
+p_motd.c
+p_nhmenu.c
+p_nhscoreboard.c
+p_predator.c
+p_trail.c
+p_view.c
+p_weapon.c
+q_devels.c
+q_model.c
+E:\Linux Backup\Nt151\nhcommon\q_model.c(191) : warning C4047: 'function' : 'const char *' differs in levels of indirection from 'int '
+E:\Linux Backup\Nt151\nhcommon\q_model.c(191) : warning C4024: 'strcpy' : different types for formal and actual parameter 2
+E:\Linux Backup\Nt151\nhcommon\q_model.c(194) : warning C4047: 'function' : 'const char *' differs in levels of indirection from 'int '
+E:\Linux Backup\Nt151\nhcommon\q_model.c(194) : warning C4024: 'strcpy' : different types for formal and actual parameter 2
+q_shared.c
+strsep.c
+Linking...
+   Creating library ..\release/gamex86.lib and object ..\release/gamex86.exp
+
+
+
+gamex86.dll - 0 error(s), 16 warning(s)
