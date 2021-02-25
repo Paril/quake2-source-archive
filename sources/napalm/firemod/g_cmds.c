@@ -387,7 +387,7 @@ void Cmd_Use_f (edict_t *ent)
 
 	s = gi.args();
 // PM:  Use power screen if player has it, but no shield.
-        if (!stricmp(s, "Power Shield"))
+        if (!Q_stricmp(s, "Power Shield"))
         {
                 if (ent->client->pers.inventory[ITEM_INDEX(FindItem("Power Screen"))])
                         strcpy (s, "Power Screen");

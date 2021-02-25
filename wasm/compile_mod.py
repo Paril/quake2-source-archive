@@ -3,10 +3,12 @@ import subprocess
 import os
 from pathlib import Path
 import hashlib
+from string import Template
 
 def compile(modname, debug):
 	
 	compile_args = [
+	'-v',
 		'-c',
 		'--target=wasm32-wasi',
 		'--sysroot=wasi-sysroot',
@@ -69,7 +71,9 @@ def compile(modname, debug):
 	c_files = [ Path('./quake2-wasm/game/wasm.c') ]
 	cpp_files = []
 
-	for path in { p.resolve() for p in Path(f'../sources/{modname}').rglob("**/*") if p.suffix in [ ".c", ".cc", ".cpp" ] }:
+	src_folder = Path(f'../sources/{modname}')
+
+	for path in { p.resolve() for p in src_folder.rglob("**/*") if p.suffix in [ ".c", ".cc", ".cpp" ] }:
 		if path.suffix == '.c':
 			c_files.append(path)
 		else:
@@ -78,6 +82,15 @@ def compile(modname, debug):
 	if len(cpp_files):
 		linker_args.append('wasi-sysroot/lib/wasm32-wasi/libc++abi.a');
 		linker_args.append('wasi-sysroot/lib/wasm32-wasi/libc++.a');
+
+	def load_and_expand(path):
+		if not os.path.exists(path):
+			return False
+
+		with open(path, 'r') as content_file:
+			content = content_file.read()
+
+		return Template(content).substitute(src_folder=str(src_folder)).split('\n')
 
 	debug = 'Debug' if debug else 'Release'
 	print(f'Compiling {modname}:{debug}...')
@@ -89,6 +102,9 @@ def compile(modname, debug):
 
 	if os.path.exists(errfile):
 		os.remove(errfile)
+
+	if (additional_compile_args := load_and_expand(f'../sources/{modname}/compiler.opt')) != False:
+		compile_args += additional_compile_args
 
 	err = open(errfile, 'a')
 	
