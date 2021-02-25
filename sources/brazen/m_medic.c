@@ -23,11 +23,13 @@ MEDIC
 
 qboolean visible (edict_t *self, edict_t *other);
 void M_SetEffects (edict_t *ent);
+qboolean FindTarget (edict_t *self);
 void HuntTarget (edict_t *self);
 void FoundTarget (edict_t *self);
 char *ED_NewString (char *string);
 void spawngrow_think (edict_t *self);
 void SpawnGrow_Spawn (vec3_t startpos, int size);
+void ED_CallSpawn (edict_t *ent);
 void M_FliesOff (edict_t *self);
 void M_FliesOn (edict_t *self);
 
