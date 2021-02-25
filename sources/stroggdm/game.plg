@@ -1,0 +1,459 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: game - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\bob\LOCALS~1\Temp\RSPA6.tmp" with contents
+[
+/nologo /G5 /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "BUILDING_REF_GL" /FR".\debug/" /Fo".\debug/" /Fd".\debug/" /FD /c 
+"E:\Old Stuff (C)\src\g_ai.c"
+"E:\Old Stuff (C)\src\g_chase.c"
+"E:\Old Stuff (C)\src\g_cmds.c"
+"E:\Old Stuff (C)\src\g_combat.c"
+"E:\Old Stuff (C)\src\g_ctf.c"
+"E:\Old Stuff (C)\src\g_devmenu.c"
+"E:\Old Stuff (C)\src\g_func.c"
+"E:\Old Stuff (C)\src\g_items.c"
+"E:\Old Stuff (C)\src\g_main.c"
+"E:\Old Stuff (C)\src\g_misc.c"
+"E:\Old Stuff (C)\src\g_monster.c"
+"E:\Old Stuff (C)\src\g_phys.c"
+"E:\Old Stuff (C)\src\g_save.c"
+"E:\Old Stuff (C)\src\g_spawn.c"
+"E:\Old Stuff (C)\src\g_svcmds.c"
+"E:\Old Stuff (C)\src\g_target.c"
+"E:\Old Stuff (C)\src\g_trigger.c"
+"E:\Old Stuff (C)\src\g_turret.c"
+"E:\Old Stuff (C)\src\g_utils.c"
+"E:\Old Stuff (C)\src\g_weapon.c"
+"E:\Old Stuff (C)\src\m_actor.c"
+"E:\Old Stuff (C)\src\m_berserk.c"
+"E:\Old Stuff (C)\src\m_boss2.c"
+"E:\Old Stuff (C)\src\m_boss3.c"
+"E:\Old Stuff (C)\src\m_boss31.c"
+"E:\Old Stuff (C)\src\m_boss32.c"
+"E:\Old Stuff (C)\src\m_brain.c"
+"E:\Old Stuff (C)\src\m_chick.c"
+"E:\Old Stuff (C)\src\m_config.c"
+"E:\Old Stuff (C)\src\m_flash.c"
+"E:\Old Stuff (C)\src\m_flipper.c"
+"E:\Old Stuff (C)\src\m_float.c"
+"E:\Old Stuff (C)\src\m_flyer.c"
+"E:\Old Stuff (C)\src\m_gladiator.c"
+"E:\Old Stuff (C)\src\m_gunner.c"
+"E:\Old Stuff (C)\src\m_hover.c"
+"E:\Old Stuff (C)\src\m_infantry.c"
+"E:\Old Stuff (C)\src\m_insane.c"
+"E:\Old Stuff (C)\src\m_medic.c"
+"E:\Old Stuff (C)\src\m_move.c"
+"E:\Old Stuff (C)\src\m_mutant.c"
+"E:\Old Stuff (C)\src\m_parasite.c"
+"E:\Old Stuff (C)\src\m_rpg_boss_makron.c"
+"E:\Old Stuff (C)\src\m_rpg_boss_tc.c"
+"E:\Old Stuff (C)\src\m_soldier.c"
+"E:\Old Stuff (C)\src\m_stalker.c"
+"E:\Old Stuff (C)\src\m_supertank.c"
+"E:\Old Stuff (C)\src\m_tank.c"
+"E:\Old Stuff (C)\src\p_client.c"
+"E:\Old Stuff (C)\src\p_hud.c"
+"E:\Old Stuff (C)\src\p_menu.c"
+"E:\Old Stuff (C)\src\p_trail.c"
+"E:\Old Stuff (C)\src\p_view.c"
+"E:\Old Stuff (C)\src\p_weapon.c"
+"E:\Old Stuff (C)\src\pa_helpers.c"
+"E:\Old Stuff (C)\src\pa_profile.c"
+"E:\Old Stuff (C)\src\q_shared.c"
+"E:\Old Stuff (C)\src\sdm_menufunctions.c"
+"E:\Old Stuff (C)\src\sdm_rpg_playerdata.c"
+"E:\Old Stuff (C)\src\turret.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\bob\LOCALS~1\Temp\RSPA6.tmp" 
+Creating temporary file "C:\DOCUME~1\bob\LOCALS~1\Temp\RSPA7.tmp" with contents
+[
+kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:yes /pdb:"..\debug/gamex86.pdb" /map:".\debug/gamex86.map" /debug /machine:I386 /def:".\game.def" /out:"C:\Quake2\stroggdm\gamex86.dll" /implib:"..\debug/gamex86.lib" 
+".\debug\g_ai.obj"
+".\debug\g_chase.obj"
+".\debug\g_cmds.obj"
+".\debug\g_combat.obj"
+".\debug\g_ctf.obj"
+".\debug\g_devmenu.obj"
+".\debug\g_func.obj"
+".\debug\g_items.obj"
+".\debug\g_main.obj"
+".\debug\g_misc.obj"
+".\debug\g_monster.obj"
+".\debug\g_phys.obj"
+".\debug\g_save.obj"
+".\debug\g_spawn.obj"
+".\debug\g_svcmds.obj"
+".\debug\g_target.obj"
+".\debug\g_trigger.obj"
+".\debug\g_turret.obj"
+".\debug\g_utils.obj"
+".\debug\g_weapon.obj"
+".\debug\m_actor.obj"
+".\debug\m_berserk.obj"
+".\debug\m_boss2.obj"
+".\debug\m_boss3.obj"
+".\debug\m_boss31.obj"
+".\debug\m_boss32.obj"
+".\debug\m_brain.obj"
+".\debug\m_chick.obj"
+".\debug\m_config.obj"
+".\debug\m_flash.obj"
+".\debug\m_flipper.obj"
+".\debug\m_float.obj"
+".\debug\m_flyer.obj"
+".\debug\m_gladiator.obj"
+".\debug\m_gunner.obj"
+".\debug\m_hover.obj"
+".\debug\m_infantry.obj"
+".\debug\m_insane.obj"
+".\debug\m_medic.obj"
+".\debug\m_move.obj"
+".\debug\m_mutant.obj"
+".\debug\m_parasite.obj"
+".\debug\m_rpg_boss_makron.obj"
+".\debug\m_rpg_boss_tc.obj"
+".\debug\m_soldier.obj"
+".\debug\m_stalker.obj"
+".\debug\m_supertank.obj"
+".\debug\m_tank.obj"
+".\debug\p_client.obj"
+".\debug\p_hud.obj"
+".\debug\p_menu.obj"
+".\debug\p_trail.obj"
+".\debug\p_view.obj"
+".\debug\p_weapon.obj"
+".\debug\pa_helpers.obj"
+".\debug\pa_profile.obj"
+".\debug\q_shared.obj"
+".\debug\sdm_menufunctions.obj"
+".\debug\sdm_rpg_playerdata.obj"
+".\debug\turret.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\bob\LOCALS~1\Temp\RSPA7.tmp"
+<h3>Output Window</h3>
+Compiling...
+g_ai.c
+e:\old stuff (c)\src\g_ai.c(176) : warning C4013: 'M_SetEffects' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ai.c(1671) : warning C4013: 'vectoangles2' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ai.c(1694) : warning C4013: 'has_valid_enemy' undefined; assuming extern returning int
+g_chase.c
+g_cmds.c
+e:\old stuff (c)\src\g_cmds.c(217) : warning C4013: 'PMenu_Next' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(254) : warning C4013: 'PMenu_Prev' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(919) : warning C4013: 'PMenu_Select' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(1632) : warning C4101: 'other' : unreferenced local variable
+e:\old stuff (c)\src\g_cmds.c(1631) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\g_cmds.c(1631) : warning C4101: 'j' : unreferenced local variable
+e:\old stuff (c)\src\g_cmds.c(1635) : warning C4101: 'cl' : unreferenced local variable
+e:\old stuff (c)\src\g_cmds.c(2713) : warning C4013: 'fire_clust' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(2751) : warning C4013: 'fire_lightning_bigbolt' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(3382) : warning C4013: 'Middle_Source' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(3395) : warning C4013: 'SpawnTrappedTech' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(3417) : warning C4013: 'fire_tip' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(3527) : warning C4013: 'P_ProjectSource' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(3708) : warning C4013: 'Launch_Ball' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(3730) : warning C4013: 'fire_explogib' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(3771) : warning C4013: 'fire_freezer' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(4176) : warning C4013: 'OpenMainMenus' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(4186) : warning C4013: 'Cmd_Hook_f' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(4189) : warning C4013: 'Cmd_Chasecam_Toggle' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(4191) : warning C4013: 'Cmd_CamMaxDistance' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_cmds.c(4231) : warning C4013: 'Sentry_ControlWeapon' undefined; assuming extern returning int
+g_combat.c
+e:\old stuff (c)\src\g_combat.c(472) : warning C4013: 'CTFApplyProjectile' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_combat.c(558) : warning C4013: 'sound' undefined; assuming extern returning int
+g_ctf.c
+e:\old stuff (c)\src\g_ctf.c(1339) : warning C4013: 'P_ProjectSource' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ctf.c(1421) : warning C4013: 'CheckTeamDamage' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ctf.c(1584) : warning C4013: 'Weapon_Generic' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ctf.c(2960) : warning C4013: 'EndDMLevel' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ctf.c(3512) : warning C4013: 'ClientUserinfoChanged' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ctf.c(3967) : warning C4013: 'PMenu_UpdateEntry' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ctf.c(3998) : warning C4013: 'PMenu_Update' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_ctf.c(4369) : warning C4101: 'taken' : unreferenced local variable
+g_devmenu.c
+g_func.c
+g_items.c
+g_main.c
+e:\old stuff (c)\src\g_main.c(448) : warning C4013: 'Spawn_Random_Monster' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_main.c(519) : warning C4013: 'ChasecamRemove' undefined; assuming extern returning int
+g_misc.c
+e:\old stuff (c)\src\g_misc.c(222) : warning C4013: 'SV_SetClientAnimation' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_misc.c(1834) : warning C4013: 'Is_Grappling' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_misc.c(1835) : warning C4013: 'Release_Grapple' undefined; assuming extern returning int
+g_monster.c
+e:\old stuff (c)\src\g_monster.c(45) : warning C4013: 'fire_blaster2' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_monster.c(56) : warning C4013: 'fire_tracker' undefined; assuming extern returning int
+e:\old stuff (c)\src\g_monster.c(66) : warning C4013: 'fire_heat' undefined; assuming extern returning int
+g_phys.c
+g_save.c
+g_spawn.c
+e:\old stuff (c)\src\g_spawn.c(969) : warning C4013: 'ModelIndex_P' undefined; assuming extern returning int
+g_svcmds.c
+g_target.c
+g_trigger.c
+g_turret.c
+g_utils.c
+g_weapon.c
+e:\old stuff (c)\src\g_weapon.c(3986) : warning C4101: 'r' : unreferenced local variable
+Generating Code...
+e:\old stuff (c)\src\g_main.c(426) : warning C4700: local variable 'countdown' used without having been initialized
+Compiling...
+m_actor.c
+m_berserk.c
+m_boss2.c
+m_boss3.c
+m_boss31.c
+m_boss32.c
+m_brain.c
+e:\old stuff (c)\src\m_brain.c(454) : warning C4101: 'end' : unreferenced local variable
+e:\old stuff (c)\src\m_brain.c(455) : warning C4101: 'tr' : unreferenced local variable
+m_chick.c
+m_config.c
+m_flash.c
+m_flipper.c
+m_float.c
+m_flyer.c
+m_gladiator.c
+m_gunner.c
+m_hover.c
+m_infantry.c
+m_insane.c
+m_medic.c
+m_move.c
+Generating Code...
+e:\old stuff (c)\src\m_gunner.c(461) : warning C4700: local variable 'start' used without having been initialized
+Compiling...
+m_mutant.c
+m_parasite.c
+m_rpg_boss_makron.c
+m_rpg_boss_tc.c
+m_soldier.c
+m_stalker.c
+e:\old stuff (c)\src\m_stalker.c(486) : warning C4013: 'has_valid_enemy' undefined; assuming extern returning int
+e:\old stuff (c)\src\m_stalker.c(521) : warning C4013: 'monster_fire_blaster2' undefined; assuming extern returning int
+e:\old stuff (c)\src\m_stalker.c(754) : warning C4013: 'vectoangles2' undefined; assuming extern returning int
+e:\old stuff (c)\src\m_stalker.c(923) : warning C4013: 'monster_jump_start' undefined; assuming extern returning int
+e:\old stuff (c)\src\m_stalker.c(958) : warning C4013: 'monster_jump_finished' undefined; assuming extern returning int
+e:\old stuff (c)\src\m_stalker.c(1037) : warning C4013: 'blocked_checkshot' undefined; assuming extern returning int
+e:\old stuff (c)\src\m_stalker.c(1050) : warning C4013: 'blocked_checkjump' undefined; assuming extern returning int
+e:\old stuff (c)\src\m_stalker.c(1057) : warning C4013: 'blocked_checkplat' undefined; assuming extern returning int
+m_supertank.c
+m_tank.c
+p_client.c
+e:\old stuff (c)\src\p_client.c(2228) : warning C4101: 'monsters_you_get' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(2947) : warning C4013: 'Kamikaze_Cancel' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(2872) : warning C4101: 'plane' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(2871) : warning C4101: 'temp' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(4825) : warning C4013: 'G_MuzzleFlash' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(6591) : warning C4013: 'findspawnpoint' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(6769) : warning C4013: 'OpenMainMenus' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(6572) : warning C4101: 'max' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(6571) : warning C4101: 'min' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(7467) : warning C4013: 'Middle_Source' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(7469) : warning C4013: 'fire_player_melee_mutant' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(7455) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(7605) : warning C4013: 'ClipGibVelocity' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(7666) : warning C4013: 'G_ProjectSource2' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(7763) : warning C4101: 'n' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(7779) : warning C4101: 'n' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(7844) : warning C4101: 'n' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(7862) : warning C4101: 'n' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(8002) : warning C4101: 'n' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(8243) : warning C4013: 'BossExplode' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(8640) : warning C4013: 'Kamikaze_Explode' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(8717) : warning C4013: 'Think_Airstrike' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(8724) : warning C4013: 'Think_Lightn' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(8736) : warning C4013: 'PMenuDoUpdate' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(8264) : warning C4101: 'up' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(8757) : warning C4101: 'up' : unreferenced local variable
+e:\old stuff (c)\src\p_client.c(9120) : warning C4013: 'P_ProjectSource_Reverse' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_client.c(9983) : warning C4101: 'k' : unreferenced local variable
+p_hud.c
+p_menu.c
+e:\old stuff (c)\src\p_menu.c(49) : warning C4013: 'PMenuDoUpdate' undefined; assuming extern returning int
+p_trail.c
+p_view.c
+e:\old stuff (c)\src\p_view.c(110) : warning C4101: 'l' : unreferenced local variable
+e:\old stuff (c)\src\p_view.c(3336) : warning C4013: 'CheckChasecam_Viewent' undefined; assuming extern returning int
+p_weapon.c
+e:\old stuff (c)\src\p_weapon.c(289) : warning C4013: 'Spawn_Random_Monster' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(277) : warning C4101: 'tech' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(278) : warning C4101: 'spot' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(374) : warning C4013: 'findspawnpoint' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(390) : warning C4013: 'sound' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(468) : warning C4013: 'SP_monster_boss_tank' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(481) : warning C4013: 'SP_monster_boss_makron' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(334) : warning C4101: 'forward' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(333) : warning C4101: 'spawn_angles' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(336) : warning C4101: 'temp' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(334) : warning C4101: 'up' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(333) : warning C4101: 'spawn_origin' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(1244) : warning C4013: 'fire_blaster2' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(1582) : warning C4101: 'ammo_item' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(1581) : warning C4101: 'ammo_index' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(3365) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(3912) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(3997) : warning C4013: 'fire_player_melee' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(3983) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4027) : warning C4013: 'fire_player_melee_brain' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(4013) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4045) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4144) : warning C4013: 'fire_weld' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(4176) : warning C4013: 'fire_player_melee_flyer' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(4162) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4193) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4239) : warning C4013: 'fire_player_melee_glad' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(4225) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4269) : warning C4013: 'fire_player_melee_berserk' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(4255) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4285) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4329) : warning C4013: 'fire_player_melee_mutant2' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(4315) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4347) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4377) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4409) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4446) : warning C4101: 'firevec' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4439) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4654) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4726) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4794) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4871) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(4939) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(5269) : warning C4013: 'fire_instlaser' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(5345) : warning C4101: 'damage_radius' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(5344) : warning C4101: 'damage' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(5456) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(5488) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(5621) : warning C4013: 'fire_rockheat' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(5671) : warning C4013: 'fire_loogie' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(5690) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(5768) : warning C4013: 'fire_laser' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(5724) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(5819) : warning C4013: 'fire_ionripper' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(5875) : warning C4013: 'fire_blueblaster' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(5926) : warning C4013: 'fire_plasma' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(5976) : warning C4013: 'fire_player_melee_bbrain_suck' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(5950) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6000) : warning C4101: 'firevec' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(5993) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6142) : warning C4013: 'fire_player_melee_stalk' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(6128) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6185) : warning C4013: 'fire_blaster2_homing' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(6384) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6709) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6741) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6807) : warning C4013: 'fire_heat' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(6880) : warning C4013: 'fire_tracker' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(6966) : warning C4101: 'radius_damage' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6965) : warning C4101: 'damage_radius' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6967) : warning C4101: 'v' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(6964) : warning C4101: 'damage' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(7038) : warning C4013: 'fire_phlas' undefined; assuming extern returning int
+e:\old stuff (c)\src\p_weapon.c(7008) : warning C4101: 'radius_damage' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(7007) : warning C4101: 'damage_radius' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(7009) : warning C4101: 'v' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(7112) : warning C4101: 'i' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(7314) : warning C4101: 'firevec' : unreferenced local variable
+e:\old stuff (c)\src\p_weapon.c(7307) : warning C4101: 'i' : unreferenced local variable
+pa_helpers.c
+pa_profile.c
+q_shared.c
+sdm_menufunctions.c
+sdm_rpg_playerdata.c
+e:\old stuff (c)\src\sdm_rpg_playerdata.c(48) : warning C4013: '_mkdir' undefined; assuming extern returning int
+e:\old stuff (c)\src\sdm_rpg_playerdata.c(171) : warning C4013: 'stuffcmd' undefined; assuming extern returning int
+e:\old stuff (c)\src\sdm_rpg_playerdata.c(207) : warning C4013: 'OpenMainMenu' undefined; assuming extern returning int
+turret.c
+e:\old stuff (c)\src\turret.c(10) : warning C4101: 'forward' : unreferenced local variable
+e:\old stuff (c)\src\turret.c(93) : warning C4101: 'forward' : unreferenced local variable
+e:\old stuff (c)\src\turret.c(94) : warning C4101: 'right' : unreferenced local variable
+e:\old stuff (c)\src\turret.c(91) : warning C4101: 'v' : unreferenced local variable
+e:\old stuff (c)\src\turret.c(95) : warning C4101: 'up' : unreferenced local variable
+e:\old stuff (c)\src\turret.c(375) : warning C4013: 'fire_ionripper' undefined; assuming extern returning int
+e:\old stuff (c)\src\turret.c(379) : warning C4013: 'fire_phlas' undefined; assuming extern returning int
+e:\old stuff (c)\src\turret.c(383) : warning C4013: 'fire_flechette' undefined; assuming extern returning int
+e:\old stuff (c)\src\turret.c(387) : warning C4013: 'sound' undefined; assuming extern returning int
+Generating Code...
+Linking...
+   Creating library ..\debug/gamex86.lib and object ..\debug/gamex86.exp
+Creating temporary file "C:\DOCUME~1\bob\LOCALS~1\Temp\RSPAB.tmp" with contents
+[
+/nologo /o"..\debug/game.bsc" 
+".\debug\g_ai.sbr"
+".\debug\g_chase.sbr"
+".\debug\g_cmds.sbr"
+".\debug\g_combat.sbr"
+".\debug\g_ctf.sbr"
+".\debug\g_devmenu.sbr"
+".\debug\g_func.sbr"
+".\debug\g_items.sbr"
+".\debug\g_main.sbr"
+".\debug\g_misc.sbr"
+".\debug\g_monster.sbr"
+".\debug\g_phys.sbr"
+".\debug\g_save.sbr"
+".\debug\g_spawn.sbr"
+".\debug\g_svcmds.sbr"
+".\debug\g_target.sbr"
+".\debug\g_trigger.sbr"
+".\debug\g_turret.sbr"
+".\debug\g_utils.sbr"
+".\debug\g_weapon.sbr"
+".\debug\m_actor.sbr"
+".\debug\m_berserk.sbr"
+".\debug\m_boss2.sbr"
+".\debug\m_boss3.sbr"
+".\debug\m_boss31.sbr"
+".\debug\m_boss32.sbr"
+".\debug\m_brain.sbr"
+".\debug\m_chick.sbr"
+".\debug\m_config.sbr"
+".\debug\m_flash.sbr"
+".\debug\m_flipper.sbr"
+".\debug\m_float.sbr"
+".\debug\m_flyer.sbr"
+".\debug\m_gladiator.sbr"
+".\debug\m_gunner.sbr"
+".\debug\m_hover.sbr"
+".\debug\m_infantry.sbr"
+".\debug\m_insane.sbr"
+".\debug\m_medic.sbr"
+".\debug\m_move.sbr"
+".\debug\m_mutant.sbr"
+".\debug\m_parasite.sbr"
+".\debug\m_rpg_boss_makron.sbr"
+".\debug\m_rpg_boss_tc.sbr"
+".\debug\m_soldier.sbr"
+".\debug\m_stalker.sbr"
+".\debug\m_supertank.sbr"
+".\debug\m_tank.sbr"
+".\debug\p_client.sbr"
+".\debug\p_hud.sbr"
+".\debug\p_menu.sbr"
+".\debug\p_trail.sbr"
+".\debug\p_view.sbr"
+".\debug\p_weapon.sbr"
+".\debug\pa_helpers.sbr"
+".\debug\pa_profile.sbr"
+".\debug\q_shared.sbr"
+".\debug\sdm_menufunctions.sbr"
+".\debug\sdm_rpg_playerdata.sbr"
+".\debug\turret.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\bob\LOCALS~1\Temp\RSPAB.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+gamex86.dll - 0 error(s), 178 warning(s)
+</pre>
+</body>
+</html>

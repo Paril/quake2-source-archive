@@ -1,0 +1,151 @@
+List of changes in ID's source code in Napalm2
+------------------------------------------------
+G_AI.C
+ 330 -  332:  BUG FIX -- Monster does nothing if no target exists.
+
+G_CMDS.C
+ 148 -  151:  Give command is ignored if client is dead.
+ 389 -  395:  Using power shield can active power screen.
+ 475 -  478:  Show inventory is ignored if client is dead.
+ 648 -  651:  Kill command is ignored if client is a spectator.
+
+G_COMBAT.C
+ 321 -  323:  Monsters do not attack tank commanders.
+ 356 -  375:  'CheckTeamDamage' rewrite.  Check if teammate takes damage.
+ 393 -  400:  MOD is always friendly fire if attacked by teammate.
+ 452 -  490:  Code rewrite so that 'DAMAGE_NO_PROTECTION' is checked once.
+
+G_ITEMS.C
+ 180 -  182:  Lets adrenaline extinguish fire.
+ 198 -  200:  Lets ancient head extinguish fire.
+ 549 -  571:  If burning, pick up health and put out flames.
+
+G_LOCAL.H
+ 484 -  514:  New MODs (Means of Death) added for Napalm2.
+ 880 -  882:  New persistant field used in Napalm2.
+ 981 -  984:  New client fields used in Napalm2.
+1136 - 1144:  New edict fields used in Napalm2.
+
+G_MAIN.C
+  70 -   72:  New function prototype defined.
+ 346 -  348:  Extinguish all fires before level change.
+ 361 -  363:  Reset MotD for next level.
+
+G_MISC.C
+   4 -    6:  New header file included.
+ 229 -  234:  Define misc_explobox gib_health and fireflags.
+ 989 -  992:  Define misc_explobox gib_health and fireflags.
+1214 - 1217:  misc_deadsoldier gibs below gib_health instead of -80.
+1258 - 1262:  Define more of the misc_deadsoldier attributes.
+
+G_MONSTER.C
+   2 -    4:  New header file included.
+ 549 -  572:  Define monster fireflags.
+
+G_SAVE.C
+   3 -    5:  New function prototype defined.
+ 190 -  192:  Acquire MotD from motd.ini if the file exists.
+
+G_SPAWN.C
+   3 -    6:  New function prototypes defined.
+ 606 -  614:  Reset MotD during entity spawning.
+ 688 -  691:  Timer shows up to three digits in SP.
+ 749 -  751:  Timer shows up to three digits in DM.
+ 938 -  940:  Precache files used by Napalm2 code.
+
+G_TURRET.C
+   4 -    6:  New header file included.
+ 389 -  391:  Define turret_driver fireflags.
+
+M_BOSS32.C
+ 830 -  832:  Gives Makron the classname "monster_makron".
+
+M_MEDIC.C
+ 595 -  597:  Extinguish fire on monster during its resurrection.
+
+P_CLIENT.C
+   3 -    8:  New header file included.
+ 281 -  318:  New Napalm2 obituaries for self-termination.
+ 411 -  454:  New Napalm2 obituaries for frags.
+ 599 -  601:  Don't call help if scores are already up.
+ 621 -  623:  Make body gib at gib_health.
+ 661 -  670:  Drown if underwater; zero angle to fix tilted body.
+ 711 -  713:  Set attacks on flame mode.
+1021 - 1023:  Make body gib at gib_health.
+1049 - 1051:  Stops body from making sounds.
+1053 - 1056:  Gives dead bodies monster flags to make them bleed.
+1067 - 1083:  Tranfers fire, in any, from client to dead body.
+1294 - 1298:  Sets more attributes for the client.
+1366 - 1369:  Gives player three second respawn protection in DM.
+1411 - 1413:  Display MotD.
+
+P_HUD.C
+  35 -   37:  Extinguish fire, in any, on client during intermission.
+ 407 -  412:  Show proper power armor icon.
+
+P_VIEW.C
+   4 -    6:  New header file included.
+  61 -   65:  Remove unused variable.
+ 123 -  129:  Play appropriate pain sound.
+ 468 -  471:  Blends in flash if applicable.
+ 483 -  490:  Reduces the flash in time.
+ 536 -  539:  Play footstep only if on the ground.
+ 568 -  571:  Play thud sound only if on the ground.
+ 643 -  656:  Play gasp sound only if no breathing item is active.
+ 696 -  698:  Play PPM's drowning sound instead of "player/drown1.wav".
+ 727 -  729:  Play burn sounds.
+ 813 -  820:  Footstep event code rewritten.
+
+P_WEAPON.C
+   5 -    8:  New header files included.
+ 167 -  170:  Do not allow hand grenades to detonate more than once.
+ 306 -  315:  Toggle attack modes if selecting current weapon.
+ 552 -  555:  Define fire damage for flame grenade.
+ 558 -  565:  Multiplies fire damage if pumped up by quad damage.
+ 573 -  578:  Shoot flame grenade or normal grenade.
+ 621 -  626:  Change weapon immediately if player has no grenades.
+ 668 -  671:  Subtract grenade once it is primed.
+ 680 -  683:  Switch both lines of code to fix double det bug.
+ 709 -  721:  Change weapon immediately if player has no grenades.
+ 748 -  751:  Define fire damage for flame grenade.
+ 754 -  761:  Multiplies fire damage if pumped up by quad damage.
+ 770 -  775:  Shoot flame grenade or normal grenade.
+ 813 -  816:  Define fire damage for flame rocket.
+ 825 -  828:  Multiplies fire damage if pumped up by quad damage.
+ 838 -  843:  Shoot flame rocket or normal rocket.
+ 876 -  920:  Shoot flamethrower.
+ 927 -  930:  Define fire damage for fire blaster.
+ 932 -  939:  Multiplies fire damage if pumped up by quad damage.
+ 941 -  943:  Spawn blaster shot/fireball inside player bbox.
+ 950 -  955:  Shoot fire blaster or normal blaster.
+1000 - 1050:  Shoot flamethrower or hyperblaster.
+1137 - 1140:  Define fire damage for fire hyperblaster.
+1170 - 1173:  Multiplies fire damage if pumped up by quad damage.
+1197 - 1205:  Shoot fire hyperblaster or machinegun.
+1342 - 1347:  Shoot incendiary or normal rounds for chaingun.
+1387 - 1390:  Define fire damage for explosive shotgun.
+1410 - 1413:  Multiplies fire damage if pumped up by quad damage.
+1416 - 1432:  Shoot explosive shotgun or normal shotgun.
+1483 - 1488:  Shoot incendiary or normal pellets for super shotgun.
+1491 - 1496:  Shoot incendiary or normal pellets for super shotgun.
+1536 - 1541:  Define fire damage and storm dimensions for meteors.
+1558 - 1562:  Multiplies fire damage if pumped up by quad damage.
+1572 - 1577:  Shoot meteor or railgun.
+1658 - 1679:  Shoot antimatter gun or BFG10K.
+
+
+List of new source files in Napalm2
+-------------------------------------
+X_FIRE.H
+X_FIRE1.C
+X_FIRE2.C
+X_FIRE3.C
+X_FIREMD.H
+X_FLAMER.C
+X_FLAMER.H
+X_MOTD.C
+X_MOTD.H
+X_SOUND.C
+X_SOUND.H
+
+/*=========================/  END OF FILE  /=========================*/

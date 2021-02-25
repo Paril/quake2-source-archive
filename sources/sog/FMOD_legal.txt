@@ -1,0 +1,38 @@
+       =============================================================
+                 LICENSE AGREEMENT FOR FMOD 3 SYSTEM ROUTINES
+       =============================================================
+
+FMOD,  FSOUND and FMUSIC are  released for public / private  use  under  the 
+following conditions which MUST be adhered to  under the general  protection 
+acts  of  copyright.   FMOD's names,  routines,  documentation  and binaries 
+contained within this archive are copyright (c) FireLight Multimedia,  1999.
+
+
+                --:Conditions and Terms of use in a program:--
+
+- 'Freeware or private use' products -  For non  profit  use,  where the end
+  product or program is not intended to make any money,  then the FMOD sound
+  system can be used without any  restrictions.   This means you are free to 
+  use FMOD in your own productions as long as the product is released as and 
+  classed as a free demo or 'freeware', not to be resold.
+
+- 'Shareware  or  Commercial' products  -  This  next  class  is  where  the
+  developer, in  creating a  product or program intends to make a  profit by 
+  selling it to the public in any way shape or form.  FSOUND and  FMUSIC can
+  be liscenced from FireLight Multimedia and Tantalus Interactive on various 
+  payment methods which are described elsewhere. Use of FMOD is royalty free 
+  if licensed.
+  Details on costs and a rrangements can be  made by going to  www.fmod.org, 
+  and  then follow the information there.  Also See 'Contact' details below.
+
+                              --:Distribution:--
+
+- The contents of this archive may  NOT be redistributed or modified in any 
+  way, shape  or form,  without the prior consent of the owners,  FireLight 
+  Multimedia.  The zip herein must be identical to the zip file provided by
+  the distributor FireLight Multimedia
+
+                                --:Contact:--
+
+- URL   : www.fmod.org
+- email : support@fmod.org

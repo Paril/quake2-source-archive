@@ -1,0 +1,1775 @@
+# Microsoft Developer Studio Generated Dependency File, included by game.mak
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_ai.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_ai.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_ai.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_ai.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_chase.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_chase.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_chase.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_chase.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_cmds.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_cmds.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_cmds.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_cmds.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_combat.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_combat.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_combat.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_combat.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_func.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_func.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_func.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_func.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_items.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_items.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_items.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_items.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_main.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_main.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_main.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_main.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_misc.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_misc.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_misc.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_misc.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_monster.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_monster.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_monster.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_monster.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_phys.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_phys.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_phys.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_save.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_save.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_save.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_save.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_spawn.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_spawn.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_spawn.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_spawn.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_svcmds.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_svcmds.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_svcmds.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_svcmds.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_target.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_target.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_target.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_target.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_trigger.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_trigger.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_trigger.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_trigger.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_turret.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_turret.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_turret.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_turret.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_utils.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_utils.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_utils.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_utils.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\g_weapon.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\g_weapon.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\g_weapon.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\g_weapon.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_actor.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_actor.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_actor.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_actor.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_actor.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_actor.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_actor.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_actor.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_berserk.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_berserk.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_berserk.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_berserk.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_berserk.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_berserk.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_berserk.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_berserk.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_boss2.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss2.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_boss2.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss2.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_boss2.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss2.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_boss2.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss2.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_boss3.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss32.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_boss3.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss32.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_boss3.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss32.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_boss3.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss32.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_boss31.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss31.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_boss31.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss31.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_boss31.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss31.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_boss31.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss31.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_boss32.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss32.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_boss32.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss32.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_boss32.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss32.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_boss32.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_boss32.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_brain.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_brain.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_brain.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_brain.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_brain.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_brain.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_brain.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_brain.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_chick.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_chick.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_chick.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_chick.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_chick.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_chick.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_chick.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_chick.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_flash.c : \
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_flash.c : \
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_flash.c : \
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_flash.c : \
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_flipper.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_flipper.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_flipper.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_flipper.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_flipper.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_flipper.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_flipper.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_flipper.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_float.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_float.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_float.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_float.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_float.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_float.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_float.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_float.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_flyer.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_flyer.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_flyer.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_flyer.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_flyer.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_flyer.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_flyer.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_flyer.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_gladiator.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_gladiator.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_gladiator.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_gladiator.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_gladiator.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_gladiator.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_gladiator.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_gladiator.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_gunner.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_gunner.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_gunner.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_gunner.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_gunner.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_gunner.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_gunner.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_gunner.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_hover.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_hover.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_hover.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_hover.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_hover.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_hover.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_hover.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_hover.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_infantry.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_infantry.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_infantry.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_infantry.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_infantry.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_infantry.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_infantry.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_infantry.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_insane.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_insane.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_insane.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_insane.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_insane.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_insane.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_insane.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_insane.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_medic.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_medic.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_medic.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_medic.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_medic.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_medic.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_medic.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_medic.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_move.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_move.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_move.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_move.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_mutant.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_mutant.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_mutant.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_mutant.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_mutant.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_mutant.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_mutant.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_mutant.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_parasite.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_parasite.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_parasite.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_parasite.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_parasite.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_parasite.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_parasite.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_parasite.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_soldier.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_soldier.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_soldier.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_soldier.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_soldier.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_soldier.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_soldier.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_soldier.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_stalker.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_stalker.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_stalker.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_stalker.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_supertank.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_supertank.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_supertank.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_supertank.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_supertank.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_supertank.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_supertank.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_supertank.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\m_tank.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_tank.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\m_tank.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_tank.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\m_tank.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_tank.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\m_tank.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_tank.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\p_client.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\p_client.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\p_client.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\p_hud.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\p_hud.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\p_hud.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\p_hud.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\p_trail.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\p_trail.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\p_trail.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\p_trail.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\p_view.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\p_view.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\p_view.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\p_view.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\p_weapon.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\p_weapon.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\p_weapon.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\p_weapon.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\m_player.h"\
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\pa_helpers.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\pa_helpers.c : \
+	".\g_local.h"\
+	".\game.h"\
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "game - Win32 Release"
+
+.\q_shared.c : \
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug"
+
+.\q_shared.c : \
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Debug Alpha"
+
+.\q_shared.c : \
+	".\q_shared.h"\
+	
+
+!ELSEIF  "$(CFG)" == "game - Win32 Release Alpha"
+
+.\q_shared.c : \
+	".\q_shared.h"\
+	
+
+!ENDIF 
+
