@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game", "game.vcproj", "{980CA504-6D3C-4398-8731-E17CD97672D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Debug Alpha
+		ConfigName.2 = Release
+		ConfigName.3 = Release Alpha
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{980CA504-6D3C-4398-8731-E17CD97672D8}.Debug.ActiveCfg = Debug|Win32
+		{980CA504-6D3C-4398-8731-E17CD97672D8}.Debug.Build.0 = Debug|Win32
+		{980CA504-6D3C-4398-8731-E17CD97672D8}.Debug Alpha.ActiveCfg = Debug Alpha|Win32
+		{980CA504-6D3C-4398-8731-E17CD97672D8}.Debug Alpha.Build.0 = Debug Alpha|Win32
+		{980CA504-6D3C-4398-8731-E17CD97672D8}.Release.ActiveCfg = Release|Win32
+		{980CA504-6D3C-4398-8731-E17CD97672D8}.Release.Build.0 = Release|Win32
+		{980CA504-6D3C-4398-8731-E17CD97672D8}.Release Alpha.ActiveCfg = Release Alpha|Win32
+		{980CA504-6D3C-4398-8731-E17CD97672D8}.Release Alpha.Build.0 = Release Alpha|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
