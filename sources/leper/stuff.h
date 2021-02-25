@@ -1,0 +1,1 @@
+void stuffcmd(edict_t *e, char *s);

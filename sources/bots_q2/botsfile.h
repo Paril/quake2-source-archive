@@ -1,1 +1,0 @@
-char *ReadTextFile(char *filename);
