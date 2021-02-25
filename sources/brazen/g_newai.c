@@ -1000,7 +1000,7 @@ qboolean monsterlost_checkhint2 (edict_t *self)
 // =============
 void hint_path_touch (edict_t *self, edict_t *other, cplane_t *plane, csurface_t *surf)
 {
-	edict_t		*e, *goal, *next;
+	edict_t		*e, *goal, *next = NULL;
 //	int			chain;			 // direction - (-1) = upstream, (1) = downstream, (0) = done
 	qboolean	goalFound = false;
 

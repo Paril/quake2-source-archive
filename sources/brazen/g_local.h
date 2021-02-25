@@ -27,15 +27,9 @@
 
 //==================================================================
 
-#ifndef _WIN32
-#include <nan.h>
+#ifndef min
 #define min(a,b) ((a) < (b) ? (a) : (b))
 #define max(a,b) ((a) > (b) ? (a) : (b))
-#ifdef __sun__
-#define _isnan(a) (NaN((a)))
-#else
-#define _isnan(a) ((a)==NAN)
-#endif
 #endif
 
 //==================================================================
@@ -856,6 +850,7 @@ void ai_run (edict_t *self, float dist);
 void ai_charge (edict_t *self, float dist);
 int range (edict_t *self, edict_t *other);
 
+qboolean FindTarget (edict_t *self);
 void FoundTarget (edict_t *self);
 qboolean infront (edict_t *self, edict_t *other);
 qboolean visible (edict_t *self, edict_t *other);
@@ -1038,6 +1033,7 @@ qboolean CheckGroundSpawnPoint (vec3_t origin, vec3_t entMins, vec3_t entMaxs, f
 void DetermineBBox (char *classname, vec3_t mins, vec3_t maxs);
 void SpawnGrow_Spawn (vec3_t startpos, int size);
 void Widowlegs_Spawn (vec3_t startpos, vec3_t angles);
+void ED_CallSpawn (edict_t *ent);
 
 //
 // p_client.c

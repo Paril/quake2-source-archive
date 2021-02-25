@@ -549,7 +549,7 @@ void GunnerGrenade (edict_t *self)
 	float	pitch;
 	// PMM
 	vec3_t	target;	
-	qboolean blindfire;
+	qboolean blindfire = false;
 
 	if(!self->enemy || !self->enemy->inuse)		//PGM
 		return;									//PGM
@@ -623,6 +623,8 @@ void GunnerGrenade (edict_t *self)
 		else if(pitch < -0.5)
 			pitch = -0.5;
 	}
+	else
+		pitch = 0;
 //PGM
 
 	//FIXME : do a spread -225 -75 75 225 degrees around forward

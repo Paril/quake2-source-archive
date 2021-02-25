@@ -708,7 +708,7 @@ void T_Damage (edict_t *targ, edict_t *inflictor, edict_t *attacker, vec3_t dir,
 	// GRIM 10/10/2001 2:38PM - NEW COOP - coop cam
 	if (targ->decoy && targ->target_ent)
 	{
-		edict_t *real_targ;
+		edict_t *real_targ = NULL; // FIXME?
 
 		if (attacker->svflags & SVF_MONSTER)
 			attacker->enemy = real_targ;
