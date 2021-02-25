@@ -1,0 +1,1 @@
+void Weapon_Sniper (edict_t *ent);

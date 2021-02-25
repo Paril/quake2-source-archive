@@ -1,0 +1,10 @@
+Hi,
+This is the debug version of Entron. It will be saved to quake2/Nodes.Log
+once you load a map. Only the last loaded map will be logged. Older files
+will be overwritten. The file has detailed information on what nodes are
+connected to others. Please make sure that all nodes have at least one
+adjacent node.
+Cheers,
+
+-Topaz
+n33081@wizard.net
