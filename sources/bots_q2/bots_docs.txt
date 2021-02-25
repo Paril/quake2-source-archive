@@ -1,0 +1,1464 @@
+				The Online Bots Manuals
+					  By Pain
+					Edited by
+			   Spinoza and Lee Harvey Oswald
+				 Version 2.9.9 Beta #1
+
+------------------------------------------------------------------------------
+	This Document Contains all of the information from the following:
+
+				The BotS Class Strategy Manual
+				The General Play Manual
+				The BotS FAQ
+				The BotS Quick Reference Guide
+------------------------------------------------------------------------------
+
+
+
+
+                        The Bots Class Strategy Manual
+------------------------------------------------------------------------------
+	BotS has taken on a huge following. The demand for game play information has increased with every new addition to BotS. We know there is a lot to learn. Spinoza has made it his dying wish for BotS to be the most complex and enjoyable Quake II mod on the net. We also know that in order for you to get the most out of BotS, you need to know how to play the game. This guide provides you with everything you need to know about each player class in BotS. Whether you are a beginner, or a long time BotS veteran, this guide will serve you well. Battle of the Sexes incorporates many classes in addition to gender classes to choose from. Selecting a class depends solely on the preference of the individual. Each class has its advantages and disadvantages. When it comes to serious battles such as clan wars or tournaments, teams will have to plan their character class selection carefully. Without proper balance on a team, the chances of victory will be slim. Too many or too little of any particular class could spell disaster. Analyzing your enemy, countering what he/she fields, and good strategy will be the key to success.
+
+
+------------------------------------------------------------------------------
+                                    Genders:
+------------------------------------------------------------------------------
+Men:
+	The male is the most powerful sex, (as if there were any doubt). Able to carry twice the amount of ammo as the fragile female, (wouldn't want her to break a nail now would we), he is a true brute. Although raw strength and carrying ability are great, the male does have some disadvantages of his own. While he can carry double the load of the wimpy female, this tends to limit his speed and jumping ability. Also due to his armor advantage the male starts out with 100 health and can only max it out to 150.
+	Males have the advantage of wearing massive armor. While the male sex can not jump as high or run as fast as the female, it makes no difference. When you can take a rocket to the chest, laugh, and then waste her as she runs away crying . Who needs to jump? Use your brain dummy. She can jump and run all she wants to. What you need to do is out smart her. She can't hit you while she is standing still let alone while she is trying to impress you with her circus tricks. She has half the ammo you have. Let her waste it trying to hit you. Wait for the right moment, then blast her stank ass.
+	The male possesses the special ability to "Disgust" the female sex using the taunt gesture (the default is the "k" key). When a female player(s) is nearby, taunting will have the same effect as a blaster to her pretty little face.
+	The male is limited to carrying the following weapons when team play is off: Shotgun, Super Shotgun, Rocket Launcher, Chain Gun, Rail Gun, and the BFG 10K. The male can be any class when team play is on.
+
+****NOTE****
+ Males can throw items, such as grenades, twice as far as females. Whoa, theres a big surprise! And I thought they didn't play baseball because the uniforms were ugly jeesh
+
+****NOTE****
+ The males have a rapid-fire shotgun at their disposal. If you run low on ammo in your primary weapon, switch to the shotgun. Males start with ammo in the shotgun.
+
+****NOTE****
+ Using the taunt feature more than 5 times in one minute will result in death. This is not a normal death though, you will respawn unable to do anything for 5 seconds.Sorry spammers homey don't play dat! You're alive, you're alive, you're alive, you're alive, you're alive, you're dead!
+
+
+Women:
+	The female is the quickest and most nimble of the sexes. Her lightweight and her enormous jumping ability enable the female to get to places no couch potato could ever dream of. Due to her small build, the female can carry only half the ammo as her brain dead enemy. This also contributes to her ability to wear only the lightest of armor (jacket armor). Although this babe lacks the muscle mass of her disgusting counterpart, she makes up for it in health and speed. Without heavy armor weighing her down she can leave the males in her dust, gasping for air. Females start out with 150 health and can max out to 200 (contributing to the longer life expectancy of the female sex).
+	Males are stupid, slow, cardiac arrests waiting to happen. Use your superior jumping ability and speed to counter that heavy aluminum foil he calls armor. Jump at all times when under attack. While he stands there gawking at your amazing abilities, hit him hard and run for the key girlfriend. If you run low on ammo use your blaster. Let him think about what just happened. By the time his fat head figures it out, you will be at your base giggling. Females possess the special ability to "Nag" the male sex using the taunt feature (default is the "k" key) When a male player(s) are nearby, using the taunt gesture will have the same effect as a blaster to his crotch.
+	The female is limited to carrying the following weapons when team play is off: Shotgun, Super Shotgun, Grenade Launcher, Hyper blaster, and Machine Gun. Females can use all classes when team play is on
+
+****NOTE****
+ Using the taunt feature more than 5 times in one minute will result in death. This is not a normal death though, you will respawn unable to do anything for 5 seconds. Sorry spammers homey don't play dat! You're alive, you're alive, you're alive, you're alive, you're alive, you're dead! Echo Echo Echo
+
+****NOTE****
+ When using the blaster the female has the special "rapid-fire" feature which greatly increases the firing rate of the weapon. Considering the blaster has unlimited ammo, it's great for barbecuing beefy male type persons.
+
+------------------------------------------------------------------------------
+                                  The Captain
+------------------------------------------------------------------------------
+
+
+		Male		Female
+
+Firepower	Devastating	Devastating
+Range		Long		Long
+Accuracy	Med		Med
+Armor		200		100
+Speed		Slow		Med
+Jump		Low		Low
+Weight		Heavy		Heavy
+Skills		High		High
+
+
+General information
+
+        The Captain is an integral part of the team. He/she is the leader of the team. Sporting the most powerful of weapons (BFG 10K); he/she is not to be treated lightly. Captains can help a team win or hurt them if they are killed. Protection of the Captain is crucial. If a team captures the enemy flag, they will gain two points and 1 or 2 promotion points will be awarded that the Captain can issue to a team member. When a Captain is killed the team causing his/her demise gets one point and one promotion point and the Captain will drop his/her promotion key (if the Captain is carrying it). If any enemy other than an Infiltrator touches the promotion key then one level of promotions will be lost for the entire team and all remaining promotion points will be lost. If an Infiltrator touches the key, all remaining promotion points are lost, but the team does not lose a level. If the Captain that got killed recovers his/her own promotion key then that team will keep all promotions. This gives the team a chance to keep all of their hard-earned promotions.
+
+The Captain has the following characteristics:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+***Captains can use turrets if they are available.
+
+***Captains cannot utilize the grappling hook until all team members have been promoted to level 2.
+
+***The Captain gets 6 proximity grenades.
+
+***The Captain can give promotions. Each time a team captures the enemy flag or kills the enemy Captain, the Captain gets one or two promotions to give out, depending on the circumstances, using "promote". When this is done a menu will appear listing all members available for promotion. To promote a member of your team, use the bracket keys "[" and "]" to select someone then hit "ENTER". The Captain can not promote him/herself. Promotions cost the amount of the level you are upgrading someone to. If you have a level one sniper and want to upgrade them to level 2, it will cost two promotion points to do so. For level 3 it will cost three promotion points. So to upgrade someone from level 0 to level 3 it will cost a total of six promotion points. Note: a player must have at least one point on the scoreboard to be eligible for promotion.
+
+***The Captain earns a promotion when he/she upgrades all current team members to level 1. This gives the Captain max armor and max ammo (the same as any other level 1 promotion). When the Captain upgrades all team members to level 2, he/she gains the ability to use the grapple. The Captain's level can dynamically change based on the level of his/her teammates. The Captain is always the level of the lowest team member.
+
+***The Captain is also able to "demote" his teammates, a nice way to say "please cooperate". Also very handy for when a teammate is about to leave the game or switch sides. Demoting a teammate recovers some of the promotion points spent on this player. For each level the player is demoted the team receives 1 promotion point.
+
+***The Captain can also use the "tracker" device. This clever gizmo can tell the leader the vital statistics for every player in the vicinity. This device is powered by one cell for each use.
+
+***Captains can quickly relay the alarm messages to their teammates using the "sendalarm" command.
+
+***At level 1 a Captain can create ammo and other items using "create". This is a very valuable tool, especially since he/she can now create quad damage power-ups and special items such as the environment suit. Each creation requires a certain amount of cells in order to build it.
+
+***If a Captain is at level 0, he/she will be able to open enemy Captain doors. This only works if the Captain is level 0. Any higher and the Captain will not be able to open enemy Captain doors.
+
+***If the Captain is carrying the promotion key, he/she will get a warning every ten seconds until they drop the key. This warning can be toggled on and off by typing "warning" in the console. By default the warning message is displayed.
+
+Captain Strategy
+
+       The Captain not only comes equipped with the extreme BFG 10k, but also proximity grenades. Use these in defense of the key. It's amazing how many people forget about these weapons while they play as Captain. Properly used, proximity grenades can save your team from an embarrassing capture. Deploy your proximity grenades in a location that the enemy has to come through, remember you can quickly switch from normal grenades to proximity grenades by using the "proxmode" command. Use your BFG 10K only as a last resort. If the enemy penetrates your layer of proximity grenades he/she has more than likely been weakened by the proximity grenades. If the enemy is smart and decides to grapple over your trap.....use your BFG 10K. There is no reason why a healthy Captain with full ammo can not successfully defend his/her own flag. Use your wits. Assign a team member(s) to stay outside the flag area only for defense. Let this person warn you of an incoming attack. This person(s) should also be able to weaken the enemy enough so that your proximity grenades will kill or further weaken them by the time they penetrate your defenses. If they get this far it's time to fire up the ole BFG 10K.
+       Every so often use the "scout" command. This is useful for telling you what the enemy force is composed of. If they have kamikazees, ask some of your teammates to switch to bodyguard. If they have a lot of soldiers then you might need to have some as well. Don't be afraid to ask teammates to change classes if needed. Explain the situation to them and hopefully they will help out. If they don't, remember them when it comes time for promotion.
+       Never, ever, carry the promotion key while you are attacking or are in danger of being attacked. It is your responsibility to guard this key with your life. If you want to attack, make sure you drop the promotion key some where safe before you go. A gender specific supply room is a good example. With infiltrators running around, the promotion key will never be 100% safe, but getting killed with the promotion key is a very embarrassing and avoidable situation.
+       When you go on the attack, make sure you let your teammates go ahead of you if possible. They can clear out any ambushes that are waiting. You never know where that sneaky kamikazee is hiding. Let your teammates find him/her and sacrifice themselves. Use the tracker when you are approaching an enemy base. You will be able to tell how many enemies are in the area and how far away they are. If your team is in a brawl with some enemies, don't just jump in the middle of it...stand back and fire your BFG into the thick of things. You do your team no good when you die. If they kill you they get a point. Be responsible. When in doubt run and call for help. Don't just think that "well, I'm almost dead, might at well keep going". You only have four shots with your BFG. Conserve them and save one to clear any enemies on your tail when you are heading back to base.
+       When it comes to promotion time, you have some important decisions to make. Sure you could give it to the guy/gal that just captured, but is that really what your team needs? If your defense is failing maybe you should upgrade that bodyguard first. If you lack offense maybe the soldier, berzerker, or infiltrator would be better. You can't make everyone happy so use your head and take into account the current situation. Whatever you do make sure you give out promotions as soon as you get them or if you want to build them up let your teammates know this. Don't make your team wait on you.
+       Be aware of team demotions. Continually check your promotion list when available to see who has been demoted. If a teammate is level 2 or higher and is killed by a level 0 enemy that member will be demoted one level. You might think that your team is all upgraded and not check anymore for promotions but in actuality you have some promotions that you can give out.
+       The Captain is not listed in the class menu. This will help to prevent people from accidentally picking the Captain class and then getting flamed for being a terrible Captain. :) In order to be a Captain, you will have to type "captain" in the console to switch to the Captain class.
+
+Captain Promotions:
+^^^^^^^^^^^^^^^^^^^
+Level 1	Max ammo for BFG 10k and best armor and the ability to create items
+Level 2	Captain gains the ability to use grapple
+Level 3	Creation cost is cut in half and proximity grenades last for four minutes instead of one
+Level 0 	Has the ability to open enemy Captain's doors
+  (only)
+
+
+Captain Commands:
+^^^^^^^^^^^^^^^^^
+promote	Brings up the player promotion menu. Use the brackets to select 	whom you want to promote then, hit enter.
+demote		Brings up the player demotion menu. Use the brackets to select whom you want to demote then, hit enter.
+droppromote	Quick way to drop the promotion key
+create		Brings up the create ammo menu.The Captain gains this ability at Level 1
+scout		Displays scout report (Lists classes in use by your team and enemy team)
+scoutall		Displays scout report to all team members
+tracker		Shows you all players that are within a certain range and their vital statistics
+proxmode	Switches to proximity grenades
+sendalarm	Displays the last alarm message to all teammates
+use hook	Selects the grappling hook. The Captain gains this ability at level 2
+warning		Toggles the display of the warning "you are carrying the promo key"
+
+Skill Commands
+^^^^^^^^^^^^^^
+skill1	Displays the promotion menu (promote)
+skill2	Displays the create item menu (create)
+skill3	Uses the tracking device (tracker)
+
+------------------------------------------------------------------------------
+                                 The Bodyguard
+------------------------------------------------------------------------------
+
+		Male		Female
+Firepower	Med		Med
+Range		Short		Short
+Accuracy	Med		Med
+Armor		200		100
+Speed		Slow		Med
+Jump		Low		Med
+Weight		Med		Light
+Skills		High		High
+
+
+
+General Information:
+^^^^^^^^^^^^^^^^^^^^
+        The Bodyguard is a class every team must have. This class is very important to team survival and victory. These guys/gals are tougher than leather. Equipped from the start with heavy armor, (body armors for men.... jacket armor for women), they can take a lot of punishment. Also starting out with a quad damage they can also dish out some serious whoop ass when called upon. Equipped with the super shotgun these servants of protection would proudly die for their leader. After all that is their job.
+
+The Bodyguard has the following characteristics:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+***Can use turrets if available
+
+***Can use the grappling hook
+
+***Begins with a quad damage in his inventory. But if he is killed by either the "Kill" command or tripping on his own grenade, He does not get the quad on his next life.
+
+***Can use 6 proximity grenades
+
+***The Bodyguard's main function is to protect his teammates and most importantly his leader (captain). He/she has the special ability to absorb all of the damage from a kamikazee attack. He/she will die in the process but gain honor from their team in the form of points for each teammate saved from death.
+
+***The Bodyguard can place defensive lasers (you know, like the ones that killed you in the single player version). Lasers attach to walls. To attach a laser simply move close to a wall and type "laser" or bind it to a key. You need 50 cells to build a laser. To turn the laser on after attaching it to a wall type "laseron" in the console, or bind it to a key. If you don't like where the laser ended up, type "laserkill" in the console. Keep in mind you'll need 50 more cells to build another one. To turn the laser off, type "laseroff" in the console. The laser will only last 15 seconds if left on, after that it will self-destruct. In other words, turn the laser off before it turns itself off! The laser also needs to cool after each use. This cool down time is the amount of time the laser was left on. There is a two second minimum cool down period. When the Bodyguard dies his or her lasers self-destruct A Bodyguard must be near his/her laser(s) in order to activate them. A message will display telling you which laser(s) could not be activated because you need to get closer.
+
+***The Bodyguard "decoy" command deploys a decoy promotion key. The key looks the same as the Captain's promotion key except it will explode when touched by the enemy. The Bodyguard can only have one decoy promo key deployed at once. It will last 60 seconds before self destructing. It will also self destruct if the Bodyguard that deployed the decoy dies. Similar to proximity grenades, the decoy promo key will also explode if your teammates touch it. However, it will not hurt them.
+
+Bodyguard Strategy:
+^^^^^^^^^^^^^^^^^^^
+       Bodyguards should always remember that their primary purpose is to defend the captain. The captain should always have a Bodyguard near by. It should take a Bodyguard no more than a few seconds to get to the captain's location if he/she needs help. If more than one Bodyguard is on the team then one should be assigned to the captain. This can be on a rotational basis or however you want to do it. The key issue is, at least one Bodyguard needs to be with the captain. The easiest way for the captain to get killed is by a kamikazee attack. Without you the captain is helpless against quad and apocalypse kamikazee attacks. When the captain goes on the offensive, follow him/her. Go ahead of the captain and scout for ambushes. Hopefully you will absorb any kamikazee attacks waiting. Draw the enemy off of him/her. Die if you have to, just make sure your captain gets back to base with the flag. If released from guard duty the same applies when supporting other team members.
+       The Bodyguard has some key defensive weapons at his/her disposal. The proximity grenades are one. When used in conjunction with the captain's proximity grenades you can set up a formidable defensive layer to protect against incoming attacks. When deploying proximity grenades don't clump them all together at a door somewhere. It's fine to defend the door but if the enemy jumps or grapples over them you have failed. Spread your proximity grenades out over an area. Also anticipate the enemy jumping or grappling over them and deploy grenades in these places as well. Remember to replenish your minefield every minute to keep the defense up. Next is the laser(s). Lasers are great weapons of defense if used properly. These should be set up in areas that the enemy will have to come through to get the flag. Setting them up at the flag is fine but if you have 2 lasers to deploy, deploy one at the flag and then one before the flag. The enemy will have to go through the first laser, then another to get the flag, then back through the first laser. If this fails then the proximity grenades you and the captain have deployed should get them on the way out. If all else fails use your super shotgun to chase the enemy down and return the flag. By this time it should be a very easy kill. Remember not to run after the flag if the captain will be left unprotected. If this is the case, immediately get back on the defensive. Cover the captain while he/she gets ammo/armor/health then deploy more proximity grenades. It's also a good idea to deploy your laser(s) in different locations after awhile. This will keep the enemy guessing and not let them get accustomed to your laser locations.
+
+Bodyguard Promotions:
+^^^^^^^^^^^^^^^^^^^^^
+Level 1	Max ammo for Super Shotgun and best armor
+Level 2	Start with 50 cells and can deploy a second laser
+Level 3	Rapid-fire super shotgun and laser power is doubled. The power is doubled and the laser time is increased to 30 seconds
+
+Bodyguard Commands:
+^^^^^^^^^^^^^^^^^^^
+laser		Deploy a laser
+laseron		Turns laser on
+laseroff		Turns laser off
+laserkill		Destroys the laser(s)
+proxmode	Switches to proximity grenades
+decoy		Drops a decoy promotion key
+use hook	Switches to the grappling hook
+
+Skill Commands:
+^^^^^^^^^^^^^^^
+skill1	Turns lasers on (laseron)
+skill2	Turns lasers off (laseroff)
+skill3	Activates decoy mode (decoy)
+
+------------------------------------------------------------------------------
+                                   The Sniper
+------------------------------------------------------------------------------
+
+		Male		Female
+Firepower	Med		Med
+Range		Extreme	Extreme
+Accuracy	Low		Low
+Armor		50		25
+Speed		Med		Fast
+Jump		Med		High
+Weight		Light		Light
+Skills		Med		Med
+
+
+General Information:
+^^^^^^^^^^^^^^^^^^^^
+        The name says it all. This highly skilled master of death can remove a limb or any part of the body for that matter, at 1000 yds...when its windy...as it usually is on Strogg. Equipped with a silencer ready rail gun you never know when they are going to strike. Hit the enemy with this weapon and it will go through the enemy, the buddy behind them, the wall, a tree outside...
+
+The Sniper has the following characteristics:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***Can use the grappling hook (invisible grapple)
+
+***Cannot use turrets
+
+***Snipers can use the tracker device using the "tracker" command
+
+***The sniper can use a laser sight by typing "sight" in the console or binding it to a key. Simply put the dot on the target and squeeze, instant giblet gravy. Anyone hungry?
+
+***The sniper now gets 3 silent alarms he/she can place to warn of an incoming enemy attack. These silent stewards of defense will display the actual alarm that was triggered (if more than one has been deployed) and the class/name of the player that is intruding to the sniper and captain(s) on the team. If more than one enemy triggers the alarm at the same time then both will be listed. The enemy however will not know that he has triggered an alarm unless he/she sees it. And you thought you were clever.... we knew it all the time loser!!!
+
+***Sniper's can also relay the last alarm message received to the rest of the team. To do so use the "sendalarm" command.
+
+***Snipers can name alarms using the command "alarm1", "alarm2", & "alarm3"
+
+***Snipers can now add an additional name to their alarms that only display when an enemy passes by carrying a flag. "flagalarm1 (name)", "flagalarm2 (name)" and "flagalarm3 (name)" are the new commands. Just replace "(name)" with the name of the flag alarm.
+
+***Sniper starts out with silencer in inventory. The Sniper must use the item to activate the silencer.
+
+***If a sniper stands near a wall, crate, column, etc. for 10 seconds without moving he/she will become invisible. The player will see a message saying "You are cloaked!" when they become invisible. The only thing that will make you visible again is if you move. You can fire your weapon and turn around as long as you do not move forward, left, right or up or use the grappling hook. If you are shot by an enemy when cloaked you will become visible again. Snipers cannot cloak while carrying the enemy flag. You will also lose your cloak if you are in the light radius of a flare. Level 1 Snipers and above can cloak faster depending on the light level of the area they are standing in. So in a really dark corner you will cloak almost instantly and in a well lit area it will take you 10 seconds to cloak. It will never take more than 10 seconds to cloak.
+
+***Snipers get 4 active flares. All you have to do is type "flare" in the console or bind it to a key to throw a flare. Each flare costs 5 cells and lasts 20 seconds before it dies out. And remember that the flare now uncloaks those enemy Snipers!
+
+***The damage caused by the railgun is dependent on the condition the Sniper's sight and cloak.
+If the Sniper is firing without using either the sight or cloak
+Damage = 100 pts
+If firing with the sight, but uncloaked
+Damage = 150 pts
+If firing while cloaked but without the sight
+Damage = 150 pts
+If firing with the sight while cloaked
+Damage = 300 pts
+
+Sniper Strategy:
+^^^^^^^^^^^^^^^^
+       Snipers have a style all their own. Not much for mingling with the other teammates, they prefer to be alone, usually some place high. When playing as the sniper you must think stealth. Since you will be working alone, far away from your base, you won't get much help from your team if you get into trouble. Pick a place to camp. More than likely, the site you pick will determine how long you survive. Make sure that if you are discovered you have a quick exit. Your footsteps make no sound, so listen carefully to what is going on around you. Although you have a very powerful weapon; the slow reload time, the lack of area effect damage, and the precise aiming it takes, will limit you in an open battle with some of the big boys and girls. Shoot and scoot should be your motto. After you have made a couple of kills, move to a different location. It doesn't take long for some pissed off soldier to come looking for your annoying ass. Make sure you're not there when he/she comes knocking.
+       Before going out to do some hunting.... grab plenty of ammo, cells, armor and health. There is no telling how far away you will find that perfect spot for sniping. You don't want to risk giving away your position because you only picked up 10 slugs while you were at base.
+       Snipers have a much greater responsibility than just shooting at bad guys. Your team is relying on you to deploy alarms that will warn of an incoming attack. You determine where these alarms will go. Pick places the enemy must use in order to gain access to your base. You should deploy alarms in a manner that will give long, medium, and short range warning of enemy movements. Deploying all of your alarms in the same area defeats the purpose. Do not deploy alarms in the enemy base or very close to it. You will get multiple false alarms from the enemy simply moving around in their base. Start your alarm deployment about halfway between the two bases. If the enemy has come that far they probably are not just going for a hike. When an alarm has been activated, send the message out once, not twenty times. This not only hinders your team communication but it can be very annoying. If the captain thinks it is important he/she can send it again. Make sure you name your alarms. Give the alarm a name that everyone on the team can identify with. If there is a bridge separating the two bases, name it bridge alarm. Your teammates will know this and know how much time they have to prepare. Your alarms could make the difference between a team that is picking their nose, and one that is drooling over the ambush they have planned.
+
+Sniper Promotions:
+^^^^^^^^^^^^^^^^^^
+Level 1	Max ammo for the rail gun and best armor, gains ability to cloak faster in shadows
+Level 2	Sniper starts with 50 cells, slug capacity is doubled, and the rail gun is modified for rapid-fire mode.
+Level 3	Rail gun pierces walls and other objects, rail gun trail is invisible.
+
+Sniper Commands:
+^^^^^^^^^^^^^^^^
+alarm		Deploys an alarm
+alarmkill	Destroys all alarms
+sendalarm	Sends the last alarm message to your team
+alarm1 [name]	This allows you to name your first alarm. To name the other alarms simply replace the 1 with a 2 or 3
+flagalarm1	This allows you to name your first flagalarm. To name the other flagalarms simply
+[name]		replace the 1 with a 2 or 3
+
+sight		Activates the laser sight
+tracker		Activates the tracker device
+
+Skill Commands:
+^^^^^^^^^^^^^^^
+skill1	Toggles the laser sight on and off (sight)
+skill2	Sends the most recent alarm message to the rest of the team (sendalarm)
+skill3	Uses the tracking device (tracker)
+
+------------------------------------------------------------------------------
+                                  The Soldier
+------------------------------------------------------------------------------
+
+		Male		Female
+Firepower	Extreme	Extreme
+Range		Long		Long
+Accuracy	Med		Med
+Armor		150		75
+Speed		Med		Med
+Jump		Low		Med
+Weight		Heavy		Med
+Skills		Low		Low
+
+
+General information:
+^^^^^^^^^^^^^^^^^^^^
+        Bad to the bone devastation is all that needs to be said. This guy/gal has one mission.... eliminate the competition. He/she certainly is equipped for it. Using a rocket launcher, this warrior lays waste to the enemy and all surrounding wildlife. Hey look.... it's a bird...it's a plane...it's a rocket to the brain!
+
+Soldiers have the following characteristics:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***Soldiers cannot use the grappling hook
+
+***Soldiers can use turrets if available
+
+***Any soldier Level 1 or greater can conquer a capture pad using the "conquer" command. This enables conquer mode. When a soldier is in conquer mode his/her jumping ability is greatly reduced. To conquer a capture pad just touch it and a message will be displayed announcing the pad has been conquered. Once a pad is conquered, the enemy will not be able to capture the flag using that pad. Depending on your level you will have to remain close to the pad for it to remain conquered. The higher level you are the further away you can be from the pad while keeping it conquered.
+
+Soldier Strategy:
+^^^^^^^^^^^^^^^^^
+       Ok here is the strategy.... Destroy, maim, pulverize, and grind into tiny bits. No, but seriously the Soldier is a devastating individual. Whether used on offense or defense, the Soldier is a very valuable asset. When ammo is not a problem, they can do just about anything. The Soldier has no special abilities or functions. Your primary purpose is to kill on sight. Since Soldiers have no wimpy grapple to get them out of trouble, they have to use their wits.... and of course their rockets. It's very simple if you think about it. You see someone that does not belong to your team....you destroy them.
+       Soldiers should always use cover when available. When approaching an enemy base be cautious. I know you could take them all on left-handed but think before you do. While the Soldier is extremely powerful, he/she is not invulnerable. Manage your ammo wisely. Save it for when you need it. You are the primary asset in a strike package to the enemy key. You can't do jack if you have no ammo. Those rockets go quickly...especially at level 2. Lead your team into the enemy base. Clear out the defenders and leave a hole for your teammates to go through. Unless you are a solo attacker you should not go for the flag. Your speed will hamper you. Let the faster classes get all the glory, while you build your frag count. Cover their retreat and you will be a hero, die protecting them and you will be a martyr. When you see that the enemy is about to capture your flag, go for their capture pad and steal their victory from them by conquering the pad and holding it until the flag carrier can be killed.
+
+Soldier Promotions:
+^^^^^^^^^^^^^^^^^^^
+Level 1	Max ammo for rocket launcher and best armor, Gain the ability to "conquer" an enemy capture pad
+Level 2	Doubles rocket capacity and gives rapid-fire rocket capability
+Level 3	Gain the ability to toggle between "Splitmode" and normal rocket 		fire. Splitmode Rockets split into 4 separate warheads after being 		shot, each rocket does one-half damage as a normal rocket. You can 		also control how wide the pattern of the rockets will fire. 		Additionally the Soldier becomes immune to their own splash damage, 		but you still lose armor points. (Hello rocket jumping!).
+
+Soldier Commands:
+^^^^^^^^^^^^^^^^^
+splitmode	Toggles split fire rockets off and on (this can also be toggled off and on using the default rocket launcher key #7)
+split1		Selects the width of the split rocket pattern, from Tight (split1)
+split2		to Extra-Wide (split3)
+split3
+
+Skill Commands:
+^^^^^^^^^^^^^^^
+skill1	Activates split mode rockets for level 3 soldiers (splitmode)
+skill2	Uses a Quad damage powerup if it exists in the inventory (use quad 		damage)
+
+------------------------------------------------------------------------------
+                                 The Berzerker
+------------------------------------------------------------------------------
+
+		Male		Female
+Firepower	Extreme	Extreme
+Range		Long		Long
+Accuracy	Low		Low
+Armor		300		150
+Speed		Slow		Slow
+Jump		Low		Low
+Weight		Extreme	Heavy
+Skills		Med		Med
+
+
+General information:
+^^^^^^^^^^^^^^^^^^^^
+        More charred from powder burns than enemy fire, this character defines the meaning of "Rock & Roll." Chain gun in hand and tequila bottle in the other (copy right Chalupa 97), this terror from the basement can cut a whole team in half in just about the time it took you to read this sentence. When ammo is available for this lead-eating monster, best bet is to exit quickly.
+
+The Berzerker has the following characteristics:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***Cannot use the grappling hook
+
+***Can use turrets if available
+
+***Sometimes the Berzerker drops all armor and gets quad damage, this happens every 60 seconds for the ladies and every 90 seconds for men (Never underestimate the temper of those gals.)
+
+***When hurt, the Berzerker can also become enraged. Typing "rage" in the console will turn this powerful beast into an invulnerable flesh-frying freak. The amount of time the rage lasts depends on the amount of health the Berzerker has. Rage will then last for the number of seconds equal to your remaining health divided by 5. The number of rage seconds will be displayed counting down on the status bar. Oh yeah, by the way.... you die after rage is exhausted. The Berzerker does not lose points for dying from rage. In order to go into a rage the Berzerker must have been wounded in glorious combat. Men can rage when their health is below 75, Women can rage with a health below 100. Berzerkers cannot rage when carrying the flag. If they are currently raging when they pick up the flag rage mode will immediately be turned off. This applies to anyone using the invulnerability power up as well.
+
+Berzerker Strategy:
+^^^^^^^^^^^^^^^^^^^
+       Berzerkers are a one-man/woman army. You should never have to cry for help. With the massive firepower at your fingertips and the eight-inch thick armor surrounding your body, defeat is not an option. The Berzerker can be used offensively or defensively. Either way it's the same result . death and destruction. The Berzerker is an all-purpose killing machine. Send it here and it destroys send it there and it destroys. It makes no difference. Just remember that your chaingun is an ammo-gobbling beast. Always make sure you have max ammo before you go marching off for the enemy key. At maximum peak firing rate this will give you only a couple of seconds of trigger pulling. Not much room for error. As a Berzerker you should always keep an eye on your ammo count. Without ammo for the chaingun you are just a slow, heavily armored duck waiting to be plucked.
+       The Berzerker has a few cards up the sleeve. You can initiate the "rage" command. This will make you invulnerable for certain amount of time, depending on how much health you have. A good trick is to initiate rage command when you encounter the enemy captain. Watch the their expression when a BFG bounces off your face. More than likely they will waste all their ammo on you while you are cutting them to pieces. It's hilarious trust me. When you engage the rage command; distract, draw the enemies' fire, and protect your teammates. A raging Berzerker also makes a nice mobile landmine clearance device! Sure those proximity grenades will bounce you around a bit, but you can just shrug them off and come on back for more. Rage only lasts for a predetermined amount of time and then you die. Make sure it was worth the trip to hell. Remember; when in doubt use rage.
+       The Berzerker drops all armor and gets quad damage every 60 to 90 seconds. It would be worth the effort to plan your attack around the time you get this power-up. If you time you attack correctly, you could have quad damage and be invulnerable at the same time. Need I say more?
+
+Berzerker Promotions:
+^^^^^^^^^^^^^^^^^^^^^
+Level 1 	Max ammo for the chaingun and best armor
+Level 2 	Five times best armor and speed decreases
+Level 3 	Chain gun uses one bullet per round instead of three and the chain gun damage is doubled and the rate of fire is increased
+
+Berzerker Commands:
+^^^^^^^^^^^^^^^^^^^
+rage		Makes the Berzerker invulnerable for a certain amount of time depending on how much health he/she has left
+
+Skill Commands:
+^^^^^^^^^^^^^^^
+skill1	Activates rage mode (rage)
+skill2	Uses a Quad damage powerup if it exists in the inventory (use quad damage)
+
+------------------------------------------------------------------------------
+                                The Infiltrator
+------------------------------------------------------------------------------
+
+		Male		Female
+Firepower	Med		Med
+Range		Med		Med
+Accuracy	Low		Low
+Armor		100		50
+Speed		Med		Fast
+Jump		Med		High
+Weight		Med		Light
+Skills		Med		Med
+
+
+General Information:
+^^^^^^^^^^^^^^^^^^^^
+        Stealth is the Infiltrator's best friend. Invisible to enemy sniper and key alarms this guy/gal can take the flag, have dinner, and drink a few beers before anyone knows it's gone. Stealing ammo is a hobby of the Infiltrator. Equipped with the hyper blaster, and a multitude of talent, no one is safe.
+
+The Infiltrator has the following characteristics:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***Can use the grappling hook (invisible grapple)
+
+***Cannot use turrets
+
+***The Infiltrator can steal ammo. To toggle stealing mode on use the "steal" command. Any ammo stolen will take 90 seconds to re-appear. Just make sure you don't steal from your own team moron. By default stealing is turned off.
+
+***The Infiltrator is not only invisible to enemy alarms, he/she is invisible to the ear too. The enemy can not hear the Infiltrator's footsteps. Walk up behind the enemy, tap them on the shoulder, and give em a big warm hyper-blaster hug.
+
+***Infiltrator can create decoy grenades. These puppies look like a weapon that the enemy can use but once picked up they explode. Kaboom! Great for placing around dead bodies. You can not select the type of item that you want to drop; it is a random selection out of the items available. Decoy grenades can be selected by either hitting your grenade key twice, or by using the comand "decoymode" when you have grenades selected. Decoy grenades last for 30 seconds then self-destruct. A maximum of four decoy grenades can be deployed at once.
+
+***Using the disguise command, the Infiltrator can look and sound like the enemy. The Infiltrator will continue to use the hyper blaster and the disguise effect will only last for 30 seconds. Once the Infiltrator touches the enemy key or fires his or her weapon the disguise will be lost. You can not use the disguise while carrying the promotion key. Each time the disguise is used it will cost 25 cells.
+
+***A high level Infiltrator also has the ability to open enemy doors and use enemy elevators/buttons/etc... This makes a Level 3 Infiltrator a serious force to be reconed with.
+
+***The Infiltrator has a special ability to steal the enemy's promotion points by taking their promotion key. At levels 1 and 2 this just causes the enemy captain to lose those points, at level 3, the stolen points are actually transfered to the infitrator's team!
+
+***The Infiltrator starts with a enviroment suit in their inventory. Good use for those long underwater trips, or if you just cant stay out of the lava!
+The Infiltrator does not make any splash noises when entering or exiting water
+
+Infiltrator Strategy:
+^^^^^^^^^^^^^^^^^^^^^
+       The Infiltrator's mission is to penetrate enemy defenses undetected and cause havoc behind enemy lines. The Infiltrator should live in the enemy base. Once you have evaded the enemy defenders, make your way to the nearest supply room. If you are not level 3, you will not be able to open gender specific doors but you can wait outside the door until someone opens it from the inside. You can also hide and wait for someone to open the door from the outside. When the door has been opened take care of the enemy but make your way into the supply room before the door closes. Once inside, immediately begin stealing ammo and laying decoy grenades. Remember, to steal ammo you must be maxed out on all ammo yourself. Also, be looking for the captain's promotion key. Most captains leave the promotion key inside a room that only their team can access.
+       Use the diguise command when you want to enter the enemy base as one of their own. When you are diguised you must work fast, the effect only lasts for 30 seconds. Grab the flag and go. You can also send a report back to your team informing them of enemy defenses. In this way you are more of a spy than a flag grabber. When the jig is up start blasting.
+       When you are a level 3 Infiltrator you have complete access to all enemy supply rooms. Without needing someone to open the door for you to gain access, you should start searching for the promotion key immediately. Your primary objective should be to find the promotion key and destroy it. Yes, capturing the flag is important also, but if the enemy has a lot of promotions, you will help your team more by destroying the promotion key. While you are looking, you can lay decoy grenades and steal ammo but this is secondary to finding that key. You might even stumble onto the enemy captain hiding out. If you find him/her, waste them on sight (easier said than done). If you have searched all supply rooms and can not find the promotion key or the enemy captain, go for the enemy flag and head back to base. By the time you get back you could have killed the enemy captain (one point), destroyed the promotion key (gained a promotion), stolen all enemy ammo, and captured the key (two points). All of this could have happened without the enemies knowing it except the dead captain that is. Not bad for one trip to the enemy base. This scenario is highly unlikely but hopefully you can see what a well-motivated Infiltrator can do if they set their mind to it.
+
+Infiltrator Promotions
+^^^^^^^^^^^^^^^^^^^^^^
+Level 1	Max ammo for the hyper blaster and best armor
+Level 2	Gains the disguise command
+Level 3	Gains access to all enemy doors, buttons and elevators
+
+Infiltrator Commands
+^^^^^^^^^^^^^^^^^^^^
+disguise	Allows the Infiltrator to look and sound like the enemy
+decoymode	Switches to decoy grenades
+steal		Toggles stealing mode off and on
+
+Skill Commands
+^^^^^^^^^^^^^^
+skill1	Toggles stealing of ammo on and off (steal)
+skill2	Displays the disguise menu for a level 3 Infiltrator (disguise)
+
+------------------------------------------------------------------------------
+                                 The Kamikazee
+------------------------------------------------------------------------------
+
+		Male		Female
+Firepower	Med		Med
+Range		Short		Short
+Accuracy	Low		Low
+Armor		50		0
+Speed		Med		Med
+Jump		Med		High
+Weight		Med		Med
+Skills		High		High
+
+
+General Information
+^^^^^^^^^^^^^^^^^^^
+        The absolute in a final say so. This guy/gal always has the last word. Armed with a grenade launcher and the brain of a roll of toilet paper, death is always close by...literally. Sending people to the grave is his/her only reward. The Kamikazee can commit suicide by exploding all grenades in possession at once. If the suicide was successful then the Kamikazee gets points for number of enemies killed. The Kamikazee never has points taken for committing suicide. Not only skilled at blowing himself/herself to pieces, he/she is equally skilled at rewiring the enemies proximity grenades so that they explode when the team that laid them approaches (this takes 2 seconds).
+
+The Kamikazee has the following characteristics:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***Can use the grappling hook
+
+***Cannot use turrets
+
+***To rewire enemy proximity grenades simply walk over them. Shaking is normal when rewiring.... wouldn't you shake with a proximity grenade that close to your genitals? This function can be toggled on and off using the "autorewire". By default Kamikazee has autorewire turned off. When a Kamikazee rewires a proximity grenade his/her team will see a message informing them of the Kamikazee's actions. Only members of the Kamikazee's team will see the message.
+
+***The Kamikazee can self-detonate using the "suicide" command. The Kamikazee must have 50+ health to suicide. When the Kamikazee has 11+ grenades he/she gets a quad suicide. If Kamikazee has 31+ grenades and 100+ health then he/she gets an apocalypse suicide when at Level 3. This kills everyone that can be seen...including your teammates and will randomly cause a level wide 5-second earthquake. Great for family reunions. For a Level 3 Kamikazee, once 31+ grenades and 100+ health have been reached, a countdown warning starts. The Kamikazee must use apocalypse or get the grenade count below Apocalypse level (31+ grenades) before the countdown (30 seconds) ends or he/she will self-destruct. Type "suicide" in the console to commit suicide or bind it to a key. In order to perform a Quad or Apocalypse suicide the kamikazee must also have a positive score. But be careful, If you have a hair trigger and keep blowing your self up for no particular reason you will start losing points. Each time you suicide 3 times in a row without killing or hurting an enemy you lose a point
+
+***the damage caused by suicide is based on the number of grenades  you are carrying. Here is the chart and requirements:
+
+                    If you have a score greater than zero:
+
+                    Damage = # of Grenades * 5
+
+                    * 4 if greater than 10 grenades and health is greater than 74 (Quaded)
+                    * 2 if greater than 30 grenades and health is greater than 99 and is a level 3 Kamikazee (Apocalypse)
+                    (Ex. An apocalypse with 50 grenades does 2000 damage)
+                     (#of gren *5 (normal) *4 (quaded) *2 (apoc)= 50*5*4*2=2000)
+
+                    Damage Radius = # of Grenades * 5
+                    * 8 if greater than 30 grenades and health is greater than 99 and is a level 3 Kamikazee (Apocalypse)
+                    (Ex. An apocalypse with 50 grenades has a 2000 damage radius)
+
+                    If your score is zero:
+
+                    Damage = 100
+                    Damage Radius = 100
+
+
+***The Kamikazee can lay detpipes. These remotely triggered bombs can ruin the enemy's day real quick. Use the grenade launcher key to switch between detpipes and regular grenades (normally the #6 key). Only the grenade launcher can deploy detpipes.
+
+***At level 2 the Kamikazee gains cluster grenades. Cluster grenades use 5 grenades per shot. When cluster grenades explode they split into four new grenades that fire into the air.The command "cluster" will switch between cluster grenades and normal grenades for the grenade launcher.
+
+***Kamikazee's do not get hurt by their own splash damage from the grenade launcher. They still get hurt from hand grenades and cluster grenades. All other grenades fired from the grenade launcher, including detpipes, do not harm the Kamikazee due to splash damage at any level.
+
+Kamikazee Strategy
+^^^^^^^^^^^^^^^^^^
+       The Kamikazee has many different ways to kill. The primary method you should use is suicide. This is the most effective way of taking out groups of invading or defending enemies. When going on the attack, lead your team. If there is a large force defending, clear them out with an apocalypse so that your buddies can get through. If you don't have apocalypse, pick a target and quad suicide on them. Always have grenades . Lots of em. If you are attacking by yourself, bypass defenders and try to get inside the base. The enemy captain should be your primary target. If you don't see the captain, take out the bodyguard so that the lasers are destroyed. You shouldn't waste the long trip to the enemy base just to take out a lowly defender. Always try to get inside before suiciding. If you are close to self-destructing, use the apocalypse on the first enemy you see. A good way to get more time in the enemy base with apocalypse is to gather just enough grenades so that you only need a few for apocalypse. When you reach the enemy base have a teammate drop some grenades for you. Your apocalypse time will start there instead of all the way back at your base.
+       If you decide to go for the flag you can pretty much forget about suiciding. When you get the flag, don't stop to fight for anything. You don't have much armor, or none if you are female. A good way to get baddies off your ass is to lob detpipes straight up in the air when you are running so that they fall behind ya. Wait a sec or two then blow them up. You can also set up detpipes somewhere close to the exit before you actually go in after the flag. When you grab the flag, head straight for your detpipes. If anyone is following they will have to go through them. Just set them off as they approach . you'll be laughing all the way to your base.
+       Playing Kamikazee on defense is more than just suiciding at the first sight of an enemy. You need to use that pea brain of yours. Set up detpipes first. Deploy them in a wide pattern and cover the main entrance to your base or the flag. Drop some grenades next to where you will be camping. These will be your apocalypse grenades. These will last only 30 seconds but continue to keep a supply on the ground. Make sure you have 30 grenades after your detpipes have been deployed. You will have to go get more but it will be worth it. Now just wait. When the enemy comes through blow your detpipes and immediately grab those extra grenades beside you. You should be in apocalypse mode now. Use this on any one that got through your detpipes. Just remember that apocalypse kills everyone...including your teammates. If you drop to below zero frags you will not be able to use apocalypse.
+
+Kamikazee Promotions
+^^^^^^^^^^^^^^^^^^^^
+Level 1		Max ammo for the grenade launcher
+Level 2		Can use cluster grenades, and grenade launcher range is doubled
+Level 3		Can use Apocolypse
+
+Kamikazee Commands
+^^^^^^^^^^^^^^^^^^
+detpipe		Explodes your detpipes
+detmode	Toggles detpipes on and off
+autorewire	Toggles proximity rewire on and off
+suicide		Explodes all grenades in your possession
+cluster		Toggles between cluster grenades and normal grenades
+Skill Commands
+^^^^^^^^^^^^^^
+skill1	Commits suicide with different degrees of damage radius based on genade/health count (suicide)
+skill2	Detonate all deployed detpipes (detpipe)
+skill3	Switch to launch detpipes from the grenade launcher (detmode)
+
+------------------------------------------------------------------------------
+                                   The Nurse
+------------------------------------------------------------------------------
+
+		Male		Female
+Firepower	Weak		Weak
+Range		Short		Short
+Accuracy	Low		Low
+Armor		50		25
+Speed		Fast		Fast
+Jump		Med		High
+Weight		Light		Light
+Skills		Med		Med
+
+
+General Information
+^^^^^^^^^^^^^^^^^^^
+        This self-healing class can take the best the enemy can give and be ready for more in a few seconds. With plenty of life, flash grenades, and a machine gun in hand nothing can stop her...umm.... I mean him/her.
+
+The Nurse has the following characteristics:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***The Nurse can use the grappling hook.
+
+***The nurse cannot use turrets
+
+***Nurses are self-healing every 5 seconds
+
+***They can heal teammates to full health by touching them with the grapple
+
+***The nurse has flash grenades. Those familiar with TF Quake will understand how annoying these rascals can be. The flash grenade will explode one second after thrown, or if they hit the enemy...best place in my opinion. You will be informed if you momentarily blinded the enemy. The enemy must be looking at the flash grenade in order to be blinded unless a super flash grenade was used. Super flash grenades have triple the blinding range and do not require the enemy to be looking at them to be blinded. OHHH! My Eyes! The effects wear off after about two seconds. The blinding effect can be immediately cured by:
+A. Jumping into some lava B. Jumping into some water.... You make the choice.
+
+***A Nurse can poison health using "poison". Once activated, this chick.... umm I mean guy/gal can infect the enemies health supply and instead of giving that amount of health it will take away twice that amount. DOH! Grab that juicy megahealth.... I dare ya! If the poison didn't kill you it will cause disorientation for ten seconds. To poison enemy health, first turn on poison with "poison" then all health touched will be poisoned. Poison uses ten cells for each health poisoned. You can not poison your own teammates. A teammate will see a message saying that they cannot use the health if a team nurse has poisoned it. A team nurse can disinfect poisoned health by running over a poisoned health with the "poison" off. This will cost ten cells for each antidote applied.
+
+***A Nurse can also poison a player using the blaster. When a Nurse has poison active it will cause the blaster to shoot poison blasts. These blasts have a trail so you can easily tell the Nurse is shooting poison. Each poison blast costs 5 cells. When hit by a poison blast, you will be hurt the same as normal blaster fire and you will become disoriented for 5 seconds.
+A level 3 Nurse can use the healing device to remotely heal any teammate no matter where they are located.
+
+Nurse Strategy
+^^^^^^^^^^^^^^
+       Nurses are more powerful than you would expect them to be. Nurses are best used on offense. Take advantage of the nurse's speed. Don't fight toe to toe with someone when you could be running home with the key. Light armor and a machine gun won't provide much help against a rocket launcher. You should get in and get out. If you do manage to get into trouble, use your flash grenades. Flash grenades are a great weapon if used properly. Chunk a couple into a room before you go in. This is especially effective with the super flash grenades. Move fast while the effect lasts. If you are being chased throw them up in the air while you are running. This should blind anyone behind you; your speed will do the rest. If you have to fight, run around and let your health regenerate. Return fire, then run some more. Unless cornered, you have a good chance of surviving using this strategy.
+       When possible, nurses should work closely with infiltrators. Team up with one when going on the attack. Let the infiltrators open enemy doors for you, then you can go in and poison health to your hearts content. Remember that it costs ten cells for each health poisoned. Make sure you have plenty of cells before you leave base or just use the enemy's cells to poison. The infiltrator will be stealing ammo and laying decoy grenades while you leave poisoned treats for the enemy. With this combo, you could render an enemy supply room completely useless.
+       A nurse should be listening for any call for help from teammates. You are the team medic. I know that this job sometimes falls to the wayside when compared to getting the enemy key. When you can, you should always render medical assistance to those in need of it. Also, be alert to any teammates that are getting poisoned. If you see this, immediately go to all team supply rooms and apply the antidote. You could lose a lot of friends if you do not help.
+
+Nurse Promotions
+^^^^^^^^^^^^^^^^
+Level 1	Max ammo for machine gun and best armor
+Level 2	Nurse starts with grenades and super flash grenade capability
+Level 3	Gains healing device that allows them to heal from a remote location
+
+Nurse Commands
+^^^^^^^^^^^^^^
+heal		Displays menu for healing device
+flashmode	Switches to flash grenades
+poison		Turns poison ability on and off
+
+Skill Commands
+^^^^^^^^^^^^^^
+skill1	Toggles poison mode on and off (poison)
+skill2	Activates the healing device for a level 3 nurse (heal)
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+
+
+				BotS General Playing Information
+------------------------------------------------------------------------------
+	The Battle of the Sexes mod became reality when one individual (Spinoza) with vision, saw something more than just another Quake mod. This individual saw an opportunity to make an awesome game even better. With the release of Quake II and it's code comes with it a whole new realm of possibilities....enter Battle of the Sexes.
+
+
+I. Introduction to General Play
+
+II. Objectives
+	a. Capturing the Flag
+	b. Fair Teams
+	c. Individual Scores
+	d. Kill the Enemy Captain
+	e. Promotions
+	f. Demotions
+	g. Destroying the Enemy Promotion Key
+	h. Impeachment
+
+III. Special Game Items
+	a. Tracker
+	b. Grapple
+	c. Proximity grenades
+	d. Detpipes
+	e. Turrets
+	f. Alarms
+	g. Lasers
+	h. Decoy Promotion Key
+	i. Decoy grenades
+	j. Healing device
+	k. Cluster Grenades
+	l. Radio
+
+IV. General Gameplay Features in BotS
+	a. Automatic Script Execution
+	b. Menu System
+	c. The Mystatus Display
+	d. Exploding Grenades
+	e. Powerup Items
+	f. Bleeding
+	g. Environment Suit Protection
+	h. Skill Commands
+	i. Rank Information When Talking
+	j. Mute and Unmute commands
+	k. The Kill Command
+	l. Voting
+	m. Quad Rally
+	n. Respawning
+	o.Custom Wavs
+------------------------------------------------------------------------------
+
+
+I. INTRODUCTION
+
+This manual provides and explains important game play information. We have divided the information into two separate manuals for ease of use. If you feel that something is missing or that something should be added, please let us know so we can make the changes if needed.
+------------------------------------------------------------------------------
+
+II. OBJECTIVES (Scoring)
+
+------------------------------------------------------------------------------
+	a. Capturing the Flag
+
+	The object of any game is to win. In this mod the objective is no different. To win your team has to score points. To score points you have to meet certain objectives....number one is capturing the flag. To capture the flag there are certain conditions that have to exist:  If you are on the female team then your flag is blue. If you are on the male team your flag is red. So if you are on the blue team (female) then you want to go get the red flag.
+      To capture the flag, you must bring the enemy flag to your team's capture pad. The capture pad is a hexagonal shaped pad that will glow in your team's color. In some maps there is a special capture pad that both teams can use. This pad changes it's color every 10 seconds, and must be glowing your team's color in order for you to capture. Bring the enemy flag back to the goal and your team will get two points and a promotion point. If your flag is at base when you capture, your team will get three points and two promotion points.
+On some older maps and CTF maps capturing the flag is not as easy as just getting it and bringing it back to your base (pad). Your flag also must be there. To capture the flag simply touch the flag you are holding to your flag when it is at base. If your flag is not on the pad then someone from the opposite team has it. To get your flag back you must kill the person who is running around with it. Type "flagstatus" (identifies who has your flag) or "locateflag" (identifies who has your flag and how far away it is) in the console for important flag information. When your team's flag is out in the open return it to base simply by touching it. If it's the other team's flag then grab it up and take it back to your base...hopefully your flag will be there also.
+	When all has gone well and you have done everything right then special music will play (its the music from the final level when you go into the secret area with the programmers pics). Also your team will get either two or three points for capturing the flag. The team, not the individual, with the most points at the end of the game wins.
+
+***NOTE****
+Sometimes on certain levels with lava a player carrying the flag will die in the lava. Never fear Spinoza is here. Spinoza has made certain that the flag will reappear if this occurs.
+
+***NOTE****
+If a team captures the enemy flag 3 times in a row then the opposite team gets a "Quad Rally." This allows the team to re-group and maybe get a capture. What the hell were ya doin anyway?
+
+***NOTE****
+Promotion points are automatically returned to a team for the following situations:
+	When a player leaves the game, or rejoins one promo point is returned to the team for each level of the exiting player (e.g. a level 1 player returns 1 point, a level 2 player returns 2 points (not 3), and a level 3 player returns 3 points (not 6)).
+	When a player at level 1 switches classes, he takes his promo with him (becomes level 1 in new class). When a player at level 2 or 3 switches classes, he becomes level 1 in the new class and returns 1 (from level 2) or 2 (from level 3) promo points to the team.
+------------------------------------------------------------------------------
+
+	b. Fair Teams
+
+    The game has a balancing system to insure that one team does not unfairly outnumber the other, this is called the Fair Teams option. When fair teams is enabled, anytime one team outnumbers the other by 2 or more players, the larger team will no longer be able to pick up the enemy flag, and a message will be sent to all players of the game stating that the teams are unfair.
+------------------------------------------------------------------------------
+
+	c. Individual Scoring
+
+    Even though the winner of the game is decided by the highest team score, you can still veiw an individual player's score using the command "cmd help". This score is based on the following items:
+1 pt  = Killing the enemy Captain
+1 pt  = Taking a stripe from an enemy
+1 pt  = Killing an enemy flag carrier
+1 pt  = Returning the flag
+1 pt  = Destroying the enemy promotion key
+1 pt  = Taking the enemy flag from the enemy base
+1 pt  = Capture the flag without your flag being at home base
+2 pts = Capture the flag with your flag being at home base
+
+You can only get one of the following points on a single kill:
+1 pt  = For each enemy kill where enemy is close to your flag
+1 pt  = For each enemy kill where you are close to your flag
+1 pt  = For each enemy kill where you are close to a teammate carrying the enemy flag
+
+Bodyguards will get a point for each person saved
+
+	You can also veiw how many frags an individual has with the command "cmd help2"
+      You can also veiw how many flag captures an individual has with the command "cmd help2"
+------------------------------------------------------------------------------
+
+	d. Kill the Enemy Captain
+
+	The Captain is the leader of the team. Without him/her the team suffers. You know that old saying..."chop off the head and the body will die." (Copyright General Schwarzkopff 1991). Well the same applies here. Kill the enemy Captain and your team gets one point and a promotion point. If the Captain was carrying the promotion key, run over it and it will be destroyed.....
+------------------------------------------------------------------------------
+
+	e. Promotions
+
+	Promotions are very important in BotS. Promotions do not give you points but they do help your team achieve the objective..... scoring (capturing the flag or killing the enemy Captain). To receive or deliver promotions your team must have a Captain. Captains can award promotions after his/her team captures the enemy flag. For each capture your team gets, and each time your team kills the enemy Captain, the Captain gets 1 or 2 promotion points to promote a teammate to the next level depending on the person to be upgraded. If a teammate is level 1 then it will take two promotions to upgrade them to level 2. If the teammate is level 2 then it will take three promotion points to upgrade them to level 3. If the level (map) has a goal that the flag must be brought back to then the team will receive one promotion point if their flag is not at base and two promotion points if it is. If the level (map) does not have goals to return the flag to, then each capture will give the Captain two promotion points to give out. The Captain also has the choice of saving promotions (letting them build up) and then issuing multiple promotions at a time. Who and when team members get promoted is up to the Captain. I know everyone wants to get promoted first but the Captain, being the team leader, must determine which promotions will benefit his team the most and which can wait until later. If the Captain needs defense then he/she would most likely benefit promoting a bodyguard. Since the bodyguards have lasers, proximity grenades, and can protect against Kamikazee attacks this would probably be the best bet. If the Captain is more worried about offense then the soldiers, Infiltrators or berzerkers might be the best choice.  If you are not helping the team then you may be the last to be promoted. It's all up to the Captain. Nothing is worse than some guy/gal screaming they need a promotion just because they captured. That's great!!! But think about the big picture before thinking about yourself. If the Captain is in anyway good, they will recognize this and reward you sooner or later. Just don't nag about promotions...it could make you wait longer...especially if I'm Captain.
+	The team must protect the Captain. If the Captain dies while carrying the promotion key then he/she will drop the promotion key (looks like a glowing red or blue skull depending on which team you are on). It is your job as a team member to guard this key with your life. You will not be able to pick it up (only a Captain can pick up his/her own promotion key). Use the "locatepromo" to find out the distance to your Captain's promotion key, if it has been dropped. This will also tell you who your Captain is if he/she is carrying the promotion key. If the enemy team touches this key then the key will be destroyed resulting in your entire team losing a promotion level (unless the key was destroyed by an enemy infiltrator). If the Captain that lost the promotion key recovers it then promotions remain. If the enemy runs over it then the person that destroys the other teams promotion key gains a promotion to the next level. Now if you have been promoted and you die then you keep your promotion. The only way to lose promotions is for the Captain to die, lose the promotion key and have it destroyed by the other team, for you to switch classes or from you being demoted by an enemy, or by being demoted by the Captain. It should be every team members objective to kill the enemy Captain when they get the chance. Doing so will demote the entire enemy team one level if you can destroy the promotion key. If you let the enemy team continue to score and get promotions it could spell disaster for your team. Every promotion the enemy gets, the more powerful they become. On the other hand it should also be every team members objective to protect your own Captain. So, you say you like those rapid fire rockets and all that extra ammo? Well if you want to keep them you had better be watching your Captain's ass. Losing your Captain to the enemy is not only embarrassing but its a big blow to your offensive and defensive capabilities. If you see a distress call from your Captain make sure you attend to his or her needs before you go off on your own. BotS is a team game. If you are not a team player then you might consider looking else where.
+	The Captain will now always be the same level as the lowest player on his/her team. The Captain's rank will change dynamically. For example, if someone new joins then his/her rank will drop to 0 until that person is promoted. If everyone is at level 2 except for one person at level 1. Then that level 1 person destroys the enemy promotion key and gets promoted to level 2, the Captain will also be promoted to level 2 since none of the players are lower than level 2. The Captain's level is checked every ten seconds so the change may not happen instantly.
+
+***NOTE****
+You can see the number of unused promotion points for your team on the "mystatus" screen next to your level
+
+***NOTE****
+The class of the player is displayed in the promotion menu
+------------------------------------------------------------------------------
+
+	f. Demotions
+
+	Demotions can occur in 3 ways:
+1).Your promotion key is destroyed
+2).Your Captain uses the "demote" command to demote you.
+3).You get "stripped", You are running along as a level 3 soldier...killing everything in your path...then suddenly you are demoted to level 2. What the @#$! just happened? When you are level 2 or higher and you get killed by an enemy that is level 0...you get demoted one level and they get promoted one level. Unfair you say? Well if you are level 2 or higher and you get killed by a level 0 enemy then you deserve more than a demotion...you deserve a good kick in the ass. Don't worry you can not be demoted past level 1. Remember to enjoy your promotion...or you will be a grunt with the rest of us.
+
+***NOTE****
+Only a direct normal kill will cause you to lost a stripe... Grenades, Lasers, Invincibility, Quad Damage, etc. will not cause you to lose a stripe.
+
+***NOTE****
+If you drop below zero (0) frags you will automatically be demoted to level zero (0).
+------------------------------------------------------------------------------
+
+	g. Destroying the Enemy Promotion Key
+	If an enemy destroys your promotion key you lose a promotion level. However, if an Infiltrator destroys the promotion key, you won't lose a promotion level but you will lose any promotion points you had in reserve. Basically, an Infiltrator steals the unused promotions from your team. Destroying the enemy promotion key also gives you a promotion level! If the Infiltrator is already at Level 3 then the Infiltrator's team will also get two promotion points. In both cases, if an enemy touches your promotion key you will lose all of your unused promotion points.
+------------------------------------------------------------------------------
+
+	h. Impeachment
+
+	Impeachment is just as the name suggests. If the entire team agrees that the current Captain is a loser and should be removed, then they can impeach that person. 70% of a team needs to vote to impeach a Captain before it will take effect. Once 70% have typed "impeach" in the console the Captain will be booted and will not be able to rejoin as Captain. At this time a new Captain should be chosen. The former Captain can join any other class except for Captain.
+------------------------------------------------------------------------------
+
+III. SPECIAL GAME ITEMS
+
+    There are certain items in the game that do very cool and clever stuff. Since new items are being added all the time we will list these items here as they become available.
+------------------------------------------------------------------------------
+
+
+	a. Tracker
+
+	The tracker is a device used to tell all the vital statistics for all players in the vicinity. To use the tracker, simply type "tracker" in the console or bind it to a key. This command is very useful for the Captain. He/she can use this device to see if there is a enemy nearby. I would worry about the closeness of an enemy before I would worry about his or her statistics. Not all classes can use the tracker. Only the Captain and the Sniper can use the tracker. Each time you use the Tracker a single cell is used.
+------------------------------------------------------------------------------
+
+	b. Grapple
+
+	The grapple is an ingenious device used to get to the highest of places. This device shoots a laser beam at whatever your aiming it at and then pulls you to that point. Great for getting to Sniper points or setting up ambushes. To use the grapple simply type "use hook" in the console or change weapons with the / key. You'll know its grapple because of the way it looks.. Some classes can use the invisible grapple which can not be seen by the enemy.  You can also hit the enemy with your grapple. Although your primary weapon would be better you can use the grapple as a weapon also. Hitting the enemy with your grapple will cause 30 points of damage then the grapple will shut off. The grapple does cost cells for each use. Depending on the class and the gender you have selected, this will vary.
+------------------------------------------------------------------------------
+
+	c. Proximity Grenades
+
+	Proximity grenades look and explode just like regular grenades except that they only go boom when an enemy passes near them. Throw them like any other grenade and just wait for the enemy to come by. Proximity grenades can also be thrown on walls and will stick to them with great effect. You can not stick proximity grenades on doors. Only the Captain and bodyguard classes have proximity grenades. A maximum of six proximity grenades can be deployed at once. The proximity grenades will self-destruct after one minute (4 minutes for level 3 Captain) or when the person who deployed them dies, switches teams or switches classes. Contrary to popular belief, proximity grenades do not go off if a teammate runs near them. They will go off if the teammate actually steps or touches the proximity grenade.
+
+***NOTE****
+Keep in mind a Kamikazee can rewire proximity grenades
+------------------------------------------------------------------------------
+
+	d. Detpipes
+
+	Detpipes are a Kamikazee specialty. Using the grenade launcher, the Kamikazee can deploy detpipes and lay in wait for some unsuspecting sucker to come walking along. The detpipes are remotely triggered by the Kamikazee using the "detpipe" command. To detonate the detpipes type "detpipe" in the console or bind it to a key. Only six detpipes can be deployed at once. To switch between detpipes and regular grenades hit the #6 key or whatever key you have binded for the grenade launcher or use the "detmode" command. The detpipes will self-destruct when the person who laid them dies, switches classes, or switches teams.
+------------------------------------------------------------------------------
+
+	e. Turrets
+
+	Ahhhh, turrets. What beautiful weapons of destruction these can be. These babies fire rockets three times more powerful than your standard rockets. Of course someone has to be the deliverer of this death. To use a turret simply hop aboard and fire as you regularly would. You have to have rockets to use the turret. Once on the turret you can not dismount until all rocket ammo has been exhausted or you have been killed. Only certain classes can use the turret. The Sniper, Infiltrator, Kamikazee and Nurse can not use the turrets.. Currently there are only 2 levels on Spinoza's server that have turrets. Low G BotS and Outlands are the levels with turrets. Hopefully more new user maps will be made with these incorporated if possible.
+
+***NOTE****
+You can leave the turret by moving backwards and pressing a key bound to "exitturret", otherwise you will automatically be stopped from using the turret when you run out of rockets.
+------------------------------------------------------------------------------
+
+	f. Alarms
+
+	Alarms are devices used for warning your team when an enemy is approaching, or leaving with your flag. Depending on where the Sniper has deployed them this warning could give your team enough time to gather and repel the incoming attack. When an alarm is triggered it will display the alarm triggered (if more than one has been deployed) and the class/name of the intruder on both the Sniper's screen and the Captain's, if the enemy who triggers your alarm is carrying your flag, it will display a special flagalarm message set by the sniper. Since Snipers are the only class that can deploy alarms, it would be wise to have one on your team...as if they were hard to find. To deploy a alarm, first you have to be a Sniper, secondly you have to be close to a wall. Alarms can only be attached to walls. If it says you're not close enough to a wall then guess what genius, move closer to a wall !!!! To deploy the alarm type "alarm" in the console. It takes 2 seconds to set an alarm. A maximum of three alarms can be deployed by a Sniper. You must have 50 cells to build a alarm....you know the little green glowing things you've never had a use for.....well now ya do. When the Sniper that set the alarms changes classes or teams, the alarms he set will self destruct. The alarms no longer self-destruct when the Sniper dies.Snipers can name their alarms. This is useful for instantly knowing where the alarm is. To name a alarm use the "alarm1 &lt;name&gt;", "alarm2 &lt;name&gt;", and "alarm3 &lt;name&gt;". To name a flagalarm use the "flagalarm1 &lt;name&gt;", "flagalarm2 &lt;name&gt;", and "flagalarm3 &lt;name&gt;". Example: I want to name an alarm "bridge alarm" well this is what I would type.... alarm1 bridge alarm. That's it. So if the alarm was triggered it would look like this: "Bridge alarm was tripped by: Soldier Pain." You do not have to be near the alarm to name it. You can name the alarms before or after you deploy them.
+	Snipers and Captains can now quickly relay the last alarm message to all team members by using the "sendalarm" command. Type "sendalarm" in the console or bind it to a key to send the last alarm message to your team.
+
+***NOTE****
+The enemy can not hear the alarms he/she has triggered. He/she might see the alarm attached to the wall and avoid it.
+
+***NOTE****
+Infiltrators will NOT set off your alarms
+------------------------------------------------------------------------------
+
+	g. Lasers
+
+	Hmmm...remember those bright shiny, almost hypnotic beams of light in the single player game that killed you instantly when you touched them? Well guess what....their baaaaacccckkkkk!!!!! WOOO I love these things. Anyway, yes these were in the single player but now they have a much more devious and gruesome purpose. KILLLLL the enemy. Well ok the purpose is the same but now you have or I should say the bodyguard (bodyguard is the only class that can deploy lasers) has the fun job of deploying these things and turning them off and on to his delight.  To set these limb removers simply move close to a wall (god  I sense a dejavue) and type "laser" in the console or bind it to a key. It takes 2 seconds to place a laser. Now, the laser doesn't become active until you turn it on. To turn the laser on type "laseron" in the console. If you don't like where the laser ended up just type "laserkill" in the console to destroy the laser. Keep in mind you'll need 50 more cells to build another one. OK, so your having fun with your new toy and everyone but the other team is laughing.....ooops....boom!!! You left your laser on too long. Yes, lasers can only be left on for 15 seconds before they self-destruct (30 seconds for level 3).  You should have turned off your laser. To turn off your laser simply type "laseroff" in the console or bind it to a key.   Well, if your really upset go get another 50 cells (it takes 50 cells to build a laser) and make another.  Be advised only two lasers can be deployed at a time...sorry wouldn't want ya to have too much fun.....Whadya think this was a game or something?
+
+***NOTE****
+ The laser will also self-destruct when the bodyguard that deployed it dies.  After each use the laser must cool off.
+
+***NOTE****
+  Lasers cannot be deployed on moveable objects such as doors and elevators.
+------------------------------------------------------------------------------
+
+	h. Decoy Promotion Keys
+
+	Another nifty toy for the Bodygaurd is the Decoy Key, This looks exactly like the Captain's promotion key except that when touched by an enemy it explodes in thier face! Bodyguards can only have one Decoy Key deployed at anyone time, and they will self destruct after 1 minute.
+------------------------------------------------------------------------------
+
+	i. Decoy Grenades
+
+	Decoy grenades are an Infiltrator only weapon. These grenades look like a weapon that an enemy can use but when they try and pick it up, it explodes, similar to the proximity grenade. The Infiltrator can not specify what item the grenade will look like. It is a random selection from the items available. Remember, deploying four decoy grenades in one location defeats the purpose. Unless your enemy is a complete idiot, they will avoid them. Sometimes though, five rocket launchers are just to hard to pass up and you will get a kill. To deploy a decoy grenade, simply throw a grenade like you normally would. A maximum of four decoy grenades can be deployed at one time. The decoy grenades will self-destruct after 30 seconds.
+------------------------------------------------------------------------------
+
+	j. Healing Device
+
+	This device is used for long range healing by the Nurse. The Nurse can use this device to heal teammates from any location on the map. Unlike the grapple heal utilized by the Nurse, the healing device can heal a teammate from any where. This gives the Nurse a much more complex and diversified mission. Since a Nurse can not be every where, every time members need help...the healing device can be used to reach out and touch someone when they need it the most. The healing device costs 50 cells per use
+------------------------------------------------------------------------------
+
+	k. Cluster Grenades
+
+	Cluster grenades are available only to the Kamikazee at level 2 upgrade. Fired with the grenade launcher, cluster grenades break into four separate grenades that fire into the air and detonate at random times.A single cluster grenades costs 4 regular greandes to fire.
+------------------------------------------------------------------------------
+
+	l. Radio
+
+	Radio messages and Shouts are now possible. The following lists all of the messages and their commands for quick access:
+
+	RADIO ALERTS for Team: You can turn the radio on and off using the "radioon" and "radiooff" commands. By default the radio is turned on. Use "team" to bring up a menu of the sounds:
+
+Message to Offense
+[team1] "I have the enemy's flag. I need cover."
+[team2] "Offense regroup at location designate Area A."
+[team3] "They're killing us! Get their promotion key!"
+
+Message to Defense
+[team4] "The perimeter's been breached. Tighten inner defense."
+[team5] "Alert: Enemy has tripped an alarm."
+[team6] "Inner defense needs backup. ASAP."
+[team7] "Heavy enemy force inbound. Defense - look sharp."
+[team8] "Our captain dropped the promotion key. Cover it until his return."
+[team9] "Enemy has flag. Intercept at once."
+[team10] "Enemy has level two Infiltrator. Be on alert."
+
+Message to Team
+[team11] "I'm hit! Medic, report to our flag area ASAP!"
+[team12] "Alert: Incoming text transmission."
+
+Message to Captain
+[team13] "Promotion key safety in jeopardy. Relocate it immediately."
+[team14] "Captain - requesting permission for next level promotion, sir (ma'am)."
+
+	There are three channels available on your radio. By default the channel is set to "channelteam":
+"channeloffense" - You will only hear radio messages to the offense
+"channeldefense" - You will only hear radio messages to the defense
+"channelteam" - You will hear all radio messages sent to the team, offense and defense
+
+	SHOUTS: Use "shout" to bring up a menu of the sounds:
+[shout1] "Stay here and guard this spot!"
+[shout2] "Cease fire! I'm on your team!"
+[shout3] "Hey! You have their flag!"
+[shout4] "You there! Follow me!"
+[shout5] "Medic! Over here!"
+[shout6] "Infiltrator, open these doors!"
+
+	You can only shout or use the radio every 4 seconds. This means after shouting or using the radio, you must wait at least 4 seconds before using it again. A message will appear telling you to "Wait to shout again..." or that the "Radio is still in use..." if you try to spam.
+------------------------------------------------------------------------------
+
+IV. GENERAL GAMEPLAY FEATURES IN BATTLE OF THE SEXES
+------------------------------------------------------------------------------
+
+	a. Automatic Script Execution
+
+	When you change classes or select a class from the menu a script will automatically be executed for that class. In order to have the scripts work properly you need to make sure of two things. a) make sure ...+set game "bots"... is on the command line when starting Quake2 or that "bots" is the game folder selected when starting from Gamespy. b) Have the following scripts in the "bots" directory:
+captain.cfg
+bodyguard.cfg
+Sniper.cfg
+soldier.cfg
+berzerker.cfg
+Infiltrator.cfg
+Kamikazee.cfg
+Nurse.cfg
+
+	If for some reason the class script fails to execute, you can have the game automatically execute the script using the command "myclass".
+
+	If you do not have these files do not worry. The game will still work fine. I will be adding customs scripts to the website soon so look there for more information.
+
+	Also, by default a file called "bots.cfg" will be executed if it exists. This allows you to centrally locate many bindings in a single file if you like. Make sure the "bots.cfg" file is in your "bots" directory.
+------------------------------------------------------------------------------
+
+	b. Menu System
+
+	A complete menu system for all the commands supported by Battle of the Sexes is accessible by typing "menu" in the console or binding it to a key. This main menu has links to all the menus in the system. Here are shortcut commands to access the different menus if you do not want to use the main menu:
+teammenu - Will display a menu of team commands
+classmenu - Will display a menu of commands specific to your current class
+generalmenu - Will display a menu of general commands
+changeclass - Will display a menu of the available classes in Battle of the Sexes
+
+	Remember to use the "[" and "]" keys to scroll through the menu and use the "ENTER" key to select an entry. Also, a command called "killmenu" will attempt remove any active menu on the screen instead of selecting cancel. This is bound to the [BACKSPACE] key by default. If for some reason any menu gets stuck on the screen, you can clear it by typing "menu" in the console and then selecting "Cancel" from the menu.
+------------------------------------------------------------------------------
+
+	c. The Mystatus Display
+
+	The command "mystatus" will display some very helpful info for you when used. The following information will be given:
+Name: Your Name!
+Team: The Team you are currently playing on
+Class: What Class you are playing
+Keys: Whether or not you are carrying the enemy flag
+Level: Your current Promotion Level
+Promo Pts: The current amount of Promotion Points available to your team
+Class Info: Status information pertaining to your current class as follows:
+	Captain - Displays number of proximity grenades left
+	Bodyguard - Displays laser status and number of proximity grenades left
+	Sniper - Displays cloaked status and number of flares left
+	Berzerker - Displays time until next quad berzerk
+	Infiltrator - Displays disguise status, and number of decoy grenades left
+	Kamikazee - Dispays number of detpipes left
+	Nurse - Displays health of Captain
+
+Here is an example:
+
+
+      Player Status
+      ============================
+      Name  :      Lee Oswald[RPD]
+      Team  : [2]              Men
+      Class : [2]        Bodyguard
+      Keys  :                 None
+
+        Level : 0  Promo Pts : 0
+
+
+       Your laser is cooling off
+  You have 4 proximity grenade(s) left
+------------------------------------------------------------------------------
+
+	d. Exploding Grenades
+
+	Exploding grenades will now cause nearby grenades to explode also.
+------------------------------------------------------------------------------
+
+	e. Powerup Items
+
+	Powerup Items are now stored in the inventory before use. You can only carry one of a particular powerup item. For example, you pick up a quad and now have "1 Quad Damage" in inventory. If you tried to pick up another quad damage you could not. Use the powerup item like anything else you would use in your inventory. For example, "use Quad Damage" or highlight the Quad Damage in the inventory and hit the ENTER key (this will work as long as the ENTER key is bound to "invuse"). (Note: when you first pick up the item it is made active in your iventory, so hitting the key bound to "invuse" will immediately use the powerup item)
+
+***NOTE****
+Quad Damages also only last for 15 seconds in BotS, 2 Quads used simultaneously will give you 30 seconds.
+------------------------------------------------------------------------------
+
+	f. Bleeding
+
+	If you fall below 75 health you will begin to bleed and make pain noises. The worse you are hurt the more you will bleed and scream in pain!
+------------------------------------------------------------------------------
+
+	g. Environment Suit Protection
+
+	Environment suit gives much more protection against lava now. Lava still does small amounts of damage if you stand in it, but you can search lava much more easily if you have an environment suit on. Captains can create environment suits.
+------------------------------------------------------------------------------
+
+	h. Skill Commands
+
+	Skill commands decrease the number of bindings necessary. There are three skill commands called "skill1", "skill2" and "skill3". Here is what they do for each class:
+
+Captain
+skill1 = Displays the promotion menu (promote)
+skill2 = Displays the create item menu (create)
+skill3 = Uses the tracking device (tracker)
+
+Bodyguard
+skill1 = Turns lasers on (laseron)
+skill2 = Turns lasers off (laseroff)
+skill3 = Activates decoy mode (decoy)
+
+Sniper
+skill1 = Toggles the laser sight on and off (sight)
+skill2 = Sends the most recent alarm message to the rest of the team (sendalarm)
+skill3 = Uses the tracking device (tracker)
+
+Soldier
+skill1 = Activates split mode rockets for level 3 soldiers (splitmode)
+skill2 = Uses a Quad damage powerup if it exists in the inventory (use quad damage)
+
+Berzerker
+skill1 = Activates rage mode (rage)
+skill2 = Uses a Quad damage powerup if it exists in the inventory (use quad damage)
+
+Infiltrator
+skill1 = Toggles stealing of ammo on and off (steal)
+skill2 = Displays the disguise menu for a level 3 infiltrator (disguise)
+
+Kamikazee
+skill1 = Commits suicide with different degrees of damage radius based on grenade/health count (suicide)
+skill2 = Detonate all deployed detpipes (detpipe)
+skill3 = Switch to launch detpipes from the grenade launcher (detmode)
+
+Nurse
+skill1 = Toggles poison mode on and off (poison)
+skill2 = Activates the healing device for a level 3 nurse (heal)
+------------------------------------------------------------------------------
+
+	i. Rank Information When Talking
+
+	When you type a message to your team or to everyone, your rank will be displayed before your name:
+Level 0 - Grunt
+Level 1 - Private
+Level 2 - Sergeant
+Level 3 - Lieutenant
+Team Captains will always have "Captain" before their name regardless of the level.
+------------------------------------------------------------------------------
+
+	j. Mute and Unmute Commands
+
+	The "mute" command allows you to mute a player so that you will not get any typed messages or radio messages from them. The "unmute" command will allow you to hear the player again. You can have up to 3 people muted at once.
+------------------------------------------------------------------------------
+
+	k. The Kill Command
+
+	The kill command still works in BotS, But... After hitting kill you will still be alive for 5 seconds in which time you still play as normal, and can still be killed by an opponent. After you respawn you will have a 5 second delay before you can perform any actions.
+------------------------------------------------------------------------------
+
+	l. Voting
+
+	Using the "vote" command players can vote on which map they would like to play next. Once more than half of the players have voted the map with the most votes after 60 seconds will be selected. A countdown of the number of seconds remaining before the voting ends is displayed to each player. Either the Men or Women must have a score of at least 10 points before a new map can be voted on. This will prevent people from voting on maps immediately after a new one has been loaded. Also at the normal end of the current game, whichever map had recieved the most votes previously will be played next. All voting is reset after 5 minutes.
+
+***NOTE****
+Only when there are 5 or more players does the rule of not being able to vote until a team scores 10 points kicks in. This allows small group of players or a single person to switch through maps by voting for them without having to score 10 points.
+------------------------------------------------------------------------------
+
+	m. Quad Rally
+
+	If a team gets three flag captures in a row without the other team getting a single capture, then the losing team will get what is called a Quad Rally. This gives every player on the loasing team a Quad powerup. In addition to that, Quad Rally gives a team a single level promotion. However, the team cannot be promoted by a Quad Rally past level 2. This promotion takes place whether or not the team have a Captain.
+------------------------------------------------------------------------------
+
+	n. Respawning
+
+	When a player respawns he/she is always invulnerable for 5 seconds. This allows them to exit the respawn room when there is a respawn camper. Or to try and take out a respawn camper. Also all players respawn with thier class weapons (Refer to the Class Strategy Guide for lists), and a minimum amount of ammo (depending on their promotion level).
+
+	o. Custom Wavs
+
+	Custom ".wav" files can now be played using the following commands (replace {wavfile} with the name of the file. For example, "play_captain dropit.wav"). The ".wav" files must be located in the "sound" directory off of your "bots" directory or "baseq2" directory. If you do not have a "sound" directory you will need to create one. :
+
+play_captain {wavfile} - Plays the sound to your team Captain
+play_bodyguard {wavfile} - Plays the sound to all bodyguards on your team
+play_sniper {wavfile} - Plays the sound to all snipers on your team
+play_soldier {wavfile} - Plays the sound to all soldiers on your team
+play_berzerker {wavfile} - Plays the sound to all berzerkers on your team
+play_infiltrator {wavfile} - Plays the sound to all infiltrators on your team
+play_kamikazee {wavfile} - Plays the sound to all kamikazees on your team
+play_nurse {wavfile} - Plays the sound to all nurses on your team
+play_team {wavfile} - Plays the sound to all of your teammates
+play_capturer {wavfile} - Plays the sound to your teammate that last captured the flag
+play_killer {wavfile} - Plays the sound to the player that just killed you (you must be dead)
+play_autoid {wavfile} - Plays the sound to the player currently in your autoid HUD display
+
+All of these sounds use the "play" console commands on the client's end so they will only be heard by the player on their machine. This does not work like the radio and shout commands.
+
+***NOTE****
+You can toggle custom wavs on and off using the "customwav" command. By default they are turned on.
+
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+
+                             Battle of the Sexes
+                               Quick Reference
+
+------------------------------------------------------------------------------
+Class		Weapon	Special Console Commands
+------------------------------------------------------------------------------
+Captain		BFG 10K		tracker
+					sendalarm
+					promote
+					demote
+					droppromote
+					create
+					scout
+					scoutall
+					proxmode
+					warning
+
+Special Abilities:
+Proximity grenades, Can use turrets,  Grappling hook at level 2, create at level 1, able to open enemy doors while level 0
+------------------------------------------------------------------------------
+Bodyguard	Super Shotgun		laser
+					laserkill
+					laseron
+					laseroff
+					decoy
+					proxmode
+
+Special Abilities:
+Proximity grenades, Grappling hook, Can use turrets
+------------------------------------------------------------------------------
+Sniper		Railgun			tracker
+					sight
+					alarm
+					alarmkill
+					flare
+					sendalarm
+					alarm1 [name]
+					alarm2 [name]
+					alarm3 [name]
+					flagalarm1 [name]
+					flagalarm2 [name]
+					flagalarm3 [name]
+
+Special Abilities:
+Silencer, Invisible grappling hook, cloaking, silent footsteps
+------------------------------------------------------------------------------
+Soldier		Rocket Launcher	splitmode
+					split1
+					split2
+					split3
+					conquer
+
+Special Abilities:
+Faster rockets, Can use turrets,immune to own splash damage at level 3
+------------------------------------------------------------------------------
+Berzerker	Chaingun		rage
+
+Special Abilities:
+Every 60 to 90 seconds (for female/male respectively) the Berzerker class drops all armor and gets quad damage, Can use turrets
+------------------------------------------------------------------------------
+Infiltrator	Hyperblaster		steal
+					disguise
+					decoymode
+
+Special Abilities:
+Does not set off sniper alarms, Does not sound alarm when taking enemy flag, Decoy grenades, Invisible grappling hook, Does not make footstep sounds or any sound when exiting/entering water
+------------------------------------------------------------------------------
+Kamikazee	Grenade Launcher	suicide
+					detmode
+					detpipe
+					cluster
+'
+Special Abilities:
+Can rewire proximity grenades (takes 2 secs to rewire), Grappling hook, Apocolypse at level 3
+------------------------------------------------------------------------------
+Nurse		Machinegun		poison
+					heal
+					flashmode
+
+Special Abilities:
+Self-Heals 20 points every 5 seconds, Grappling hook, Can heal teammates by touching them with grapple, Flash grenades, Can poison health and fire poison blasts using the blaster
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+Female					Male
+Jumps Higher				Jumps Lower
+200 Max Health / Starts with 150	150 Max Health / Starts with 100
+Can only use Jacket Armor		Can use all armor
+Carries less ammo than men.
+Run faster than men
+Rapid fire Blaster			Rapid fire Shotgun
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+Other Commands
+------------------------------------------------------------------------------
+Menu
+	changeclass		Will display a menu of the available classes in Battle of the Sexes
+	classmenu		Will display a menu of commands specific to your current class
+	generalmenu		Will display a menu of general commands
+	menu			Access the main BotS menu
+	teammenu		Will display a menu of team commands
+
+Help Commands
+	gender			Displays a gender based message
+	modhelp		List all game aliases
+	helpoff(Default)		Turn help messages off
+	helpon			turn help messages on
+
+General
+	exitturret		Allows you to leave a turret
+	kill			Kills yourself (for all classes)
+	mute			Allows you to mute a player. This prevents you from seeing anything 				they type or whenever they use the radio. You can have up to three 				people muted at once.
+	shout			Displays the shout message menu
+	unmute			Allows you to unmute a player
+	shout1 - shout6		Quick access commands for shout messages
+	vote			Vote on the next level to load
+	modstatus		displays what method of map rotation is being used along with the name of the current map and 				next map when appropriate.
+	welcome		Redisplays the welcome message
+
+Custom Sounds
+	play_captain {wavfile} 		Plays the sound to your team Captain
+	play_bodyguard {wavfile}	Plays the sound to all bodyguards on your team
+	play_sniper {wavfile}		Plays the sound to all snipers on your team
+	play_soldier {wavfile} 		Plays the sound to all soldiers on your team
+	play_berzerker {wavfile}	Plays the sound to all berzerkers on your team
+	play_infiltrator {wavfile} 		Plays the sound to all infiltrators on your team
+	play_kamikazee {wavfile} 	Plays the sound to all kamikazees on your team
+	play_nurse {wavfile}		Plays the sound to all nurses on your team
+	play_team {wavfile}		Plays the sound to all of your teammates
+	play_capturer {wavfile}		Plays the sound to your teammate that last captured the flag
+	play_killer {wavfile}		Plays the sound to the player that just killed you (you must be dead)
+	play_autoid {wavfile}		Plays the sound to the player currently in your autoid HUD display
+	customwav 			Toggles the use of custom wavs (You dont hear any)
+
+Teamplay
+	autoid			Automatically displays the person you are looking at on your screen
+	channeldefense	You will only hear radio messages to the defense
+	channeloffense		You will only hear radio messages to the offense
+	channelteam		You will hear all radio messages sent to the team, offense and defense
+	cmd help		Displays the game scoreboard
+	cmd help2		Displays the list of frags
+	cmd help3		Displays the list of flag captures
+	dropkey/dropflag	Drops the flag you are holding (if any)
+	impeach		Votes to impeach your current team's Captain
+	keystatus		Displays the status of all the flags in the game (dropped, at base or 				who has it)
+	flagstatus		Same as keystatus
+	locatekey		Displays the location of your flag. Either the enemy carrying it or the distance you are from it.
+	locateflag		Same as locatekey
+	locatepromo		Displays the location of your Captain's promotion key. Either the 				Captain carrying it or the distance you are from it.
+	messagemode2	You can now send messages to just your team. Just type "messaegmode2" 				in the console or bind it to a key. The message you type will only 				display to your teammates. You will notice your name in parenthesis.
+	myclass		Executes your class script file. For example, if you are a soldier, typing "myclass" in the console 				will execute "soldier.cfg"
+	mystatus		Displays your name, team, class and key you are holding (if any),and 				number of promotion points your team has,and smoe class specific info.
+	playerid		Displays the same information as "mystatus" for the player you are 				looking at
+	radioon			Turn your radio on
+	radiooff			Turn your radio off
+	rejoin			Displays the team selection menu
+	team			Displays the team radio message menu
+	team1 - team14		Quick access command for team radio messages
+	teamscore		Displays the team scoreboard
+
+Class Specific
+	alarm			Place an alarm on the wall
+	alarm1 [name]		Assigns a descriptive name to alarm #1
+	alarm2 [name]		Assigns a descriptive name to alarm #2
+	alarm3 [name]		Assigns a descriptive name to alarm #3
+	flagalarm1 [name]	Assigns a descriptive name to flagalarm #1
+	flagalarm2 [name]	Assigns a descriptive name to flagalarm #2
+	flagalarm3 [name]	Assigns a descriptive name to flagalarm #3
+	alarmkill		Remove all alarms
+	cluster			Toggles between cluster grenades and regular grenades.
+	conquer		Enables a soldier to conquer an enemy capture pad
+	flare			Throws a flare
+	heal			Activates the healing device
+	decoymode		Switches to decoy grenades for an Infiltrator
+	detmode		Switches to detpipes for a Kamikazee
+	detpipe			Detonates all deployed detpipes
+	disguise		Displays the disguise menu for a Level 3 Infiltrator
+	flashmode		Switches to flash grenades for a Nurse
+	laser			Place a laser on the wall
+	laserkill			Destroys a laser
+	laseroff			Turns a laser off
+	laseron			Turn a laser on
+	proxmode		Switches to proximity grenades for a Captain or Bodyguard
+skill1/skill2/skill3		Activates class specific skill. This helps to reduce bindings. See the 				General Play documentation for more information.
+split1, split2, split3		Changes the way split rockets fire from tight grouping to wide spread
+	splitmode		Switches to split rockets for a Level 3 Soldier
+	suicide			The Kamikazee can suicide and detroy players nearby
+	tracker			Displays the distance and status of nearby players
+	warning			Toggles the "you are carrying the promo key" warning for captains
+Player Classes
+captain		class1	 Switch to Captain class on next respawn
+bodyguard	class2	 Switch to Bodyguard class on next respawn
+sniper		class3	 Switch to Sniper class on next respawn
+soldier		class4	 Switch to Soldier class on next respawn
+berzerker	class5	 Switch to Berzerker class on next respawn
+infiltrator	class6	 Switch to Infiltrator class on next respawn
+kamikazee	class7	 Switch to Kamikazee class on next respawn
+nurse		class8	 Switch to Nurse class on next respawn
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+
+                                      Battle of the Sexes
+                                              FAQ
+------------------------------------------------------------------------------
+
+
+    Welcome to the FAQ section of Battle of the Sexes or BotS for short. The BotS mod was created by Jesse Herrera aka Spinoza. Due to the many special features this mod has incorporated, we are supplying the users a quick reference for the most frequently asked questions and concerns of you the gamer. We understand that a new modification of the Quake2 code can be confusing and with all the new features and options that are available in BotS, we want to make sure that you are satisfied. If we are not online to help you, you can always come here and get the answer. If you don’t find the answer here then please feel free to e-mail either myself or Spinoza and we would be happy to answer your question and add it to the faq.
+------------------------------------------------------------------------------
+
+Q. How do I talk in multiplayer?
+A. To type a message to other players in a game simply hit the "T" key and type the message you wish to send then hit enter. If this does not work then you need to "bind" a key to "messagemode" for example you would type in the console "bind t messagemode", and this will allow you to use the "T" key as explained above. You can also type without hitting the "T" key by bringing down the console and typing normally while pressing enter after each message, but do this with caution because it this is also where you can enter commands to the game, and if you accidentally include the name of a command as the first word in your message, quake will try to execute that command instead. For example if the message you were trying to type was "Kill that SOB!!!", instead of sending the intended message, the game will instead execute the "kill" command, which causes you to commit suicide!
+------------------------------------------------------------------------------
+
+Q. How do I use team talk?
+A.  To use team talk (your message is only displayed to the members of your team) simply type "cmd sayteam" and the message you want to send.
+
+Example: you would type this, cmd sayteam where is the red key?
+
+This is all done in the same sentence. Now to make things easier, since BotS is a team player game, you might consider binding special messages to a key. For example, you want to tell your team that the enemy is coming but you don’t want the enemy team to know that you are aware of this. Since you’ll be using this message a lot, you don’t want to have to type it in every time like you did in the above example. Here’s how it’s done:
+
+Example: type this in console: bind b cmd sayteam Incoming enemy attack!!!!
+
+Now "b" is just an example. You can bind any key that you want to use for this team message. You can modify this anyway you want, just make sure the key that you bind the message to is not one that you need for playing. If so you will bind over the current function of that key and that function will be lost until you bind the correct command back for that key.
+
+Another thing you can do is to bind a key to "messagemode2".
+For example: type this in the console:    "bind y messagemode2"
+This would allow you to use the key you have bound just like the "messagmode" key above, except it only sends messages to your team!
+------------------------------------------------------------------------------
+
+Q. What is binding a key anyways?
+A. Well that is a perfectly good question. Most of us take for granted that a lot of new users have just begun their Quake experience with Quake2. Most people familiar with Quake and all the mods that were made for it understand the binding command. Simply put, binding is assigning a key to do a special function. For example when you press "J" in quake2, you salute. Well, to make that key do that there was a pre-designed bind that was assigned to that key so that every time you press it, you will salute. Well it’s no different in BotS. Binding a key is telling Quake2 what you want the specific key to do when you press it. I will give you an example.
+
+Say you want to bind a key so that you can use the grappling hook in BotS. You want this key to be assigned so that every time you press it your grappling hook comes up. Well here is how you would do that:
+
+Bind h cmd use hook
+
+Very simple huh? Yeah it really is. You can use this with anything you want to bind a command to.
+
+For more info on binding keys and creating scripts in Quake2 try this page http://www.planetquake.com/f176/
+(Fahrenheite176)
+------------------------------------------------------------------------------
+
+Q. I binded over a key that I needed, how do I get it back?
+A. Well, this is a common occurence. I have done it myself a few times. There are a couple of ways you can solve this problem. First, you can go to the options menu and select reset defaults at the bottom of the menu. This will restore everything to the way it was when you bought the game. Doing this though will delete all of your custom binds and you will have to re-bind them again. What I suggest is to make a backup copy of your config file after you reset defaults. Once you have done this place this copy in a temp file or save it to disk. If you ever need to find out a bind that you lost you can go back to this config and open it. In it you will find every command that was originally loaded. Simply find the correct bind in the config and the command, then rebind your key in the game with that command.
+------------------------------------------------------------------------------
+
+Q. What is the console? People keep saying this but I just don’t know what it is.
+A. The console is the place where you put in all your special commands. You can also type here without hitting the "T" key. To bring the console down simply press the "~" key. To exit the console hit the "~" key again.
+------------------------------------------------------------------------------
+
+Q. How do I use the grappling hook?
+A. The grappling hook is a tool or weapon depending on how you use it. It’s main purpose is to get you up high or wherever you want to go. To use the grappling hook, type "cmd use hook" in the console, bind it to a key, or hit the / key to switch weapons until it brings up the grappling hook.
+
+Example: bind h cmd use hook
+------------------------------------------------------------------------------
+
+Q. How do I switch classes within the game?
+A. Well Spinoza has made that easy for you. If you are familiar with BotS then you probably know all the different classes that are available to you. To change classes simply type the name of the class that you want to be in the console. A message will come up saying that after you die you will become the class you selected. If you are not familiar with all the classes that are available then please see the Class Strategy Guide on this site for more details on the classes you can choose from.
+------------------------------------------------------------------------------
+
+Q. How do I switch teams in BotS?
+A. To switch teams in BotS simply type "rejoin" in the console. It will be the same as if you just joined the server. Re-select your gender(sex) and the class you want to be.
+------------------------------------------------------------------------------
+
+Q. I can’t remember all the different classes in the game. How can I see all the classes to choose from?
+A. To bring up the class selection list type "help" in the console and a list of the class aliases will be displayed.
+------------------------------------------------------------------------------
+
+Q. Why does everyone look the same to me? I can’t tell the difference between the enemy and my teammates.
+A. If you can not tell the difference between the enemy and your teammates then you need to download the new skins that are available. If you do not have these new skins everyone will look like a male grunt. The file name of the skins is "client.zip" on the downloads page.
+------------------------------------------------------------------------------
+
+Q.  How do I capture the enemy key?
+A. You can find out how to capture the key and more by reading the objectives section in the General play manual.
+------------------------------------------------------------------------------
+
+Q. What do I do with the key once I have it?
+A. All the answers to this question are in the General play manual. Go Read It!!
+------------------------------------------------------------------------------
+
+Q. How can I find out who took my key?
+A. To find out the status of both keys in a game type "cmd keystatus" or "cmd locatekey" in the console.
+------------------------------------------------------------------------------
+
+Q. Why are there grenades laying around everywhere?
+A. Certain classes can lay proximity grenades. These grenades will only go off when the ENEMY gets close to them or a teammate steps on them. Proximity grenades will not damage your teammates but they will explode after one minute.
+------------------------------------------------------------------------------
+
+Q. Everyone is voting for a level but I don’t know how to vote.
+A. To vote for a level that you want to play simply type "vote" in the console. Then exit the console and hit the number of the level that you want. Now just because you voted for a level doesn’t mean that you are going to get it. It’s a majority decision that decides.
+------------------------------------------------------------------------------
+
+Q. I just joined and I can not get my menu to disappear after I select a team and a class.
+A. Well, with every new mod there come some bugs. This is a bug that Spinoza is currently working on. The best way to solve this problem is to type "menu" in the console and select "cancel".
+------------------------------------------------------------------------------
+
+Q. How do I use detpipes?
+A. Detpipes can only be used by the kamikazee. The command for detpipes is "cmd detpipe". For more info on detpipes and the kamikazee refer to the Kamikazee Strategy manual.
+------------------------------------------------------------------------------
+
+Q. How do I set alarms/lasers?
+A. Read the special game items section in the general play manual on this site.
+------------------------------------------------------------------------------
+
+Q. I tried to set a laser but it says "too far from wall." What does this mean?
+A. Well I should send ya to the Strategy Guide but this is short and sweet. "too far from wall" means your too damn far from a wall. Jeesh!! Move closer to a wall and try again. Lasers can only be attached to walls, floors, ceilings or structures.
+------------------------------------------------------------------------------
+
+Q. I tried to deploy a alarm but it says "too far from wall." What does that mean?
+A. Don’t even ask!!!
+------------------------------------------------------------------------------
+
+Q. I tried to mount a turret but I can’t. What is the problem?
+A. Well the number one problem is you. To mount a turret you would simply jump up on it and fire as you normally would but only certain classes can use turrets. To find out which classes can and can not use turrets refer to the Class Strategy Guide.
+------------------------------------------------------------------------------
+
+Q. I want to use grapple but it says "out of item grapple." What does this mean?
+A. Ok, this is a question that pops up a lot. Well, there are only certain classes that can use grapple. I will list the ones that can not. Captain and Soldier classes can not use grapple. Every other class can use grapple. Note: after level 2 upgrade the captain can use the grapple.
+------------------------------------------------------------------------------
+
+Q. Why do I get stuck when I respawn on a teammate?
+A. Well this is another one of those mysterious bugs that are floating around in the BotS mod. Sometimes you can just move and get away. Other times you are permanently stuck to your buddy. The best bet if this happens is to just type "kill" in the console. This will kill you and free your teammate. Hey, this is a team effort!!! When this bug is smashed it will be posted.
+------------------------------------------------------------------------------
+
+Q. Why can’t I pick up that armor that I want?
+A. Depending on the gender(sex) that you have chosen and the class you have selected, this will vary. Only certain genders and classes can wear certain armor. To find out the complete details, refer to the Gender Strategy Guide in the DOCS section of this site.
+------------------------------------------------------------------------------
+
+Q. Why can’t I pick up that weapon that I want?
+A. Well, BotS has specific classes that use specific weapons. If the class you have chosen is not capable of using that weapon, then it will remain on the ground. For more information on the classes and weapons of each class, refer to the Gender Strategy Guide in the DOCS section of this site.
+------------------------------------------------------------------------------
+
+Q. How do I use the sniper laser sight?
+A. Type "sight" in the console (refer to the Sniper Strategy Guide for more info)
+------------------------------------------------------------------------------
+
+Q. How do I turn the sniper sight off?
+A. To turn the sniper sight off type "sight" in the console
+------------------------------------------------------------------------------
+
+Q. What is that weird music that plays every now and then?
+A. That’s the sound of victory. When the funky music plays, that means your team or the enemy team has just captured the key.
+------------------------------------------------------------------------------
+
+Q. Why does my armor disappear sometimes when playing as a berzerker?
+A. The berzerker gets a Quad power-up every 60 to 90 seconds (depending on gender) and drops all armor when this happens.
+------------------------------------------------------------------------------
+
+Q. How do I get a promotion?
+A. Promotions are explained in detail in the general play manual on this site.
+------------------------------------------------------------------------------
+
+Q. Who is the console guy that comes on every now and then?
+A. That is Spinoza himself....the creator of the bots mod.
+------------------------------------------------------------------------------
+
+Q. I know my class can use grapple but now it says not enough cells?
+A. The grapple costs cells now. Each class and gender use a certain amount of cells each time they use grapple.
+------------------------------------------------------------------------------
+
+Q. How do I promote someone?
+A. Use "cmd promote" or bind it to a key, then select someone using the bracket [] keys, then hit enter.
+------------------------------------------------------------------------------
+
+Q. I was a level 2 soldier and all of a sudden I got demoted...what happened?
+A. If you are level 2 or higher and are killed by a level 0 enemy, you will be demoted one level. You can not be demoted under level 1.
+------------------------------------------------------------------------------
+
+Q. What do promotions do?
+A. Promotions give you special abilities depending on the class you are playing as. The higher the level you are the more powerful you become. Read the promotions section of the General Play Manual for complete details.
+------------------------------------------------------------------------------
+
+Q. How do I create items when I am captain?
+A. Use the "cmd create" or bind it to a key, then use the brackets to select an item, then hit enter.
+------------------------------------------------------------------------------
+
+Q. Why is there an enemy that looks like they are on my team?
+A. The infiltrator class can use the disguise command when they are level 3. This enables them to look like the enemy for 30 seconds.
+------------------------------------------------------------------------------
+
+Q. Why doesn't my captain ever promote me?
+A. Well there are many reasons why this could happen. The captain might not know how to promote someone, they might not like you, they might have a different strategy in mind and you are not part of it, or they might be saving promotions for a different person or you might not deserve one. Ask them if they know how to promote and ask them kindly if they could give you a promotion when they get a chance. If you deserve one and they know how to give...you should get one soon.
+Another reason may be that he cannot promote you, you must have a positive score in order to recieve promotions.
+------------------------------------------------------------------------------
+
+Q. How do I drop the promotion key?
+A. You can drop the promotion key somewhere safe by using "cmd droppromote"
+------------------------------------------------------------------------------
+
+Q. I have killed a lot of enemies but why is my score still a 0?
+A. Scores are not based on frags, this is a Team Game! For more info on what scores are based on see the General Refrence Manual
+
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
