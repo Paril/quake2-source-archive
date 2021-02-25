@@ -1,0 +1,25 @@
+The ACE Bot is a product of Steve Yeager, and is available from
+the ACE Bot homepage, at http://www.axionfx.com/ace.
+
+This program is a modification of the ACE Bot, and is therefore
+in NO WAY supported by Steve Yeager.
+
+This program MUST NOT be sold in ANY form. If you have paid for 
+this product, you should contact Steve Yeager immediately, via
+the ACE Bot homepage.
+
+------------------
+
+Commands :
+
+sv addbot - Add a random bot.
+sv addbot <name> - Add a bot with name <name>.
+sv addbot <name> <skin> - Add a bot with name <name> and skin <skin>.
+   The class of the bot is determined by the skin,
+   for example : "sv addbot Skippy idg3/base" will add a Axe-class bot.
+sv addbot <name> <skin> <blue|red> - Add a bot for CTF and Red vs Blue Team games.
+sv removebot <name> - Remove a bot by name
+sv savenodes - Updates pathing data and saves bots current knowledge of level.
+sv acedebug <on|off> - Turns on ACE's debugging messages. 
+   Shows when stuck, bot's thought process, node placement and linkage information.
+
