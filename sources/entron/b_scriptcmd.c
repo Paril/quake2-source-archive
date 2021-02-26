@@ -37,7 +37,7 @@ void script_touch(edict_t *ent, edict_t *other)
 			{
 			if (!other->targetname)
 				return;
-			if (strcmpi(ent->scr.commands[cmd].ParamString[0], other->targetname))
+			if (Q_stricmp(ent->scr.commands[cmd].ParamString[0], other->targetname))
 	         return;
 			}
 		}
@@ -68,7 +68,7 @@ void script_block(edict_t *ent, edict_t *other)
 			{
 			if (!other->targetname)
 				return;
-			if (strcmpi(ent->scr.commands[cmd].ParamString[0], other->targetname))
+			if (Q_stricmp(ent->scr.commands[cmd].ParamString[0], other->targetname))
 	         return;
 			}
 		}
@@ -98,7 +98,7 @@ int script_pain(edict_t *ent, edict_t *other)
 			{
 			if (!other->targetname)
 				return 0;
-			if (strcmpi(ent->scr.commands[cmd].ParamString[0], other->targetname))
+			if (Q_stricmp(ent->scr.commands[cmd].ParamString[0], other->targetname))
 	         return 0;
 			}
 		}
@@ -123,7 +123,7 @@ void script_use(edict_t *ent, edict_t *other, edict_t *activator)
       {
       for (i = 0; i < ent->scr.num_intercepts; i++)
          if (ent->scr.ivec[i].index >= 0)
-            if (!strcmpi(ent->scr.ivec[i].activator, activator->targetname))
+            if (!Q_stricmp(ent->scr.ivec[i].activator, activator->targetname))
                {
                ent->scr.save = ent->scr.index;
                ent->scr.savenextcmd = ent->scr.nextcmd;
@@ -137,7 +137,7 @@ void script_use(edict_t *ent, edict_t *other, edict_t *activator)
       {
       for (i = 0; i < ent->scr.num_intercepts; i++)
          if (ent->scr.ivec[i].index >= 0)          
-            if (!strcmpi(ent->scr.ivec[i].activator, ".client"))
+            if (!Q_stricmp(ent->scr.ivec[i].activator, ".client"))
                {
                ent->scr.save = ent->scr.index;
                ent->scr.savenextcmd = ent->scr.nextcmd;
@@ -151,7 +151,7 @@ void script_use(edict_t *ent, edict_t *other, edict_t *activator)
       {
       for (i = 0; i < ent->scr.num_intercepts; i++)
          if (ent->scr.ivec[i].index >= 0)          
-            if (!strcmpi(ent->scr.ivec[i].activator, ".any"))
+            if (!Q_stricmp(ent->scr.ivec[i].activator, ".any"))
                {
                ent->scr.save = ent->scr.index;
                ent->scr.savenextcmd = ent->scr.nextcmd;
@@ -177,7 +177,7 @@ edict_t * script_activator(edict_t *ent, char *s, int activate)
 			continue;
       if (!x->targetname)
          continue;
-		if (!strcmpi(x->targetname, s))
+		if (!Q_stricmp(x->targetname, s))
          return x;
 	   }
 	return NULL;
@@ -230,7 +230,7 @@ void on_see (edict_t *ent)
             continue;
          if (other->flags & FL_NOTARGET)
             continue;
-         if (strcmpi(other->targetname, s))
+         if (Q_stricmp(other->targetname, s))
             continue;
          if (other->health <= 0)
             continue;
@@ -286,7 +286,7 @@ void AddUse(edict_t *ent, char *activator, int index)
    for (i = 0; i < ent->scr.num_intercepts; i++)
       {
       if (ent->scr.ivec[i].activator[0])
-         if (!strcmpi(ent->scr.ivec[i].activator, activator))
+         if (!Q_stricmp(ent->scr.ivec[i].activator, activator))
             {
             strcpy(ent->scr.ivec[i].activator, activator);
             ent->scr.ivec[i].index = index;

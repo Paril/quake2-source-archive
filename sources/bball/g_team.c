@@ -613,14 +613,14 @@ int UpdateJoinMenu(edict_t *ent)
 
 	if (forcejoin->string && *forcejoin->string)
 	{
-		if (stricmp(forcejoin->string, "red") == 0
-			|| stricmp(forcejoin->string, team1name->string) == 0)
+		if (Q_stricmp(forcejoin->string, "red") == 0
+			|| Q_stricmp(forcejoin->string, team1name->string) == 0)
 		{
 			joinmenu[6].text = NULL;
 			joinmenu[6].SelectFunc = NULL;
 		}
-		else if (stricmp(forcejoin->string, "blue") == 0
-			|| stricmp(forcejoin->string, team2name->string) == 0)
+		else if (Q_stricmp(forcejoin->string, "blue") == 0
+			|| Q_stricmp(forcejoin->string, team2name->string) == 0)
 		{
 			joinmenu[4].text = NULL;
 			joinmenu[4].SelectFunc = NULL;

@@ -1,5 +1,4 @@
 *.ncb
-*.opt
 *.001
 /bin
 /wasm/wasi-sysroot

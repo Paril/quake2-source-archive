@@ -30,9 +30,9 @@ gitem_armor_t combatarmor_info	= { 50, 999, .60, .30, ARMOR_COMBAT};
 gitem_armor_t bodyarmor_info	= {100, 999, .80, .60, ARMOR_BODY};
 // END Teamplay
 
-static int	jacket_armor_index;
-static int	combat_armor_index;
-static int	body_armor_index;
+int	jacket_armor_index;
+int	combat_armor_index;
+int	body_armor_index;
 static int	power_screen_index;
 static int	power_shield_index;
 

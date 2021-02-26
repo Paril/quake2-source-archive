@@ -17,6 +17,9 @@ int meansOfDeath;
 edict_t		*g_edicts;
 
 // BEGIN Teamplay
+int		teamplay;
+int		numberteams;
+
 cvar_t  *scorelimit;
 cvar_t  *teamflags;
 cvar_t	*team1_desc;

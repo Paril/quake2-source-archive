@@ -312,7 +312,7 @@ void camera_enemy(edict_t *ent, edict_t *user)
 			{           
 			if (other->inuse)
 	         if (other->monsterinfo.run && other->targetname)
-		         if (!strcmpi(ent->target, other->targetname))
+		         if (!Q_stricmp(ent->target, other->targetname))
 			         found = 1;
 			if (!found)
 	         other++;

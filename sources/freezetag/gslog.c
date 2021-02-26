@@ -26,12 +26,15 @@
  *
  */
 
+#ifdef ENABLE_GSLOG
 static int fWasAlreadyOpen = 0;
 static char     *pPatch     = NULL;     /* PatchName - Should never change */
+#endif
 
 int sl_Logging( game_import_t  *gi,
                 char           *pPatchName )
 {
+#ifdef ENABLE_GSLOG
     int fFileOpen = sl_OpenLogFile( gi );
 
     if( fFileOpen && !fWasAlreadyOpen )
@@ -51,11 +54,15 @@ int sl_Logging( game_import_t  *gi,
     }
 
     return fFileOpen;
+#else
+	return 0;
+#endif
 }
 
 void sl_GameStart( game_import_t    *gi,
                    level_locals_t    level )
 {
+#ifdef ENABLE_GSLOG
     if( sl_Logging( gi, pPatch ) )
     {
         // log name of map
@@ -64,11 +71,13 @@ void sl_GameStart( game_import_t    *gi,
         // start counting frags
         sl_LogGameStart( gi, level.time );
     }
+#endif
 }
 
 void sl_GameEnd( game_import_t      *gi,
                  level_locals_t      level )
 {
+#ifdef ENABLE_GSLOG
     if( sl_Logging( gi, pPatch ) )
     {
         sl_LogGameEnd( gi, level.time );
@@ -76,6 +85,7 @@ void sl_GameEnd( game_import_t      *gi,
 
         fWasAlreadyOpen = 0;
     }   
+#endif
 }
 
 
@@ -85,6 +95,7 @@ void sl_WriteStdLogDeath( game_import_t     *gi,
                           edict_t           *inflictor,
                           edict_t           *attacker )
 {
+#ifdef ENABLE_GSLOG
     /* StdLogging for Deathmatch only */
     if( deathmatch->value )
     {
@@ -272,12 +283,14 @@ void sl_WriteStdLogDeath( game_import_t     *gi,
                  level.time,
                  -1 );
     return;
+#endif
 }
 
 void sl_WriteStdLogPlayerEntered( game_import_t     *gi,
                                   level_locals_t     level,
                                   edict_t           *ent )
 {
+#ifdef ENABLE_GSLOG
     if( sl_Logging( gi, pPatch ) )
     {
         sl_LogPlayerConnect( gi,
@@ -285,12 +298,14 @@ void sl_WriteStdLogPlayerEntered( game_import_t     *gi,
                              NULL,
                              level.time);        
     }
+#endif
 }
 
 void sl_LogPlayerDisconnect( game_import_t      *gi,
                              level_locals_t      level,
                              edict_t            *ent )
 {
+#ifdef ENABLE_GSLOG
     // GSLogMod Start: Player disconnected
     if( sl_Logging( gi, pPatch ) )
     {
@@ -298,6 +313,7 @@ void sl_LogPlayerDisconnect( game_import_t      *gi,
                           ent->client->pers.netname,
                           level.time );
     }
+#endif
 }
 
 

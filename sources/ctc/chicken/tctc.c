@@ -141,7 +141,9 @@ static int Chicken_SelectTeam(void *data, int itemId)
 	ent->client->team = team;
 	gi.bprintf(PRINT_HIGH, "%s has joined %s team\n", ent->client->pers.netname, teamDetails[team].colour);	
 
+#ifdef STD_LOGGING	
 	sl_LogPlayerTeamChange( &gi, ent->client->pers.netname, teamDetails[team].colour, level.time);
+#endif
 	
 	// If the models OK then they can join now
 	if (ent->client->modelOk)

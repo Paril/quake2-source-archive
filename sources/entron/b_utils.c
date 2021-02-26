@@ -15,6 +15,19 @@ any snipet of code you might find interesting.
 
 #include "g_local.h"
 
+int  node_hops, max_hops;
+
+int			num_nodes;		
+int			max_nodes;
+int			num_ambushes;	
+int			max_ambushes;
+
+map_node_t     *g_nodes;
+ambush_node_t  *g_ambushes;
+
+script_file_t script_file[25];
+int script_index;
+
 qboolean CloseEnough (vec3_t spot1, vec3_t spot2);
 qboolean reacheable (map_node_t *node1, map_node_t *node2);
 qboolean reacheable_vector(vec3_t self, vec3_t other);

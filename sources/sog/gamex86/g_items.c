@@ -74,12 +74,12 @@ gitem_armor_t dbluearmor_info  = {200,200, .50, .60, ARMOR_D_BLUE};
 gitem_armor_t wgreenvest_info = {100,100, .40, .25, ARMOR_W_GREEN};
 gitem_armor_t wbluevest_info  = {200,200, .60, .60, ARMOR_W_BLUE};
  
-static int	q1_green_armor_index;
-static int	q1_yellow_armor_index;
-static int	q1_red_armor_index;
+int	q1_green_armor_index;
+int	q1_yellow_armor_index;
+int	q1_red_armor_index;
 
-static int	d_green_armor_index;
-static int	d_blue_armor_index;
+int	d_green_armor_index;
+int	d_blue_armor_index;
 
 static int	w_green_vest_index;
 static int	w_blue_vest_index;
@@ -90,9 +90,9 @@ gitem_armor_t jacketarmor_info	= { 50,  50, .30, .00, ARMOR_JACKET};
 gitem_armor_t combatarmor_info	= {100, 100, .60, .30, ARMOR_COMBAT};
 gitem_armor_t bodyarmor_info	= {200, 200, .80, .60, ARMOR_BODY};
 
-static int	jacket_armor_index;
-static int	combat_armor_index;
-static int	body_armor_index;
+int	jacket_armor_index;
+int	combat_armor_index;
+int	body_armor_index;
 static int	power_screen_index;
 static int	power_shield_index;
 

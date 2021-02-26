@@ -35,7 +35,7 @@ void SP_info_player_coop(edict_t *self)
 }
 
 
-void SP_info_player_intermission(void)
+void SP_info_player_intermission(edict_t *self)
 {
 }
 

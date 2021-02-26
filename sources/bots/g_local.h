@@ -518,8 +518,8 @@ extern	edict_t			*g_edicts;
 #define crandom()	(2.0 * (random() - 0.5))
 
 //BEGIN Teamplay
-int		teamplay;
-int		numberteams;
+extern int		teamplay;
+extern int		numberteams;
 
 extern	cvar_t	*scorelimit;
 extern	cvar_t	*teamflags;
@@ -840,6 +840,7 @@ void GetChaseTarget(edict_t *ent);
 
 // BEGIN Teamplay
 #include "botsmenu.h"
+#include "botsutil.h"
 // END Teamplay
 
 //============================================================================

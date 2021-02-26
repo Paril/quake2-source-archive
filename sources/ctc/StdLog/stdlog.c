@@ -202,7 +202,7 @@ static void _sl_LogTime( void )
 
 static void _sl_LogDeathFlags( unsigned long dmFlags )
 {
-    fprintf( StdLogFile, "\t\tLogDeathFlags\t%u\n", dmFlags );
+    fprintf( StdLogFile, "\t\tLogDeathFlags\t%lu\n", dmFlags );
 }
 
 static void _sl_LogMapName( char *pMapName )
@@ -310,7 +310,7 @@ static int _sl_MaybeOpenFile( game_import_t  *gi )
 			/* cvars must always have to have unix path names */
 #ifdef _WIN32
             char*   pName    = "ctc\\StdLog.log";
-#else ifdef UNIX
+#else
             char*   pName    = "ctc/stdlog.log";
 #endif
            

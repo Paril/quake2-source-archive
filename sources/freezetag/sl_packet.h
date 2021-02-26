@@ -12,6 +12,7 @@
 **
 ******************************************************************************/
 
+#ifdef ENABLE_GSLOG
 #ifndef __SL_PACKET_H__
 #define __SL_PACKET_H__
 
@@ -71,3 +72,4 @@ extern int sl_DeconstructPacketBytes( PACKET_STRUCT **ppPacketStruct,
 #endif /* __SL_PACKET_H__ */
 
 /* end of file */
+#endif

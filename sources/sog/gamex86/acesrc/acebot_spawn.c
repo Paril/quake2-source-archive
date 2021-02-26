@@ -60,6 +60,7 @@
 #include "..\g_local.h"
 #include "..\m_player.h"
 #include "acebot.h"
+#include "..\g_sogutil.h"
 
 ///////////////////////////////////////////////////////////////////////
 // Had to add this function in this version for some reason.

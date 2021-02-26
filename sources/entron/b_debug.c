@@ -86,7 +86,7 @@ void spawn_nodes()
 
   if ((stream = fopen("Nodes.Log", "w+t" )) == NULL)
      {
-     gi.error("Debug Mode: Cannot open NodeLog file\n");
+     //gi.error("Debug Mode: Cannot open NodeLog file\n");
      return;
      }
   gi.dprintf("NODE DEBUG: [ON]. Saved to Quake2/Nodes.Log\n");

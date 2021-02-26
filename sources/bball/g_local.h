@@ -16,6 +16,8 @@
 #include "g_bball.h"
 #include "g_team.h"
 #include "g_bots.h"
+void ChasecamRemove (edict_t *ent);
+void Cmd_Observer_f(edict_t *ent);
 //M.S.
 
 // the "gameversion" client command will print this plus compile date

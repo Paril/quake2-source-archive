@@ -492,7 +492,7 @@ void DisplayFancyMenu(edict_t *ent)
 	
 	sprintf(pos,
 		"xv 0 yv 24 cstring2 \"%s\" ",		// menu title
-		menu->it);
+		(char *) menu->it);
 
 	pos = my_statusbar+strlen(my_statusbar);
 

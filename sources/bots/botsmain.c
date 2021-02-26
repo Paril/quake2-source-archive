@@ -1,5 +1,6 @@
 // CUSTOM SOURCE FILE
 
+#include <ctype.h>
 #include "g_local.h"
 #include "botsmain.h"
 #include "botsteam.h"
@@ -8,6 +9,29 @@
 #include "botshook.h"
 #include "botsini.h"
 #include "p_light.h"
+
+vote_t   votes[MAX_MAPS];
+int		 nextmap;
+int		 votetotal;
+float	 startvote;
+int		 votemode;		// 1-classic, 2-voting w/ini, 3-sequential, 4-groups
+int		 rotatemode;	// 1-sequential, 2-eliminzation, 3-random
+qboolean logvotes;
+qboolean mapsread;
+
+int		 currentmap;
+int		 nextinseq;
+int		 groupx;
+int		 groupx_count;
+int		 elimx;
+int		 elimx_count;
+int		 randomx;
+int		 randomx_count;
+
+float	 nextwarn;
+float	 startimpeach;
+edict_t	 *earthquake;
+qboolean lights;
 
 void gsmod_Tracker (edict_t *ent);
 void gsmod_Suicide (edict_t *ent);

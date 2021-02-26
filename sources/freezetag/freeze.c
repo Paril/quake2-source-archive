@@ -50,6 +50,10 @@
 #define	mapnohook	0x00000004
 #define	everyone_ready 0x00000008
 
+maplist_t maplist[64];
+int	endMapIndex;
+freeze_t freeze[5];
+
 cvar_t*	item_respawn_time;
 cvar_t*	hook_max_len;
 cvar_t*	hook_rpf;
@@ -309,6 +313,8 @@ qboolean freezeCheck(edict_t* ent)
 	return true;
 }
 
+qboolean IsFemale (edict_t *ent);
+
 void freezeAnim(edict_t* ent)
 {
 	ent->client->anim_priority = ANIM_DEATH;
@@ -378,7 +384,7 @@ void freezeAnim(edict_t* ent)
 	gi.linkentity(ent);
 }
 
-qboolean gibCheck()
+qboolean gibCheck(void)
 {
 	if (gib_queue > 35)
 		return true;
@@ -922,7 +928,7 @@ static void updateTeam(int team)
 	gi.configstring(CS_GENERAL + team, small);
 }
 
-qboolean endCheck()
+qboolean endCheck(void)
 {
 	int	i;
 
@@ -1970,6 +1976,8 @@ static void maintainlinks(edict_t* ent)
 	gi.multicast(ent->s.origin, MULTICAST_PVS);
 }
 
+void SV_CheckVelocity (edict_t *ent);
+
 void hookbehavior(edict_t* ent)
 {
 	edict_t*	targ;
@@ -2393,7 +2401,7 @@ void cmdVote(edict_t* ent)
 	{
 		if (!maplist[i].name)
 			break;
-		if (stricmp(maplist[i].name, s) == 0)
+		if (Q_stricmp(maplist[i].name, s) == 0)
 		{
 			int	needed;
 
@@ -2420,7 +2428,7 @@ static void mapLight()
 	{
 		if (!maplist[i].name)
 			break;
-		if (stricmp(level.mapname, maplist[i].name) == 0)
+		if (Q_stricmp(level.mapname, maplist[i].name) == 0)
 		{
 			switch (maplist[i].light)
 			{
@@ -2464,7 +2472,7 @@ static void mapLight()
 			else
 				lame_hack &= ~mapnohook;
 
-			if (maplist[i].gravity && stricmp(maplist[i].gravity, "0"))
+			if (maplist[i].gravity && Q_stricmp(maplist[i].gravity, "0"))
 				gi.cvar_set("sv_gravity", maplist[i].gravity);
 			else
 				gi.cvar_set("sv_gravity", "800");
@@ -2475,7 +2483,7 @@ static void mapLight()
 	gi.configstring(CS_LIGHTS + 0, "m");
 }
 
-void freezeSpawn()
+void freezeSpawn(void)
 {
 	int	i;
 
@@ -2502,7 +2510,7 @@ void freezeSpawn()
 	gi.configstring(CS_GENERAL + 5, ">");
 }
 
-qboolean freezeMap()
+qboolean freezeMap(void)
 {
 	int	i;
 
@@ -2604,7 +2612,7 @@ qboolean freezeMap()
 			i--;
 			break;
 		}
-		if (stricmp(level.mapname, maplist[i].name) == 0)
+		if (Q_stricmp(level.mapname, maplist[i].name) == 0)
 		{
 			i++;
 			if (i < 63)
@@ -2628,7 +2636,7 @@ qboolean freezeMap()
 		return false;
 }
 
-void cvarFreeze()
+void cvarFreeze(void)
 {
 	item_respawn_time = gi.cvar("item_respawn_time", "20", 0);
 	hook_max_len = gi.cvar("hook_max_len", "1000", 0);

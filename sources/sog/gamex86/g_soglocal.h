@@ -3,11 +3,13 @@
 #include "menu.h"
 
 //For music code
+#ifdef USE_FMOD
 #include "fmod.h"
 
 // Music stuff
 
 FSOUND_STREAM *stream; //define the MPEG
+#endif
 
 void music_init(void);
 void music_play_song(void);
@@ -226,3 +228,5 @@ void Q1_DropBackPack(edict_t *ent);
 void q1_explode (edict_t *self);
 void GenRockExplode(edict_t *ent, vec3_t origin);
 void d_texplode (edict_t *self);  // from m_idg2_cu.c
+
+void ChasecamRemove (edict_t *ent);

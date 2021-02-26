@@ -58,8 +58,7 @@ void tell_node(edict_t *ent);
 void find_node_target(edict_t *ent);
 
 // Navigation info:
-int  node_hops, max_hops;
-
+extern int  node_hops, max_hops;
 
 // BOT:
 qboolean BOT_movestep (edict_t *ent, vec3_t move, qboolean relink);
@@ -118,8 +117,8 @@ void scrBOT_run (edict_t *self, float dist);
 void scrBOT_stand (edict_t *self, float dist);
 
 // Data:
-edict_t *Ent1, *Ent2;
-edict_t *bullet_hole[35];
-int bullet_index;
+extern edict_t *Ent1, *Ent2;
+extern edict_t *bullet_hole[35];
+extern int bullet_index;
 
 #endif

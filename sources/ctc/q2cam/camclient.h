@@ -65,6 +65,5 @@ void PrintEntityList();
 void EnitityListClean();
 sPlayerList *EntityListHead();
 sPlayerList *EntityListNext(sPlayerList *pCurrent);
-sPlayerList *pTempFind;
 
 

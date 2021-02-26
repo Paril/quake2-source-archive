@@ -1,0 +1,4 @@
+-I$src_folder/chicken
+-I$src_folder/q2cam
+-I$src_folder/StdLog
+-I$src_folder

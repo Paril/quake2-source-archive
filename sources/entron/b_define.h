@@ -155,8 +155,8 @@ struct ambush_node_s
 typedef struct ambush_node_s ambush_node_t;
 
 // Topaz:
-map_node_t     *g_nodes;
-ambush_node_t  *g_ambushes;
+extern map_node_t     *g_nodes;
+extern ambush_node_t  *g_ambushes;
 
 struct script_s
 {
@@ -193,6 +193,6 @@ struct intercept_s
 typedef struct script_file_s script_file_t;
 typedef struct intercept_s intercept_t;
 
-script_file_t script_file[25];
-int script_index;
+extern script_file_t script_file[25];
+extern int script_index;
 #endif

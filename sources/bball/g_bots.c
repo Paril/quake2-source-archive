@@ -72,6 +72,8 @@ static qboolean avoid(edict_t *ent)
 	return false;
 }
 
+qboolean SV_movestep (edict_t *ent, vec3_t move, qboolean relink);
+
 void bot_move(edict_t *ent, edict_t *target, vec3_t spot, int movetype)
 {
 	vec3_t	dist, move;
@@ -323,6 +325,8 @@ edict_t *bot_zone_mark(edict_t *ent)
 	return best;
 }
 
+void weapon_bball_steal(edict_t *ent);
+
 void bot_defense (edict_t *ent, edict_t *target)
 {
 	vec3_t	spot, dist, temp, up;
@@ -371,6 +375,8 @@ void bot_defense (edict_t *ent, edict_t *target)
 			shootstate = markup->bot->weaponstate;
 		else if(markup->client)
 			shootstate = markup->client->weaponstate;
+		else
+			shootstate = WEAPON_ACTIVATING;
 
 		if(shootstate == WEAPON_FIRING && ent->groundentity)
 		{
@@ -616,6 +622,7 @@ void bot_looseball(edict_t *ent, edict_t *target)
 }
 
 void PutBotInServer(edict_t *ent);
+void CopyToBodyQue (edict_t *ent);
 
 void bot_respawn (edict_t *self)
 {
@@ -1130,6 +1137,8 @@ void BotEndServerFrames (void)
 //	bot spawning/killing etc.
 //
 //============================================================
+qboolean SP_bball_bot(int Team);
+qboolean Kill_bball_bot(int Team);
 
 void BotEvenTeams(void)
 {
@@ -1260,6 +1269,8 @@ void InitBotResp (gbot_t *bot)
 	bot->resp.enterframe = level.framenum;
 }
 
+void	SelectSpawnPoint (edict_t *ent, vec3_t origin, vec3_t angles);
+
 void PutBotInServer(edict_t *ent)
 {
 	vec3_t	mins = {-16, -16, -24};
@@ -1375,6 +1386,8 @@ qboolean SP_bball_bot(int Team)
 	gi.dprintf("Reached bot limit\n");
 	return false;
 }
+
+char *TeamName(int team);
 
 qboolean Kill_bball_bot(int Team)
 {

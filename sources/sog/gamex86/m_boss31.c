@@ -11,7 +11,7 @@ jorg
 
 
 
-extern SP_monster_makron (edict_t *self);
+void SP_monster_makron (edict_t *self);
 qboolean visible (edict_t *self, edict_t *other);
 
 

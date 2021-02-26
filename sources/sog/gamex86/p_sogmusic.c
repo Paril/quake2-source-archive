@@ -8,6 +8,7 @@
 #define MUSIC_PLAYING	2
 #define MUSIC_PAUSE		3
 
+#ifdef USE_FMOD
 cvar_t *mp3_music;
 
 char CurrentMP3[MAX_QPATH] = ""; 
@@ -15,11 +16,13 @@ char CurrentMP3[MAX_QPATH] = "";
 songinfo songlist[MAXSONGS];
 
 int Music_State = MUSIC_OFF;
+#endif
 
 int ReadSongEntry(FILE *fp, songinfo *entry);
 
 void InitSongList(void)
 {
+#ifdef USE_FMOD
 	FILE *fp;
 	int index =0;
 
@@ -61,12 +64,14 @@ void InitSongList(void)
 	
 	if(fclose(fp))
 		gi.dprintf("ERROR Closing music.cfg\n");
+#endif
 }
 
 
 
 int ReadSongEntry(FILE *fp, songinfo *entry)
 {
+#ifdef USE_FMOD
 	char buffer[MAX_QPATH]  = {0}; 
 	int c;
 	int i=0;
@@ -157,6 +162,9 @@ int ReadSongEntry(FILE *fp, songinfo *entry)
         }    
 	} while((c != EOF) && (FieldsRead <= 1));    
 	return FieldsRead;
+#else
+	return 0;
+#endif
 }
 
 
@@ -164,6 +172,7 @@ int ReadSongEntry(FILE *fp, songinfo *entry)
 
 void PrintSongList(void)
 {
+#ifdef USE_FMOD
 	int i=0;
 	
 	gi.dprintf("#: mapname - filename\n");
@@ -174,20 +183,24 @@ void PrintSongList(void)
 			songlist[i].filename);
 		i++;
 	}
+#endif
 }
 
 qboolean SongListAlive(void)
 {
+#ifdef USE_FMOD
 	if(strlen(songlist[0].filename)) 
 	{
 	return true;
 	}
+#endif
 return false;
 }
 
 
 int FindCurrentSongIndex(void)
 {
+#ifdef USE_FMOD
 	int i=0;
 	qboolean found=false;
 
@@ -207,11 +220,13 @@ int FindCurrentSongIndex(void)
 	{
 		return i;
 	}
+#endif
 	return MAXSONGS;
 }
 
 void music_init(void)
-{	
+{
+#ifdef USE_FMOD
 	if (Music_State == MUSIC_OFF)
 	{
 	
@@ -254,10 +269,12 @@ void music_init(void)
 					Music_State = MUSIC_READY;
 		}
 	}
+#endif
 }
 
 void music_play_song(void)
 {
+#ifdef USE_FMOD
 	int CurrentIndex;
 	
 //	if (dedicated)
@@ -294,10 +311,12 @@ void music_play_song(void)
 			}
 		}
 	}
+#endif
 }
 
 void music_pause_song(void)
 {
+#ifdef USE_FMOD
 	if ((Music_State == MUSIC_PLAYING) || (Music_State == MUSIC_READY))
 		if (stream)
 			if (FSOUND_Stream_Stop (stream))
@@ -305,10 +324,12 @@ void music_pause_song(void)
 				gi.dprintf("Music paused");
 				Music_State = MUSIC_PAUSE;
 			}
+#endif
 }
 
 void music_stop_song(void)
 {	
+#ifdef USE_FMOD
 	if (Music_State != MUSIC_OFF)
 	{	 
 		if (stream) 
@@ -320,10 +341,12 @@ void music_stop_song(void)
 		FSOUND_Close();
 		Music_State = MUSIC_OFF;
 	}
+#endif
 }
 
 void music_sogmov1_hack(void)
 {
+#ifdef USE_FMOD
 	int SongIndex=0;
 
 	qboolean found=false;
@@ -367,4 +390,5 @@ void music_sogmov1_hack(void)
 			}
 		}
 	}
+#endif
 }

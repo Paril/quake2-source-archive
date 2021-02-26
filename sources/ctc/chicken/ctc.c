@@ -1041,6 +1041,8 @@ void ShowGun(edict_t *ent)
 	ent->s.skinnum |= n;
 }
 */
+#include <unistd.h>
+
 // 
 void ShowGun(edict_t *ent)
 {
@@ -1087,7 +1089,7 @@ void ShowGun(edict_t *ent)
 			strcat(model, skin);
 			strcat(model, "\\w_chicken.md2");
 
-			if (_access(model, 2) == 0)
+			if (access(model, 2) == 0)
 				ent->client->gotChickenModel = 1;
 			else
 				ent->client->gotChickenModel = 0;
@@ -2111,7 +2113,7 @@ static void Chicken_ReadIni()
  */
 #ifdef _WIN32
     sprintf(filename, ".\\%s\\%s", game_dir->string, INI_FILE);
-#else ifdef UNIX
+#else
     sprintf(filename, "./%s/%s", game_dir->string, INI_FILE); 
 #endif
 

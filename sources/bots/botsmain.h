@@ -49,6 +49,7 @@ void gsmod_ClearVotes(void);
 void gsmod_SetStats (edict_t *ent);
 int gsmod_NumPlayers(void);
 char *gsmod_TeamColor (int team);
+void gsmod_Killmenu (edict_t *ent);
 qboolean gsmod_BannedIP (char *ip, char *filename);
 qboolean gsmod_PlayerReset (edict_t *ent, qboolean respawn);
 qboolean gsmod_Pickup_Armor(edict_t *ent, char *pickup_name, int armorindex);
@@ -62,28 +63,28 @@ typedef struct
 	char	grouplist[20];
 } vote_t;
 
-vote_t   votes[MAX_MAPS];
-int		 nextmap;
-int		 votetotal;
-float	 startvote;
-int		 votemode;		// 1-classic, 2-voting w/ini, 3-sequential, 4-groups
-int		 rotatemode;	// 1-sequential, 2-eliminzation, 3-random
-qboolean logvotes;
-qboolean mapsread;
+extern vote_t   votes[MAX_MAPS];
+extern int		 nextmap;
+extern int		 votetotal;
+extern float	 startvote;
+extern int		 votemode;		// 1-classic, 2-voting w/ini, 3-sequential, 4-groups
+extern int		 rotatemode;	// 1-sequential, 2-eliminzation, 3-random
+extern qboolean logvotes;
+extern qboolean mapsread;
 
-int		 currentmap;
-int		 nextinseq;
-int		 groupx;
-int		 groupx_count;
-int		 elimx;
-int		 elimx_count;
-int		 randomx;
-int		 randomx_count;
+extern int		 currentmap;
+extern int		 nextinseq;
+extern int		 groupx;
+extern int		 groupx_count;
+extern int		 elimx;
+extern int		 elimx_count;
+extern int		 randomx;
+extern int		 randomx_count;
 
-float	 nextwarn;
-float	 startimpeach;
-edict_t	 *earthquake;
-qboolean lights;
+extern float	 nextwarn;
+extern float	 startimpeach;
+extern edict_t	 *earthquake;
+extern qboolean lights;
 
 // Laser stuff
 

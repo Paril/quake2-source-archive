@@ -12,6 +12,7 @@
 **
 ******************************************************************************/
 
+#ifdef ENABLE_GSLOG
 #include "sl_packet.h"
 
 #include <stdio.h>
@@ -495,3 +496,4 @@ static unsigned char *_sl_Compress( BYTE *pData, DWORD dwSize )
 
 
 /* end of file */
+#endif

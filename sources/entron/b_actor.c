@@ -16,17 +16,17 @@ any snipet of code you might find interesting.
 #include "b_actor.h"
 
 void find_node_hide (edict_t *self);
-void actor_pain (edict_t *self, edict_t *other, float kick, int damage);
-void actor_touch (edict_t *ent, edict_t *other, cplane_t *plane, csurface_t *surf);
+static void actor_pain (edict_t *self, edict_t *other, float kick, int damage);
+static void actor_touch (edict_t *ent, edict_t *other, cplane_t *plane, csurface_t *surf);
 void parse_command(edict_t *ent);
 void script_touch(edict_t *ent, edict_t *other);
 void actor_restore(edict_t *self);
-void blaster_touch (edict_t *self, edict_t *other, cplane_t *plane, csurface_t *surf);
-void fire_blaster (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect, qboolean hyper);
+static void actor_blaster_touch (edict_t *self, edict_t *other, cplane_t *plane, csurface_t *surf);
+static void actor_fire_blaster (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect, qboolean hyper);
 void script_block(edict_t *self, edict_t *other);
 void script_use(edict_t *self, edict_t *other, edict_t *activator);
 
-mframe_t actor_frames_stand [] =
+static mframe_t actor_frames_stand [] =
 {
 	scrBOT_stand, 0, NULL,
 	scrBOT_stand, 0, NULL,
@@ -69,9 +69,9 @@ mframe_t actor_frames_stand [] =
 	scrBOT_stand, 0, NULL,
 	scrBOT_stand, 0, NULL
 };
-mmove_t actor_move_stand = {FRAME_stand01, FRAME_stand40, actor_frames_stand, NULL};
+static mmove_t actor_move_stand = {FRAME_stand01, FRAME_stand40, actor_frames_stand, NULL};
 
-void actor_stand (edict_t *self)
+static void actor_stand (edict_t *self)
 {
 	self->monsterinfo.currentmove = &actor_move_stand;
 }
@@ -113,7 +113,7 @@ void actor_crouch (edict_t *self)
 	self->monsterinfo.currentmove = &actor_move_crouch;
 }
 
-mframe_t actor_frames_walk [] =
+static mframe_t actor_frames_walk [] =
 {
 	scrBOT_run, 0,  NULL,
 	scrBOT_run, 16,  NULL,
@@ -122,9 +122,9 @@ mframe_t actor_frames_walk [] =
 	scrBOT_run, 16,  NULL,
 	scrBOT_run, 16,  NULL
 };
-mmove_t actor_move_walk = {FRAME_run1, FRAME_run6, actor_frames_walk, NULL};
+static mmove_t actor_move_walk = {FRAME_run1, FRAME_run6, actor_frames_walk, NULL};
 
-void actor_walk (edict_t *self)
+static void actor_walk (edict_t *self)
 {
 	self->monsterinfo.currentmove = &actor_move_walk;
 }
@@ -145,7 +145,7 @@ void actor_alert (edict_t *self)
 	self->monsterinfo.currentmove = &actor_move_runattack;
 }
 
-mframe_t actor_frames_run [] =
+static mframe_t actor_frames_run [] =
 {
 	scrBOT_run, 0,  NULL,
 	scrBOT_run, 32,  NULL,
@@ -154,9 +154,9 @@ mframe_t actor_frames_run [] =
 	scrBOT_run, 32,  NULL,
 	scrBOT_run, 32,  NULL
 };
-mmove_t actor_move_run = {FRAME_run1, FRAME_run6, actor_frames_run, NULL};
+static mmove_t actor_move_run = {FRAME_run1, FRAME_run6, actor_frames_run, NULL};
 
-void actor_run (edict_t *self)
+static void actor_run (edict_t *self)
 {
 	if (self->monsterinfo.aiflags & AI_STAND_GROUND)
 		self->monsterinfo.currentmove = &actor_move_stand;
@@ -165,34 +165,34 @@ void actor_run (edict_t *self)
 }
 
 
-mframe_t actor_frames_pain1 [] =
+static mframe_t actor_frames_pain1 [] =
 {
 	BOT_move, -3, NULL,
 	BOT_move, -2, NULL,
 	BOT_move, -1, NULL,
 	BOT_move, -1, NULL
 };
-mmove_t actor_move_pain1 = {FRAME_pain101, FRAME_pain104, actor_frames_pain1, actor_run};
+static mmove_t actor_move_pain1 = {FRAME_pain101, FRAME_pain104, actor_frames_pain1, actor_run};
 
-mframe_t actor_frames_pain2 [] =
+static mframe_t actor_frames_pain2 [] =
 {
 	BOT_move, -3, NULL,
 	BOT_move, -2, NULL,
 	BOT_move, -1, NULL,
 	BOT_move, -1, NULL
 };
-mmove_t actor_move_pain2 = {FRAME_pain201, FRAME_pain204, actor_frames_pain2, actor_run};
+static mmove_t actor_move_pain2 = {FRAME_pain201, FRAME_pain204, actor_frames_pain2, actor_run};
 
-mframe_t actor_frames_pain3 [] =
+static mframe_t actor_frames_pain3 [] =
 {
 	BOT_move, -3, NULL,
 	BOT_move, -2, NULL,
 	BOT_move, -1, NULL,
 	BOT_move, -1, NULL
 };
-mmove_t actor_move_pain3 = {FRAME_pain301, FRAME_pain304, actor_frames_pain3, actor_run};
+static mmove_t actor_move_pain3 = {FRAME_pain301, FRAME_pain304, actor_frames_pain3, actor_run};
 
-void actor_dead (edict_t *self)
+static void actor_dead (edict_t *self)
 {
    self->s.modelindex2 = 0;
 	VectorSet (self->mins, -65, -26, -24);
@@ -202,7 +202,7 @@ void actor_dead (edict_t *self)
 	gi.linkentity (self);
 }
 
-mframe_t actor_frames_death1 [] =
+static mframe_t actor_frames_death1 [] =
 {
 	BOT_move, -4, NULL,
 	BOT_move, 0,  NULL,
@@ -211,9 +211,9 @@ mframe_t actor_frames_death1 [] =
 	BOT_move, -4, NULL,
 	BOT_move, 0,  NULL
 };
-mmove_t actor_move_death1 = {FRAME_death101, FRAME_death106, actor_frames_death1, actor_dead};
+static mmove_t actor_move_death1 = {FRAME_death101, FRAME_death106, actor_frames_death1, actor_dead};
 
-mframe_t actor_frames_death2 [] =
+static mframe_t actor_frames_death2 [] =
 {
 	BOT_move, -4, NULL,
 	BOT_move, 0,  NULL,
@@ -222,9 +222,9 @@ mframe_t actor_frames_death2 [] =
 	BOT_move, -4, NULL,
 	BOT_move, 0,  NULL
 };
-mmove_t actor_move_death2 = {FRAME_death201, FRAME_death206, actor_frames_death2, actor_dead};
+static mmove_t actor_move_death2 = {FRAME_death201, FRAME_death206, actor_frames_death2, actor_dead};
 
-mframe_t actor_frames_death3 [] =
+static mframe_t actor_frames_death3 [] =
 {
 	BOT_move, -4, NULL,
 	BOT_move, 0,  NULL,
@@ -235,7 +235,7 @@ mframe_t actor_frames_death3 [] =
 	BOT_move, -4, NULL,
 	BOT_move, 0,  NULL
 };
-mmove_t actor_move_death3 = {FRAME_death301, FRAME_death308, actor_frames_death3, actor_dead};
+static mmove_t actor_move_death3 = {FRAME_death301, FRAME_death308, actor_frames_death3, actor_dead};
 
 void actor_restore(edict_t *self)
 {
@@ -287,7 +287,7 @@ void actor_salute(edict_t *self)
    self->monsterinfo.currentmove = &actor_move_salute;
 }
 
-mframe_t actor_frames_taunt [] =
+static mframe_t actor_frames_taunt [] =
 {
 	BOT_move, 0, NULL,
 	BOT_move, 0, NULL,
@@ -307,7 +307,7 @@ mframe_t actor_frames_taunt [] =
 	BOT_move, 0, NULL,
 	BOT_move, 0, NULL
 };
-mmove_t actor_move_taunt = {FRAME_taunt01, FRAME_taunt17, actor_frames_taunt, actor_restore};
+static mmove_t actor_move_taunt = {FRAME_taunt01, FRAME_taunt17, actor_frames_taunt, actor_restore};
 
 void actor_taunt(edict_t *self)
 {
@@ -360,7 +360,7 @@ void actor_point(edict_t *self)
 }
 
 
-void actor_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
+static void actor_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
 {
    int	n;
 // check for gib
@@ -386,7 +386,7 @@ void actor_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage
 	self->monsterinfo.currentmove = &actor_move_death1;
 }
 
-void actor_fire (edict_t *self)
+static void actor_fire (edict_t *self)
 {
 	vec3_t	forward, right;
 	vec3_t	start;
@@ -402,7 +402,7 @@ void actor_fire (edict_t *self)
    self->s.angles[2] = 0;
    AngleVectors (self->s.angles, forward, right, NULL);
 	G_ProjectSource (self->s.origin, offset, forward, right, start);
-   fire_blaster (self, start, forward, self->dmg, 1600, EF_BLASTER, 1);	
+   actor_fire_blaster (self, start, forward, self->dmg, 1600, EF_BLASTER, 1);	
 
    self->s.angles[1] += 15;
    self->s.angles[0] = 0;
@@ -426,7 +426,7 @@ mframe_t actor_frames_attack1 [] =
 };
 mmove_t actor_move_attack1 = {FRAME_attack1, FRAME_attack8, actor_frames_attack1, actor_run};
 
-void actor_attack(edict_t *self)
+static void actor_attack(edict_t *self)
 {
    self->monsterinfo.nextattack = level.time + .3;
    self->monsterinfo.currentmove = &actor_move_attack1;
@@ -490,7 +490,7 @@ void SP_actor (edict_t *self)
    load_script(self);
 }
 
-void actor_pain (edict_t *self, edict_t *other, float kick, int damage)
+static void actor_pain (edict_t *self, edict_t *other, float kick, int damage)
 {
 	int		n;
 
@@ -515,7 +515,7 @@ void actor_pain (edict_t *self, edict_t *other, float kick, int damage)
 }
 
 
-void actor_touch (edict_t *ent, edict_t *other, cplane_t *plane, csurface_t *surf)
+static void actor_touch (edict_t *ent, edict_t *other, cplane_t *plane, csurface_t *surf)
 {
 
    if (ent->touch_debounce_time > level.time)
@@ -532,7 +532,7 @@ fire_blaster
 Fires a single blaster bolt.  Used by the blaster and hyper blaster.
 =================
 */
-void blaster_touch (edict_t *self, edict_t *other, cplane_t *plane, csurface_t *surf)
+static void actor_blaster_touch (edict_t *self, edict_t *other, cplane_t *plane, csurface_t *surf)
 {
 	int		mod;
 
@@ -571,7 +571,7 @@ void blaster_touch (edict_t *self, edict_t *other, cplane_t *plane, csurface_t *
 	G_FreeEdict (self);
 }
 
-void fire_blaster (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect, qboolean hyper)
+static void actor_fire_blaster (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect, qboolean hyper)
 {
 	edict_t	*bolt;
 	trace_t	tr;
@@ -592,7 +592,7 @@ void fire_blaster (edict_t *self, vec3_t start, vec3_t dir, int damage, int spee
 	bolt->s.modelindex = gi.modelindex ("models/objects/laser/tris.md2");
 	bolt->s.sound = gi.soundindex ("misc/lasfly.wav");
 	bolt->owner = self;
-	bolt->touch = blaster_touch;
+	bolt->touch = actor_blaster_touch;
 	bolt->nextthink = level.time + 2;
 	bolt->think = G_FreeEdict;
 	bolt->dmg = damage;

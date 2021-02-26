@@ -4,6 +4,7 @@
 // g_combat.c was modified to add a teamplay damage function
 //
 
+#include <ctype.h>
 #include "g_local.h"
 #include "botsmain.h"
 #include "botsutil.h"
@@ -11,6 +12,26 @@
 #include "botsfile.h"
 #include "botsqdev.h"
 #include "p_light.h"
+
+qboolean tp_keys_spawned;
+qboolean newmapentities;
+team_t	teams;
+teamkey_t teamkeys[MAX_KEYS];
+
+float	keychecktime;
+float	fairwarning;
+float	startgame;
+int		mapmode;
+int		goalmode;
+int		lastcapteam;
+float	lastcaptime;
+
+gitem_t *flag1_item;
+gitem_t *flag2_item;
+
+edict_t	*intermission_spot;
+
+float	newbots_gravity;
 
 void ClientUserinfoChanged (edict_t *ent, char *userinfo);
 void SpawnDamage (int type, vec3_t origin, vec3_t normal, int damage);

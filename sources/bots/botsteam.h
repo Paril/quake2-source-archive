@@ -122,8 +122,8 @@ qboolean OnSameTeam (edict_t *ent1, edict_t *ent2);
 qboolean teamplay_MapCheck(edict_t *mapent, edict_t *player);
 qboolean teamplay_IsOffense(edict_t *ent);
 
-qboolean tp_keys_spawned;
-qboolean newmapentities;
+extern qboolean tp_keys_spawned;
+extern qboolean newmapentities;
 
 typedef struct
 {
@@ -137,7 +137,7 @@ typedef struct
 	qboolean	hasprotect[3];
 } team_t;
 
-team_t	teams;
+extern team_t	teams;
 
 typedef struct
 {
@@ -158,19 +158,19 @@ typedef struct
 	int			keyeffect;
 } teamkey_t;
 
-teamkey_t teamkeys[MAX_KEYS];
+extern teamkey_t teamkeys[MAX_KEYS];
 
-float	keychecktime;
-float	fairwarning;
-float	startgame;
-int		mapmode;
-int		goalmode;
-int		lastcapteam;
-float	lastcaptime;
+extern float	keychecktime;
+extern float	fairwarning;
+extern float	startgame;
+extern int		mapmode;
+extern int		goalmode;
+extern int		lastcapteam;
+extern float	lastcaptime;
 
-gitem_t *flag1_item;
-gitem_t *flag2_item;
+extern gitem_t *flag1_item;
+extern gitem_t *flag2_item;
 
-edict_t	*intermission_spot;
+extern edict_t	*intermission_spot;
 
-float	newbots_gravity;
+extern float	newbots_gravity;

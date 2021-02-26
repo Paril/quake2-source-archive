@@ -62,7 +62,7 @@ typedef struct gen_score
 	int last_capture_team;
 }generations_game;
 
-generations_game	gengame;
+extern generations_game	gengame;
 
 //Game functions
 void GenInit(void);
@@ -113,3 +113,171 @@ qboolean CheckTeamDamage (edict_t *targ, edict_t *attacker);
 void SendStatusBar(edict_t *ent, char *bar);
 void OldDudesUseState(edict_t *ent);
 
+#include "acesrc/acebot.h"
+
+
+
+//=========================================
+
+// Skid - added 
+
+//=========================================
+
+//Quake Health
+
+//=========================================
+
+void SP_item_q1_health (edict_t *self);
+
+void SP_item_q1_health_large (edict_t *self);
+
+void SP_item_q1_health_mega (edict_t *self);
+
+// Doom Health
+
+//=========================================
+
+void SP_item_d_health (edict_t *self);
+
+void SP_item_d_health_large (edict_t *self);
+
+void SP_item_d_health_small (edict_t *self);
+
+void SP_item_d_health_mega (edict_t *self);
+
+// Arno added - WOLF Health
+
+//=========================================
+
+void SP_item_idg1_healthS (edict_t *self);
+
+void SP_item_idg1_healthM (edict_t *self);
+
+void SP_item_idg1_healthL (edict_t *self);
+
+void SP_item_idg1_megahealth (edict_t *self);
+
+// Misc Quake1 Entities
+
+//=========================================
+
+void SP_q1_misc_large_flame(edict_t *self);
+
+void SP_q1_misc_small_flame (edict_t *self);
+
+void SP_q1_misc_torch(edict_t *self); 
+
+void SP_idg3_target_lavaball(edict_t *self);
+
+void SP_q1_misc_globe(edict_t *self);
+
+void SP_idg3_target_trap(edict_t *self);
+
+void SP_misc_idg0_keen(edict_t *self);
+
+void SP_misc_idg2_bigtorch(edict_t *self);
+
+void SP_misc_idg2_bigtree(edict_t *self);
+
+void SP_misc_idg2_candleabra(edict_t *self);
+
+void SP_misc_idg2_actor(edict_t *self);
+
+void SP_misc_idg1_armored(edict_t *self);
+
+void SP_misc_idg1_cageskel(edict_t *self);
+
+void SP_misc_idg1_flag(edict_t *self);
+
+void SP_misc_idg1_barrel(edict_t *self);
+
+void SP_misc_idg1_barrelwide(edict_t *self);
+
+void SP_misc_idg1_bed(edict_t *self);
+
+void SP_misc_idg1_plant(edict_t *self);
+
+void SP_misc_idg1_skelhang(edict_t *self);
+
+void SP_misc_idg1_cage(edict_t *self);
+
+void SP_misc_idg1_skeleton(edict_t *self);
+
+void SP_misc_idg1_pot(edict_t *self);
+
+
+
+//=========================================
+
+// QUAKE1 MONSTERS BAY-BEEEEEE
+
+//=========================================
+
+
+//=========================================
+
+// DOOM MONSTERS
+
+//=========================================
+
+void SP_monster_idg2_super (edict_t *self);
+
+void SP_monster_idg2_cu (edict_t *self);
+
+void SP_monster_idg2_monkey (edict_t *self);
+
+void SP_monster_idg2_pinky (edict_t *self);
+
+void SP_monster_idg2_dude (edict_t *self);
+
+void SP_monster_idg2_sarge (edict_t *self);
+
+void SP_monster_idg2_head (edict_t *self);
+
+void SP_monster_idg2_skull (edict_t *self);
+
+void SP_monster_idg2_medic (edict_t *self);
+
+void SP_monster_idg2_skeleton (edict_t *self);
+
+void SP_monster_idg2_commando (edict_t *self);
+
+void SP_monster_idg2_fatdude (edict_t *self);
+
+void SP_monster_idg2_spider (edict_t *self);
+
+void SP_monster_idg2_skullspawner (edict_t *self);
+
+void SP_monster_idg2_spiderchild (edict_t *self);
+
+//=========================================
+
+// WOLF MONSTERS   
+
+//=========================================
+
+void SP_monster_idg1_sa (edict_t *self);
+
+void SP_monster_idg1_ss (edict_t *self);
+
+void SP_monster_idg1_dog (edict_t *self);
+
+void SP_monster_idg1_bd19 (edict_t *self);
+
+void SP_monster_idg1_officer (edict_t *self);
+
+void SP_monster_idg1_mutant (edict_t *self);
+
+void SP_monster_idg1_doctor (edict_t *self);
+
+void SP_monster_idg1_commander (edict_t *self);
+
+void SP_monster_idg1_general (edict_t *self);
+
+void SP_monster_idg1_priest (edict_t *self);
+
+//=========================================
+
+void SP_d_misc_barrel(edict_t *self);
+
+void d_fire_imp (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int speed);

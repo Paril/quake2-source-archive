@@ -292,6 +292,9 @@ void NoAmmoWeaponChange (edict_t *ent)
    ent->client->newweapon = FindItem ("hammer");
 }
 
+qboolean	is_quad;
+byte		is_silenced;
+
 /*
 =================
 Think_Weapon

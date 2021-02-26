@@ -214,9 +214,9 @@ typedef struct
 } game_export_t;
 
 // topaz:
-int			num_nodes;		
-int			max_nodes;
-int			num_ambushes;	
-int			max_ambushes;
+extern int			num_nodes;		
+extern int			max_nodes;
+extern int			num_ambushes;	
+extern int			max_ambushes;
 
 game_export_t *GetGameApi (game_import_t *import);

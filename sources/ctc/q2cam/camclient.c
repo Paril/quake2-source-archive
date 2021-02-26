@@ -684,7 +684,7 @@ void
 CameraFollowThink(edict_t *ent, usercmd_t *ucmd)
 {
     vec3_t	vCameraOffset;
-	if ((ent->client->pTarget = PlayerToFollow(ent)) != NULL)
+	if ((ent->client->pTarget = PlayerToFollow()) != NULL)
     {
         //
         // Just keep looking for action!
@@ -763,7 +763,7 @@ CameraNormalThink(edict_t *ent, usercmd_t *ucmd)
                 ent->last_move_time = 0;
             }
         }
-        else if ((ent->client->pTarget = PlayerToFollow(ent)) != NULL)
+        else if ((ent->client->pTarget = PlayerToFollow()) != NULL)
         {
             //
             // Just keep looking for action!

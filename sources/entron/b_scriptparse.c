@@ -465,7 +465,7 @@ void parse_set4(edict_t *ent)
       case SCR_LOAD_MAP:
          {
          char x[255] = {0};
-         if (!strcmpi(ent->scr.cmd->ParamString[0], ".self"))
+         if (!Q_stricmp(ent->scr.cmd->ParamString[0], ".self"))
             {
             sprintf(x, "map %s\n", level.mapname);
 	         gi.AddCommandString (x);

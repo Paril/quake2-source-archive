@@ -1,6 +1,8 @@
 #include "g_local.h"
 #include "g_sogutil.h"
 
+generations_game	gengame;
+
 // model paths
 #define WOLFGUY_MODEL	"idg1/"		
 #define DOOMGUY_MODEL	"idg2/"

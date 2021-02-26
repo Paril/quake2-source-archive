@@ -122,7 +122,7 @@ int script_exists(edict_t *ent)
    ent->scr.index = -1;
    for (i = 0; i < script_index; i++)
       { 
-      if (!strcmpi(script_file[i].filename, ent->scriptfile))
+      if (!Q_stricmp(script_file[i].filename, ent->scriptfile))
          {
          intercept_t x;
          int j;

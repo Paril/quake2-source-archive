@@ -16,12 +16,14 @@
 
 #include "stdlog.h"
 
+#ifdef ENABLE_GSLOG
 #include "sl_packet.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <time.h>
+#include <ctype.h>
 
 /* OS specific includes, defines and typdefs */
 #ifdef WIN32
@@ -33,12 +35,13 @@ typedef int socklen_t;
 #   include <sys/socket.h>
 #   include <netinet/in.h>
 #   include <arpa/inet.h>
-#   include <netdb.h>
+//#   include <netdb.h>
 typedef int SOCKET;
 typedef struct sockaddr_in SOCKADDR_IN;
 #   define INVALID_SOCKET -1
 typedef int BOOL;
 #define TRUE 1
+#define closesocket close
 #endif /* WIN32 */
 
 
@@ -244,6 +247,8 @@ static __inline void _sl_close( void );
 
 #ifdef WIN32
 static void net_disp_err(void);
+#else
+#define net_disp_err()
 #endif
 
 static unsigned long atoaddr(char *address);
@@ -512,6 +517,7 @@ static void _sl_LogDate_1_2a( void )
                       "%d %b %Y\t%Z",
                       ptm );
 
+#if defined(WIN32) || defined(UNIX)
 #if 0
             if( daylight )
                 sprintf( &_sl_date[strlen(_sl_date)],
@@ -522,6 +528,7 @@ static void _sl_LogDate_1_2a( void )
                 sprintf( &_sl_date[strlen(_sl_date)],
                          "\t%ld",
                          timezone );
+#endif
 #endif
 
 
@@ -750,6 +757,7 @@ static void _sl_LogPlayerConnect( char *pPlayerName,
 *******************************************************************************
 **
 ******************************************************************************/
+
 static void _sl_LogPlayerTeamChange( char *pPlayerName,
                                      char *pTeamName,
                                      float timeInSeconds )
@@ -995,17 +1003,21 @@ void sl_LogMapName( game_import_t  *gi,
 *******************************************************************************
 **
 ******************************************************************************/
+#endif
 void sl_LogPlayerName( game_import_t  *gi,
                        char           *pPlayerName,
                        char           *pTeamName,
                        float           timeInSeconds )
 {
+#ifdef ENABLE_GSLOG
     if( _sl_open( gi ) )
     {
         _sl_log_styles[log_style].pLogPlayerName( pPlayerName, pTeamName, timeInSeconds );
     }
+#endif
 }
 
+#ifdef ENABLE_GSLOG
 /******************************************************************************
 **
 **	sl_LogScore
@@ -1014,6 +1026,7 @@ void sl_LogPlayerName( game_import_t  *gi,
 *******************************************************************************
 **
 ******************************************************************************/
+#endif
 void sl_LogScore( game_import_t  *gi,
                   char           *pKillerName,
                   char           *pTargetName,
@@ -1023,12 +1036,15 @@ void sl_LogScore( game_import_t  *gi,
                   float           timeInSeconds,
                   int             killerPing )
 {
+#ifdef ENABLE_GSLOG
     if( _sl_open( gi ) )
     {
         _sl_log_styles[log_style].pLogScore( pKillerName, pTargetName, pScoreType, pWeaponName, iScore, timeInSeconds, killerPing );
     }
+#endif
 }
 
+#ifdef ENABLE_GSLOG
 /******************************************************************************
 **
 **	sl_LogPlayerLeft
@@ -1108,15 +1124,19 @@ void sl_LogPlayerConnect( game_import_t  *gi,
 *******************************************************************************
 **
 ******************************************************************************/
+#endif
+
 void sl_LogPlayerTeamChange( game_import_t  *gi,
                              char           *pPlayerName,
                              char           *pTeamName,
                              float           timeInSeconds)
 {
+#ifdef ENABLE_GSLOG
     if( _sl_open( gi ) )
     {
         _sl_log_styles[log_style].pLogPlayerTeamChange( pPlayerName, pTeamName, timeInSeconds );
     }
+#endif
 }
 
 /******************************************************************************
@@ -1132,15 +1152,16 @@ void sl_LogPlayerRename( game_import_t  *gi,
                          char           *pNewPlayerName,
                          float           timeInSeconds)
 {
+#ifdef ENABLE_GSLOG
     if( _sl_open( gi ) )
     {
         _sl_log_styles[log_style].pLogPlayerRename( pOldPlayerName, pNewPlayerName, timeInSeconds );
     }
+#endif
 }
 
 
-
-
+#ifdef ENABLE_GSLOG
 /******************************************************************************
 **
 **	File Base Logging Functions
@@ -1430,6 +1451,7 @@ static __inline int _sl_udp_open( game_import_t  *gi )
 #endif
         }
 
+#if defined(WIN32) || defined(UNIX)
         /* Output Message */
         if( fCont )
         {
@@ -1443,6 +1465,7 @@ static __inline int _sl_udp_open( game_import_t  *gi )
                         pServerAddr,
                         ntohs(udp_ServAddr.sin_port) );
         }
+#endif
 
         /* tidy up */
         if( pServerMem )
@@ -1664,7 +1687,8 @@ static void _sl_udp_send( const char *pString )
         {
             char aNumber[100];
 
-            itoa( udp_packet_num, &aNumber[0], 10 );
+            Com_sprintf(aNumber, sizeof(aNumber), "%d", udp_packet_num);
+
             pGI->cvar_set(SL_UDP_PACKETNUM_STR, &aNumber[0]);
         }
         
@@ -1892,6 +1916,7 @@ static __inline int _sl_tcp_open( game_import_t  *gi )
 #endif
         }
 
+#if defined(WIN32) || defined(UNIX)
         /* Output Message */
         if( fCont )
         {
@@ -1905,6 +1930,7 @@ static __inline int _sl_tcp_open( game_import_t  *gi )
                         pServerAddr,
                         ntohs(tcp_ServAddr.sin_port) );
         }
+#endif
 
         /* tidy up */
         if( pServerMem )
@@ -2261,6 +2287,7 @@ static void net_disp_err(void)
 ******************************************************************************/
 static unsigned long atoaddr(char *address)
 {
+#if defined(WIN32) || defined(UNIX)
     struct hostent *host;
     struct in_addr saddr;
 
@@ -2273,6 +2300,7 @@ static unsigned long atoaddr(char *address)
     if (host != NULL) {
         return ((struct in_addr *) *host->h_addr_list)->s_addr;
     }
+#endif
     return 0L;
 }
 
@@ -2314,6 +2342,7 @@ static char *_sl_add_cvars( char *pCurrent, char *pVarNameList, game_import_t  *
             if( ('$' == aCVarName[0]) &&
                 ('$' == aCVarName[0]) )
             {
+#if defined(WIN32) || defined(UNIX)
                 /* Special Sequence */
                 static char aTemp[MAX_QPATH];
                 static char aHostName[MAX_QPATH] = "";
@@ -2357,6 +2386,7 @@ static char *_sl_add_cvars( char *pCurrent, char *pVarNameList, game_import_t  *
                     }
                 }
                 else
+#endif
                 {
                     /* unknown special */
                 }
@@ -2686,3 +2716,4 @@ static void _sl_free_clientinfos( PACKET_STRUCT *pPacketStruct )
 
 
 /* end of file */
+#endif

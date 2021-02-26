@@ -1,5 +1,9 @@
 #include "g_local.h"
 
+edict_t *Ent1, *Ent2;
+edict_t *bullet_hole[35];
+int bullet_index;
+
 
 /*
 =================

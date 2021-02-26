@@ -14,7 +14,7 @@ any snipet of code you might find interesting.
 
 #include "g_local.h"
 
-void Teargas_Explode (edict_t *ent);
+static void Teargas_Explode (edict_t *ent);
 void Weapon_Generic2 (edict_t *ent, int FRAME_ACTIVATE_LAST, int FRAME_FIRE_LAST, int FRAME_IDLE_LAST, int FRAME_DEACTIVATE_LAST, int FRAME_FIRE2_LAST, int *pause_frames, int *fire_frames, void (*fire)(edict_t *ent), void (*fire2)(edict_t *ent));
 void Weapon_Generic3 (edict_t *ent, int, int, int, int, int, int, int *, int *, 
 void (*fire)(edict_t *), 

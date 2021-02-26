@@ -97,7 +97,7 @@ skiprestscan:
    			   continue;
             if (!x->targetname)
                continue;
-		      if (!strcmpi(x->targetname, scan->target))
+		      if (!Q_stricmp(x->targetname, scan->target))
                {
                scan->enemy = x;
                x = &g_edicts[globals.num_edicts];
