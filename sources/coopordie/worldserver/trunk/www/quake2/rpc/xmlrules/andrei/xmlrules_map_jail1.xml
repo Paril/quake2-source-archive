@@ -1,0 +1,53 @@
+<xml>
+<!-- initial xmlrule file by ANDREI 2009-07-20 -->
+<entity_add>
+<entity> { "classname" "monster_tank" "origin" "-2112 -208 256" } </entity>
+<entity> { "classname" "monster_floater" "origin" "-1960 -8 432" } </entity>
+<entity> { "classname" "monster_floater" "origin" "-2368 -8 432" } </entity>
+<entity> { "classname" "monster_floater" "origin" "-2696 -80 432" } </entity>
+<entity> { "classname" "ammo_grenades" "origin" "-1928 -1056 24" } </entity>
+<entity> { "classname" "monster_flyer" "origin" "-1600 -1696 80" } </entity>
+<entity> { "classname" "monster_flyer" "origin" "-1840 -1696 80" } </entity>
+<entity> { "classname" "monster_flyer" "origin" "-1616 -1464 80" } </entity>
+<entity> { "classname" "monster_flyer" "origin" "-1840 -1464 80" } </entity>
+<entity> { "classname" "item_health_large" "origin" "-480 -280 80" } </entity>
+<entity> { "classname" "item_armor_jacket" "origin" "-480 -224 80" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "-672 -736 80" } </entity>
+<entity> { "classname" "ammo_rockets" "origin" "-984 -808 80" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-312 -1360 136" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-312 -1272 136" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-384 -1360 136" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-384 -1272 136" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-728 -1368 136" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-728 -1272 136" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-824 -1272 136" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-824 -1368 136" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "-560 -1648 136" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "-592 -1648 136" } </entity>
+<entity> { "classname" "ammo_slugs" "origin" "-432 -2008 512" } </entity>
+<entity> { "classname" "ammo_slugs" "origin" "-456 -2008 512" } </entity>
+<entity> { "classname" "monster_flipper" "origin" "-768 -1984 -184" } </entity>
+<entity> { "classname" "monster_flipper" "origin" "-768 -1912 -184" } </entity>
+<entity> { "classname" "monster_flipper" "origin" "-840 -1960 -184" } </entity>
+<entity> { "classname" "monster_flipper" "origin" "-544 -1944 -184" } </entity>
+<entity> { "classname" "monster_flipper" "origin" "-624 -1912 -184" } </entity>
+<entity> { "classname" "monster_flipper" "origin" "-624 -2000 -184" } </entity>
+<entity> { "classname" "monster_hover" "origin" "-352 -1808 552" } </entity>
+<entity> { "classname" "weapon_railgun" "origin" "-1168 -1856 552" } </entity>
+<entity> { "classname" "ammo_rockets" "origin" "-376 -3296 312" } </entity>
+<entity> { "classname" "ammo_cells" "origin" "-304 -3296 312" } </entity>
+<entity> { "classname" "ammo_cells" "origin" "-296 -3296 312" } </entity>
+<entity> { "classname" "ammo_grenades" "origin" "-240 -3296 312" } </entity>
+<entity> { "classname" "ammo_grenades" "origin" "-232 -3296 312" } </entity>
+<entity> { "classname" "ammo_bullets" "origin" "-200 -3296 312" } </entity>
+<entity> { "classname" "ammo_bullets" "origin" "-192 -3296 312" } </entity>
+<entity> { "classname" "item_bandolier" "origin" "-136 -3296 312" } </entity>
+<entity> { "classname" "item_health_large" "origin" "16 -3296 312" } </entity>
+<entity> { "classname" "item_health_large" "origin" "64 -3296 312" } </entity>
+<entity> { "classname" "item_adrenaline" "origin" "-64 -3296 312" } </entity>
+<entity> { "classname" "item_armor_combat" "origin" "120 -3296 312" } </entity>
+<entity> { "classname" "monster_hover" "origin" "64 -3168 312" } </entity>
+<entity> { "classname" "monster_hover" "origin" "-128 -3168 312" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "-504 -3080 136" } </entity>
+</entity_add>
+</xml>

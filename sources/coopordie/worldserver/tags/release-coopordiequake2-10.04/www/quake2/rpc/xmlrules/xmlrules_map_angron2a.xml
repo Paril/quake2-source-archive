@@ -1,0 +1,39 @@
+<xml>
+<entity_add>
+
+<!-- info_player_start: default -->
+<entity> { "classname" "info_player_coop" "origin" "-1818 1202 32" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-1832 1062 32" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-1888 1202 32" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-1888 1062 32" } </entity>
+
+<!-- info_player_start: from_b -->
+<entity> { "classname" "info_player_coop" "origin" "-1264 48 -128" "angle" "90" "targetname" "from_b" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-1184 48 -128" "angle" "90" "targetname" "from_b" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-1264 -16 -128" "angle" "90" "targetname" "from_b" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-1184 -16 -128" "angle" "90" "targetname" "from_b" } </entity>
+
+<!-- info_player_start: from_c1 -->
+<entity> { "classname" "info_player_coop" "origin" "2012 816 -104" "angle" "90" "targetname" "from_c1" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "2060 816 -104" "angle" "90" "targetname" "from_c1" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "2012 772 -104" "angle" "90" "targetname" "from_c1" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "2060 772 -104" "angle" "90" "targetname" "from_c1" } </entity>
+
+<!-- info_player_start: from_c2 -->
+<entity> { "classname" "info_player_coop" "origin" "1476 -380 -164" "angle" "90" "targetname" "from_c2" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "1476 -414 -164" "angle" "90" "targetname" "from_c2" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "1576 -274 -164" "angle" "180" "targetname" "from_c2" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "1616 -274 -164" "angle" "180" "targetname" "from_c2" } </entity>
+
+</entity_add>
+
+<!-- move "from_c2" info_player_start for more room -->
+<entity_change>
+<if keyname="classname" keyvalue="info_player_start"> 
+    <if keyname="targetname" keyvalue="from_c2"> 
+        <set_key keyname="origin" value="1476 -448 -164" /> 
+    </if> 
+</if>
+</entity_change>
+
+</xml>

@@ -1,0 +1,18 @@
+<xml>
+<entity_add>
+
+<!-- info_player_start: from_a -->
+<entity> { "classname" "info_player_coop" "origin" "192 -3272 -200" "targetname" "from_a" "angle" "90" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "144 -3272 -200" "targetname" "from_a" "angle" "90" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "192 -3312 -200" "targetname" "from_a" "angle" "90" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "144 -3312 -200" "targetname" "from_a" "angle" "90" } </entity> 
+
+<!-- info_player_start: from_d -->
+<entity> { "classname" "info_player_coop" "origin" "-652 576 -456" "targetname" "from_d" "angle" "-90" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "-672 648 -456" "targetname" "from_d" "angle" "270" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "-672 612 -456" "targetname" "from_d" "angle" "270" } </entity> 
+<entity> { "classname" "info_player_coop" "origin" "-692 576 -456" "targetname" "from_d" "angle" "-90" } </entity> 
+
+</entity_add>
+
+</xml>

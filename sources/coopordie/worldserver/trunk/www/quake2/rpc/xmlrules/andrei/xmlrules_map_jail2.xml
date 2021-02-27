@@ -1,0 +1,35 @@
+<xml>
+<!-- initial xmlrule file by ANDREI 2009-07-22 -->
+<entity_add>
+<entity> { "classname" "monster_chick" "origin" "-128 192 328" } </entity>
+<entity> { "classname" "monster_chick" "origin" "128 192 328" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "1384 416 184" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "832 504 64" } </entity>
+<entity> { "classname" "monster_tank" "origin" "-2272 320 64" "target" "tt1" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1472 96 200" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1728 96 200" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1984 96 200" } </entity>
+<entity> { "classname" "item_adrenaline" "origin" "-240 96 416" } </entity>
+<entity> { "classname" "item_adrenaline" "origin" "-240 96 416" } </entity>
+<entity> { "classname" "item_adrenaline" "origin" "-240 96 416" } </entity>
+<entity> { "classname" "item_adrenaline" "origin" "-240 96 416" } </entity>
+<entity> { "classname" "item_adrenaline" "origin" "-240 96 416" } </entity>
+<entity> { "classname" "monster_medic" "origin" "112 416 88" } </entity>
+<entity> { "classname" "monster_medic" "origin" "-120 432 88" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "160 248 88" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-160 248 88" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "264 384 88" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-8 376 88" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-216 368 88" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "-120 520 88" } </entity>
+<entity> { "classname" "monster_berserk" "origin" "160 520 88" } </entity>
+<entity> { "classname" "monster_gladiator" "origin" "-1024 -808 -168" } </entity>
+<entity> { "classname" "ammo_rockets" "origin" "-520 -232 384" } </entity>
+<entity> { "classname" "weapon_rocketlauncher" "origin" "-504 -208 384" } </entity>
+<entity> { "classname" "item_armor_combat" "origin" "-440 -192 384" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-64 -328 80" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "96 -1216 72" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "-96 -1216 72" } </entity>
+<entity> { "classname" "item_health" "origin" "96 -1888 216" } </entity>
+</entity_add>
+</xml>

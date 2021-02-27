@@ -1,0 +1,41 @@
+<xml>
+	<entity_add>
+		<entity>{ "classname" "trigger_once" "message" "Hum hum, Stroggos seem to come in large  \nnumbers :(                              \n                          -Pat Aftermoon" "sound" "2" "mins" "768 2208 -256" "maxs" "784 2384 -160" } </entity>
+		
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_gunner" "origin" "520 -1728 24" "angle" "180" "spawnflags" "1" "targetname" "t88" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_soldier_ss" "origin" "896 -1304 24" "angle" "180" "spawnflags" "1" "targetname" "t48" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_flyer" "origin" "8 400 184" "angle" "225" "spawnflags" "3" "targetname" "t77" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_flyer" "origin" "160 456 184" "angle" "225" "spawnflags" "3" "targetname" "t77" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_flyer" "origin" "448 632 184" "angle" "225" "spawnflags" "3" "targetname" "t77" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_infantry" "origin" "608 928 24" "angle" "180" "spawnflags" "1" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_infantry" "origin" "600 1536 -160" "angle" "270" "spawnflags" "1" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_soldier_light" "origin" "64 1192 24" "angle" "0" "target" "t36" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_soldier_light" "origin" "400 2640 32" "angle" "270" "spawnflags" "1" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_soldier_ss" "origin" "168 2144 -232" "angle" "90" "spawnflags" "1" "targetname" "t110" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_soldier_ss" "origin" "224 2520 -232" "angle" "180" "spawnflags" "1" "targetname" "t109" } </entity></case></switch>
+		<switch random="100"><case random="[random_1_player_20]"><entity entity_change="1"> { "classname" "monster_soldier_ss" "origin" "-416 200 -128" "angle" "90" } </entity></case></switch>
+		
+		<entity>{ "classname" "ammo_bullets" "origin" "495 1967 -37" "angle" "180" }</entity>
+		<entity>{ "classname" "monster_soldier_ss" "spawnflags" "4" "origin" "82 1647 -145" "angle" "0" }</entity>
+		<entity>{ "classname" "monster_soldier_ss" "spawnflags" "4" "origin" "495 1647 -145" "angle" "180" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "spawnflags" "4" "origin" "687 1616 46" "angle" "180" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "spawnflags" "4" "origin" "431 1903 46" "angle" "-90" }</entity>
+		<entity>{ "classname" "monster_flyer" "spawnflags" "4" "origin" "431 1808 80" "angle" "180" }</entity>
+		<entity>{ "classname" "monster_soldier_ss" "spawnflags" "4" "origin" "239 1680 46" "angle" "90" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "spawnflags" "4" "origin" "303 1936 46" "angle" "180" }</entity>
+		<entity>{ "classname" "ammo_bullets" "origin" "544 2080 56" "angle" "90" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "spawnflags" "4" "origin" "720 2671 46" "angle" "-40" }</entity>
+		<entity>{ "classname" "item_armor_jacket" "origin" "889 2537 46" "angle" "180" }</entity>
+		<entity>{ "classname" "ammo_shells" "origin" "416 2543 -81" "angle" "-90" }</entity>
+		<entity>{ "classname" "ammo_shells" "origin" "352 2543 -81" "angle" "-90" }</entity>
+		<entity>{ "classname" "ammo_bullets" "origin" "528 1071 110" "angle" "-90" }</entity>
+		
+		<entity>{ "classname" "item_armor_shard" "origin" "-328 264 16" }</entity>
+		<entity>{ "classname" "item_armor_shard" "origin" "-328 312 16" }</entity>
+		<entity>{ "classname" "item_health_small" "origin" "-328 288 16" }</entity>
+		
+		<entity>{ "classname" "item_health_large" "origin" "-160 -416 0" }</entity>
+		<entity>{ "classname" "item_health_large" "origin" "-288 -416 0" }</entity>
+	
+	</entity_add>
+</xml>

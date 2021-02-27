@@ -1,0 +1,122 @@
+<xml>
+	<entity_change>
+
+		<!-- monsters substitutions -->
+		<switch keyname="classname">
+			<case keyvalue="monster_soldier_ss">
+				<switch random="100">
+					<case random="10"><set_key keyname="classname" value="monster_chick"/></case>
+					<case random="15"><set_key keyname="classname" value="monster_infantry"/></case>
+				</switch>
+			</case>
+			<case keyvalues="monster_soldier_light,monster_soldier">
+				<switch random="100">
+					<case random="10"><set_key keyname="classname" value="monster_soldier_ss"/></case>
+					<case random="5"><set_key keyname="classname" value="monster_chick"/></case>
+					<case random="10"><set_key keyname="classname" value="monster_infantry"/></case>
+				</switch>
+			</case>
+			<case keyvalue="monster_infantry">
+				<switch random="100">
+					<case random="10"><set_key keyname="classname" value="monster_berserk"/></case>
+					<case random="10"><set_key keyname="classname" value="monster_gunner"/></case>
+					<case random="5"><set_key keyname="classname" value="monster_soldier_ss"/></case>
+				</switch>
+			</case>
+			<case keyvalue="monster_berserk">
+				<switch random="100">
+					<case random="15"><set_key keyname="classname" value="monster_gunner"/></case>
+					<case random="10"><set_key keyname="classname" value="monster_chick"/></case>
+				</switch>
+			</case>
+		</switch>
+
+		<!-- monsters drop items (if not already one defined by the map file) -->
+		<if keyname="item" keyvalue="">
+			<switch keyname="classname">
+	
+				<case keyvalue="monster_soldier_ss">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_bullets"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_soldier" op="strstr">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_shells"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_infantry">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_shells"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_flyer">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_cells"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_floater">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_cells"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_hover">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_cells"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_gunner">
+					<switch random="100">
+						<case random="5"><set_key keyname="item" value="ammo_bullets"/></case>
+						<case random="5"><set_key keyname="item" value="ammo_grenades"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_chick">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_rockets"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_gladiator">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_slugs"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_tank">
+					<switch random="100">
+						<case random="5"><set_key keyname="item" value="ammo_bullets"/></case>
+						<case random="5"><set_key keyname="item" value="ammo_rockets"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_supertank">
+					<switch random="100">
+						<case random="10"><set_key keyname="item" value="ammo_bullets"/></case>
+						<case random="10"><set_key keyname="item" value="ammo_rockets"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_berserk">
+					<switch random="100">
+						<case random="5"><set_key keyname="item" value="item_armor_jacket"/></case>
+					</switch>
+				</case>
+	
+				<case keyvalue="monster_mutant">
+					<switch random="100">
+						<case random="5"><set_key keyname="item" value="item_adrenaline"/></case>
+					</switch>
+				</case>
+			</switch>
+		</if>
+
+	</entity_change>
+</xml>

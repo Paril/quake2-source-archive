@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------
+February 13 2008
+
+0.6 Changes in dll :
+- bug fix for pers.connected in p_client.c / ClientThink()
+--------------------------------------------------------------------------------
+november 28 2006, bug fix for "launch command" map hack and trigger_once added by worldserver
+
+0.5d Changes in dll :
+- bug fix for map hack in g_spawn.c
+--------------------------------------------------------------------------------
+july 13 2006, bug fix for dataset not saved
+
+0.5c Changes in dll :
+- better correction for the inventory not saved
+- enhanced log with mapname and level.time
+
+0.5c Changes in WorldServer :
+- csession_data class is now in a separate file
+--------------------------------------------------------------------------------
+july 12 2006, bug fix for dataset not saved
+
+0.5b Changes in dll :
+- Log and bug report enhanced
+- use of "cl_ent->inuse" in combination with "game.clients[i].pers.connected" for
+  avoiding bug after a ReadLevel (occur when a player come back to a previously 
+  visited map). This modification prevent the bug but not solve the problem, I 
+  don't understand why "game.clients[i].pers.connected" does not have the value
+  it should have.
+
+0.5b Changes in WorldServer :
+- Log and bug report enhanced
+
+--------------------------------------------------------------------------------
+july 6 2006, return to the dll only form and bug fix
+
+0.5a Changes in dll :
+- Remove all dependance to the KMQuake2 engine
+- Restore the compatibility with most modern Quake2 engines
+- Improve error reporting and debug logging
+- Bug fix
+- Remove bad hacks and old ugly code
+
+0.5a Changes in WorldServer :
+- Code cleaning, security fix, bug fix
+
+--------------------------------------------------------------------------------
+december 23 2004, quick and dirty bug fix 
+
+0.4c Changes in dll :
+- The "map doesn't save on worldserver" seem to be a bug related to the KMQuake2
+  engine. When a player return to a previously visited map the state of the
+  map is loaded from hard drive, the "connected" field of the player structure
+  is turned to false, then, after reload, it is automatically re-turned to true.
+  This seem to doesn't work, so I've added a check inside WSrv_GameLoop function.
+  If the "connected" field of an existing player is false, the program turn it to
+  true. It seem to work :/
+--------------------------------------------------------------------------------
+june 17 2004, bug fix, security fix and anti-cheat fix.
+
+0.4b Changes in dll :
+- disable rcon when in worldserver mode
+
+0.4b Changes in engine :
+- locked Lazarus developer cvar
+- check map checksum
+- added team deathmatch with human vs bots
+
+0.4b Changes in worldserver :
+- added Ghostface security fix for session variables
+- removed unused code
+- added email reporting for admin
+--------------------------------------------------------------------------------
+16 september 2003, first integration worldserver <--> KMQuake2 (Knightmare engine)
+
+0.4 Changes in dll :
+- Integration of the 0.3b COOP or DIE dll in the KMQuake2 one.
+- Enlarged some buffers used with worldserver RPC communication
+- No modifications of the gameplay since 0.3b
+
+0.4 Changes in engine :
+- Added server ping display in multiplayer join menu
+- Removed all unused menus : save/load game, start sertver, DM options
+- Added a credit list display for the Quake2 GPL contributors in menu options
+- removed Knightmare protocol choose (forced to new kmquake2 one)
+--------------------------------------------------------------------------------

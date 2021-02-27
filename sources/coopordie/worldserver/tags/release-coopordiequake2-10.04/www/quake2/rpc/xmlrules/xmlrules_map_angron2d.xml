@@ -1,0 +1,27 @@
+<xml>
+<entity_add>
+
+<!-- info_player_start: from_b -->
+<entity> { "classname" "info_player_coop" "origin" "388 -2452 -356" "targetname" "from_c" "angle" "90" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "348 -2452 -356" "targetname" "from_c" "angle" "90" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "388 -2492 -356" "targetname" "from_c" "angle" "90" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "348 -2492 -356" "targetname" "from_c" "angle" "90" } </entity>
+
+<!-- info_player_start: from_c -->
+<entity> { "classname" "info_player_coop" "origin" "1336 -2764 -628" "targetname" "from_b" "angle" "90" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "1336 -2700 -628" "targetname" "from_b" "angle" "90" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "1272 -2608 -628" "targetname" "from_b" "angle" "90" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "1272 -2576 -628" "targetname" "from_b" "angle" "90" } </entity>
+
+</entity_add>
+
+<!-- move "from_b" info_player_start for more room -->
+<entity_change>
+<if keyname="classname" keyvalue="info_player_start"> 
+    <if keyname="targetname" keyvalue="from_b"> 
+        <set_key keyname="origin" value="1336 -2732 -628" /> 
+    </if> 
+</if>
+</entity_change>
+
+</xml>

@@ -1,0 +1,27 @@
+<entity_add>
+<!--
+<entity>{ "classname" "trigger_once" "message" "Event message 1                         \n                                        \n                          -Pat Aftermoon" "mins" "-128 -520 -232" "maxs" "328 -120 232" }</entity>
+<entity>{ "classname" "trigger_once" "message" "Event message 2                         \n                                        \n                          -Pat Aftermoon" "mins" "-432 -144 -48" "maxs" "-272 112 200" }</entity>
+-->
+<entity>{ "classname" "trigger_once" "message" "Please fill your profile with geographic\ninformation. It will help other players \nto meet you.              -Pat Aftermoon" "sounds" "2" "mins" "-928 264 -32" "maxs" "-536 424 200" }</entity>
+<entity>{ "classname" "monster_soldier_light" "spawnflags" "4" "origin" "-530 212 -2" "angle" "180" }</entity>
+<entity>{ "classname" "monster_infantry" "spawnflags" "4" "origin" "-427 824 -81" }</entity>
+<entity>{ "classname" "monster_infantry" "spawnflags" "4" "origin" "-794 1080 -165" "angle" "27" }</entity>
+<entity>{ "classname" "weapon_shotgun" "origin" "232 184 110" }</entity>
+<entity>{ "classname" "trigger_once" "message" "There are new secret weapons and ammo.  \nAsk other players to give you a boost.  \n                         -JudicatorOmega" "mins" "132 84 -200" "maxs" "332 284 210" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "spawnflags" "4" "origin" "480 175 -197" "angle" "-90" }</entity>
+<entity>{ "classname" "monster_infantry" "spawnflags" "4" "origin" "415 175 -197" "angle" "-90" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "1284 302 -20" "angle" "90" }</entity>
+<entity>{ "classname" "monster_flipper" "spawnflags" "4" "origin" "424 720 -264" }</entity>
+<entity>{ "classname" "monster_flipper" "spawnflags" "4" "origin" "368 656 -264" }</entity>
+<entity>{ "classname" "monster_flipper" "spawnflags" "4" "origin" "456 656 -264" }</entity>
+<entity>{ "classname" "monster_soldier_light" "spawnflags" "4" "spawnflags" "4" "origin" "479 1007 -209" "angle" "-90" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "spawnflags" "4" "spawnflags" "4" "origin" "431 1104 -209" "angle" "172" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "-943 1120 158" }</entity>
+<entity>{ "classname" "weapon_supershotgun" "origin" "-945 1248 158" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "-943 1377 158" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "-1208 1895 110" "angle" "220" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "-2095 1536 238" }</entity>
+<entity>{ "classname" "misc_deadsoldier" "spawnflags" "16" "origin" "-1615 1383 97" }</entity>
+<entity>{ "classname" "trigger_once" "message" "That could have been you.               \nYou better watch out from now on.       \n                         -JudicatorOmega" "mins" "-1625 1373 87" "maxs" "-1605 1393 107" }</entity>
+</entity_add>
