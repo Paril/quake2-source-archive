@@ -10,6 +10,8 @@
 
 #include "g_local.h"
 
+int nextdynamicset;
+
 /*----------------------------------------
   SP_Flashlight
 

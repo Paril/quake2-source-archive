@@ -152,7 +152,7 @@ void SP_info_player_coop(edict_t *self)
 The deathmatch intermission point will be at one of these
 Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
 */
-void SP_info_player_intermission(void)
+void SP_info_player_intermission(edict_t *self)
 {
 }
 
@@ -717,7 +717,7 @@ void player_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damag
 
 		// ***** Start of NH Changes *****
 		if (attacker && attacker->client &&
-		!attacker->client->resp.score >= fraglimit->value)
+		!(attacker->client->resp.score >= fraglimit->value))
 		{
 		if (deathmatch->value)
 			Cmd_Help_f (self);		// show scores 

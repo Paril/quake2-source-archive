@@ -442,7 +442,10 @@ void ExitLevel (void)
 		if (ent->health > ent->client->pers.max_health)
 			ent->health = ent->client->pers.max_health;
 	}
+
+#ifdef _WIN32	
 	GenStopMidi();
+#endif
 
 }
 

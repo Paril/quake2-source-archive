@@ -9,6 +9,10 @@
 
 #include "g_local.h"
 
+char predatorModel[SKINLEN/2] ;
+char predatorSkin[SKINLEN] ;
+char marineSkin[SKINLEN] ;
+
 // Cvar handling
 void validatePredatorModel() {
 

@@ -11,6 +11,13 @@
 #include <stdlib.h>
 #include <time.h>
 
+char maplist_lastmap[64];
+char maplist2_lastmap[64];
+char maplist3_lastmap[64];
+
+// Intermission music 
+int last_beat ;
+
 // General random function.
 int nhrand(int low, int high) {
 

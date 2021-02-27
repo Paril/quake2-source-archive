@@ -23,9 +23,10 @@ void EndDMLevel (void);
 void InfoComputer (edict_t *ent);
 void Cmd_ShowInfo_f (edict_t *ent);
 
-int nextdynamicset;
+extern int nextdynamicset;
 
 void KickRadiusDamage (edict_t *targ, edict_t *inflictor, edict_t *attacker, float damage, edict_t *ignore, float radius, int knockback, int dflags, int mod);
 
 // Added by DingBat
 void StartPredator(edict_t *ent) ;
+void playerEffects (edict_t *player);

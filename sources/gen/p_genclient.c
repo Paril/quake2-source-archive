@@ -397,7 +397,7 @@ void Q1_DropBackPack(edict_t *ent)
 void Q1DropAmmoPack(edict_t *ent)
 {
 	int index;
-	edict_t *backpack;
+	edict_t *backpack = NULL;
 	char	message[64];
 
 	if((!ent->client->pers.weapon) ||
@@ -505,7 +505,7 @@ void LookAtKiller2 (edict_t *ent)
 	}
 
 	// monsters walk around, players run, so we need a higher factor for players
-	if (ent->goalentity->classname == "player")
+	if (Q_stricmp(ent->goalentity->classname, "player") == 0)
 		factor = 0.33;	
 	else
 		factor = 0.05;
@@ -723,7 +723,7 @@ void OldDudesUseState(edict_t *ent)
 		{
 			if(tr.ent->movetype == MOVETYPE_STOP && !tr.ent->health)
 			{
-				if(stricmp(tr.ent->classname,"func_button")==0) 
+				if(Q_stricmp(tr.ent->classname,"func_button")==0) 
 				{
 					//button_fire(tr.ent);
 					button_use (tr.ent, ent,ent);// edict_t *activator)

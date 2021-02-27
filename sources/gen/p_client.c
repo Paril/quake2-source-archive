@@ -152,7 +152,7 @@ void SP_info_player_coop(edict_t *self)
 The deathmatch intermission point will be at one of these
 Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
 */
-void SP_info_player_intermission(void)
+void SP_info_player_intermission(edict_t *self)
 {
 }
 
@@ -1850,8 +1850,10 @@ void PutClientInServer (edict_t *ent)
         client_persistant_t     saved;
         client_respawn_t        resp;
 
+#ifdef GEN_SOCK
 		//Always saved
 		client_sock_t			socksave;
+#endif
 
 //Skid added
 //Ugly - check if player has changed class
@@ -1994,13 +1996,17 @@ void PutClientInServer (edict_t *ent)
         // clear everything but the persistant data
         saved = client->pers;
 //Skid	
+#ifdef GEN_SOCK
 		socksave= client->sock;
+#endif
 
         memset (client, 0, sizeof(*client));
         
 		client->pers = saved;
 //Skid
+#ifdef GEN_SOCK
 		client->sock = socksave;
+#endif
         
 		if (client->pers.health <= 0)
                 InitClientPersistant(client);
@@ -2165,7 +2171,8 @@ void ClientBeginDeathmatch (edict_t *ent)
     }
     else
     {
-			
+
+#ifdef GEN_SOCK
 // Skid added
 // Select Effect based on map 
 	if(level.miditime)
@@ -2179,7 +2186,7 @@ void ClientBeginDeathmatch (edict_t *ent)
 	}
 	else if((!dedicated->value) || (ent->client->sock.sconnected))
 			GenMidiCmd(ent,MCMD_STOP);
-
+#endif
 
          if((level.game == CLASS_DOOM) || 
            (ent->client->resp.player_class == CLASS_DOOM))
@@ -2259,6 +2266,7 @@ void ClientBegin (edict_t *ent)
         }
         else
         {
+#ifdef GEN_SOCK
 // Skid added
 // Select Effect based on map 
 				//try to connect to client if not already connected
@@ -2272,6 +2280,7 @@ void ClientBegin (edict_t *ent)
 				}
 				else if((!dedicated->value) || (ent->client->sock.sconnected))
 					GenMidiCmd(ent,MCMD_STOP);
+#endif
 
                 // send effect if in a multiplayer game
                 if (game.maxclients > 1)

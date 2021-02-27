@@ -16,9 +16,9 @@
 #define DEFAULT_MARINE_SKIN "nightops"
 
 #define SKINLEN 64
-char predatorModel[SKINLEN/2] ;
-char predatorSkin[SKINLEN] ;
-char marineSkin[SKINLEN] ;
+extern char predatorModel[SKINLEN/2] ;
+extern char predatorSkin[SKINLEN] ;
+extern char marineSkin[SKINLEN] ;
 
 // Cvar handling.
 void validatePredatorModel() ;

@@ -2,6 +2,8 @@
 #include "g_local.h"
 #include "g_IRgoggles.h"
 
+gitem_t *IR_type_dropped ;
+
 // Declare Use_Quad and Use_Invulnerability
 void Use_Quad(edict_t *ent, gitem_t *item) ;
 void Use_Invulnerability(edict_t *ent, gitem_t *item) ;

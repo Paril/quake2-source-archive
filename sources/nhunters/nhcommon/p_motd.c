@@ -14,10 +14,10 @@
 void ShowMOTD(edict_t *ent)
 {
 
-  char textfile[500];
-  char line[80];
-  char entry[120];	// a line with the xv yv etc..
-  char string[1400];	// contains what is sent to WriteString
+  char textfile[500] = { 0 };
+  char line[80] = { 0 };
+  char entry[120] = { 0 };	// a line with the xv yv etc..
+  char string[1400] = { 0 };	// contains what is sent to WriteString
 	
   int i=0;	// for going through each motd.txt line - counter
   int y=16;	// for incrementing the y coord on screen

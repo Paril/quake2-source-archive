@@ -654,12 +654,12 @@ extern cvar_t *motd_time ;
 #define MAPLIST_SMALL_MAX	2
 #define MAPLIST_MEDIUM_MAX	10
 #define MAPLIST_LARGE_MAX	15
-char maplist_lastmap[64];
-char maplist2_lastmap[64];
-char maplist3_lastmap[64];
+extern char maplist_lastmap[64];
+extern char maplist2_lastmap[64];
+extern char maplist3_lastmap[64];
 
 // Intermission music 
-int last_beat ;
+extern int last_beat ;
 
 // Starting inventory stuff.
 extern cvar_t *predator_max_rockets ;

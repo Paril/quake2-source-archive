@@ -23,6 +23,7 @@ void MoveClientToIntermission (edict_t *ent)
 		hack=true;
 
 //Skid added
+#ifdef GEN_SOCK
 	if(level.miditime)
 	{
 		if((!dedicated->value) || 
@@ -32,6 +33,7 @@ void MoveClientToIntermission (edict_t *ent)
 	  		GenMidiCmd(ent,MCMD_DINTER);
 		}
 	}
+#endif
 
 	if (deathmatch->value || coop->value)
 	{

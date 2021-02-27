@@ -1,5 +1,6 @@
  
 #include "g_local.h"
+#include "g_IRgoggles.h"
 
 typedef struct
 {

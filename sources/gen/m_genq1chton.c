@@ -258,8 +258,8 @@ void chton_pain (edict_t *self, edict_t *other, float kick, int damage)
 	if (level.time < self->pain_debounce_time)
 		return;
 
-/*	if(stricmp(level.mapname,"qe1m7")==0)
-	if(stricmp(other->classname,"target_q1_bolt")==0)
+/*	if(Q_stricmp(level.mapname,"qe1m7")==0)
+	if(Q_stricmp(other->classname,"target_q1_bolt")==0)
 	{
 		gi.dprintf("HIT BY BOLT");
 		self->pain_debounce_time = level.time + 5;
@@ -592,6 +592,8 @@ qboolean chton_checkattack (edict_t *self)
 
 	else if (visible(self,self->enemy))
 		return true;
+
+	return false;
 }
 
 

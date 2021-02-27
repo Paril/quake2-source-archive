@@ -9,8 +9,9 @@
 //============================================================================
 
 // NH menu.
-qboolean showscores;// set layout stat
+extern qboolean showscores;// set layout stat
 
 // Show the NH menu.
 void ShowNHMenu (edict_t *ent); 
 qboolean NHStartClient(edict_t *ent) ;
+void EnterGame(edict_t *ent, pmenu_t *p) ;

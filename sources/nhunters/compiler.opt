@@ -1,0 +1,3 @@
+-I$src_folder
+-I$src_folder/nhcommon
+-I$src_folder/strsep

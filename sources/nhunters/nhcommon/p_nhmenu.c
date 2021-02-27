@@ -12,6 +12,7 @@
 
 #include "g_local.h"
 #include "g_cmd_observe.h"
+#include "g_cmd_setup.h"
 
 void ShowNHMenu(edict_t *ent) ;
 void ShowNHInfoMenu(edict_t *ent, pmenu_t *p) ;
@@ -31,6 +32,9 @@ void EnterGame(edict_t *ent, pmenu_t *p) ;
 void ObserveGame(edict_t *ent, pmenu_t *p) ;
 void ChaseCam(edict_t *ent, pmenu_t *p) ;
 void SetupBindings(edict_t *ent, pmenu_t *p);
+void spectator_respawn (edict_t *ent);
+
+qboolean showscores;
 
 // Menu initialization.
 

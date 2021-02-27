@@ -9,6 +9,8 @@
 //============================================================================
 
 #include "g_local.h"
+#include "g_IRgoggles.h"
+#include "g_cmd_observe.h"
 
 void CTFChaseCam(edict_t *ent)
 {

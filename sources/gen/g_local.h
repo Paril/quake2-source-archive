@@ -1,7 +1,9 @@
 // g_local.h -- local definitions for game module
 
 
+#if defined(_WIN32) || defined(UNIX)
 #define GEN_SOCK
+#endif
 
 #ifdef _WIN32
 #ifdef GEN_SOCK

@@ -10,6 +10,10 @@
 #include "g_cmd_misc.h" // NH change: Miscellaneous commands.
 #include "g_cmd_overload.h" // NH change: Predator weapon overload toggle.
 #include "g_cmd_spotrep.h" // NH change: Spot report command.
+#include "g_cmd_setup.h"
+#include "p_nhmenu.h"
+#include "g_cmd_observe.h"
+#include "p_nhmenu.h"
 //***** End of NH changes ***** 
 
 
@@ -1059,7 +1063,7 @@ void ClientCommand (edict_t *ent)
 	{
 	  // If observing use flashlight key to enter game..
 	  if (ent->isObserving) {
-		  EnterGame(ent);
+		  EnterGame(ent, NULL);
 		  return;
 	  }
 	  else {

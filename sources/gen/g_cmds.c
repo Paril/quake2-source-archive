@@ -1343,11 +1343,12 @@ void ClientCommand (edict_t *ent)
 	else if(Q_stricmp(cmd, "mpause") == 0)
 			GenMidiCmd(ent,MCMD_PAUSE);
 #endif
-	
+#ifdef GEN_SOCK
 	else if(Q_stricmp(cmd, "myip") == 0)
 	{
 		gi.dprintf("IP addr :%s\n",ent->client->sock.ipaddr);
 	}
+#endif
 	else if(Q_stricmp(cmd,"showorg")== 0)
 	{
 		gi.dprintf("X :%f\nY :%f\nZ :%f\n",ent->s.origin[0],ent->s.origin[1],ent->s.origin[2]);

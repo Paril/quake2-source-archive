@@ -11,6 +11,8 @@
 #include "g_local.h"
 #include "g_cmd_overload.h"                                                    
 
+void CTFSay_Team(edict_t *who, char *msg);
+
 void Cmd_SpotRep_f(edict_t *ent) {
 
   char message[100] ;

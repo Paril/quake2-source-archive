@@ -19,3 +19,4 @@ void validateMarineSafetyTime();
 void validatePredatorSafetyTime();
 
 int getMarineSafetyTime();
+int getPredatorSafetyTime();

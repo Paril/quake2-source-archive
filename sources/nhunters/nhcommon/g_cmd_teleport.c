@@ -210,6 +210,8 @@ void Cmd_Load_Teleport_f(edict_t *ent)
   return ;	
 }
 
+void	SelectSpawnPoint (edict_t *ent, vec3_t origin, vec3_t angles);
+
 void
 randomTeleport(edict_t *ent) {
 

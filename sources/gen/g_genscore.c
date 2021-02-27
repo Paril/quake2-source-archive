@@ -57,7 +57,7 @@ void GenTeamScoreboard (edict_t *ent, edict_t *killer)
 	int		i, j, k, n;
 	int		sorted[4][MAX_CLIENTS];
 	int		sortedscores[4][MAX_CLIENTS];
-	int		score, total[4], totalscore[2];
+	int		score, total[4], totalscore[4];
 	int		last[4];
 	gclient_t	*cl;
 	edict_t		*cl_ent;
@@ -67,7 +67,7 @@ void GenTeamScoreboard (edict_t *ent, edict_t *killer)
 	// sort the clients by team and score
 	total[0] = total[1] = total[2] = total[3] = 0;
 	last[0] = last[1] =  last[2] = last[3] = 0;
-	totalscore[0] = totalscore[1] = 0;
+	totalscore[0] = totalscore[1] = totalscore[2] = totalscore[3] = 0;
 	
 	for (i=0 ; i<game.maxclients ; i++)
 	{
