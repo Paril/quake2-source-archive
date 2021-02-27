@@ -35,7 +35,7 @@ void turret_idle (edict_t *self)
 	self->monsterinfo.currentmove = &turret_move_idle;
 }
 
-void turret_sight (edict_t *self)
+void turret_sight (edict_t *self, edict_t *other)
 {
 	self->monsterinfo.currentmove = &turret_move_sight;
 }
@@ -139,7 +139,7 @@ void turret_die(edict_t *self, edict_t *inflictor, edict_t *attacker, int damage
 }
 
 
-void turret_pain (edict_t *self)
+void turret_pain (edict_t *self, edict_t *other, float kick, int damage)
 {
 	self->style = TURRET_WAIT;
 	self->takedamage = false;

@@ -54,9 +54,9 @@ gitem_armor_t jacketarmor_info	= { 25,  50, .30, .00, ARMOR_JACKET};
 gitem_armor_t combatarmor_info	= { 50, 100, .60, .30, ARMOR_COMBAT};
 gitem_armor_t bodyarmor_info	= {100, 200, .80, .60, ARMOR_BODY};
 
-static int	jacket_armor_index;
-static int	combat_armor_index;
-static int	body_armor_index;
+int	jacket_armor_index;
+int	combat_armor_index;
+int	body_armor_index;
 static int	power_screen_index;
 static int	power_shield_index;
 
@@ -204,7 +204,7 @@ void SetRespawn (edict_t *ent, float delay)
 
 //peewee start
 //tank functions
-void dietank(edict_t *ent)
+void dietank(edict_t *ent, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
 {
 	//remove tank enhancment
 	ent->client->pers.enhance = ENH_NONE;
@@ -1461,6 +1461,16 @@ be on an entity that hasn't spawned yet.
 */
 //peewee start
 //spawn monster function
+void SP_monster_soldier(edict_t *self);
+void SP_monster_berserk(edict_t *self);
+void SP_monster_soldier_ss(edict_t *self);
+void SP_monster_infantry(edict_t *self);
+void SP_monster_flyer(edict_t *self);
+void SP_monster_gunner(edict_t *self);
+void SP_monster_chick(edict_t *self);
+void SP_monster_medic(edict_t *self);
+void SP_monster_gladiator(edict_t *self);
+
 void ItemSpawnMonster(edict_t *ent, edict_t *monster, gitem_t *item, char *spawnname)
 {
 	int temp;

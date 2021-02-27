@@ -327,7 +327,7 @@ mmove_t block_move_sight = {FRAME_stand1, FRAME_stand1, block_frames_stand, bloc
 
 //sight function
 //change moveinfo to sight frames
-void block_sight (edict_t *self, edict_t *other, float kick, int damage)
+void block_sight (edict_t *self, edict_t *other)
 {
 	self->monsterinfo.currentmove = &block_move_sight;
 }
