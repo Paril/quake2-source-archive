@@ -1,0 +1,158 @@
+GenderMod 0.1 Technical Notes
+-----------------------------
+by SteQve (steqve@shore.net), 4/12/98.
+
+This TechNotes document contains a discussion of how GenderMod operates.
+It is also written for people who want to integrate GenderMod with
+other modifications or who want to examine its code in detail.  In some
+places, it assumes that the reader has a working knowledge of computer
+programming, but I've tried to keep this to a minimum.
+
+This code is written to be easily readable and understandable.  As a result,
+it's not particularly elegant and in some cases it is downright inefficient.
+You have been warned.
+
+This TechNote is shockingly sparse.  I apologize, but release time is
+near...
+
+Table of contents
+-----------------
+1. General Approach
+2. Changes to Original Source Code
+3. Main Sections of the Code
+4. Limitations of the Approach
+5. Credits
+
+
+
+1. General Approach
+-------------------
+
+The client can specify their own sex by setting the "sex" variable in the
+userinfo string.  (E.g. on the client side, "set sex m u").  Acceptable
+values at this time are "m", "f", and "n".  The client's specification is
+a PROPOSED value.  GenderMod can override this value if it can verify that
+the proposed gender is inconsistent with the model used by the player.
+
+GenderMod/ModelGen.dat contains a map of model names to their
+associated genders ([M]ale, [F]emale, [N]euter).  When the userinfo string
+is sent to the server (e.g. when the user changes their skin), GenderMod
+checks for the "sex" value, gets the model, and looks through the map for a 
+match.  If a match is found and the model is male or female, then that gender
+is enforced.  If the match is neuter, or the map doesn't identify the
+model, then the user's "sex" variable is used.  Thus users of neuter models 
+can set their gender as they wish, or they can do so if GenderMod doesn't know
+about their model.  If no sex variable is available, then idsoftware's original
+logic applies - if the model name starts with "f", then it is treated as female,
+otherwise it is treated as male.
+
+The user can use a "gender me" command to find out what GenderMod is using
+internally for that user's gender, regardless of what their "sex" variable is.
+
+As mentioned, in cases where the model has a male or female gender, the player
+can NOT switch to the other gender.  This isn't perfect (e.g. when someone
+uses a female skin on a male model), but the idea is to make the gender of
+the player as consistent with the model as possible.  (OK, so even with a
+female model and an unknown skin the client displays that grunt, but the
+*idea* is sound and I cross my fingers daily that idsoftware will let the
+client display a female model if it doesn't have a female skin.)
+
+Once the gender has been identified (or "approved"), it is stored in the
+client_respawn_t part of the client's edict for speed of lookup.
+
+
+2. Changes to Original Source Code
+----------------------------------
+
+** NOTE ** GenderMod 0.1 code is bundled with the ServObit 1.4 code.
+
+g_cmds.c - addition of "gender" command to ClientCommand()
+
+g_local.h - extended client_respawn_t to record gender
+
+g_save.c - InitGame
+
+p_client.c - ClientUserinfoChanged
+
+
+3. Main Sections of the Code
+----------------------------
+
+** NOTE ** GenderMod 0.1 code is bundled with the ServObit 1.4 code.
+
+All GenderMod code is in gender.[ch]
+
+In gender.h, the different genders are defined as constants.
+
+Model Characteristics - creation and search of the model->gender map, logic
+   to determine gender based on model
+
+Gender Pronouns - translates from gender to appropriate pronouns, e.g.
+   his/her, him/her, he/she, etc.
+
+Determining Player Gender - gets user skin information, determines
+   restrictions on what gender can be set for what model, etc.
+
+Initialization - initialization in the game (what, you were expecting a small
+   dissertation on the subject?)
+
+
+4. Limitations of the Approach
+------------------------------
+
+One problem is that ModelGen.dat must be kept up to date in order to be
+the most accurate.  It is hoped that someone (e.g. model warehouses) takes
+care of maintaining an "official" ModelGen.dat, but it becomes the server
+operator's responsibility to keep their ModelGen.dat current.  However,
+there will always be models which are not listed in any official
+ModelGen.dat, so the model->gender map is not sufficient.
+
+One naming convention that could go a long way is for modelers to give their
+female models names that start with "f".  This would support the present
+idsoftware approach of determining gender (i.e. looking for an "f" in the
+beginning of the model name) and thus would have immediate "global"
+effectiveness regardless of whether mods use GenderMod or not; however,
+what to do about the female models that currently exist without this naming
+convention, and how to handle neuter models?  The modeling community needs
+to determine whether naming conventions are reasonable or not.
+
+GenderMod is pretty autocratic about limiting when players can declare
+their own gender.  The intention is to provide as much consistency with
+the model the player is using, so players using known male/female models
+can't say they're the other gender.  However, this doesn't address the
+situation when players use a male model which has a female skin, for example,
+and in the long run users may not like this "forced" adherence to the gender
+of the model, although in my opinion this "unity" contributes best to 
+establishing a "valid" online persona, which is one of the kewl things about
+the Internet.  This last sentence of this paragraph only exists to allow me to
+put "something" in quotes for one final time because the first "approximately"
+12 times or so simply weren't enough.  OK, so those last two quotes were 
+"forced" but I can see this paragraph headed down an awfully slippery slope,
+so let's just end this the last sentence and get on with it.
+
+While each entry of the model->gender map only takes up about 10 bytes or so,
+conceivably it could become large enough that memory becomes a factor.
+Search of the map is presently linear, which also can become problematic
+as the map grows in size.  One way of reducing the impact is to only record
+non-male models and assume male for all others; however, if GenderMod's
+restrictions on when players can changes their genders are to be kept,
+it is necessary to know when models are "definitely male" to prevent players
+from declaring themselves female.
+
+Any solution which relies on the user somehow specifying their gender to the
+server will have limited effectiveness, at least initially, because it
+would take a while for users to become aware of the capability.
+
+
+5. Credits
+----------
+
+EAVY and I had some great email conversations on the best way to address the
+problem of accurately determining the gender of player models.  He went the
+simpler and less autocratic route; to each their own ;-)  It is hoped that
+our conversation will be translated into an article.
+
+Thanks go to the various people who responded positively to the gender issues
+I outlined in my article "Technical Concerns Regarding Use of New Player
+Models."  The response, including EAVY's, indicated that I wasn't the only one
+who wanted to see something done.
