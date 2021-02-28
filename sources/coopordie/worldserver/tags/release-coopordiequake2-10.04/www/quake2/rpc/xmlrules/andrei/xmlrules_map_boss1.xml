@@ -1,0 +1,40 @@
+<xml>
+<!-- initial xmlrule file by ANDREI 2009-07-23 -->
+	<entity_add>
+		<entity> { "classname" "misc_deadsoldier" "origin" "-1848 40 2224" } </entity>
+		<entity> { "classname" "item_invulnerability" "origin" "-1848 200 2184" } </entity>
+		<entity> { "classname" "item_enviro" "origin" "-1848 200 2184" } </entity>
+		<entity> { "classname" "item_bandolier" "origin" "-1848 200 2184" } </entity>
+		<entity> { "classname" "item_adrenaline" "origin" "-1848 200 2184" } </entity>
+		<entity> { "classname" "item_breather" "origin" "-1848 200 2184" } </entity>
+		<entity> { "classname" "item_quad" "origin" "-1848 200 2184" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "-1816 360 2184" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "-1816 360 2184" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "-1816 360 2184" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "-1816 360 2184" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "-1816 360 2184" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "-1816 360 2184" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "-1816 360 2184" } </entity>
+		<entity> { "classname" "ammo_cells" "origin" "-1848 360 2184" } </entity>
+		<entity> { "classname" "ammo_bullets" "origin" "-1880 360 2184" } </entity>
+		<entity> { "classname" "ammo_bullets" "origin" "-1880 360 2184" } </entity>
+		<entity> { "classname" "ammo_bullets" "origin" "-1880 360 2184" } </entity>
+		<entity> { "classname" "ammo_bullets" "origin" "-1880 360 2184" } </entity>
+		<entity> { "classname" "ammo_bullets" "origin" "-1880 360 2184" } </entity>
+		<entity> { "classname" "ammo_cells" "origin" "-1848 360 2184" } </entity>
+		<entity> { "classname" "ammo_cells" "origin" "-1848 360 2184" } </entity>
+		<entity> { "classname" "ammo_cells" "origin" "-1848 360 2184" } </entity>
+		<entity> { "classname" "item_armor_body" "origin" "-1848 400 2184" } </entity>
+		<entity> { "classname" "item_pack" "origin" "-1808 400 2184" } </entity>
+		<entity> { "classname" "item_pack" "origin" "-1888 400 2184" } </entity>
+		<entity> { "classname" "monster_boss2" "origin" "-1984 -64 1736" } </entity>
+		<entity> { "classname" "monster_tank_commander" "origin" "-1936 -224 1680" } </entity>
+		<entity> { "classname" "monster_tank_commander" "origin" "-1912 80 1680" } </entity>
+		<entity> { "classname" "monster_tank_commander" "origin" "-728 -64 1184" } </entity>
+		<entity> { "classname" "monster_tank_commander" "origin" "-1552 -224 968" } </entity>
+		<entity> { "classname" "monster_tank_commander" "origin" "144 -240 1048" } </entity>
+		<entity> { "classname" "monster_tank_commander" "origin" "144 144 1048" } </entity>
+		<!-- updated 2009-07-23 -->
+		<entity> { "classname" "item_health_mega" "origin" "-144 -104 1208" } </entity>
+	</entity_add>
+</xml>

@@ -1,0 +1,39 @@
+<xml>
+<entity_add>
+
+<!-- info_player_start: default -->
+<entity> { "classname" "info_player_coop" "origin" "-720 1466 -352" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-720 1502 -352" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-680 1466 -352" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-680 1502 -352" } </entity>
+
+<!-- info_player_start: from_a1 -->
+<entity> { "classname" "info_player_coop" "origin" "-720 1466 -352" "targetname" "from_a1" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-720 1502 -352" "targetname" "from_a1" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-680 1466 -352" "targetname" "from_a1" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-680 1502 -352" "targetname" "from_a1" } </entity>
+
+<!-- info_player_start: from_a2 -->
+<entity> { "classname" "info_player_coop" "origin" "-760 1224 -356" "targetname" "from_a2" "angle" "-90" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-796 1224 -356" "targetname" "from_a2" "angle" "-90" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-954 1168 -400" "targetname" "from_a2" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "-988 1168 -400" "targetname" "from_a2" } </entity>
+
+<!-- info_player_start: from_d -->
+<entity> { "classname" "info_player_coop" "origin" "184 1916 -292" "targetname" "from_d" "angle" "270" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "136 1916 -292" "targetname" "from_d" "angle" "270" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "184 1964 -292" "targetname" "from_d" "angle" "270" } </entity>
+<entity> { "classname" "info_player_coop" "origin" "136 1964 -292" "targetname" "from_d" "angle" "270" } </entity>
+
+</entity_add>
+
+<!-- move "from_a2" info_player_start for more room -->
+<entity_change>
+<if keyname="classname" keyvalue="info_player_start"> 
+    <if keyname="targetname" keyvalue="from_a2"> 
+        <set_key keyname="origin" value="-1022 1168 -400" /> 
+    </if> 
+</if>
+</entity_change>
+
+</xml>

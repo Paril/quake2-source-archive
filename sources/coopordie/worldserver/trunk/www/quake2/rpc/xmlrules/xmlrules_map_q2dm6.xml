@@ -1,0 +1,135 @@
+<xml>
+<!-- initial xmlrule file by ANDREI 2009-08-18 -->
+	<entity_change>
+		<if keyname="classname" keyvalue="worldspawn">
+			<set_key keyname="message" value="The cave people"/>
+		</if>
+		<if keyname="classname" keyvalue="ammo_" op="strstr">
+			<del_entity/>
+		</if>
+		<if keyname="classname" keyvalue="weapon_" op="strstr">
+			<del_entity/>
+		</if>
+		<if keyname="classname" keyvalue="info_" op="strstr">
+			<del_entity/>
+		</if>
+		<if keyname="classname" keyvalue="item_" op="strstr">
+			<del_entity/>
+		</if>
+	</entity_change>
+	<entity_add>
+		<entity> { "classname" "trigger_always" "mins" "0 0 0" "maxs" "1 1 1" "target" "mission" "sounds" "2" } </entity>
+		<entity> { "classname" "target_help"  "targetname" "mission" "origin" "1184 488 520" "message" "You're a caveman.\nfind the teleporter\nto future." } </entity>
+		<entity> { "classname" "target_help"  "targetname" "mission" "spawnflags" "1" "origin" "1184 488 520" "message" "Your house has been\ninvaded by ugly\nstroggs, go in the\nfuture" } </entity>
+		<entity> {  "classname" "trigger_multiple"      "mins" "56 -256 -320" "maxs" "88 -224 -248" "targetname" "trig_q2dm6_startmap" "target" "exitlevel" } </entity>
+		<entity> {  "classname" "misc_teleporter_dest"  "origin" "72 -240 -296"  "targetname" "tele_dest_startmap" "angle" "90" } </entity>
+		<entity> {  "classname" "target_changelevel"  "origin" "-40 472 664"  "map" "*startmap"  "targetname" "exitlevel" } </entity>
+		<entity> { "classname" "misc_teleporter" "origin" "1080 -384 24" "target" "tele_dest_startmap" } </entity>
+		<entity> { "classname" "monster_boss2" "origin" "936 -376 16" "angle" "90" "spawnflags" "5" } </entity>
+		<entity> { "classname" "monster_tank_commander" "origin" "768 368 -96" "angle" "-90" "spawnflags" "5" } </entity>
+		<entity> { "classname" "monster_tank_commander" "origin" "1024 8 -96" "angle" "-90" "spawnflags" "5" } </entity>
+		<entity> { "classname" "item_armor_body" "origin" "1376 -128 -40" "angle" "180" } </entity>
+		<entity> { "classname" "monster_gladiator" "origin" "912 -656 -160" "angle" "180" } </entity>
+		<entity> { "classname" "monster_berserk" "origin" "152 -544 -224" "angle" "-90" } </entity>
+		<entity> { "classname" "monster_berserk" "origin" "216 -544 -224" "angle" "-90" } </entity>
+		<entity> { "classname" "monster_berserk" "origin" "280 -544 -224" "angle" "-90" } </entity>
+		<entity> { "classname" "monster_berserk" "origin" "288 -864 -224" "angle" "90" } </entity>
+		<entity> { "classname" "monster_berserk" "origin" "224 -864 -224" "angle" "90" } </entity>
+		<entity> { "classname" "monster_berserk" "origin" "160 -864 -224" "angle" "90" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "608 -864 -152" } </entity>
+		<entity> { "classname" "item_health_large" "origin" "0 -704 -216" } </entity>
+		<entity> { "classname" "item_armor_combat" "origin" "48 -232 -216" "angle" "-90" } </entity>
+		<entity> { "classname" "item_armor_combat" "origin" "-32 -232 -216" "angle" "-90" } </entity>
+		<entity> { "classname" "ammo_slugs" "origin" "8 -240 -216" } </entity>
+		<entity> { "classname" "weapon_railgun" "origin" "544 -32 -168" "angle" "180" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "-40 -32 -96" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "-40 0 -96" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "-40 32 -96" } </entity>
+		<entity> { "classname" "weapon_supershotgun" "origin" "0 0 -96" } </entity>
+		<entity> { "classname" "item_invulnerability" "origin" "544 -32 -168" "angle" "180" } </entity>
+		<entity> { "classname" "monster_gunner" "origin" "-352 256 64" "angle" "90" } </entity>
+		<entity> { "classname" "monster_gunner" "origin" "-432 248 64" "angle" "90" } </entity>
+		<entity> { "classname" "monster_gunner" "origin" "-480 480 64" "angle" "-1.40334e-014" "spawnflags" "5" } </entity>
+		<entity> { "classname" "monster_gunner" "origin" "-288 480 64" "angle" "180" "spawnflags" "5" } </entity>
+		<entity> { "classname" "item_health" "origin" "-408 944 16" } </entity>
+		<entity> { "classname" "item_health" "origin" "-360 944 16" } </entity>
+		<entity> { "classname" "item_armor_shard" "origin" "-352 848 16" "angle" "90" } </entity>
+		<entity> { "classname" "item_armor_shard" "origin" "-368 848 16" "angle" "90" } </entity>
+		<entity> { "classname" "item_armor_shard" "origin" "-384 848 16" "angle" "90" } </entity>
+		<entity> { "classname" "item_armor_shard" "origin" "-400 848 16" "angle" "90" } </entity>
+		<entity> { "classname" "item_armor_shard" "origin" "-416 848 16" "angle" "90" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "-152 864 16" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "-152 928 16" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "888 1176 -168" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "888 1144 -168" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "888 1112 -168" } </entity>
+		<entity> { "classname" "monster_flyer" "origin" "-576 640 160" "angle" "90" "spawnflags" "5" } </entity>
+		<entity> { "classname" "monster_flyer" "origin" "-576 896 160" "angle" "-90" "spawnflags" "5" } </entity>
+		<entity> { "classname" "weapon_grenadelauncher" "origin" "-128 896 40" } </entity>
+		<entity> { "classname" "monster_tank" "origin" "-16 904 24" } </entity>
+		<entity> { "classname" "item_health_large" "origin" "-96 880 -48" } </entity>
+		<entity> { "classname" "ammo_grenades" "origin" "-88 912 -48" } </entity>
+		<entity> { "classname" "ammo_grenades" "origin" "-88 936 -48" } </entity>
+		<entity> { "classname" "trigger_counter" "count" "3" "target" "spawn1" "targetname" "counter1" "mins" "384 1520 168" "maxs" "416 1536 176" } </entity>
+		<entity> { "classname" "monster_mutant" "origin" "-24 1168 -8" "targetname" "spawn1" "spawnflags" "2" } </entity>
+		<entity> { "classname" "monster_mutant" "origin" "-104 1304 -8" "targetname" "spawn1" "spawnflags" "2" } </entity>
+		<entity> { "classname" "item_armor_jacket" "origin" "568 1504 -152" } </entity>
+		<entity> { "classname" "monster_soldier_ss" "origin" "568 1440 -152" "target" "counter1" } </entity>
+		<entity> { "classname" "monster_soldier_ss" "origin" "616 1504 -152" "target" "counter1" } </entity>
+		<entity> { "classname" "monster_soldier_ss" "origin" "568 1568 -152" "target" "counter1" } </entity>
+		<entity> { "classname" "item_health_large" "origin" "488 1032 -232" } </entity>
+		<entity> { "classname" "monster_gladiator" "origin" "960 1160 -120" "spawnflags" "5" } </entity>
+		<entity> { "classname" "item_health" "origin" "1184 808 -120" } </entity>
+		<entity> { "classname" "item_health" "origin" "1120 808 -120" } </entity>
+		<entity> { "classname" "monster_flyer" "origin" "1272 936 -120" "angle" "90" "spawnflags" "4" } </entity>
+		<entity> { "classname" "monster_berserk" "origin" "1368 608 -160" "angle" "180" "spawnflags" "5" } </entity>
+		<entity> { "classname" "monster_berserk" "origin" "1112 608 -160" "spawnflags" "5" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1272 160 -88" "angle" "180" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1272 160 -72" "angle" "180" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1272 160 -136" "angle" "180" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1272 160 -120" "angle" "180" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1272 160 -104" "angle" "180" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1272 160 -184" "angle" "180" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1272 160 -168" "angle" "180" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1272 160 -152" "angle" "180" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "info_player_coop" "origin" "1608 648 -128" } </entity>
+		<entity> { "classname" "info_player_coop" "origin" "1568 672 -128" } </entity>
+		<entity> { "classname" "info_player_coop" "origin" "1608 696 -128" } </entity>
+		<entity> { "classname" "info_player_start" "origin" "1560 712 -128" } </entity>
+		<entity> { "classname" "monster_soldier_light" "origin" "1112 472 -128" } </entity>
+		<entity> { "classname" "monster_soldier_light" "origin" "1112 416 -128" } </entity>
+		<entity> { "classname" "monster_soldier_light" "origin" "1112 344 -128" } </entity>
+		<entity> { "classname" "monster_soldier_light" "origin" "1112 272 -128" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "1048 320 -128" } </entity>
+		<entity> { "classname" "ammo_shells" "origin" "1048 384 -128" } </entity>
+		<entity> { "classname" "weapon_shotgun" "origin" "1056 352 -128" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -8" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -24" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -40" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -56" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -72" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -88" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -104" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -120" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -136" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -152" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -168" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "1080 824 -184" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "456 -504 -88" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "456 -504 -112" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "456 -504 -136" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "-240 392 40" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "-240 408 80" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "424 64 176" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "384 64 152" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "384 64 128" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "384 64 104" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "384 64 80" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "384 64 56" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "target_laser" "origin" "384 64 32" "angle" "-90" "spawnflags" "3" "dmg" "999" } </entity>
+		<entity> { "classname" "info_player_coop" "origin" "1600 680 -112" } </entity>
+		<entity> { "classname" "info_player_coop" "origin" "1552 688 -112" } </entity>
+		<entity> { "classname" "info_player_coop" "origin" "1600 720 -112" } </entity>
+		<entity> { "classname" "info_player_start" "origin" "1544 728 -112" } </entity>
+	</entity_add>
+</xml>

@@ -1,0 +1,250 @@
+<xml> 
+<entity_add> 
+<entity>{ "classname" "info_player_start" "origin" "-1120 -1608 464" "angle" "60" }</entity>
+<entity>{ "classname" "info_player_coop"  "origin" "-1136 -1256 176" "angle" "90" }</entity>
+<entity>{ "classname" "info_player_coop"  "origin" "-1184 -1256 176" "angle" "90" }</entity>
+<entity>{ "classname" "info_player_coop"  "origin" "-1080 -1608 464" "angle" "60" }</entity>
+
+<entity>{ "classname" "misc_bigviper" "origin" "-1160 -1400 200" "angles" "61.2 53.6 10" }</entity>
+<entity>{ "classname" "trigger_always" "origin" "-1240 -1416 64" "target" "Init" }</entity>
+<entity>{ "classname" "target_explosion" "origin" "-1160 -1408 232" "targetname" "init" "dmg" "0" "delay" "4" }</entity>
+<entity>{ "classname" "target_explosion" "origin" "-1168 -1384 264" "targetname" "init" "dmg" "0" "delay" "3" }</entity>
+<entity>{ "classname" "target_explosion" "origin" "-1168 -1352 296" "targetname" "init" "dmg" "0" "delay" "2" }</entity>
+<entity>{ "classname" "target_explosion" "origin" "-1176 -1328 328" "targetname" "init" "dmg" "0" "delay" "1" }</entity>
+<entity>{ "classname" "target_explosion" "origin" "-1104 -1432 160" "targetname" "init" "dmg" "0" "delay" "2" }</entity>
+<entity>{ "classname" "target_explosion" "origin" "-1072 -1392 176" "targetname" "init" "dmg" "0" "delay" "1" }</entity>
+<entity>{ "classname" "target_help" "origin" "-1088 -1496 392" "spawnflags" "1" "targetname" "init" "message" "Meet up with your companions\n(if any) and capture the\nfortified Strogg Depot" }</entity>
+<entity>{ "classname" "target_help" "origin" "-1120 -1496 392" "targetname" "init" "message" "Destroy Strogg leader's\nhead (Technician). Open the\ndefense grid that\nprotects the supplies" }</entity>
+<entity>{ "classname" "target_explosion" "origin" "-1152 -1440 256" "targetname" "init" "dmg" "0" "delay" "1.7" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "-1160 -1064 160" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "-1176 -1232 160" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "origin" "-712 -928 192" "angle" "270" "target" "wpa1" "item" "ammo_shells" "spawnflags" "1" "targetname" "init" }</entity>
+<entity>{ "classname" "monster_soldier" "origin" "-696 -968 184" "angle" "270" "target" "wpa1" "item" "ammo_bullets" "spawnflags" "1" "targetname" "init" }</entity>
+<entity>{ "classname" "monster_soldier_light" "origin" "-704 -776 192" "angle" "270" "target" "wpa1" "spawnflags" "1" "targetname" "init" }</entity>
+<entity>{ "classname" "monster_soldier_light" "origin" "-728 -824 192" "angle" "270" "target" "wpa1" "spawnflags" "1" "targetname" "init" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "-712 -688 192" "angle" "270" "target" "wpa1" "item" "ammo_bullets" "spawnflags" "1" "targetname" "init" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-704 -1152 168" "targetname" "wpa1" "target" "wpa2" }</entity>
+<entity>{ "classname" "monster_soldier_light" "origin" "-688 -864 192" "angle" "270" "target" "wpa1" "spawnflags" "1" "targetname" "init" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-1160 -1152 160" "targetname" "wpa2" "target" "wpa3" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-1160 -1248 160" "targetname" "wpa3" }</entity>
+<entity>{ "classname" "monster_tank" "origin" "-704 -544 160" "angle" "270" "item" "ammo_rockets" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_hover" "origin" "-568 -600 256" "angle" "252" "item" "item_armor_shard" }</entity>
+<entity>{ "classname" "monster_hover" "origin" "-824 -512 328" "angle" "293" "item" "ammo_cells" }</entity>
+<entity>{ "classname" "item_armor_combat" "origin" "-928 -544 160" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "-896 -576 160" }</entity>
+<entity>{ "classname" "misc_deadsoldier" "origin" "-920 -568 136" "angle" "340" "spawnflags" "2" }</entity>
+<entity>{ "classname" "misc_deadsoldier" "origin" "-1040 -1396 152" "angle" "33" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-700 -700 -284" "angle" "36" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-636 -612 -316" "angle" "267" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-812 -568 -316" "angle" "301" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-652 -484 -316" "angle" "251" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-752 -792 -316" "angle" "131" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-288 -624 -252" "angle" "14" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-456 -664 -284" "angle" "56" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-144 -380 -240" "angle" "259" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-124 -20 -136" "angle" "259" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "168 -24 48" "angle" "188" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-116 188 68" "angle" "342" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-12 88 68" "angle" "259" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_berserk" "origin" "-812 -220 172" "angle" "360" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_brain" "origin" "-700 -180 180" "angle" "271" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_brain" "origin" "-540 -188 180" "angle" "200" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-712 -800 440" "angle" "89" "spawnflags" "3" "target" "wpb1" "targetname" "flyers1" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-780 -740 552" "angle" "65" "spawnflags" "3" "target" "wpb1" "targetname" "flyers1" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-612 -672 504" "angle" "118" "spawnflags" "3" "target" "wpb1" "targetname" "flyers1" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-824 -616 552" "angle" "63" "spawnflags" "3" "target" "wpb1" "targetname" "flyers1" }</entity>
+<entity>{ "classname" "trigger_once" "spawnflags" "0" "target" "flyers1" "mins" "-752 -420 152" "maxs" "-660 -384 244" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-704 -396 184" "targetname" "wpb1" "target" "wpb2" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-700 -192 176" "targetname" "wpb2" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "-292 -236 116" "maxs" "316 348 376" "sounds" "2" "message" "Wha tha?\nWatch out!" "target" "airstrike1" }</entity>
+<entity>{ "classname" "misc_viper" "origin" "180 -256 496" "angle" "123" "speed" "400" "target" "airstrikewpa1" "targetname" "airstrike1" }</entity>
+<entity>{ "classname" "misc_viper_bomb" "origin" "116 -148 460" "angles" "23.4 115.6 10" "dmg" "200" "targetname" "bombdrop1" "pathtarget" "bombdrop1" }</entity>
+<entity>{ "classname" "misc_viper_bomb" "origin" "80 -104 468" "angles" "31.1 146.6 1" "dmg" "200" "targetname" "bombdrop1" "pathtarget" "bombdrop1" }</entity>
+<entity>{ "classname" "path_corner" "origin" "116 -148 460" "targetname" "airstrikewpbomb1" "target" "airstrikewpbomb2" "pathtarget" "bombdrop1" }</entity>
+<entity>{ "classname" "path_corner" "origin" "80 -104 468" "targetname" "airstrikewpbomb2" "target" "airstrikewpa2" "pathtarget" "bombdrop2" }</entity>
+<entity>{ "classname" "path_corner" "origin" "152 -212 400" "targetname" "airstrikewpa1" "target" "airstrikewpbomb1" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-184 320 500" "targetname" "airstrikewpa2" "target" "airstrikewpa3" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-228 352 468" "targetname" "airstrikewpa3" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "4 32 160" "noise" "world/flyby1" "attenuation" "2" "volume" "1" "targetname" "airstrike1" }</entity>
+<entity>{ "classname" "monster_soldier_light" "origin" "-780 -1350 -70" "angle" "360" "deathtarget" "ambush2" "target" "wpc1" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "-32 -896 -68" "angle" "247" "item" "ammo_grenades" "targetname" "ambush2" "target" "wpc1" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "8 -908 -68" "angle" "254" "item" "ammo_bullets" "spawnflags" "4" "target" "wpc1" "targetname" "ambush2" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "-44 -936 -48" "angle" "254" "item" "ammo_bullets" "spawnflags" "4" "target" "wpc1" "targetname" "ambush2" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "4 -956 -48" "angle" "264" "item" "ammo_bullets" "spawnflags" "4" "target" "wpc1" "targetname" "ambush2" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-68 -1340 -72" "targetname" "wpc1" "target" "wpc2" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-768 -1340 -84" "targetname" "wpc2" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "-216 -1836 -84" "target" "ambush3" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-300 -1420 -12" "angle" "288" "targetname" "ambush3" "spawnflags" "3" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-160 -1348 44" "angle" "258" "targetname" "ambush3" "spawnflags" "3" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "-216 -1836 -84" }</entity>
+<entity>{ "classname" "trigger_once" "maxs" "296 -1012 -136" "mins" "-616 -1636 -376" "target" "ambush4" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-212 -1328 -160" "angle" "276" "spawnflags" "4" "targetname" "ambush4" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-272 -1320 -156" "angle" "290" "spawnflags" "4" "targetname" "ambush4" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-356 -1316 -164" "angle" "291" "spawnflags" "4" "targetname" "ambush4" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-116 -1332 -172" "angle" "266" "spawnflags" "4" "targetname" "ambush4" }</entity>
+<entity>{ "classname" "monster_flipper" "origin" "-316 -1336 -164" "angle" "243" "spawnflags" "4" targetname" "ambush4" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "324 -984 108" "maxs" "408 -872 172"  "target" "ambush5" }</entity>
+<entity>{ "classname" "monster_berserk" "origin" "360 -732 184" "angle" "270" "spawnflags" "4" "item" "item_armor_shard" }</entity>
+<entity>{ "classname" "monster_parasite" "origin" "44 -928 72" "angle" "360" "targetname" "ambush5" "item" "ammo_cells" "spawnflags" "2" "combattarget" "combatwpt1" }</entity>
+<entity>{ "classname" "point_combat" "origin" "360 -928 -64" "targetname" "combatwpt1" }</entity>
+<entity>{ "classname" "monster_mutant" "origin" "-392 804 20" "angle" "190" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_tank" "origin" "760 1272 160" "angle" "180" "spawnflags" "4" "targetname" "elevatetank" "item" "ammo_cells" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "444 900 184" "angle" "180" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "324 792 184" "angle" "90" "item" "ammo_grenades" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_chick" "origin" "596 1348 156" "angle" "180" "spawnflags" "4" "item" "ammo_rockets" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "-528 812 20" "angle" "270" "item" "ammo_bullets" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "-496 748 20" "angle" "270" "item" "ammo_bullets" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "-528 676 20" "angle" "270" "item" "item_armor_shard" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "-500 600 20" "angle" "270" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "-532 540 20" "angle" "270" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "-492 476 20" "angle" "270" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "-532 420 20" "angle" "270" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_chick" "origin" "596 1192 172" "angle" "180" "spawnflags" "4" }</entity>
+<entity>{ "classname" "trigger_once" "maxs" "20 984 256" "mins" "-452 620 132" "message" "This place sure looks guarded..." "target" "ambush7" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-224 800 220" "spawnflags" "0" "targetname" "wpe1" "target" "wpe2" }</entity>
+<entity>{ "classname" "path_corner" "origin" "-60 772 224" "spawnflags" "0" "targetname" "wpe2" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-280 844 28" "angle" "313" "spawnflags" "2" "targetname" "ambush7" "item" "item_armor_shard" "target" "wpe1" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-268 752 48" "angle" "292" "spawnflags" "2" "targetname" "ambush7" "item" "ammo_cells" "target" "wpe1" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "-192 856 48" "angle" "340" "spawnflags" "2" "targetname" "ambush7" "item" "item_armor_shard" "target" "wpe1" }</entity>
+<entity>{ "classname" "item_armor_combat" "origin" "972 336 168" }</entity>
+<entity>{ "classname" "item_health_mega" "origin" "964 304 168" }</entity>
+<entity>{ "classname" "monster_tank" "spawnflags" "4" "origin" "996 320 168" "angle" "360" "item" "ammo_cells" "spawnflags" "0" }</entity>
+<entity>{ "classname" "monster_tank" "spawnflags" "4" "origin" "932 320 168" "angle" "180" "item" "ammo_cells" }</entity>
+<entity>{ "classname" "monster_infantry" "spawnflags" "4" "origin" "964 368 176" "angle" "90" }</entity>
+<entity>{ "classname" "monster_infantry" "spawnflags" "4" "origin" "964 272 176" "angle" "270" "spawnflags" "0" }</entity>
+<entity>{ "classname" "trigger_once" "maxs" "828 1408 240" "mins" "132 1080 -40" "target" "elevatetank" "sounds" "1" }</entity>
+<entity>{ "classname" "target_laser" "origin" "648 880 423" "spawnflags" "5" "angle" "-2" "dmg" "40" }</entity>
+<entity>{ "classname" "target_laser" "origin" "648 848 423" "spawnflags" "5" "angle" "-2" "dmg" "40" }</entity>
+<entity>{ "classname" "target_laser" "origin" "648 816 423" "spawnflags" "5" "angle" "-2" "dmg" "40" }</entity>
+<entity>{ "classname" "target_laser" "origin" "648 784 423" "spawnflags" "5" "angle" "-2" "dmg" "40" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "448 -416 168" "angle" "90" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "origin" "744 -168 176" "angle" "184" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "origin" "744 -208 176" "angle" "154" "item" "ammo_shells" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "origin" "1080 -224 -16" "angle" "199" "item" "ammo_shells" }</entity>
+<entity>{ "classname" "ammo_grenades" "origin" "1048 112 -32" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1104 112 -32" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1096 112 -32" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1112 112 -32" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "416 -416 168" "angle" "90" }</entity>
+<entity>{ "classname" "monster_hover" "origin" "888 -192 184" "angle" "170" "item" "ammo_cells" }</entity>
+<entity>{ "classname" "monster_tank" "origin" "1432 760 168" "angle" "270" "spawnflags" "4" "item" "ammo_cells" }</entity>
+<entity>{ "classname" "monster_gladiator" "origin" "1504 848 176" "angle" "261" "item" "ammo_slugs" }</entity>
+<entity>{ "classname" "monster_tank" "origin" "1504 664 168" "angle" "246" "spawnflags" "4" "item" "ammo_rockets" }</entity>
+<entity>{ "classname" "misc_banner" "origin" "752 1024 112" "angle" "180" }</entity>
+<entity>{ "classname" "misc_banner" "origin" "816 1024 112" "angle" "360" }</entity>
+<entity>{ "classname" "misc_teleporter_dest" "origin" "784 992 336" "angle" "270" "targetname" "t1" }</entity>
+<entity>{ "classname" "monster_floater" "origin" "784 992 324" "combattarget" "headstay" "angle" "89" "deathtarget" "headkilled" "spawnflags" "4" }</entity>
+<entity>{ "classname" "point_combat" "origin" "784 992 332" "targetname" "headstay" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_gladiator" "origin" "792 864 336" "angle" "180" "spawnflags" "1" "item" "ammo_slugs" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "872 768 328" }</entity>
+<entity>{ "classname" "monster_parasite" "origin" "824 936 336" "angle" "293" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_parasite" "origin" "824 800 336" "angle" "36" "spawnflags" "1" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "392 832 536" "angle" "360" "targetname" "headkilled" "spawnflags" "3" "target" "wpg1" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "416 896 536" "angle" "360" "targetname" "headkilled" "spawnflags" "3" "target" "wpg1" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "448 976 470" "angle" "360" "targetname" "headkilled" "spawnflags" "3" "target" "wpg1" }</entity>
+<entity>{ "classname" "path_corner" "origin" "504 824 376" "targetname" "wpg1" }</entity>
+<entity>{ "classname" "target_goal" "origin" "720 824 448" "targetname" "headkilled" }</entity>
+<entity>{ "classname" "target_help" "origin" "720 856 448" "targetname" "headkilled" "message" "Strogg Leader neutralized\nBlue Lasers deactivated" }</entity>
+<entity>{ "classname" "monster_parasite" "origin" "1680 680 8" "angle" "90" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_mutant" "origin" "1576 640 8" "angle" "90" "spawnflags" "4" "item" "item_armor_shard" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "480 792 504" "angle" "360" "targetname" "headkilled" "spawnflags" "3" "target" "wpg1" }</entity>
+<entity>{ "classname" "monster_hover" "origin" "528 920 528" "angle" "360" "targetname" "headkilled" "spawnflags" "3" "target" "wpg1" }</entity>
+<entity>{ "classname" "monster_brain" "origin" "1576 1224 16" "angle" "270" "item" "ammo_cells" "deathtarget" "ambush8" }</entity>
+<entity>{ "classname" "monster_berserk" "origin" "1448 1240 368" "angle" "279" "spawnflags" "3" "targetname" "ambush8" }</entity>
+<entity>{ "classname" "monster_berserk" "origin" "1504 1240 384" "angle" "279" "spawnflags" "3" "targetname" "ambush8" }</entity>
+<entity>{ "classname" "monster_berserk" "origin" "1560 1240 392" "angle" "279" "spawnflags" "3" "targetname" "ambush8" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "1408 1368 168" "angle" "270" "spawnflags" "4" "combattarget" "1408" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "1344 1368 168" "angle" "270" "spawnflags" "4" "combattarget" "1344" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "1376 1368 168" "angle" "270" "spawnflags" "4" "combattarget" "1376" }</entity>
+<entity>{ "classname" "point_combat" "origin" "1408 1368 168" "spawnflags" "1" "targetname" "1408" }</entity>
+<entity>{ "classname" "point_combat" "origin" "1344 1368 168" "spawnflags" "1" "targetname" "1344" }</entity>
+<entity>{ "classname" "point_combat" "origin" "1376 1368 168" "spawnflags" "1" "targetname" "1376" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1432 1296 152" "spawnflags" "9" "dmg" "100" "targetname" "headkilled" "target" "blaser1" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1432 1296 152" "spawnflags" "9" "dmg" "100" "targetname" "headkilled" "target" "blaser2" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1432 1296 184" "spawnflags" "9" "dmg" "100" "targetname" "headkilled" "target" "blaser3" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1432 1296 216" "spawnflags" "9" "dmg" "100" "targetname" "headkilled" "target" "blaser5" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1432 1296 216" "spawnflags" "9" "dmg" "100" "targetname" "headkilled" "target" "blaser6" }</entity>
+<entity>{ "classname" "info_notnull" "origin" "1432 1464 216" "targetname" "blaser5" }</entity>
+<entity>{ "classname" "info_notnull" "origin" "1640 1296 216" "targetname" "blaser6" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1432 1296 184" "spawnflags" "9" "dmg" "100" "targetname" "headkilled" "target" "blaser4" }</entity>
+<entity>{ "classname" "info_notnull" "origin" "1640 1296 152" "targetname" "blaser1" }</entity>
+<entity>{ "classname" "info_notnull" "origin" "1432 1464 152" "targetname" "blaser2" }</entity>
+<entity>{ "classname" "info_notnull" "origin" "1432 1464 184" "targetname" "blaser3" }</entity>
+<entity>{ "classname" "info_notnull" "origin" "1640 1296 184" "targetname" "blaser4" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "1472 1024 -16" "maxs" "1664 1280 128" "message" "We need to get up there..." "spawnflags" "0" "sounds" "2" "target" "ambush9" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "1416 1704 -80" "angle" "270" "spawnflags" "1" "targetname" "ambush9" "combattarget" "wpf1" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "1376 1704 -80" "angle" "270" "spawnflags" "1" "targetname" "ambush9" "combattarget" "wpf1" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "1336 1704 -80" "angle" "270" "spawnflags" "1" "targetname" "ambush9" "combattarget" "wpf1" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "1352 1664 -80" "angle" "270" "spawnflags" "1" "targetname" "ambush9" "combattarget" "wpf1" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "1400 1664 -80" "angle" "270" "spawnflags" "1" "targetname" "ambush9" "combattarget" "wpf1" }</entity>
+<entity>{ "classname" "point_combat" "origin" "1392 1232 16" "targetname" "wpf1" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1712 992 32" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1720 992 32" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "1784 992 32" }</entity>
+<entity>{ "classname" "monster_tank_commander" "origin" "768 1856 20" "angle" "283" "spawnflags" "4" }</entity>
+<entity>{ "classname" "item_armor_combat" "origin" "688 1688 -104" }</entity>
+<entity>{ "classname" "item_armor_combat" "origin" "688 1744 -104" }</entity>
+<entity>{ "classname" "ammo_rockets" "origin" "1192 1704 -88" }</entity>
+<entity>{ "classname" "ammo_rockets" "origin" "1232 1704 -88" }</entity>
+<entity>{ "classname" "monster_tank" "origin" "992 1424 -112" "angle" "90" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_tank" "origin" "1048 1432 -104" "angle" "96" "spawnflags" "4" }</entity>
+<entity>{ "classname" "monster_tank" "origin" "936 1432 -104" "angle" "80" "spawnflags" "4" }</entity>
+<entity>{ "classname" "item_invulnerability" "origin" "1480 1456 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "item_adrenaline" "origin" "1472 1336 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "item_enviro" "origin" "1552 1336 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "item_breather" "origin" "1592 1336 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "item_adrenaline" "origin" "1512 1336 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "item_pack" "origin" "1600 1456 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "item_pack" "origin" "1560 1456 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "item_quad" "origin" "1520 1456 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "trigger_once" "spawnflags" "4" "targetname" "teleporter" "target" "endportalstart" "message" "You made it.\nNow a teleporter will get you back." "sounds" "2" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "784 992 316" "noise" "world/lite_on1" "attenuation" "2" "volume" "1" "targetname" "headkilled" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1488 1432 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1496 1432 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1504 1432 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "ammo_bullets" "origin" "1504 1432 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "1536 1432 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "1560 1432 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "1548 1432 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "ammo_shells" "origin" "1572 1432 168" "target" "finalstuff" }</entity>
+<entity>{ "classname" "trigger_counter" "spawnflags" "1" "count" "16" "targetname" "finalstuff" "target" "teleporter" }</entity>
+<entity>{ "classname" "misc_teleporter" "origin" "1368 1488 168" "target" "teledest" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1552 1392 200" "volume" "1" "attenuation" "2" "noise" "world/lite_on1" "targetname" "teleporter" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1368 1448 152" "spawnflags" "5" "targetname" "teleporter" "angles" "-70 90 0" "dmg" "200" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1400 1456 152" "spawnflags" "5" "targetname" "teleporter" "angles" "-70 135 0" "dmg" "200" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1336 1456 152" "spawnflags" "5" "targetname" "teleporter" "angles" "-70 45 0" "dmg" "200" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1328 1488 152" "spawnflags" "5" "targetname" "teleporter" "angles" "-70 0 0" "dmg" "200" }</entity>
+<entity>{ "classname" "target_laser" "origin" "1408 1488 152" "spawnflags" "5" "targetname" "teleporter" "angles" "-70 180 0" "dmg" "200" }</entity>
+<entity>{ "classname" "misc_teleporter_dest" "origin" "1760 1472 224" "angle" "360" "targetname" "teledest" }</entity>
+<entity>{ "classname" "trigger_multiple" "target" "Levelend" "maxs" "1840 1552 368" "mins" "1696 1376 192" }</entity>
+<entity>{ "classname" "target_changelevel" "targetname" "Levelend" "map" "*startmap" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "-896 -1504 192" "attenuation" "4" "spawnflags" "4" "noise" "world/voice10" "volume" "1" "targetname" "inits" }</entity>
+<entity>{ "classname" "trigger_relay" "targetname" "init" "target" "inits" "origin" "1 2 3" "delay" "9" }</entity>
+<entity>{ "classname" "trigger_relay" "targetname" "init" "target" "elevatetans" "origin" "1 2 3" }</entity>
+<entity>{ "classname" "target_goal" "targetname" "teleporter" "origin" "1 2 3" }</entity>
+<entity>{ "classname" "target_help" "targetname" "teleporter" "origin" "1 2 3" "spawnflags" "1" "message" "Resume previous objective" }</entity>
+<entity>{ "classname" "item_power_shield" "origin" "1616 1376 168" }</entity>
+<entity>{ "classname" "item_power_screen" "origin" "1616 1416 168" }</entity>
+</entity_add>
+<entity_change> 
+<if keyname="classname" keyvalue="worldspawn"> 
+<set_key keyname="message" value="Crash n' Massacre" /> 
+</if> 
+<if keyname="classname" keyvalue="weapon_" op="strstr"> 
+<del_entity /> 
+</if>
+<if keyname="classname" keyvalue="ammo_" op="strstr"> 
+<del_entity /> 
+</if>
+<if keyname="classname" keyvalue="item_" op="strstr"> 
+<del_entity /> 
+</if>
+<if keyname="classname" keyvalue="info_player_start" op="strstr"> 
+<del_entity /> 
+</if>
+<if keyname="speed" keyvalue="200" op="strstr"> 
+<set_key keyname="targetname" value="elevatetank" /> 
+</if>
+</entity_change>
+</xml> 
+

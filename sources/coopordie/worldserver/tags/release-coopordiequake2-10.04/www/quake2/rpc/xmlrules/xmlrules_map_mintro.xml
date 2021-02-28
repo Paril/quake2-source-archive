@@ -1,0 +1,24 @@
+<xml>
+	<entity_add> 
+		<entity>{ "classname" "monster_soldier_light" "origin" "-992 -2624 640" "angle" "16" "spawnflags" "1" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "origin" "-1072 -2448 656" "angle" "353" "spawnflags" "1" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "origin" "-1248 -2448 720" "angle" "16" "spawnflags" "1" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "origin" "-1008 -2368 656" "angle" "350" "spawnflags" "1" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "origin" "-944 -2496 656" "angle" "16" "spawnflags" "1" }</entity>
+		<entity>{ "classname" "monster_infantry" "origin" "-1008 -2416 656" "angle" "360" "spawnflags" "1" "item" "ammo_bullets" }</entity>
+		<entity>{ "classname" "monster_infantry" "origin" "-1200 -2528 736" "angle" "360" "spawnflags" "1" "item" "ammo_bullets" }</entity>
+		<entity>{ "classname" "monster_infantry" "origin" "-1104 -2368 656" "angle" "360" "spawnflags" "1" "item" "ammo_bullets" }</entity>
+		<entity>{ "classname" "monster_tank" "origin" "-1264 -2384 720" "angle" "360" "spawnflags" "1" "item" "weapon_grenadelauncher" }</entity>
+		<entity>{ "classname" "monster_soldier_light" "origin" "-912 -2576 656" "angle" "360" "spawnflags" "1" }</entity>
+		<entity>{ "classname" "weapon_chaingun" "origin" "-464 -2720 656" }</entity> 
+		<entity>{ "classname" "ammo_bullets" "origin" "-464 -2448 656" }</entity> 
+		<entity>{ "classname" "ammo_bullets" "origin" "-464 -2448 656" }</entity> 
+		<entity>{ "classname" "ammo_bullets" "origin" "-464 -2448 656" }</entity> 
+		<entity>{ "classname" "ammo_bullets" "origin" "-464 -2448 656" }</entity> 
+		<entity>{ "classname" "monster_berserk" "origin" "-1280 -1216 1128" "angle" "189" "targetname" "t74" "spawnflags" "2" "item" "item_armor_shard" }</entity>
+		<entity>{ "classname" "monster_berserk" "origin" "-1280 -968 1168" "angle" "202" "targetname" "t74" "spawnflags" "2" "item" "item_armor_shard" }</entity>
+		<entity>{ "classname" "monster_berserk" "origin" "-1248 -1096 984" "angle" "189" "targetname" "t74" "spawnflags" "2" "item" "item_armor_shard" }</entity>
+		<entity>{ "classname" "monster_soldier_ss" "origin" "-2696 1440 496" "angle" "360" "item" "ammo_shells" }</entity>
+		<entity>{ "classname" "monster_soldier_ss" "origin" "-2624 1392 496" "angle" "360" }</entity>
+	</entity_add>
+</xml>

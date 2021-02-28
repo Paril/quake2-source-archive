@@ -1,0 +1,73 @@
+<xml>
+<!-- initial xmlrule file by ANDREI 2009-07-20 -->
+<entity_add>
+<entity> { "classname" "monster_supertank" "origin" "-144 -960 280" } </entity>
+<entity> { "classname" "misc_deadsoldier" "origin" "-640 -1448 152" "message" "Be careful, he has a shield ... aaargh!!.. ki..ll him.. and .. save the worlddddddd..... (he dies)" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -864 208" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -1056 208" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -1056 328" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -1056 256" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -864 256" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -864 328" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -992 328" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -1024 328" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -960 328" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -896 328" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -928 328" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -896 256" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -960 256" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -992 256" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -1024 256" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -928 256" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -1024 208" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -896 208" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -992 208" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -928 208" "angle" "180" } </entity>
+<entity> { "classname" "monster_brain" "origin" "248 -960 208" "angle" "180" } </entity>
+<entity> { "classname" "monster_boss2" "origin" "224 -1200 496" } </entity>
+<entity> { "classname" "path_corner" "origin" "-16 -960 208" "target" "tt1" "targetname" "tt2" } </entity>
+<entity> { "classname" "path_corner" "origin" "-352 -968 208" "target" "tt2" "targetname" "tt1" } </entity>
+<entity> { "classname" "monster_medic" "origin" "-248 -968 280" "target" "tt1" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "-464 -1408 416" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "-400 -1256 416" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "-392 -1344 416" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "-480 -1312 416" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "-400 -640 416" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "-544 -632 416" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "-384 -496 416" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "-488 -544 416" } </entity>
+<entity> { "classname" "monster_boss2" "origin" "208 -640 416" } </entity>
+<entity> { "classname" "ammo_slugs" "origin" "40 -704 72" } </entity>
+<entity> { "classname" "ammo_slugs" "origin" "40 -696 72" } </entity>
+<entity> { "classname" "ammo_slugs" "origin" "40 -688 72" } </entity>
+<entity> { "classname" "ammo_slugs" "origin" "40 -680 72" } </entity>
+<entity> { "classname" "ammo_rockets" "origin" "40 -656 72" } </entity>
+<entity> { "classname" "ammo_rockets" "origin" "40 -648 72" } </entity>
+<entity> { "classname" "ammo_rockets" "origin" "40 -640 72" } </entity>
+<entity> { "classname" "ammo_cells" "origin" "24 -1120 72" } </entity>
+<entity> { "classname" "ammo_cells" "origin" "24 -1128 72" } </entity>
+<entity> { "classname" "ammo_grenades" "origin" "88 -1104 72" } </entity>
+<entity> { "classname" "ammo_grenades" "origin" "88 -1112 72" } </entity>
+<entity> { "classname" "ammo_grenades" "origin" "88 -1120 72" } </entity>
+<entity> { "classname" "ammo_grenades" "origin" "88 -1128 72" } </entity>
+<entity> { "classname" "ammo_bullets" "origin" "88 -1160 72" } </entity>
+<entity> { "classname" "ammo_bullets" "origin" "88 -1200 72" } </entity>
+<entity> { "classname" "ammo_bullets" "origin" "88 -1240 72" } </entity>
+<entity> { "classname" "item_armor_combat" "origin" "88 -1288 72" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "112 -1096 280" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "112 -1192 280" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "112 -1272 280" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "112 -1344 280" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "96 -808 280" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "104 -720 280" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "96 -608 280" } </entity>
+<entity> { "classname" "monster_mutant" "origin" "96 -520 280" } </entity>
+<entity> { "classname" "monster_tank_commander" "origin" "224 -1120 280" } </entity>
+<entity> { "classname" "monster_tank_commander" "origin" "224 -1224 280" } </entity>
+<entity> { "classname" "monster_tank_commander" "origin" "224 -1344 280" } </entity>
+<entity> { "classname" "monster_tank_commander" "origin" "208 -744 280" } </entity>
+<entity> { "classname" "monster_tank_commander" "origin" "208 -640 280" } </entity>
+<entity> { "classname" "monster_tank_commander" "origin" "208 -504 280" } </entity>
+<entity> { "classname" "weapon_railgun" "origin" "688 -288 -48" } </entity>
+</entity_add>
+</xml>

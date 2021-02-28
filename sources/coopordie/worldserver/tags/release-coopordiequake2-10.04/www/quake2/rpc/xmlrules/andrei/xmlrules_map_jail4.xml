@@ -1,0 +1,44 @@
+<xml>
+<!-- initial xmlrule file by ANDREI 2009-08-18 -->
+<entity_add>
+<entity> { "classname" "monster_gunner" "origin" "-528 2216 -992" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "-520 1728 -992" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "-88 2168 -992" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "-72 1720 -992" } </entity>
+<entity> { "classname" "monster_tank" "origin" "-1152 1328 -576" } </entity>
+<entity> { "classname" "monster_tank" "origin" "-912 768 -576" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "-1536 472 -1168" "angle" "-90" "spawnflags" "5" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "-1536 584 -1168" "angle" "-90" "spawnflags" "5" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1304 696 -872" "angle" "-90" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1304 608 -872" "angle" "-90" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1304 520 -872" "angle" "-90" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1304 432 -872" "angle" "-90" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1096 272 -872" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1008 272 -872" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-920 272 -872" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-832 272 -872" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1096 272 -872" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-1008 272 -872" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-920 272 -872" } </entity>
+<entity> { "classname" "monster_chick" "origin" "-832 272 -872" } </entity>
+<entity> { "classname" "ammo_slugs" "origin" "-1264 320 -424" } </entity>
+<entity> { "classname" "item_invulnerability" "origin" "-1248 320 -424" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "640 -64 -864" "angle" "-90" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "392 -64 -864" "angle" "-90" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "864 88 -864" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "864 312 -864" } </entity>
+<entity> { "classname" "monster_gladiator" "origin" "720 768 -568" } </entity>
+<entity> { "classname" "monster_gladiator" "origin" "976 768 -568" } </entity>
+<entity> { "classname" "monster_gladiator" "origin" "920 392 -568" "angle" "180" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "216 336 -568" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "192 560 -568" } </entity>
+<entity> { "classname" "monster_parasite" "origin" "448 560 -568" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "-144 -104 -728" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "-144 -480 -728" } </entity>
+<entity> { "classname" "monster_hover" "origin" "592 -1728 40" "angle" "90" "health" "250" "spawnflags" "5" } </entity>
+<entity> { "classname" "monster_hover" "origin" "648 -1712 152" "angle" "90" "health" "250" "spawnflags" "5" } </entity>
+<entity> { "classname" "monster_hover" "origin" "536 -1712 152" "angle" "90" "health" "250" "spawnflags" "5" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "328 -1936 48" "angle" "180" "health" "250" "spawnflags" "5" } </entity>
+<entity> { "classname" "monster_gunner" "origin" "40 -1936 48" "health" "250" "spawnflags" "5" } </entity>
+</entity_add>
+</xml>

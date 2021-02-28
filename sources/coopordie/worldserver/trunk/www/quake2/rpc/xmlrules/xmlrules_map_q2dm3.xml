@@ -1,0 +1,65 @@
+<xml>
+<entity_change>
+  <if keyname="classname" keyvalue="weapon_" op="strstr">
+    <del_entity/>
+  </if>
+  <if keyname="classname" keyvalue="worldspawn">
+    <set_key keyname="message" value="The punishment"/>
+  </if>
+</entity_change>
+<entity_add>
+<!--
+-->
+<entity>{ "classname" "info_player_start"     "origin" "192 -336 -16" "targetname" "punish" "angle" "90" }</entity>
+<entity>{ "classname" "info_player_coop"      "origin" "192 -496 -16" "targetname" "punish" "angle" "90" }</entity>
+<entity>{ "classname" "info_player_coop"      "origin" "252 -496 -16" "targetname" "punish" "angle" "90" }</entity>
+<entity>{ "classname" "info_player_coop"      "origin" "132 -496 -16" "targetname" "punish" "angle" "90" }</entity>
+
+<entity>{ "classname" "target_help"           "origin" "192 -336 -16" "spawnflags" "1" "message" "Escape from this level" "targetname" "init" }</entity>
+<entity>{ "classname" "target_help"           "origin" "192 -336 -16" "spawnflags" "0" "message" "Kill jorg and take\nthe teleporter" "targetname" "init" }</entity>
+
+<entity>{ "classname" "trigger_once"          "mins" "152 -386 -16" "maxs" "242 -286 34" "target" "init" "message" "Hurry up, take cover" }</entity>
+
+<entity>{ "classname" "target_changelevel"    "origin" "296 -136 -224" "map" "*startmap" "targetname" "victory" }</entity>
+<entity>{ "classname" "trigger_multiple"      "mins" "56 -256 -320" "maxs" "88 -224 -248" "target" "victory" }</entity>
+<entity>{ "classname" "misc_teleporter_dest"  "origin" "72 -240 -296"  "targetname" "tele_dest_startmap" "angle" "90" }</entity>
+<entity>{ "classname" "misc_teleporter"       "origin" "192 -136 -16"  "target" "tele_dest_startmap" "targetname" "tele_startmap" }</entity>
+
+<entity>{ "classname" "target_goal" "origin" "192 -136 -16" "targetname" "victory" }</entity>
+
+<entity>{ "classname" "monster_jorg"          "origin" "192 -128 -40"  "item" "weapon_bfg" "angle" "270" }</entity>
+
+<entity>{ "classname" "monster_infantry"      "origin" "-128 112 -16"  "item" "weapon_chaingun" }</entity>
+<entity>{ "classname" "monster_gladiator"     "origin" "-16 528 -16"   "item" "weapon_railgun" }</entity>
+<entity>{ "classname" "monster_parasite"      "origin" "-192 320 -16"  }</entity>
+<entity>{ "classname" "monster_infantry"      "origin" "-24 256 -16"   "item" "ammo_bullets" }</entity>
+<entity>{ "classname" "monster_soldier_ss"    "origin" "-304 -352 120" "item" "ammo_bullets" }</entity>
+<entity>{ "classname" "monster_soldier_light" "origin" "-304 -40 120"  "item" "weapon_shotgun" }</entity>
+<entity>{ "classname" "monster_gladiator"     "origin" "-304 512 -16"  "item" "ammo_slugs" }</entity>
+<entity>{ "classname" "monster_soldier_ss"    "origin" "-336 -248 216" "item" "weapon_machinegun" }</entity>
+<entity>{ "classname" "monster_soldier"       "origin" "-352 24 -16"   "angle" "90"  "item" "ammo_shells" }</entity>
+<entity>{ "classname" "monster_soldier"       "origin" "-416 -40 216"  "angle" "90" "item" "weapon_supershotgun" }</entity>
+<entity>{ "classname" "monster_soldier"       "origin" "-424 -88 216"  "item" "ammo_shells" }</entity>
+<entity>{ "classname" "monster_parasite"      "origin" "-624 288 -16"   }</entity>
+<entity>{ "classname" "monster_berserk"       "origin" "-688 600 -16"   }</entity>
+<entity>{ "classname" "monster_berserk"       "origin" "-776 584 -16"   }</entity>
+<entity>{ "classname" "monster_berserk"       "origin" "1080 616 32"   }</entity>
+<entity>{ "classname" "monster_berserk"       "origin" "832 400 32"    }</entity>
+<entity>{ "classname" "monster_berserk"       "origin" "944 440 32"    }</entity>
+<entity>{ "classname" "monster_parasite"      "origin" "1040 -104 224" "angle" "90" }</entity>
+<entity>{ "classname" "monster_gunner"        "origin" "1040 368 224"  "angle" "270" "item" "weapon_grenadelauncher" }</entity>
+<entity>{ "classname" "monster_gunner"        "origin" "1048 104 224"  "angle" "270" "item" "ammo_grenades" }</entity>
+<entity>{ "classname" "monster_chick"         "origin" "1072 720 32"   "angle" "180" "item" "weapon_rocketlauncher" }</entity>
+<entity>{ "classname" "monster_parasite"      "origin" "160 624 -16"   }</entity>
+<entity>{ "classname" "monster_soldier"       "origin" "168 520 -16"   "angle" "270" "item" "ammo_shells" }</entity>
+<entity>{ "classname" "monster_soldier_light" "origin" "584 456 24"    "angle" "180" "item" "ammo_shells" }</entity>
+<entity>{ "classname" "monster_floater"       "origin" "760 400 192"   "item" "weapon_hyperblaster" }</entity>
+<entity>{ "classname" "monster_floater"       "origin" "760 488 200"   "item" "ammo_cells" }</entity>
+<entity>{ "classname" "monster_soldier_ss"    "origin" "848 56 -96"    "item" "ammo_bullets" }</entity>
+<entity>{ "classname" "monster_chick"         "origin" "888 -16 224"   "item" "ammo_rockets" }</entity>
+<entity>{ "classname" "monster_flyer"         "origin" "896 160 224"   }</entity>
+<entity>{ "classname" "monster_soldier_ss"    "origin" "896 56 -96"    "item" "ammo_bullets" }</entity>
+<entity>{ "classname" "monster_floater"       "origin" "904 440 192"   "item" "ammo_cells" }</entity>
+
+</entity_add>
+</xml>

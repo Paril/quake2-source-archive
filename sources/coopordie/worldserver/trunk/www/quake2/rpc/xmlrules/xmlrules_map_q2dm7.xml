@@ -1,0 +1,131 @@
+<xml> 
+<entity_change> 
+<if keyname="classname" keyvalue="worldspawn"> 
+<set_key keyname="message" value="Rush for the Head" /> 
+</if> 
+<if keyname="classname" keyvalue="weapon_" op="strstr"> 
+<del_entity /> 
+</if>
+<if keyname="classname" keyvalue="ammo_" op="strstr"> 
+<del_entity /> 
+</if>
+<if keyname="classname" keyvalue="item_" op="strstr"> 
+<del_entity /> 
+</if>
+<if keyname="classname" keyvalue="info_player_start" op="strstr"> 
+<del_entity /> 
+</if>
+</entity_change>
+
+<entity_add> 
+<entity>{ "classname" "info_player_start" "origin" "1280 320 192" "angle" "90" }</entity>
+<entity>{ "classname" "info_player_coop"  "origin" "1280 384 192" "angle" "90" }</entity>
+<entity>{ "classname" "info_player_coop"  "origin" "1344 320 192" "angle" "360" }</entity>
+<entity>{ "classname" "info_player_coop"  "origin" "1216 320 192" "angle" "180" }</entity>
+
+<entity>{ "classname" "trigger_always" "target" "inits2" "origin" "1216 320 192" }</entity>
+<entity>{ "classname" "trigger_once" "delay" "2" "sounds" "2" "message" "Kill all Strogg before\ntimer runs out\nYou have 4 minutes!" "targetname" "inits2" "target" "init" "mins" "1152 192 -64" "maxs" "1376 448 288" }</entity>
+<entity>{ "classname" "monster_soldier_light" "origin" "1280 768 160" "angle" "90" "spawnflags" "4" "deathtarget" "monster1" "item" "item_armor_shard" }</entity>
+<entity>{ "classname" "monster_soldier_light" "origin" "1280 1088 272" "angle" "270" "spawnflags" "2" "deathtarget" "monster2" "item" "item_armor_shard" "targetname" "monster1" }</entity>
+<entity>{ "classname" "monster_soldier" "origin" "960 1088 272" "angle" "360" "spawnflags" "2" "deathtarget" "monster3" "item" "ammo_bullets" "targetname" "monster2" }</entity>
+<entity>{ "classname" "monster_soldier" "origin" "960 1408 272" "angle" "270" "spawnflags" "2" "deathtarget" "monster4" "item" "item_armor_shard" "targetname" "monster3" }</entity>
+<entity>{ "classname" "monster_soldier" "origin" "1232 1408 256" "angle" "180" "spawnflags" "2" "deathtarget" "monster4x" "targetname" "monster4" }</entity>
+<entity>{ "classname" "monster_soldier" "origin" "1280 1440 272" "angle" "180" "spawnflags" "2" "deathtarget" "monster4x" "item" "item_armor_shard" "targetname" "monster4" }</entity>
+<entity>{ "classname" "monster_soldier" "origin" "1280 1376 224" "angle" "180" "spawnflags" "2" "deathtarget" "monster4x" "item" "item_armor_shard" "targetname" "monster4" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1568 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster1" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1600 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "2" "volume" "1" "targetname" "monster2" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1632 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "3" "volume" "1" "targetname" "monster3" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1664 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "4" "volume" "1" "targetname" "monster4" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1696 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster5" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1728 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster6" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1760 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster7" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1792 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster8" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1824 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster9" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1856 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster10" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1888 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster11" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1920 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster12" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1952 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster13" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1984 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster14" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "2016 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster15" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "2048 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster16" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "2080 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster17" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "2112 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster18" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "2144 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster19" }</entity>
+<entity>{ "classname" "target_help" "origin" "1312 352 288" "spawnflags" "1" "message" "RAMPAGE" "targetname" "init" }</entity>
+<entity>{ "classname" "target_help" "origin" "1248 352 288" "spawnflags" "0" "message" "Kill all Strogg before\n timer runs out" "targetname" "init" }</entity>
+<entity>{ "classname" "func_timer" "origin" "352 240 112" "spawnflags" "1" "target" "endlevel" "pausetime" "240" }</entity>
+<entity>{ "classname" "func_timer" "origin" "1312 448 96" "spawnflags" "1" "target" "0remain" "pausetime" "239" }</entity>
+<entity>{ "classname" "func_timer" "origin" "1312 448 96" "spawnflags" "1" "target" "1remain" "pausetime" "180" }</entity>
+<entity>{ "classname" "func_timer" "origin" "1280 448 96" "spawnflags" "1" "target" "2remain" "pausetime" "120" }</entity>
+<entity>{ "classname" "func_timer" "origin" "1248 448 96" "spawnflags" "1" "target" "3remain" "pausetime" "60" }</entity>
+<entity>{ "classname" "func_timer" "origin" "1248 448 96" "spawnflags" "1" "target" "4remain" "pausetime" "1" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "480 -256 -352" "spawnflags" "4" "targetname" "1remain" "target" "Equis" "message" "1 minute remaining!\n Hurry up!" "sounds" "1" "maxs" "2304 1536 320" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "480 -256 -352" "spawnflags" "4" "targetname" "0remain" "target" "Equis" "message" "Time is up!" "sounds" "1" "maxs" "2304 1536 320" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "480 -256 -352" "spawnflags" "4" "targetname" "secret" "target" "Equis" "message" "Even the secrets have secrets.\nNice job." "sounds" "1" "maxs" "2304 1536 320" }</entity>
+<entity>{ "classname" "target_goal" "origin" "1280 288 384" "targetname" "victory" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "480 -256 -352" "spawnflags" "4" "targetname" "2remain" "target" "Equis" "message" "2 minutes remaining!\n Theres not much time!" "sounds" "1" "maxs" "2304 1536 320" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "480 -256 -352" "spawnflags" "4" "targetname" "3remain" "target" "Equis" "message" "3 minutes remaining!\n Dont get lost!" "sounds" "1" "maxs" "2304 1536 320" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "480 -256 -352" "spawnflags" "4" "targetname" "4remain" "target" "Equis" "message" "Kill all Strogg before timer\nruns out. You have 4 minutes!"sounds" "1" "maxs" "2304 1536 320" }</entity>
+<entity>{ "classname" "monster_berserk" "item" "item_armor_combat" "origin" "1120 1056 272" "angle" "91" "spawnflags" "3" "targetname" "monster3" }</entity>
+<entity>{ "classname" "trigger_counter" "spawnflags" "1" "count" "3" "targetname" "monster4x" "target" "monster5" }</entity>
+<entity>{ "classname" "trigger_counter" "spawnflags" "1" "count" "2" "targetname" "monster16x" "target" "monster16" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "origin" "1232 880 48" "angle" "90" "spawnflags" "2" "deathtarget" "monster6x" "item" "item_armor_shard" "targetname" "monster5" "target" "monster5tgt" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "origin" "1280 994 64" "angle" "90" "spawnflags" "2" "deathtarget" "monster6x" "item" "ammo_shells" "targetname" "monster5" "target" "monster5tgt" }</entity>
+<entity>{ "classname" "trigger_counter" "spawnflags" "1" "count" "3" "targetname" "monster6x" "target" "monster6" }</entity>
+<entity>{ "classname" "monster_soldier_ss" "origin" "1296 864 48" "angle" "90" "spawnflags" "2" "deathtarget" "monster6x" "item" "ammo_shells" "targetname" "monster5" "target" "monster5tgt" }</entity>
+<entity>{ "classname" "path_corner" "origin" "1280 1216 32" "targetname" "monster5tgt" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "640 864 32" "angle" "180" "spawnflags" "6" "deathtarget" "monster7" "item" "ammo_bullets" "targetname" "monster6" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "1120 928 272" "angle" "180" "spawnflags" "2" "deathtarget" "monster8x" "targetname" "monster7" "item" "ammo_bullets" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "1120 864 160" "angle" "180" "spawnflags" "2" "deathtarget" "monster8x" "targetname" "monster7" }</entity>
+<entity>{ "classname" "monster_infantry" "origin" "1072 896 224" "angle" "180" "spawnflags" "2" "deathtarget" "monster8x" "item" "ammo_bullets" "targetname" "monster7" }</entity>
+<entity>{ "classname" "trigger_counter" "spawnflags" "1" "count" "3" "targetname" "monster8x" "target" "monster8" }</entity>
+<entity>{ "classname" "monster_gladiator" "origin" "832 416 256" "angle" "90" "spawnflags" "2" "deathtarget" "monster9" "targetname" "monster8" }</entity>
+<entity>{ "classname" "monster_mutant" "origin" "576 640 48" "angle" "3" "spawnflags" "3" "deathtarget" "monster10" "targetname" "monster9" "target" "monster9tgt" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "576 480 80" "angle" "90" "spawnflags" "2" "deathtarget" "monster11" "item" "ammo_bullets" "targetname" "monster10" }</entity>
+<entity>{ "classname" "monster_gladiator" "origin" "1728 320 48" "angle" "180" "spawnflags" "2" "deathtarget" "monster12" "item" "ammo_slugs" "targetname" "monster11" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "1632 144 32" "angle" "90" "spawnflags" "2" "deathtarget" "monster14" "targetname" "monster13" "item" "ammo_bullets" }</entity>
+<entity>{ "classname" "monster_mutant" "origin" "2176 384 128" "angle" "180" "spawnflags" "2" "deathtarget" "monster16x" "targetname" "monster15" "target" "monster15tgt" }</entity>
+<entity>{ "classname" "monster_tank" "origin" "2176 960 160" "angle" "270" "spawnflags" "2" "deathtarget" "monster17" "targetname" "monster16" "item" "ammo_bullets" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "1728 976 208" "angle" "360" "spawnflags" "2" "deathtarget" "monster19" "targetname" "monster18" "item" "ammo_grenades" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "1696 1120 272" "angle" "270" "spawnflags" "2" "deathtarget" "monster20" "targetname" "monster19" "item" "ammo_bullets" }</entity>
+<entity>{ "classname" "monster_parasite" "origin" "1296 1088 224" "angle" "360" "spawnflags" "2" "deathtarget" "monster21" "targetname" "monster20" }</entity>
+<entity>{ "classname" "monster_tank_commander" "origin" "1280 352 224" "angle" "90" "spawnflags" "2" "deathtarget" "victory" "targetname" "monster21" "item" "item_ancient_head" }</entity>
+<entity>{ "classname" "path_corner" "origin" "1280 1088 160" "targetname" " monster20tgt" "target" " monster20tgt2" }</entity>
+<entity>{ "classname" "path_corner" "origin" "1488 1088 160" "targetname" " monster20tgt2" }</entity>
+<entity>{ "classname" "monster_mutant" "origin" "2160 304 128" "angle" "180" "spawnflags" "2" "deathtarget" "monster16x" "targetname" "monster15" "target" "monster15tgt" }</entity>
+<entity>{ "classname" "monster_gunner" "origin" "1888 352 32" "angle" "271" "spawnflags" "2" "deathtarget" "monster15" "targetname" "monster14" }</entity>
+<entity>{ "classname" "monster_berserk" "origin" "1745.5 210.5 32" "angle" "270" "spawnflags" "4" }</entity>
+<entity>{ "classname" "path_corner" "origin" "1632 320 32" "targetname" "monster13tgt" }</entity>
+<entity>{ "classname" "path_corner" "origin" "576 640 32" "targetname" "monster10tgt" }</entity>
+<entity>{ "classname" "path_corner" "origin" "832 640 48" "targetname" "monster9tgt" }</entity>
+<entity>{ "classname" "trigger_counter" "spawnflags" "1" "count" "4" "targetname" "monster13x" "target" "monster13" }</entity>
+<entity>{ "classname" "trigger_once" "mins" "480 -256 -352" "spawnflags" "4" "targetname" "victory" "target" "Equis" "message" "Found John Carmacks Head" "sounds" "1" "maxs" "2304 1536 320" }</entity>
+<entity>{ "classname" "path_corner" "origin" "1888 320 32" "targetname" "monster15tgt" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "1664 720 -304" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "1712 640 -288" }</entity>
+<entity>{ "classname" "item_quad" "origin" "1664 656 -304" "target" "secret" }</entity>
+<entity>{ "classname" "item_armor_jacket" "origin" "1616 672 -304" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "1568 624 -304" }</entity>
+<entity>{ "classname" "item_health_large" "origin" "1696 688 -288" }</entity>
+<entity>{ "classname" "target_secret" "origin" "1280 528 368" "targetname" "secret" }</entity>
+<entity>{ "classname" "target_changelevel" "origin" "288 400 192" "targetname" "endlevel" "map" "*startmap" }</entity>
+<entity>{ "classname" "trigger_relay" "origin" "400 336 192" "targetname" "victory" "target" "endlevel" "delay" "10" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "2176 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster20" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "2208 -176 464" "spawnflags" "4" "noise" "misc/comp_up" "attenuation" "1" "volume" "1" "targetname" "monster21" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "2240 -176 464" "spawnflags" "4" "noise" "world/lite_on1" "attenuation" "1" "volume" "1" "targetname" "victory" }</entity>
+<entity>{ "classname" "target_speaker" "origin" "1280 384 48" "spawnflags" "4" "noise" "world/flesh1" "attenuation" "2" "volume" "1" "targetname" "victory" }</entity>
+<entity>{ "classname" "path_corner" "origin" "1056 320 32" "targetname" "monster12tgt" }</entity>
+<entity>{ "classname" "monster_chick" "origin" "2016 976 192" "angle" "360" "deathtarget" "monster18" "targetname" "monster17" "spawnflags" "2" "target" "monster17tgt" "item" "ammo_rockets" }</entity>
+<entity>{ "classname" "path_corner" "origin" "2176 928 160" "targetname" "monster17tgt" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "1056 496 208" "angle" "257" "spawnflags" "2" "deathtarget" "monster13x" "targetname" "monster12" "target" "monster12tgt" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "1120 544 192" "angle" "257" "spawnflags" "2" "deathtarget" "monster13x" "item" "ammo_cells" "targetname" "monster12" "target" "monster12tgt" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "1168 432 208" "angle" "257" "spawnflags" "2" "deathtarget" "monster13x" "item" "ammo_cells" "targetname" "monster12" "target" "monster12tgt" }</entity>
+<entity>{ "classname" "monster_flyer" "origin" "1184 512 96" "angle" "257" "spawnflags" "2" "deathtarget" "monster13x" "targetname" "monster12" "target" "monster12tgt" }</entity>
+<entity>{ "classname" "target_changelevel" "origin" "272 320 224" "targetname" "endforever" "map" "*startmap" }</entity>
+<entity>{ "classname" "trigger_multiple" "mins" "480 -256 -352" "spawnflags" "4" "targetname" "endlevel" "target" "endforever" "maxs" "2304 1536 320" }</entity>
+
+</entity_add>
+
+
+</xml> 
+

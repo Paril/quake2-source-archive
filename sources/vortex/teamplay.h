@@ -1,0 +1,1 @@
+void SpawnRetard (int teamnum);

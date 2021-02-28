@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{E90CD772-F923-3974-9357-32BCBCEB4D55}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>gamex86</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\l\Desktop\zardoru\vrxcl-master\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">gamex86.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">gamex86</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\l\Desktop\zardoru\vrxcl-master\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gamex86.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">gamex86</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\l\Desktop\zardoru\vrxcl-master\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">gamex86.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">gamex86</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\l\Desktop\zardoru\vrxcl-master\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">gamex86.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">gamex86</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;REMOVE_RESPAWNS;CMD_USEHASH;Q2PRO_COMPATIBILITY;ALLOW_ADMIN;LOCK_DEFAULTS;CMAKE_INTDIR="Debug";gamex86_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;REMOVE_RESPAWNS;CMD_USEHASH;Q2PRO_COMPATIBILITY;ALLOW_ADMIN;LOCK_DEFAULTS;CMAKE_INTDIR=\"Debug\";gamex86_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;libmysql.lib;Wininet.lib;Winmm.lib;pthreadVC2.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/l/Desktop/zardoru/vrxcl-master/Debug/gamex86.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/l/Desktop/zardoru/vrxcl-master/Debug/gamex86.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REMOVE_RESPAWNS;CMD_USEHASH;Q2PRO_COMPATIBILITY;ALLOW_ADMIN;LOCK_DEFAULTS;CMAKE_INTDIR="Release";gamex86_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REMOVE_RESPAWNS;CMD_USEHASH;Q2PRO_COMPATIBILITY;ALLOW_ADMIN;LOCK_DEFAULTS;CMAKE_INTDIR=\"Release\";gamex86_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;libmysql.lib;Wininet.lib;Winmm.lib;pthreadVC2.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/l/Desktop/zardoru/vrxcl-master/Release/gamex86.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/l/Desktop/zardoru/vrxcl-master/Release/gamex86.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REMOVE_RESPAWNS;CMD_USEHASH;Q2PRO_COMPATIBILITY;ALLOW_ADMIN;LOCK_DEFAULTS;CMAKE_INTDIR="MinSizeRel";gamex86_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REMOVE_RESPAWNS;CMD_USEHASH;Q2PRO_COMPATIBILITY;ALLOW_ADMIN;LOCK_DEFAULTS;CMAKE_INTDIR=\"MinSizeRel\";gamex86_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;libmysql.lib;Wininet.lib;Winmm.lib;pthreadVC2.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/l/Desktop/zardoru/vrxcl-master/MinSizeRel/gamex86.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/l/Desktop/zardoru/vrxcl-master/MinSizeRel/gamex86.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REMOVE_RESPAWNS;CMD_USEHASH;Q2PRO_COMPATIBILITY;ALLOW_ADMIN;LOCK_DEFAULTS;CMAKE_INTDIR="RelWithDebInfo";gamex86_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;REMOVE_RESPAWNS;CMD_USEHASH;Q2PRO_COMPATIBILITY;ALLOW_ADMIN;LOCK_DEFAULTS;CMAKE_INTDIR=\"RelWithDebInfo\";gamex86_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;libmysql.lib;Wininet.lib;Winmm.lib;pthreadVC2.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/l/Desktop/zardoru/vrxcl-master/RelWithDebInfo/gamex86.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/l/Desktop/zardoru/vrxcl-master/RelWithDebInfo/gamex86.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/l/Desktop/zardoru/vrxcl-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/l/Desktop/zardoru/vrxcl-master -BC:/Users/l/Desktop/zardoru/vrxcl-master --check-stamp-file C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/l/Desktop/zardoru/vrxcl-master/CMakeLists.txt;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeCCompiler.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeDependentOption.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/l/Desktop/zardoru/vrxcl-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/l/Desktop/zardoru/vrxcl-master -BC:/Users/l/Desktop/zardoru/vrxcl-master --check-stamp-file C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/l/Desktop/zardoru/vrxcl-master/CMakeLists.txt;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeCCompiler.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeDependentOption.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/l/Desktop/zardoru/vrxcl-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/l/Desktop/zardoru/vrxcl-master -BC:/Users/l/Desktop/zardoru/vrxcl-master --check-stamp-file C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/l/Desktop/zardoru/vrxcl-master/CMakeLists.txt;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeCCompiler.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeDependentOption.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/l/Desktop/zardoru/vrxcl-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/l/Desktop/zardoru/vrxcl-master -BC:/Users/l/Desktop/zardoru/vrxcl-master --check-stamp-file C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/l/Desktop/zardoru/vrxcl-master/CMakeLists.txt;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeCCompiler.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\3.7.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeDependentOption.cmake;C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\l\Desktop\zardoru\vrxcl-master\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\Player.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\Spirit.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\Talents.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ally.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\armory.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\auras.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\backpack.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\bombspell.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\boss_general.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\boss_makron.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\boss_tank.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\class_brain.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\class_demon.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\cloak.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ctf.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\damage.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\domination.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_ai.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_berserk.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_bitch.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_brain.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_decoy.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_gladiator.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_gunner.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_infantry.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_jorg.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_makron.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_medic.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_misc.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_move.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_mutant.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_parasite.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_retard.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_soldier.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_supertank.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\drone_tank.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ents.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\file_output.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\flying_skull.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\forcewall.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_chase.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_cmds.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_combat.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_flame.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_func.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_items.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_lasers.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_main.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_misc.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_monster.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_phys.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_save.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_spawn.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_svcmds.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_sword.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_target.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_trigger.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_utils.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\g_weapon.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\grid.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\hash_32a.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\help.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\invasion.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\item_menu.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\jetpack.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\lasers.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\lasersight.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\laserstuff.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\lua.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\m_flash.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\magic.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\maplist.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\menu.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\minisentry.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\misc_stuff.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\p_client.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\p_hook.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\p_hud.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\p_menu.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\p_parasite.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\p_trail.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\p_view.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\p_weapon.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\player_points.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\playerlog.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\playertoberserk.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\playertoflyer.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\playertomedic.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\playertomutant.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\playertoparasite.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\playertotank.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\pvb.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\q_shared.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\repairstation.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\scanner.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\sentrygun2.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\shaman.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\special_items.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\sqlite3.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\supplystation.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\teamplay.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\totems.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\trade.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\upgrades.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_abilitylist.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_autobind.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_cmd.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_file_IO.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_hw.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_items.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_luasettings.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_maplist.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_mysql_gds.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_sqlite_character.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_sqlite_unidb.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_tbi.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\v_utils.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\vote.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\weapon_upgrades.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\weapons.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\AStar.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_class_dmbot.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_class_monster_default.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_dropnodes.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_items.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_links.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_main.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_movement.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_navigation.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_nodes.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_tools.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\ai_weapons.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\bot_common.c"  />
+    <ClCompile Include="C:\Users\l\Desktop\zardoru\vrxcl-master\ai\bot_spawn.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/l/Desktop/zardoru/vrxcl-master/ZERO_CHECK.vcxproj">
+      <Project>2D58226F-66AA-35E8-9774-35B87D05E869</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

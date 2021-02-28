@@ -1,0 +1,11 @@
+void InitLuaSettings();
+void CleanupLua();
+int Lua_GetIntSetting(char* varname);
+double Lua_GetDoubleSetting(char* varname);
+const char* Lua_GetStringSetting(char* varname);
+void RunLuaMapSettings(char* mapname);
+double Lua_GetVariable(char* varname, double default_var);
+void Lua_RunSettingScript(const char* filename);
+qboolean Lua_StartTableIter(const char* tablename);
+int Lua_IterNextString(char** out);
+int Lua_GetIntVariable(char* varname, double default_var);

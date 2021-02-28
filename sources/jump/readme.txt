@@ -1,3 +1,22 @@
+What is it?
+Jump is a mod for Quake II where instead of plain deathmatch and killing, the idea is to jump around various jump maps in the fastest possible time. There are all sorts of different jumps you need to pull off, from double and triple jumps to circle and ladder jumps. It's annoyingly addictive too.
+NOTE: This is NOT the same mod as the jolt "JumpMod" which many servers run. This version is extremely simple and has no weapons, no web based scoring setup, etc, it's just plain jumping with a high score list. If you want the jolt JumpMod, please visit www.q2jump.jolt.co.uk
+
+Where can I get it?
+The mod basically consists of the server DLL (which prevents players from walking into each other and weapons firing, etc) and the jump maps. You can get the jump map pack which contains a whole bunch of jump maps (over 150). This map pack contains all the maps from Azbok's and jolt, with the Deathmatch and "stupid" maps removed. Still, there are new maps coming out that won't be in the pack yet, so always set auto downloading (set allow_download 1, set allow_download_maps 1) on before playing.
+These archives both contain the same maps, however the .bz2 contains NO textures, sounds or environment maps and is intended for dedicated servers only.
+jump map pack .zip (29.7mb, all maps, textures, sounds and environment files)
+jump map pack .tar.bz2 (22.17mb, .BSP files only for dedicated servers, untar in your /jump/maps/ directory)
+
+You can grab a copy of the server DLL from May 3rd too, but it is recommended you visit the IRC channel for latest updates.
+gamex86.dll.zip for Windows, 88.2kb. Extract to your quake2/jump directory.
+gamei386.so.gz for linux, 60kb. Note, due to a bug in the iD Software Quake II 3.20 for linux, you should rebuild your q2 server from source. Failure to do so will cause a crash when a player joins.
+
+You can grab the source code if you wish. By downloading, you agree to the terms of the Open Source Mod License under which this code is placed.
+
+Servers
+At the moment there is one server running my version of the jump mod. You can find it at 66.162.58.41:27914. Many thanks to OCLD.COM for hosting this. If you would like to run your own server, be sure to find me at irc.edgeirc.net #jump and I'll send you the latest DLL.
+
 =========
 Commands
 =========
