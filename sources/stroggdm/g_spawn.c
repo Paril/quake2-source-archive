@@ -966,7 +966,7 @@ void SP_worldspawn (edict_t *ent)
 	gi.modelindex ("#w_railgun.md2");
 	gi.modelindex ("#w_bfg.md2");
 
-	sm_meat_index = ModelIndex_P ("models/objects/gibs/sm_meat/tris.md2");
+	sm_meat_index = gi.modelindex ("models/objects/gibs/sm_meat/tris.md2");
 	gi.modelindex ("models/objects/gibs/arm/tris.md2");
 	gi.modelindex ("models/objects/gibs/bone/tris.md2");
 	gi.modelindex ("models/objects/gibs/bone2/tris.md2");
@@ -1008,5 +1008,7 @@ void SP_worldspawn (edict_t *ent)
 		fprintf (logged, "SERVER: Finished Worldspawn!\n");
 		fprintf (logged, "SERVER: Playing on: %s\n", level.level_name);
   }
+
+  srand(time(NULL));
 }
 

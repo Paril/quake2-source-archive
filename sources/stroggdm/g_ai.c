@@ -1680,6 +1680,20 @@ void hintpath_go (edict_t *self, edict_t *point)
 	self->monsterinfo.run (self);
 }
 
+qboolean has_valid_enemy (edict_t *self)
+{
+	if (!self->enemy)
+		return false;
+
+	if (!self->enemy->inuse)
+		return false;
+
+	if (self->enemy->health < 1)
+		return false;
+
+	return true;
+}
+
 // =============
 // hintpath_stop - bails a monster out of following hint paths
 // =============
@@ -3036,19 +3050,6 @@ void monster_duck_up (edict_t *self)
 
 //=========================
 //=========================
-qboolean has_valid_enemy (edict_t *self)
-{
-	if (!self->enemy)
-		return false;
-
-	if (!self->enemy->inuse)
-		return false;
-
-	if (self->enemy->health < 1)
-		return false;
-
-	return true;
-}
 
 void TargetTesla (edict_t *self, edict_t *tesla)
 {

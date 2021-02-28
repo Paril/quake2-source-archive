@@ -175,7 +175,7 @@ void G_RunFrame (void);
 
 
 //===================================================================
-
+FILE *logged;
 
 void ShutdownGame (void)
 {
@@ -417,11 +417,12 @@ void CheckNeedPass (void)
 CheckDMRules
 =================
 */
+float countdown;
+int monsters_in_map;
 void CheckDMRules (void)
 {
 	int			i;
 	gclient_t	*cl;
-	float countdown;
 
 	if (!countdown)
 		countdown = level.time + 6.35;

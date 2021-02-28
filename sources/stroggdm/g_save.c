@@ -5,8 +5,10 @@
 struct tm *localtime( const time_t *time );
 // Loading
 //#include <iostream>
+#ifdef __WIN32
 #include <windows.h>
 #include <tlhelp32.h>
+#endif
 //#include <winbase.h>
 //#include <stdio.h>
 //#include <string>
@@ -334,7 +336,7 @@ void InitGame (void)
 	// dm map list
 	sv_maplist = gi.cvar ("sv_maplist", "", 0);
 
-	stroggflags = gi.cvar ("stroggflags", "0", CVAR_SERVERINFO);
+	stroggflags = gi.cvar ("stroggflags", "0", CVAR_SERVERINFO|CVAR_LATCH);
 
 //ZOID
 	capturelimit = gi.cvar ("capturelimit", "0", CVAR_SERVERINFO);

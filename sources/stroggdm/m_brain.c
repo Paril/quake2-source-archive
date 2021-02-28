@@ -451,8 +451,8 @@ void brain_tentacle_attack (edict_t *self)
 	vec3_t	start;
 	vec3_t	forward, right;
 	int		flash_number;
-	vec3_t  end;
-	trace_t tr;
+//	vec3_t  end;
+//	trace_t tr;
 
 	flash_number = MZ2_GUNNER_MACHINEGUN_1 + (self->s.frame - FRAME_attak216);
 

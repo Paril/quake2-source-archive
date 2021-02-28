@@ -370,7 +370,7 @@ void chick_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage
 	G_FreeEdict(self);
 	if (((int)(stroggflags->value) & SF_RPG_MODE) && attacker->client)
 	{
-		attacker->client->resp.exp += rndnum (85, 135);
+		AddExp (attacker, rndnum (85, 135));
 		Check_Levelup(attacker);
 	}
 }
@@ -637,7 +637,7 @@ void SP_monster_chick (edict_t *self)
 
 	self->movetype = MOVETYPE_STEP;
 	self->solid = SOLID_BBOX;
-	self->s.modelindex = gi.modelindex ("players/bitch/tris.md2");
+	self->s.modelindex = gi.modelindex ("models/monsters/bitch/tris.md2");
 	VectorSet (self->mins, -16, -16, 0);
 	VectorSet (self->maxs, 16, 16, 56);
 

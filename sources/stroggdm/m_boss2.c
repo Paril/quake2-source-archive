@@ -491,7 +491,7 @@ void boss2_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage
 	G_FreeEdict(self);
 	if (((int)(stroggflags->value) & SF_RPG_MODE) && attacker->client)
 	{
-		attacker->client->resp.exp += rndnum (160, 200);
+		AddExp (attacker, rndnum (160, 200));
 		Check_Levelup(attacker);
 	}
 /*	gi.sound (self, CHAN_VOICE, sound_death, 1, ATTN_NONE, 0);

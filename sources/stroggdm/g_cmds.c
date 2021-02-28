@@ -5,7 +5,6 @@
 //VectorSet(self->gravityVector, 0, 0, -1)
 
 // controlling parameters
-// controlling parameters
 #define        LASER_TIME                                                             30
 #define        CELLS_FOR_LASER                                                20
 #define        LASER_DAMAGE                                                   100
@@ -547,7 +546,7 @@ void Cmd_Use_f (edict_t *ent)
 	
 	// Paril - Aliases
 	// First Weapons
-	if (!stricmp (s, "weapon 1") || !stricmp (s, "weapon1"))
+	if (!Q_stricmp (s, "weapon 1") || !Q_stricmp (s, "weapon1"))
 	{
 							 if (ent->client->resp.class == 1)
 								 s = "Soldier Blaster";
@@ -577,6 +576,8 @@ void Cmd_Use_f (edict_t *ent)
 								 s = "Brain Tentacles";
 							 else if (ent->client->resp.class == 13)
 								 s = "Mutant Claws";
+							 else if (ent->client->resp.class == 14)
+								 s = "Tank Blaster";
 							 else if (ent->client->resp.class == 41)
 								 s = "Tank Blaster";
 							 else if (ent->client->resp.class == 15)
@@ -619,7 +620,7 @@ void Cmd_Use_f (edict_t *ent)
 								 s = "Unknown";
 							 }
 	}
-	if (!stricmp (s, "weapon 2") || !stricmp (s, "weapon2"))
+	if (!Q_stricmp (s, "weapon 2") || !Q_stricmp (s, "weapon2"))
 	{
 							 if (ent->client->resp.class == 1)
 								 s = "Soldier Shotgun";
@@ -649,6 +650,8 @@ void Cmd_Use_f (edict_t *ent)
 								 s = "Brain Claws";
 							 else if (ent->client->resp.class == 13)
 								 s = "Mutant Claws";
+							 else if (ent->client->resp.class == 14)
+								 s = "Tank Machinegun";
 							 else if (ent->client->resp.class == 41)
 								 s = "Tank Machinegun";
 							 else if (ent->client->resp.class == 15)
@@ -691,7 +694,7 @@ void Cmd_Use_f (edict_t *ent)
 								 s = "Unknown";
 							 }
 	}
-	if (!stricmp (s, "weapon 3") || !stricmp (s, "weapon3"))
+	if (!Q_stricmp (s, "weapon 3") || !Q_stricmp (s, "weapon3"))
 	{
 							 if (ent->client->resp.class == 1)
 								 s = "Soldier Machinegun";
@@ -721,6 +724,8 @@ void Cmd_Use_f (edict_t *ent)
 								 s = "Brain Claws";
 							 else if (ent->client->resp.class == 13)
 								 s = "Mutant Claws";
+							 else if (ent->client->resp.class == 14)
+								 s = "Tank Rocket Launcher";
 							 else if (ent->client->resp.class == 41)
 								 s = "Tank Rocket Launcher";
 							 else if (ent->client->resp.class == 15)
@@ -1287,6 +1292,8 @@ void Cmd_Say_f (edict_t *ent, qboolean team, qboolean arg0)
 		monstername = "Brain";
 	else if (ent->client->resp.class == 13)
 		monstername = "Mutant";
+	else if (ent->client->resp.class == 14)
+		monstername = "Tank Commander";
 	else if (ent->client->resp.class == 41)
 		monstername = "Tank Commander";
 	else if (ent->client->resp.class == 15)
@@ -2985,8 +2992,9 @@ void SightSound (edict_t *ent)
 			gi.sound (ent, CHAN_VOICE, gi.soundindex("floater/Fltsght1.wav"), 1, ATTN_NORM, 0);
 		else if (ent->client->resp.class == 17)
 			gi.sound (ent, CHAN_VOICE, gi.soundindex("flipper/Flpsght1.wav"), 1, ATTN_NORM, 0);
+		else if (ent->client->resp.class == 14)
+			gi.sound (ent, CHAN_VOICE, gi.soundindex("tank/sight1.wav"), 1, ATTN_NORM, 0);
 		else if (ent->client->resp.class == 41)
-			//gi.sound (ent, CHAN_VOICE, gi.soundindex("parasite/Parsght1.wav"), 1, ATTN_NORM, 0);
 			gi.sound (ent, CHAN_VOICE, gi.soundindex("tank/sight1.wav"), 1, ATTN_NORM, 0);
 		else if (ent->client->resp.class == 40)
 			gi.sound (ent, CHAN_VOICE, gi.soundindex("parasite/Parsght1.wav"), 1, ATTN_NORM, 0);
@@ -3687,6 +3695,27 @@ void ClassAbilities (edict_t *ent)
 		}
 	}
 	
+	if (ent->client->resp.class == 14)
+	{
+		vec3_t	offset, start;
+		vec3_t	forward, right;
+		
+		
+		if (ent->client->pers.abilities.powerpoints < 500)
+		{
+			safe_cprintf (ent, PRINT_HIGH, "Let them regen!\n");
+			return;
+		}
+		
+		AngleVectors (ent->client->v_angle, forward, right, NULL);
+		VectorScale (forward, -2, ent->client->kick_origin);
+		ent->client->kick_angles[0] = -1;
+		VectorSet(offset, 8, 8, ent->viewheight-8);
+		P_ProjectSource (ent->client, ent->s.origin, offset, forward, right, start);
+		
+		Launch_Ball (ent, start, forward, 2, 70);
+		ent->client->pers.abilities.powerpoints -= 500;
+	}
 	if (ent->client->resp.class == 41)
 	{
 		vec3_t	offset, start;
@@ -3809,17 +3838,18 @@ pmenu_t devmenu[] = {
 	{ "",				PMENU_ALIGN_LEFT, NULL }
 };
 
-/*#define PARTY_CREATE		0
+#define PARTY_CREATE		0
 #define PARTY_DESTROY		1
 #define PARTY_CHECKING		2
 #define PARTY_JOIN			3
 
 int max_parties = 9;
 int party_number = 0;
+void	*(*TagMalloc) (int size, int tag);
 
 void PartyCommands (edict_t *ent, int command, char *cmd3)
 {
-	if (command == 0) // Creating a party.
+	if (command == PARTY_CREATE) // Creating a party.
 	{
 		if (ent->client->resp.party.has_party)
 		{
@@ -3830,36 +3860,50 @@ void PartyCommands (edict_t *ent, int command, char *cmd3)
 		// Has he entered a specific name?
 		if (cmd3)
 		{
-				char *end = "'s Party";
-				char *netname;
-				char *owner;
-				char *newname;
-				char            userinfo[MAX_INFO_STRING];
+			char *netname;
+			char *owner;
+			char *newname;
+			char            userinfo[MAX_INFO_STRING];
+			char *pname;
+			char *end;
 
-				//memset(owner,0,sizeof (owner));
-				//strcpy (owner, ent->client->pers.netname);
+			pname = G_CopyString (cmd3);
+			//memset(owner,0,sizeof (owner));
+			//strcpy (owner, ent->client->pers.netname);
 
 
 
-                memcpy (userinfo, ent->client->pers.userinfo, sizeof(userinfo));
+			memcpy (userinfo, ent->client->pers.userinfo, sizeof(userinfo));
 
-				owner = Info_ValueForKey (userinfo, "name");
+			// Alright, this can be problematic.
+			// If the person changes his name, whoamguberdeadly, the party name
+			// switches to like "Paril[Q2C]/infantry/skin"
+			// Damn you userinfo.
+			// Let's try a G_CopyString, shall we?
+			owner = G_CopyString(Info_ValueForKey (userinfo, "name"));
 
-				ent->client->resp.party.owner = owner;
+			ent->client->resp.party.owner = owner;
+			
+			// Well, atleast I know why the party name majiggy wasn't working before.
+			// Knowledge to the max!
 
-				//sprintf (netname, "%s", owner);
-				//netname = &owner;
-				//memcpy (owner, netname, sizeof(netname));
+			//sprintf (netname, "%s", owner);
+			//netname = &owner;
+			//memcpy (owner, netname, sizeof(netname));
 
-				//netname = ent->client->pers.netname;
+			//netname = ent->client->pers.netname;
 
-				//sprintf (end, "%s's Party", ent->client->pers.netname);
-				//netname = owner;
-				newname = Info_ValueForKey (userinfo, "name");
-				strcat (newname, end);
-				ent->client->resp.party.name = newname;
+			//sprintf (end, "%s's Party", ent->client->pers.netname);
+			//netname = owner;
+			newname = Info_ValueForKey (userinfo, "name");
+			//strcpy (pname, cmd3);
+			//sprintf (end, "%s's Party: %s\n", newname, pname);
+			end = va ("%s's Party: %s\n", newname, pname);
 
-				gi.cprintf (ent, PRINT_HIGH, "Party created: %s\n", ent->client->resp.party.name);
+			//strcat (newname, end);
+			ent->client->resp.party.name = G_CopyString(end);
+
+			gi.cprintf (ent, PRINT_HIGH, "Party created: %s\n", ent->client->resp.party.name);
 		}
 		else // Something odd happened.
 		{
@@ -3870,7 +3914,7 @@ void PartyCommands (edict_t *ent, int command, char *cmd3)
 		// Revision: Special flag telling them we're the owner
 		ent->client->resp.party.has_party = 1;
 	}
-	else if (command == 1) // Destroy
+	else if (command == PARTY_DESTROY) // Destroy
 	{
 		int i;
 		gi.cprintf (ent, PRINT_HIGH, "Destroying Party.. Done\n");
@@ -3886,14 +3930,14 @@ void PartyCommands (edict_t *ent, int command, char *cmd3)
 		}
 		ent->client->resp.party.owner = NULL;
 	}
-	else if (command == 2) // Checking
+	else if (command == PARTY_CHECKING) // Checking
 	{
 		int i;
 		edict_t *foundent;
 		party_s party[9]; // Max 9 parties.
 		char *members[9];
 		int p;
-		int j;
+		int j = 0;
 		int g;
 
 		p = 0;
@@ -3923,11 +3967,12 @@ void PartyCommands (edict_t *ent, int command, char *cmd3)
 				p++;
 			}
 		}
-		
+
 		gi.cprintf (ent, PRINT_HIGH, "These are the current parties:\n\n");
 
 		for (j = 0; j < p; j++)
 		{
+			// Full lists all parties available.
 			if (Q_stricmp(cmd3, "full") == 0)
 			{
 				int h;
@@ -3939,7 +3984,7 @@ void PartyCommands (edict_t *ent, int command, char *cmd3)
 					{
 						char	userinfo2[MAX_INFO_STRING];
 						memcpy (userinfo2, party[j].member[g]->client->pers.userinfo, sizeof(userinfo2));
-						
+
 						members[g] = Info_ValueForKey (userinfo2, "name");
 					}
 					else
@@ -3966,7 +4011,7 @@ void PartyCommands (edict_t *ent, int command, char *cmd3)
 				gi.cprintf (ent, PRINT_HIGH, "%s - Owner: %s\n", party[j].name, party[j].owner);
 		}
 	}
-	else if (command == 3) // Joining
+	else if (command == PARTY_JOIN) // Joining
 	{
 		int i;
 		edict_t *foundent;
@@ -4011,7 +4056,7 @@ void PartyCommands (edict_t *ent, int command, char *cmd3)
 						if ((!ent->client->resp.in_party) && foundent->client->resp.party.member[mem] == NULL) // Yay, we found an empty spot!
 						{
 							gi.cprintf (foundent, PRINT_HIGH, "%s has entered your party!\n", ent->client->pers.netname);
-							gi.cprintf (ent, PRINT_HIGH, "You have entered %s's party!\n", ent->client->pers.netname);
+							gi.cprintf (ent, PRINT_HIGH, "You have entered %s's party!\n", foundent->client->pers.netname);
 
 							foundent->client->resp.party.member[mem] = ent; // Okay, we are now on his roster!
 							ent->client->resp.in_party = 1; // We're in a party.
@@ -4029,7 +4074,53 @@ void PartyCommands (edict_t *ent, int command, char *cmd3)
 
 		gi.cprintf (ent, PRINT_HIGH, "No such owner: %s\n", cmd3);
 	}
-}*/
+}
+
+// Returns the party that ent is in, if any.
+// Returns a NULL pointer if none.
+// Revision: Returns the pointer to the client that owns the party.
+// Easier management :D
+gclient_t *InParty (edict_t *ent)
+{
+	edict_t *cl_ent;
+	int i;
+	int f;
+	gclient_t *ret = NULL;
+
+	// Not even in a party, what the hell are you doing?
+	if (!ent->client->resp.in_party)
+		return NULL;
+
+	for (i=0 ; i<maxclients->value ; i++)
+	{
+		cl_ent = g_edicts + 1 + i;
+
+		if (cl_ent->client->resp.party.has_party)
+		{
+			// Erg, nested for statements
+			// Run!
+			for (f = 0; f < 9; f++)
+			{
+				// This may not be best way to do it..
+				// FIXME?
+				if (cl_ent->client->resp.party.member[f]->client->pers.netname == ent->client->pers.netname)
+				{
+					ret = cl_ent->client;
+					break;
+				}
+			}
+		}
+	}
+	if (ret)
+		// Should I return the pointer?
+		return ret;
+	else
+		// Shit, this shouldn't happen...
+		// Oh well, it did.. so return NULL.
+		// Maybe I should put a debug print or something here..
+		// Oh well, too lazy.
+		return NULL;
+}
 
 /*
 =================
@@ -4183,7 +4274,7 @@ void ClientCommand (edict_t *ent)
 						
 	//14
 	else if (Q_stricmp(cmd, "hook") == 0) 
-		Cmd_Hook_f(ent,cmd); 
+		Cmd_Hook_f(ent); 
 	//Wyrm: chasecam
 	else if (Q_stricmp(cmd, "chasecam") == 0)
 		Cmd_Chasecam_Toggle(ent);
@@ -4231,7 +4322,7 @@ void ClientCommand (edict_t *ent)
 			Sentry_ControlWeapon (ent);
 		}
 	}
-	/*else if (Q_stricmp (cmd, "party") == 0)
+	else if (Q_stricmp (cmd, "party") == 0)
 	{
 		if (Q_stricmp (scommand, "create") == 0)
 		{
@@ -4251,7 +4342,7 @@ void ClientCommand (edict_t *ent)
 		}
 		else
 			gi.cprintf (ent, PRINT_HIGH, "Invalid command. Valid party commands: \"party create (partyname)/destroy/check (full)/join (owner's name)\"\n");
-	}*/
+	}
 	
 	// Profile, Paril
 	//else if (Q_stricmp (cmd, "profile_age") == 0)
@@ -4269,20 +4360,23 @@ void ClientCommand (edict_t *ent)
 		SelMonster_FaceLocation(ent);
 	else if (Q_stricmp (cmd, "streak") == 0)
 		safe_cprintf (ent, PRINT_HIGH, "%i kills, %i streak\n", ent->client->resp.score, ent->client->pers.streak);
-	/*else if (Q_stricmp (cmd, "devmenu") == 0)
-	{
-		Cmd_DevMenu_f (scommand, ent);
-	}
+//	else if (Q_stricmp (cmd, "devmenu") == 0)
+//	{
+//		Cmd_DevMenu_f (scommand, ent);
+//	}
 	else if (Q_stricmp(cmd, "exptest") == 0)
 	{
 		int current_level, needed;
+
+		//if (ent->client->resp.lvl < 13)
+		//	ent->client->resp.lvl = 13;
 		
 		current_level = ent->client->resp.lvl;
-		needed = 250 * (current_level) * (current_level);
+		needed = (250 * (13) * (13)) - 553;
 
 		ent->client->resp.exp += needed;
 		Check_Levelup (ent);
-	}*/
+	}
 	else	// anything that doesn't match a command will be a chat
 		//Cmd_Say_f (ent, false, true);
 		safe_cprintf (ent, PRINT_HIGH, "Unknown Command: \"%s\"\n", cmd);

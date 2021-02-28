@@ -32,7 +32,7 @@ int mysnprintf(char * buffer, size_t count, const char * fmt, ...)
 	int ret;
 
 	va_start(argptr, fmt);
-	ret = _vsnprintf(buffer, count, fmt, argptr);
+	ret = vsnprintf(buffer, count, fmt, argptr);
 	va_end(argptr);
 	buffer[count-1]=0; /* Always put zero at end */
 	return ret;
@@ -41,11 +41,18 @@ int mysnprintf(char * buffer, size_t count, const char * fmt, ...)
 //ok the below peices of code in this comment are to define the 
 //gamepath which is very useful,, 
 
+#ifndef __WIN32
+#include <sys/stat.h>
+#else
+#define mkdir _mkdir
+#endif
+
+player_save_t DAT;
 
 void SetFilename(char * filename,int len, edict_t *ent)
 {
 	char mod[16];
-	_mkdir ("stroggdm/playerfiles");//[QBS] make the dir if we dont have it 
+	mkdir ("stroggdm/playerfiles", S_IWUSR | S_IRUSR);//[QBS] make the dir if we dont have it 
 	
 	strcpy(mod, "stroggdm");
 	mysnprintf(filename, len, "%s/%s/%s.sdm", mod, PSUBDIR, ent->client->pers.netname); 
@@ -60,7 +67,7 @@ void WRITE_PLAYER_STATS (edict_t *ent)// SAVE PLAYER
 	char filename[128];
 	FILE *FH;
 
-	if (!(int)(stroggflags->value) & SF_RPG_MODE)
+	if (!((int)stroggflags->value & SF_RPG_MODE))
 		return;
 
 	attacker = ent;
@@ -131,7 +138,7 @@ int READ_PLAYER_STATS (edict_t *ent)// LOAD
 	edict_t *attacker;
 	edict_t *self;
 	
-	if (!(int)(stroggflags->value) & SF_RPG_MODE)
+	if (!((int)stroggflags->value & SF_RPG_MODE))
 		return 0;
 
 	attacker = ent;
@@ -168,10 +175,44 @@ int READ_PLAYER_STATS (edict_t *ent)// LOAD
 
 	// I'm sorry to have to do this to you, fair Quake2.
 	ent->client->asking_for_pass = 1;
-	stuffcmd (ent, "messagemode\n");
+	stuffcmd (ent, "messagemode\n", -1);
 
 	return LOADING_SUCCESS;
 } 
+
+
+qboolean PlayerExist (edict_t *ent)
+{
+	char filename[128];
+	FILE *FH;
+	//[QBS]attempt to make global
+	edict_t *attacker;
+	edict_t *self;
+	
+	if (!((int)stroggflags->value & SF_RPG_MODE))
+		return true;
+
+	attacker = ent;
+	self = ent;
+	ent = ent; //what the hell lol :)
+	//[QBS]end 
+	
+	SetFilename(filename, sizeof(filename), ent); 
+	
+	if ((FH = fopen( filename, "rb")) == NULL)
+	{
+		gi.cprintf(ent, PRINT_HIGH, "Player not found (good thing). Enter your password:\n");
+		return false;
+	}
+
+	// We got past that point, so this means...
+	// IT EXISTS! HACKING ATTEMPT, RUN!
+
+	gi.cprintf(ent, PRINT_HIGH, "A character with the name you have already exists.\nPlease change your name and try again.\n");
+	return true;
+
+	return LOADING_SUCCESS;
+}
 
 void Step2 (edict_t *ent)
 {
@@ -223,10 +264,14 @@ void PlayerData_Create (edict_t *ent, pmenuhnd_t *p)
 {
 	// Paril - Player creates new character. Very simple, first we'll open the password box,
 	// then going to do a write char, then open the class menu.
+
+	// Revision: Creating an account under an already-existing name; defunct. Need to see if he exists first!
+	if (PlayerExist (ent))
+		return;
 	
 	// I'm sorry to have to do this to you, fair Quake2.
 	ent->client->asking_for_pass = 2;
-	stuffcmd (ent, "messagemode\n");
+	stuffcmd (ent, "messagemode\n", -1);
 }
 
 void Step3 (edict_t *ent, pmenuhnd_t *p)

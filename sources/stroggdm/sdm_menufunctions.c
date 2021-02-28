@@ -11,7 +11,7 @@ void CheckBanMenu (edict_t *ent, cvar_t *ban_cvar, int menunumber)
 
 void CheckLevelForMonster (edict_t *ent, char *menuname, int playerlevel, int classnumber)
 {
-	if (!(int)(stroggflags->value) & SF_RPG_MODE)
+	if (!((int)stroggflags->value & SF_RPG_MODE))
 		return;
 
 	if (Q_stricmp (menuname, "groundrose") == 0)
@@ -254,7 +254,7 @@ pmenu_t loginmenu[] = {
 	{ NULL,				PMENU_ALIGN_LEFT, NULL },
 	{ NULL,				PMENU_ALIGN_LEFT, NULL },
 	{ "Login",	PMENU_ALIGN_LEFT, PlayerData_Login }, 
-	{ "Create new Character",				PMENU_ALIGN_LEFT, PlayerData_Create },
+	{ "Create new character",				PMENU_ALIGN_LEFT, PlayerData_Create },
 	{ NULL,				PMENU_ALIGN_LEFT, NULL },
 	{ NULL,				PMENU_ALIGN_LEFT, NULL },   
 	{ NULL,				PMENU_ALIGN_LEFT, NULL }, 
@@ -374,6 +374,7 @@ pmenu_t swimmenu[] = {
 };
 
 
+void BeCTank2 (edict_t *ent, pmenuhnd_t *p);
 
 pmenu_t ground2[] = {
 	{ "*GroundType Menu",		PMENU_ALIGN_CENTER, NULL },
@@ -382,7 +383,7 @@ pmenu_t ground2[] = {
 	{ "Iron Maiden",				PMENU_ALIGN_LEFT, BeChick },
 	{ "Brain",				PMENU_ALIGN_LEFT, BeBrain},
 	{ "Mutant",				PMENU_ALIGN_LEFT, BeMutant },
-	{ "Tank Commander",				PMENU_ALIGN_LEFT, BeCTank },
+	{ "Tank Commander",				PMENU_ALIGN_LEFT, BeCTank2 },
 	{ "JORG",				PMENU_ALIGN_LEFT, BeJorg },
 	{ "Makron",				PMENU_ALIGN_LEFT, BeMakron },
 	{ "Parasite",				PMENU_ALIGN_LEFT, BeParasite },
@@ -735,6 +736,18 @@ void BeParasite (edict_t *ent, pmenuhnd_t *p)
     EndObserverMode_Walking(ent);
 }
 void BeCTank (edict_t *ent, pmenuhnd_t *p)
+{
+	if (ban_ctank->value)
+	{
+		safe_cprintf (ent, PRINT_HIGH, "Sorry, that monster is banned.\n");
+		return;
+	}
+	//safe_cprintf (ent, PRINT_HIGH, "I'm sorry, parasite is being removed from StroggDM.\nHe is not functioning correctly.\nMake way for a new monster!\n");
+	//return;
+    ent->client->resp.class = 14;
+    EndObserverMode_Walking(ent);
+}
+void BeCTank2 (edict_t *ent, pmenuhnd_t *p)
 {
 	if (ban_ctank->value)
 	{

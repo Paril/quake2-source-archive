@@ -119,7 +119,7 @@ void CTFAssignSkin(edict_t *ent, char *s);
 void CTFAssignTeam(gclient_t *who);
 edict_t *SelectCTFSpawnPoint (edict_t *ent);
 qboolean CTFPickup_Flag(edict_t *ent, edict_t *other);
-qboolean CTFDrop_Flag(edict_t *ent, gitem_t *item);
+void CTFDrop_Flag(edict_t *ent, gitem_t *item);
 void CTFEffects(edict_t *player);
 void CTFCalcScores(void);
 void SetCTFStats(edict_t *ent);
@@ -190,3 +190,4 @@ void SP_info_teleport_destination (edict_t *ent);
 
 void CTFSetPowerUpEffect(edict_t *ent, int def);
 
+int CTFApplyProjectile(edict_t *targ, edict_t *ent, int dmg, int dmg_type);

@@ -1,0 +1,387 @@
+ src/characters/v_utils.c   |  2 ++
+ src/g_local.h              |  2 +-
+ src/libraries/sqlite3.c    | 33 +++++++++++++++++++++++++++++++--
+ src/quake2/g_cmds.c        |  2 +-
+ src/quake2/g_save.c        |  2 +-
+ src/quake2/p_client.c      |  4 ++--
+ src/server/v_luasettings.c | 29 +++++++++++++++++++++++++++++
+ 7 files changed, 67 insertions(+), 7 deletions(-)
+
+diff --git a/src/characters/v_utils.c b/src/characters/v_utils.c
+index 445aea3..254fbaa 100644
+--- a/src/characters/v_utils.c
++++ b/src/characters/v_utils.c
+@@ -1406,6 +1406,8 @@ void V_tFileGotoLine(FILE *fptr, int linenumber, long size) {
+ #define CHANGECLASS_MSG_CHANGE    1
+ #define CHANGECLASS_MSG_RESET    2
+ 
++void vrx_update_free_abilities(edict_t *ent);
++
+ void ChangeClass(char *playername, int newclass, int msgtype) {
+     int i;
+     edict_t *player;
+diff --git a/src/g_local.h b/src/g_local.h
+index 1483a45..c0b96f8 100644
+--- a/src/g_local.h
++++ b/src/g_local.h
+@@ -2333,7 +2333,7 @@ void InitTBI();
+ #include "server/v_luasettings.h"
+ 
+ /* g_configstring_override.c */
+-typedef void (*gi_sound_func_t) (edict_t *ent, int channel, int soundindex, float volume, float attenuation, float timeofs);
++typedef void (*gi_sound_func_t) (const edict_t *ent, int channel, int soundindex, float volume, float attenuation, float timeofs);
+ void cs_override_init();
+ void cs_reset();
+ 
+diff --git a/src/libraries/sqlite3.c b/src/libraries/sqlite3.c
+index 4efdeb8..6233907 100644
+--- a/src/libraries/sqlite3.c
++++ b/src/libraries/sqlite3.c
+@@ -70,6 +70,10 @@
+ # define _LARGEFILE_SOURCE 1
+ #endif
+ 
++#ifdef __wasm__
++#define getpid() 0
++#endif
++
+ /*
+ ** Include the configuration header output by 'configure' if we're using the
+ ** autoconf-based build
+@@ -25441,7 +25445,11 @@ static int posixOpen(const char *zFile, int flags, int mode){
+ ** we are not running as root.
+ */
+ static int posixFchown(int fd, uid_t uid, gid_t gid){
++#ifdef __wasm__
++  return 0;
++#else
+   return geteuid() ? 0 : fchown(fd,uid,gid);
++#endif
+ }
+ 
+ /* Forward reference */
+@@ -25558,7 +25566,11 @@ static struct unix_syscall {
+   { "fchown",       (sqlite3_syscall_ptr)posixFchown,     0 },
+ #define osFchown    ((int(*)(int,uid_t,gid_t))aSyscall[20].pCurrent)
+ 
++#if __wasm__
++  { "umask",        (sqlite3_syscall_ptr)0,               0 },
++#else
+   { "umask",        (sqlite3_syscall_ptr)umask,           0 },
++#endif
+ #define osUmask     ((mode_t(*)(mode_t))aSyscall[21].pCurrent)
+ 
+ }; /* End of the overrideable system calls */
+@@ -26029,7 +26041,6 @@ static void vxworksReleaseFileId(struct vxworksFileId *pId){
+ /*************** End of Unique File ID Utility Used By VxWorks ****************
+ ******************************************************************************/
+ 
+-
+ /******************************************************************************
+ *************************** Posix Advisory Locking ****************************
+ **
+@@ -26393,6 +26404,7 @@ static int findInodeInfo(
+ }
+ 
+ 
++#ifndef SQLITE_NO_UNIX_LOCKS
+ /*
+ ** This routine checks if there is a RESERVED lock held on the specified
+ ** file by this or any other process. If such a lock is held, set *pResOut
+@@ -26926,6 +26938,8 @@ static int unixUnlock(sqlite3_file *id, int eFileLock){
+   return posixUnlock(id, eFileLock, 0);
+ }
+ 
++#endif
++
+ /*
+ ** This function performs the parts of the "close file" operation 
+ ** common to all locking schemes. It closes the directory and file
+@@ -26958,6 +26972,7 @@ static int closeUnixFile(sqlite3_file *id){
+   return SQLITE_OK;
+ }
+ 
++#ifndef SQLITE_NO_UNIX_LOCKS
+ /*
+ ** Close a file.
+ */
+@@ -26984,6 +26999,7 @@ static int unixClose(sqlite3_file *id){
+   unixLeaveMutex();
+   return rc;
+ }
++#endif
+ 
+ /************** End of the posix advisory lock implementation *****************
+ ******************************************************************************/
+@@ -29509,6 +29525,7 @@ static const sqlite3_io_methods *(*const FINDER)(const char*,unixFile *p)    \
+ ** locking strategies.  Functions that return pointers to these methods
+ ** are also created.
+ */
++#ifndef SQLITE_NO_UNIX_LOCKS
+ IOMETHODS(
+   posixIoFinder,            /* Finder function name */
+   posixIoMethods,           /* sqlite3_io_methods object name */
+@@ -29518,6 +29535,7 @@ IOMETHODS(
+   unixUnlock,               /* xUnlock method */
+   unixCheckReservedLock     /* xCheckReservedLock method */
+ )
++#endif
+ IOMETHODS(
+   nolockIoFinder,           /* Finder function name */
+   nolockIoMethods,          /* sqlite3_io_methods object name */
+@@ -29791,6 +29809,7 @@ static int fillInUnixFile(
+ #endif
+   }
+ 
++#ifndef SQLITE_NO_UNIX_LOCKS
+   if( pLockingStyle == &posixIoMethods
+ #if defined(__APPLE__) && SQLITE_ENABLE_LOCKING_STYLE
+     || pLockingStyle == &nfsIoMethods
+@@ -29822,6 +29841,7 @@ static int fillInUnixFile(
+     }
+     unixLeaveMutex();
+   }
++#endif
+ 
+ #if SQLITE_ENABLE_LOCKING_STYLE && defined(__APPLE__)
+   else if( pLockingStyle == &afpIoMethods ){
+@@ -29851,7 +29871,10 @@ static int fillInUnixFile(
+   }
+ #endif
+ 
+-  else if( pLockingStyle == &dotlockIoMethods ){
++#ifndef SQLITE_NO_UNIX_LOCKS
++  else 
++#endif
++		if( pLockingStyle == &dotlockIoMethods ){
+     /* Dotfile locking uses the file path so it needs to be included in
+     ** the dotlockLockingContext 
+     */
+@@ -31968,19 +31991,25 @@ SQLITE_API int sqlite3_os_init(void){
+   ** array cannot be const.
+   */
+   static sqlite3_vfs aVfs[] = {
++#ifndef SQLITE_NO_UNIX_LOCKS
+ #if SQLITE_ENABLE_LOCKING_STYLE && (OS_VXWORKS || defined(__APPLE__))
+     UNIXVFS("unix",          autolockIoFinder ),
+ #else
+     UNIXVFS("unix",          posixIoFinder ),
++#endif
+ #endif
+     UNIXVFS("unix-none",     nolockIoFinder ),
+     UNIXVFS("unix-dotfile",  dotlockIoFinder ),
++#ifndef SQLITE_NO_UNIX_LOCKS
+     UNIXVFS("unix-excl",     posixIoFinder ),
++#endif
+ #if OS_VXWORKS
+     UNIXVFS("unix-namedsem", semIoFinder ),
+ #endif
+ #if SQLITE_ENABLE_LOCKING_STYLE
++#ifndef SQLITE_NO_UNIX_LOCKS
+     UNIXVFS("unix-posix",    posixIoFinder ),
++#endif
+ #if !OS_VXWORKS
+     UNIXVFS("unix-flock",    flockIoFinder ),
+ #endif
+diff --git a/src/quake2/g_cmds.c b/src/quake2/g_cmds.c
+index 0bdebd6..68de026 100644
+--- a/src/quake2/g_cmds.c
++++ b/src/quake2/g_cmds.c
+@@ -2704,7 +2704,7 @@ void Cmd_GetFloorPos_f (edict_t *ent, int add)
+ 
+ 	
+ void Cmd_BombPlayer(edict_t *ent, float skill_mult, float cost_mult);
+-Cmd_Thorns(edict_t *ent);
++void Cmd_Thorns(edict_t *ent);
+ void Cmd_HolyShock(edict_t *ent);
+ int ClassNum(edict_t *ent, int team);
+ void Cmd_VampireMode (edict_t *ent);
+diff --git a/src/quake2/g_save.c b/src/quake2/g_save.c
+index 4e77401..25f73f3 100644
+--- a/src/quake2/g_save.c
++++ b/src/quake2/g_save.c
+@@ -182,7 +182,7 @@ void InitGame(void)
+ 	srand((unsigned)time(0));
+ 
+ 	gamedir = gi.cvar("gamedir", "vortex", CVAR_SERVERINFO);
+-	save_path = gi.cvar("save_path", va("%s//characters", gamedir->string), CVAR_LATCH);
++	save_path = gi.cvar("save_path", va("%s/characters", gamedir->string), CVAR_LATCH);
+ 	//K03 End
+ 
+ 
+diff --git a/src/quake2/p_client.c b/src/quake2/p_client.c
+index c3077f9..0488a76 100644
+--- a/src/quake2/p_client.c
++++ b/src/quake2/p_client.c
+@@ -155,7 +155,7 @@ void SP_info_player_coop(edict_t *self)
+ The deathmatch intermission point will be at one of these
+ Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
+ */
+-void SP_info_player_intermission(void)
++void SP_info_player_intermission(edict_t *self)
+ {
+ }
+ 
+@@ -1740,7 +1740,7 @@ void ShowGun(edict_t *ent);
+ // ###	Hentai ### END
+ 
+ //az begin
+-void KillBoxMonsters(edict_t *ent);
++qboolean KillBoxMonsters(edict_t *ent);
+ // az end
+ 
+ void PutClientInServer (edict_t *ent)
+diff --git a/src/server/v_luasettings.c b/src/server/v_luasettings.c
+index 07fc14d..f64c888 100644
+--- a/src/server/v_luasettings.c
++++ b/src/server/v_luasettings.c
+@@ -1,9 +1,12 @@
+ #include "g_local.h"
++#ifndef NO_LUA
+ #include "../libraries/lua.h"
+ #include "../libraries/lualib.h"
+ #include "../libraries/lauxlib.h"
+ 
+ lua_State *State = NULL;
++#endif
++
+ int errload = 0;
+ void Lua_LoadVariables();
+ const char *reason;
+@@ -29,26 +32,33 @@ edict_t *printent = NULL;
+ 	}
+ 
+ void vrx_lua_event(const char* eventname) {
++#ifndef NO_LUA
+ 	lua_getglobal(State, eventname);
+ 	if (lua_isfunction(State, -1)) {
+ 		if (lua_pcall(State, 0, 0, 0))
+ 			lua_pop(State, 1); // error handler already called. we've got a message though.
+ 	} else
+ 		lua_pop(State, 1);
++#endif
+ }
+ 
+ void Lua_RunSettingScript(const char *filename)
+ {
++#ifndef NO_LUA
+ 	CHECK_LUA_ERR(luaL_loadfile(State, va("%s", filename)));
+ 	CHECK_LUA_ERR(lua_pcall(State, 0, LUA_MULTRET, 0));
++#endif
+ }
+ 
+ void Lua_RunScript(const char *filename)
+ {
++#ifndef NO_LUA
+ 	CHECK_LUA_ERR(luaL_loadfile(State, va("%s/settings/lua/%s.lua", game_path->string, filename)));
+ 	CHECK_LUA_ERR(lua_pcall(State, 0, LUA_MULTRET, 0));
++#endif
+ }
+ 
++#ifndef NO_LUA
+ int printLuaError(lua_State *state)
+ {
+ 	if (lua_isstring(state, -1))
+@@ -156,12 +166,14 @@ static const struct luaL_Reg vrxlib [] = {
+ 	{ "get_is_ability_in_use", q2lua_get_is_ability_in_use },
+ 	{ NULL, NULL }
+ };
++#endif
+ 
+ /* Called at InitGame time */
+ void vrx_init_lua()
+ {
+ 	gi.dprintf("LUA: Initializing settings...");
+ 
++#ifndef NO_LUA
+ 	State = luaL_newstate();
+ 
+ 	if (State)
+@@ -183,6 +195,7 @@ void vrx_init_lua()
+ 
+ 	Lua_RunScript("settings");
+ 	Lua_RunScript("variables");
++#endif
+ 
+ 	Lua_LoadVariables(); // vrxcl 4.2
+ 
+@@ -191,19 +204,24 @@ void vrx_init_lua()
+ 
+ void vrx_close_lua()
+ {
++#ifndef NO_LUA
+ 	if (State)
+ 		lua_close(State);
++#endif
+ }
+ 
+ void vrx_lua_run_map_settings(char *mapname)
+ {
++#ifndef NO_LUA
+ 	if (!State)
+ 		return;
+ 
+ 	Lua_RunScript("initgame");
+ 	Lua_RunScript(mapname);
++#endif
+ }
+ 
++#ifndef NO_LUA
+ double vrx_lua_get_double(char *varname)
+ {
+ 	double setting = -1;
+@@ -220,16 +238,20 @@ double vrx_lua_get_double(char *varname)
+ }
+ 
+ 
++#endif
+ const char *vrx_lua_get_string(char *varname)
+ {
++#ifndef NO_LUA
+ 	lua_getglobal(State, varname);
+ 	if (lua_isstring(State, -1))
+ 		return lua_tostring(State, -1);
++#endif
+ 	return NULL;
+ }
+ 
+ double vrx_lua_get_variable(char *varname, double default_var)
+ {
++#ifndef NO_LUA
+ 	double Setting = default_var;
+ 	lua_getglobal(State, varname);
+ 
+@@ -244,6 +266,9 @@ double vrx_lua_get_variable(char *varname, double default_var)
+ 
+ 	lua_pop(State, -1);
+ 	return Setting;
++#else
++	return default_var;
++#endif
+ }
+ 
+ int vrx_lua_get_int(char *varname, double default_var)
+@@ -253,12 +278,15 @@ int vrx_lua_get_int(char *varname, double default_var)
+ 
+ void Lua_AdminLua(edict_t *ent, char *command)
+ {
++#ifndef NO_LUA
+ 	printent = ent;
+ 	CHECK_LUA_ERR_NRET(luaL_loadstring(State, command), gi.cprintf(ent, PRINT_HIGH, "Err: %s", reason));
+ 	CHECK_LUA_ERR_NRET(lua_pcall(State, 0, 0, 0), gi.cprintf(ent, PRINT_HIGH, "Err: %s", reason));
+ 	printent = NULL;
++#endif
+ }
+ 
++#ifndef NO_LUA
+ /* Table Iteration */
+ qboolean vrx_lua_start_table_iter(const char *tablename)
+ {
+@@ -283,6 +311,7 @@ int vrx_lua_iter_next_string(char **out)
+ 	}
+ 	return retval;
+ }
++#endif
+ 
+ /* Mechanical, boring library stuff below. */
+ 

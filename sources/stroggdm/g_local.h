@@ -13,6 +13,8 @@
 #define	GAME_INCLUDE
 #include "game.h"
 
+void sound (edict_t *ent, int channel, char *folder, char *file, int attentuation);
+
 // the "gameversion" client command will print this plus compile date
 #define	GAMEVERSION	"baseq2"
 
@@ -891,6 +893,13 @@ void ThrowHead (edict_t *self, char *gibname, int damage, int type);
 void ThrowClientHead(edict_t *self);
 void ThrowGib(edict_t *self,char *gibname);
 void BecomeExplosion1(edict_t *self);
+qboolean Is_Grappling(gclient_t *client);
+void Release_Grapple(edict_t *ent);
+void G_ProjectSource2 (vec3_t point, vec3_t distance, vec3_t forward, vec3_t right, vec3_t up, vec3_t result);
+void ClipGibVelocity (edict_t *ent);
+void OpenMainMenus (edict_t *ent);
+void G_MuzzleFlash(int rec_no,vec3_t origin,int flashnum);
+void Kamikaze_Cancel(edict_t *the_spared_one);
 
 //
 // g_ai.c
@@ -917,7 +926,8 @@ void ThrowDebris (edict_t *self, char *modelname, float speed, vec3_t origin, ed
 qboolean fire_hit (edict_t *self, vec3_t aim, int damage, int kick);
 void fire_bullet (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick, int hspread, int vspread, int mod);
 void fire_shotgun (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick, int hspread, int vspread, int count, int mod);
-void fire_blaster (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int speed, int effect, qboolean hyper);
+void fire_blaster (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int speed, int effect, int which_mod);
+void fire_blaster2 (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect, qboolean hyper);
 void fire_grenade (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int speed, float timer, float damage_radius);
 void fire_grenade2 (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int speed, float timer, float damage_radius, qboolean held);
 void fire_rocket (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, float damage_radius, int radius_damage);
@@ -925,6 +935,55 @@ void fire_rail (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick
 void fire_bfg (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, float damage_radius);
 void fire_proxgrenade (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int speed, float timer, float damage_radius, qboolean held);
 void fire_fire (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int speed, float timer, float damage_radius, qboolean held);
+void fire_phlas (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, float damage_radius, int radius_damage);
+void fire_instlaser (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick, int mod);
+void fire_tracker (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, edict_t *enemy);
+void fire_heat (edict_t *self, vec3_t start, vec3_t aimdir, vec3_t offset, int damage, int kick, qboolean monster);
+void fire_player_melee_berserk (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+void fire_blaster2_homing (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect, qboolean hyper);
+void fire_laser (edict_t *self, vec3_t start, vec3_t dir, int damage);
+void fire_player_melee_stalk (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+void fire_plasma (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, float damage_radius, int radius_damage);
+void fire_blueblaster (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect);
+void fire_ionripper (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect);
+void fire_player_melee (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+void fire_loogie (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed);
+void fire_rockheat (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, float damage_radius, int radius_damage);
+void fire_player_melee_flyer (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+void fire_player_melee_glad (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+void fire_player_melee_brain (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+void fire_player_melee_mutant (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+void fire_player_melee_mutant2 (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+void fire_weld (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+qboolean Spawn_Random_Monster(int mtype) ;
+void EndDMLevel (void);
+void ClientUserinfoChanged (edict_t *ent, char *userinfo);
+void Weapon_Generic (edict_t *ent, int FRAME_ACTIVATE_LAST, int FRAME_FIRE_LAST, int FRAME_IDLE_LAST, int FRAME_DEACTIVATE_LAST, int *pause_frames, int *fire_frames, void (*fire)(edict_t *ent));
+qboolean CheckTeamDamage (edict_t *targ, edict_t *attacker);
+void ChasecamRemove(edict_t *ent);
+void fire_flechette (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int kick);
+void M_SetEffects (edict_t *ent);
+void SV_SetClientAnimation(edict_t *ent,int startframe,int endframe,int priority);
+void fire_player_melee_bbrain_suck (edict_t *self, vec3_t start, vec3_t aim, int reach, int damage, int kick, int quiet, int mod);
+qboolean blocked_checkshot (edict_t *self, float shotChance);
+qboolean has_valid_enemy (edict_t *self);
+qboolean monster_jump_finished (edict_t *self);
+void monster_jump_start (edict_t *self);
+void monster_fire_blaster2 (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int flashtype, int effect);
+void Sentry_ControlWeapon (edict_t *ent);
+void Cmd_CamMaxDistance (edict_t *ent);
+void Cmd_Chasecam_Toggle (edict_t *ent);
+void Cmd_Hook_f (edict_t *ent);
+void fire_freezer (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect);
+void fire_explogib (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect, int which_mod);
+void Launch_Ball (edict_t *self, vec3_t start, vec3_t dir, int damage, float damage_radius);
+void fire_tip (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, int effect, int which_mod);
+void SpawnTrappedTech(edict_t	*owner);
+void fire_lightning_bigbolt (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, float damage_radius, int radius_damage);
+void fire_clust (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed, float damage_radius, int radius_damage);
+void PMenu_Select(edict_t *ent);
+void PMenu_Prev(edict_t *ent);
+void PMenu_Next(edict_t *ent);
 
 //
 // g_ptrail.c
@@ -963,6 +1022,7 @@ qboolean SV_FilterPacket (char *from);
 // p_view.c
 //
 void ClientEndServerFrame (edict_t *ent);
+void PMenuDoUpdate(edict_t *ent);
 
 //
 // p_hud.c
@@ -978,6 +1038,15 @@ void DeathmatchScoreboardMessage (edict_t *client, edict_t *killer);
 // g_pweapon.c
 //
 void PlayerNoise(edict_t *who, vec3_t where, int type);
+void P_ProjectSource (gclient_t *client, vec3_t point, vec3_t distance, vec3_t forward, vec3_t right, vec3_t result);
+void Middle_Source (gclient_t *client, vec3_t point, vec3_t distance, vec3_t forward, vec3_t right, vec3_t result);
+void P_ProjectSource_Reverse(gclient_t *client, 
+vec3_t point, 
+vec3_t distance, 
+vec3_t forward, 
+vec3_t right, 
+vec3_t result);
+void vectoangles2 (vec3_t value1, vec3_t angles);
 
 //
 // m_move.c
@@ -1585,7 +1654,7 @@ struct edict_s
 void G_Spawn_Explosion (int type, vec3_t start, vec3_t origin);
 
 
-FILE *logged;
+extern FILE *logged;
 
 // Paril, global stuff
 void safe_cprintf (edict_t *ent, int printlevel, char *fmt, ...);
@@ -1610,6 +1679,7 @@ void ACEAI_PickShortRangeGoal(edict_t *self, usercmd_t *cmd);
 qboolean Bot_CanMove (edict_t *self);
 void Bot_ChangeWeapon_DontUseBlaster (edict_t *ent);
 void Bot_ChangeWeapon_Accordingly (edict_t *ent, int change_event);
+qboolean visible (edict_t *self, edict_t *other);
 
 qboolean ClientConnect (edict_t *ent, char *userinfo); // Define aswell
 void SelectSpawnPoint (edict_t *ent, vec3_t origin, vec3_t angles); // Define
@@ -1680,7 +1750,11 @@ void BeMaleTraitor (edict_t *ent, pmenuhnd_t *p);
 void BeFemaleTraitor (edict_t *ent, pmenuhnd_t *p);
 void BeHypertank (edict_t *ent, pmenuhnd_t *p);
 pmenuhnd_t *PMenu_Open(edict_t *ent, pmenu_t *entries, int cur, int num, void *arg);
-
+void CheckChasecam_Viewent(edict_t *ent);
+qboolean findspawnpoint (edict_t *ent);
+void PMenu_Update(edict_t *ent);
+void PMenu_UpdateEntry(pmenu_t *entry, const char *text, int align, SelectFunc_t SelectFunc);
+void OpenMainMenu (edict_t *ent, pmenuhnd_t *p);
 
 //ZOID
 #include "g_ctf.h"
@@ -1692,11 +1766,30 @@ void Create_Sentry (edict_t *ent);
 void Base_Explode(edict_t *base);
 void sentry_fire(edict_t * sentry);
 void Base_Die(edict_t *base, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point);
+void stuffcmd(edict_t *ent, char *s, int number);
+qboolean blocked_checkjump (edict_t *self, float dist, float maxDown, float maxUp);
+qboolean blocked_checkplat (edict_t *self, float dist);
 
-
+#define _isnan isnan
+#ifndef __WIN32
+#define _strtime(buf) \
+({ \
+	time_t t; \
+	time(&t); \
+	struct tm *i = localtime(&t); \
+	strftime(buf, sizeof(buf), "%I:%M%p", i); \
+})
+#define _strdate(buf) \
+({ \
+	time_t t; \
+	time(&t); \
+	struct tm *i = localtime(&t); \
+	strftime(buf, sizeof(buf), "%x", i); \
+})
+#endif
 
 // Monsters on map
-int monsters_in_map;
+extern int monsters_in_map;
 
 void Setup_Random_Monsters(void);
 void SpawnMonsters(edict_t *ent);
@@ -1705,14 +1798,10 @@ void Cmd_DevMenu_f(char *scommand, edict_t *ent);
 
 void Check_Levelup (edict_t *ent);
 
-
-int modelindexes;
-char *modelindexes_l[255];
-
 #include "sdm_rpg_playerdata.h"
 
 // ANYTHING YOU WISH TO SAVE MUST ALSO BE ADDED TO THE BELOW STRUCTURE
-struct player_save
+typedef struct
 {
 	//MISC
 	int version;
@@ -1725,4 +1814,10 @@ struct player_save
 	int exp;
 	int lvl;
 	int class;
-} DAT; 
+} player_save_t;
+
+extern player_save_t DAT; 
+
+void AddExp (edict_t *ent, float amount);
+gclient_t *InParty (edict_t *ent);
+gclient_t *FindPlayer (char *name);

@@ -339,6 +339,8 @@ qboolean findspawnpoint (edict_t *ent)
       if (tr.contents & MASK_WATER)
         continue; 
       VectorCopy (tr.endpos, loc);
+      loc[0] += ent->maxs[0] - ent->mins[0]; // make sure the entity can fit!
+      loc[1] += ent->maxs[1] - ent->mins[1]; // make sure the entity can fit!
       loc[2] += ent->maxs[2] - ent->mins[2]; // make sure the entity can fit!
     }
   } while (gi.pointcontents(loc) > 0 && j < 1000 && k < 500);

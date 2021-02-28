@@ -1104,7 +1104,7 @@ void SP_misc_easterchick (edict_t *ent)
 	ent->solid = SOLID_BBOX;
 	VectorSet (ent->mins, -32, -32, 0);
 	VectorSet (ent->maxs, 32, 32, 32);
-	ent->s.modelindex = gi.modelindex ("players/bitch/tris.md2");
+	ent->s.modelindex = gi.modelindex ("players/maiden/tris.md2");
 	ent->s.frame = 208;
 	ent->think = misc_easterchick_think;
 	ent->nextthink = level.time + 2 * FRAMETIME;
@@ -1132,7 +1132,7 @@ void SP_misc_easterchick2 (edict_t *ent)
 	ent->solid = SOLID_BBOX;
 	VectorSet (ent->mins, -32, -32, 0);
 	VectorSet (ent->maxs, 32, 32, 32);
-	ent->s.modelindex = gi.modelindex ("players/bitch/tris.md2");
+	ent->s.modelindex = gi.modelindex ("players/maiden/tris.md2");
 	ent->s.frame = 248;
 	ent->think = misc_easterchick2_think;
 	ent->nextthink = level.time + 2 * FRAMETIME;

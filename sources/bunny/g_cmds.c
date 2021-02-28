@@ -1,8 +1,7 @@
 #include "g_local.h"
 #include "m_player.h"
 
-
-const int ClientTeam (edict_t *ent)
+int ClientTeam (edict_t *ent)
 {
 	if (!ent->client)
 		return 0;

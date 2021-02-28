@@ -927,13 +927,12 @@ void CTFDeadDropFlag(edict_t *self)
 	}
 }
 
-qboolean CTFDrop_Flag(edict_t *ent, gitem_t *item)
+void CTFDrop_Flag(edict_t *ent, gitem_t *item)
 {
 	if (rand() & 1) 
 		safe_cprintf(ent, PRINT_HIGH, "Only lusers drop flags.\n");
 	else
 		safe_cprintf(ent, PRINT_HIGH, "Winners don't drop flags.\n");
-	return false;
 }
 
 static void CTFFlagThink(edict_t *ent)
@@ -2557,6 +2556,8 @@ void CTFSay_Team(edict_t *who, char *msg)
 		monstername = "Brain";
 	else if (ent->client->resp.class == 13)
 		monstername = "Mutant";
+	else if (ent->client->resp.class == 14)
+		monstername = "Tank Commander";
 	else if (ent->client->resp.class == 41)
 		monstername = "Tank Commander";
 	else if (ent->client->resp.class == 15)
@@ -3376,10 +3377,10 @@ int CTFUpdateJoinMenu(edict_t *ent)
 	}
 
 	if (ctf_forcejoin->string && *ctf_forcejoin->string) {
-		if (stricmp(ctf_forcejoin->string, "red") == 0) {
+		if (Q_stricmp(ctf_forcejoin->string, "red") == 0) {
 			joinmenu[jmenu_blue].text = NULL;
 			joinmenu[jmenu_blue].SelectFunc = NULL;
-		} else if (stricmp(ctf_forcejoin->string, "blue") == 0) {
+		} else if (Q_stricmp(ctf_forcejoin->string, "blue") == 0) {
 			joinmenu[jmenu_red].text = NULL;
 			joinmenu[jmenu_red].SelectFunc = NULL;
 		}

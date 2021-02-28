@@ -50,7 +50,7 @@ def compile(modname, debug):
 		'libclang_rt.builtins-wasm32.a',
 		'--stack-first',
 		'-zstack-size=8388608',
-		'--initial-memory=33554432',
+		'--initial-memory=100663296',
 		'--export=__heap_base',
 		'--export=__data_end',
 		'--export=malloc',
@@ -74,18 +74,20 @@ def compile(modname, debug):
 	cpp_files = []
 
 	src_folder = Path(f'../sources/{modname}')
-	
-	exclude_re_file = src_folder.joinpath('exclude.opts')
+
+	exclude_re_file = src_folder.joinpath('exclude.opt')
 	exclude_re = None
 	
 	if exclude_re_file.exists():
 		with open(exclude_re_file, 'r') as content_file:
 			exclude_re = re.compile(content_file.read())
 
+	excluded = 0
+
 	for path in { p.resolve() for p in src_folder.rglob("**/*") if p.suffix in [ ".c", ".cc", ".cpp" ] }:
 		if exclude_re != None and exclude_re.search(str(path)):
-			continue
-		if path.suffix == '.c':
+			excluded += 1
+		elif path.suffix == '.c':
 			c_files.append(path)
 		else:
 			cpp_files.append(path)
@@ -106,6 +108,17 @@ def compile(modname, debug):
 	debug = 'Debug' if debug else 'Release'
 	print(f'Compiling {modname}:{debug}...')
 	print('Found ' + str(len(c_files)) + ' C files and ' + str(len(cpp_files)) + ' C++ files')
+
+	if excluded:
+		print('Excluding ' + str(excluded))
+
+	patch_file = src_folder.joinpath('wasm.patch')
+
+	if patch_file.exists():
+		patch_folder = src_folder.joinpath('src')
+		print('Applying patches...')
+		subprocess.run([ 'git', 'apply', '../wasm.patch' ], cwd=patch_folder)
+
 	
 	os.makedirs(f'../bin/{modname}/obj', 0o777, True)
 

@@ -1817,7 +1817,7 @@ void fire_rockheat (edict_t *self, vec3_t start, vec3_t dir, int damage, int spe
 	{
 		if (self->client->pers.abilities.dchick_plasma)
 		{
-			speed = speed *= 0.80;
+			speed *= 0.80;
 		}
 	}
 
@@ -3983,7 +3983,7 @@ void fire_explogib (edict_t *self, vec3_t start, vec3_t dir, int damage, int spe
 	edict_t	*bolt;
 	trace_t	tr;
 	char *gib;
-	int r;
+//	int r;
 
 	speed *= 2;
 

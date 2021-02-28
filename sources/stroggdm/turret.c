@@ -7,7 +7,7 @@ void Create_Sentry (edict_t *ent)
 {
 	edict_t *sentry;           // define sentry as an entity
 	edict_t *base;             // define base as an entity
-	vec3_t forward;            // define foward as vector
+//	vec3_t forward;            // define foward as vector
 	
 	if (ent->client->sentry == 1)    // if sentry still exists, don't create again
 	{
@@ -88,11 +88,11 @@ void Create_Sentry (edict_t *ent)
 
 void Sentry_FaceEnemy(edict_t *sentry)
 {	
-	vec3_t v;	
+//	vec3_t v;	
 	vec3_t dir;	
-	vec3_t forward;	
-	vec3_t right;	
-	vec3_t up;
+//	vec3_t forward;	
+//	vec3_t right;	
+//	vec3_t up;
 	
 	
 	//VectorCopy(sentry->sentry_base->s.origin, sentry->s.origin);

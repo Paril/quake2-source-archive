@@ -713,7 +713,7 @@ void makron_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damag
 	G_FreeEdict(self);
 	if (((int)(stroggflags->value) & SF_RPG_MODE) && attacker->client)
 	{
-		attacker->client->resp.exp += rndnum (60, 100);
+		AddExp (attacker, rndnum (60, 100));
 		Check_Levelup(attacker);
 	}
 	

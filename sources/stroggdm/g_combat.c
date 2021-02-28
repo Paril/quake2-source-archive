@@ -393,11 +393,60 @@ void T_Damage (edict_t *targ, edict_t *inflictor, edict_t *attacker, vec3_t dir,
 	//if (targ->activator == attacker)
 		//return;
 
-
-
 	// Paril
-	// Teamplay Code
-	// Teamplay-By-Classes code
+	if (targ->client && attacker->client)
+	{
+		// Beh, many combinations.
+		if (targ->client->resp.party.has_party && attacker->client->resp.in_party)
+		{
+			gclient_t *partyowner = InParty(attacker);
+			gclient_t *tempmember = NULL;
+
+			if (partyowner)
+			{
+				int i;
+				for (i = 0; i < 9; i++)
+				{
+					if (!partyowner->resp.party.member[i])
+						break;
+
+					tempmember = FindPlayer (partyowner->resp.party.member[i]->client->pers.netname);
+					if (tempmember)
+					{
+						if (Q_stricmp(attacker->client->pers.netname, tempmember->pers.netname) == 0)
+							return;
+					}
+				}
+			}	
+		}
+		else if (attacker->client->resp.party.has_party && targ->client->resp.in_party)
+		{
+			gclient_t *partyowner = InParty(targ);
+			gclient_t *tempmember = NULL;
+
+			if (partyowner)
+			{
+				int i;
+				for (i = 0; i < 9; i++)
+				{
+					if (!partyowner->resp.party.member[i])
+						break;
+
+					tempmember = FindPlayer (partyowner->resp.party.member[i]->client->pers.netname);
+					if (tempmember)
+					{
+						if (Q_stricmp(targ->client->pers.netname, tempmember->pers.netname) == 0)
+							return;
+					}
+				}
+			}	
+		}
+		else if (attacker->client->resp.in_party && targ->client->resp.in_party)
+		{
+			if (Q_stricmp(attacker->client->resp.current_party.name, targ->client->resp.current_party.name) == 0)
+				return;
+		}
+	}
 
 	// FIX - Must be a client
 	if (targ->client && attacker->client)
