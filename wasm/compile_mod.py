@@ -5,6 +5,7 @@ from pathlib import Path
 import hashlib
 from string import Template
 import re
+import shutil
 
 def compile(modname, debug):
 	
@@ -106,7 +107,6 @@ def compile(modname, debug):
 		return Template(content).substitute(src_folder=str(src_folder)).split('\n')
 
 	debug = 'Debug' if debug else 'Release'
-	print(f'Compiling {modname}:{debug}...')
 	print('Found ' + str(len(c_files)) + ' C files and ' + str(len(cpp_files)) + ' C++ files')
 
 	if excluded:
@@ -118,7 +118,6 @@ def compile(modname, debug):
 		patch_folder = src_folder.joinpath('src')
 		print('Applying patches...')
 		subprocess.run([ 'git', 'apply', '../wasm.patch' ], cwd=patch_folder)
-
 	
 	os.makedirs(f'../bin/{modname}/obj', 0o777, True)
 
@@ -133,13 +132,33 @@ def compile(modname, debug):
 	err = open(errfile, 'a')
 	
 	obj_files = []
+
+	term = shutil.get_terminal_size((80, 20))
+	print(f'Compiling {modname}:{debug}...')
 	
-	for path in c_files + cpp_files:
+	all_paths = (c_files + cpp_files)
+	all_paths.sort()
+
+	for path in all_paths:
 		obj_file = f'../bin/{modname}/obj/{path.name}-{hashlib.md5(str(path).encode()).hexdigest()}.o'
 		obj_files.append(obj_file)
+		sys.stdout.write(("\r%s..." % path.name).ljust(term.columns))
+		sys.stdout.flush()
 		subprocess.run([ 'clang' ] + compile_args + (c_args if path.suffix == '.c' else cpp_args) + [ '-o', obj_file, path ], stderr=err)
 
+	sys.stdout.write('\n')
+	sys.stdout.flush()
+
+	if patch_file.exists():
+		patch_folder = src_folder.joinpath('src')
+		print('Reverting patches...')
+		subprocess.run([ 'git', 'apply', '-R', '../wasm.patch' ], cwd=patch_folder)
+
+	print(f'Linking {modname}:{debug}...')
 	subprocess.run([ 'wasm-ld' ] + linker_args + obj_files + linker_postfix, stderr=err)
+
+	print(f'Cleaning {modname}:{debug}...')
+	shutil.rmtree(Path(f'../bin/{modname}/obj'))
 
 	elen = err.tell()
 	err.close()
