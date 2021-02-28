@@ -3919,7 +3919,7 @@ void Cmd_Point_f (edict_t *ent)
         }
 
         if (deathmatch->value) {
-                char ed[33];
+                char ed[34];
                 char*action = "hit";
                 qboolean success = true;
                 if (tr.ent) {
@@ -4110,6 +4110,7 @@ static qboolean TestSummonFlag(edict_t*ent, char flag)
 }
 
 void SP_practice_target(edict_t*);
+void SP_misc_infestation (edict_t *ent);
 
 void Cmd_Summon_f (edict_t *ent)
 {

@@ -60,7 +60,7 @@
 
 extern char* gamedate; //holds GAMEDATE when linking was done
 
-#ifdef __WIN32
+#if defined(__WIN32) || defined(__wasm__)
 //#define DEBUGBREAKPOINT asm ("int $3")
 #define DEBUGBREAKPOINT ;
 #else
@@ -3332,6 +3332,7 @@ void StepMiddleFrame(); //g_main.c, but called in p_client.c to run a middle fra
 
 qboolean CtlCommand(char*cmd, ...);
 char* ExpandTextMacros(edict_t*ent, char*text, int flags);
+int PlayerQueuePosition(pqueue_t*q, edict_t*player);
 enum {
   EF_CANCEL_IF_FAIL = 1  //Cancel entire text if some item fails to expand
 };
@@ -3384,7 +3385,7 @@ float Distance2(vec3_t a, vec3_t b);
 void cvar_range(cvar_t*cvar, float*out_min, float*out_max); //cvar in from "1-2" to represent from 1 to 2
 
 
-edict_t*currentinflictor; //UGLY! for ->pain
+extern edict_t*currentinflictor; //UGLY! for ->pain
 
 //gloompmove
 gloom_pmove_t*PlayerGloomPMove(edict_t*player, pmove_t*pm); //misc.c
@@ -3397,8 +3398,8 @@ void SP_practice_target(edict_t*t);
 extern int practice_target_hits;
 
 //globals for haxed extensions
-qboolean sv_extended;
-qboolean sv_testing;
+extern qboolean sv_extended;
+extern qboolean sv_testing;
 extern cvar_t  *sv_updater;
 
 //Transition from 1.4t0 to 1.4t1, so #ifdefs work on enum items, and some #ifdefs where stuff changes in new 1.4t* files

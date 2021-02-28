@@ -1,0 +1,5 @@
+-Wno-logical-op-parentheses
+-Wno-shift-count-overflow
+-Wno-int-in-bool-context
+-Wno-parentheses
+-Wno-comment

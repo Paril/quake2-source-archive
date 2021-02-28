@@ -278,7 +278,7 @@ void Com_PageInMemory (byte *buffer, int size);
 int Q_stricmp (const char *s1, const char *s2);
 int Q_strcasecmp (const char *s1, const char *s2);
 
-#ifdef WIN32
+#if defined(__WIN32) || defined(__wasm__)
 int Q_strncasecmp (const char *s1, const char *s2, size_t n);
 #endif
 

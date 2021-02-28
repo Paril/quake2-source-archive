@@ -867,7 +867,7 @@ int Q_stricmp (const char *s1, const char *s2)
 #endif
 }
 
-#if defined(WIN32)
+#if defined(WIN32) || defined(__wasm__)
 int Q_strncasecmp (const char *s1, const char *s2, size_t n)
 {
         int             c1, c2;

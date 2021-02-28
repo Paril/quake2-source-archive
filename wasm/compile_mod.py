@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import hashlib
 from string import Template
+import re
 
 def compile(modname, debug):
 	
@@ -47,7 +48,8 @@ def compile(modname, debug):
 		'wasi-sysroot/lib/wasm32-wasi/libc.a',
 		'wasi-sysroot/lib/wasm32-wasi/crt1-reactor.o',
 		'libclang_rt.builtins-wasm32.a',
-		'-z,stack-size=8388608',
+		'--stack-first',
+		'-zstack-size=8388608',
 		'--initial-memory=33554432',
 		'--export=__heap_base',
 		'--export=__data_end',
@@ -72,16 +74,25 @@ def compile(modname, debug):
 	cpp_files = []
 
 	src_folder = Path(f'../sources/{modname}')
+	
+	exclude_re_file = src_folder.joinpath('exclude.opts')
+	exclude_re = None
+	
+	if exclude_re_file.exists():
+		with open(exclude_re_file, 'r') as content_file:
+			exclude_re = re.compile(content_file.read())
 
 	for path in { p.resolve() for p in src_folder.rglob("**/*") if p.suffix in [ ".c", ".cc", ".cpp" ] }:
+		if exclude_re != None and exclude_re.search(str(path)):
+			continue
 		if path.suffix == '.c':
 			c_files.append(path)
 		else:
 			cpp_files.append(path)
 
 	if len(cpp_files):
-		linker_args.append('wasi-sysroot/lib/wasm32-wasi/libc++abi.a');
-		linker_args.append('wasi-sysroot/lib/wasm32-wasi/libc++.a');
+		linker_args.append('wasi-sysroot/lib/wasm32-wasi/libc++abi.a')
+		linker_args.append('wasi-sysroot/lib/wasm32-wasi/libc++.a')
 
 	def load_and_expand(path):
 		if not os.path.exists(path):
@@ -119,7 +130,7 @@ def compile(modname, debug):
 
 	elen = err.tell()
 	err.close()
-	
+
 	if not elen:
 		os.remove(errfile)
 	else:

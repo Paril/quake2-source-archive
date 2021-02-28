@@ -40,7 +40,7 @@ void SP_monster_spiker (edict_t *self);
 void SP_monster_healer (edict_t *self);
 
 void SP_ammo_depot (edict_t *self);
-void CmdSetTripWire (edict_t *self, qboolean summoned);
+qboolean CmdSetTripWire (edict_t *self, qboolean summoned);
 
 void SP_misc_teleporter_dest (edict_t *self);
 void turret_think (edict_t *self);

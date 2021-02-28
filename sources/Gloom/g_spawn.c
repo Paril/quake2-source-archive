@@ -1329,6 +1329,7 @@ static void ParseConfig(FILE*f)
   }
 }
 
+int InitHudStrings(int n);
 
 void EXPORT SpawnEntities (char *mapname, char *entities, char *spawnpoint){
         edict_t         *ent;
@@ -1353,6 +1354,8 @@ void EXPORT SpawnEntities (char *mapname, char *entities, char *spawnpoint){
         memset (g_edicts, 0, MAX_EDICTS * sizeof (g_edicts[0]));
 
         strncpy (level.mapname, mapname, sizeof(level.mapname)-1);
+        
+        gi.dprintf("test\n");
         
         LoadDamageOverrideTable();
         

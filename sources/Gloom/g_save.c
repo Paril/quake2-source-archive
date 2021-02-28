@@ -552,9 +552,11 @@ void EXPORT InitGame (void)
                 game.testmsg[i] = randomMT()%26+65;
 
         sv_extended = false;
+
         sv_testing = true;
+#ifdef GLOOM_SERVER_EXT
         gi.AddCommandString("get test");
-        
+
         if (sv_extended) {
             ext.SetClientMask = gi.AddCommandString("get SetClientMask");
             ext.GetClientMask = gi.AddCommandString("get GetClientMask");
@@ -562,6 +564,7 @@ void EXPORT InitGame (void)
             ext.GetEntityMask = gi.AddCommandString("get GetEntityMask");
             gi.dprintf("Gloom server extensions loaded succesfully.\n");
         }
+#endif
         
         // items
         InitItems ();

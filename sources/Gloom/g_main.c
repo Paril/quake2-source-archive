@@ -185,6 +185,8 @@ cvar_t  *spiketest;
 cvar_t  *shrapnel_damage;
 cvar_t  *shrapnel_count;
 
+qboolean sv_extended;
+qboolean sv_testing;
 cvar_t  *sv_updater;
 
 #ifdef ADMINDLLHACK

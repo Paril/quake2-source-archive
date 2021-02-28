@@ -322,6 +322,7 @@ void SV_Cmd_Deleteaccount_f (void)
 
 void SV_Cmd_Update_f (void)
 {
+#ifndef __wasm__
     int updated;
     if (Q_stricmp(gi.argv(2), "game") == 0) {
             updated = system(va("%s/%s game", gamedir->string, sv_updater->string));
@@ -338,6 +339,7 @@ void SV_Cmd_Update_f (void)
     else {
            gi.cprintf (NULL,PRINT_HIGH,"Usage: sv update r1q2ded|game|damages\n");
     }
+#endif
 }
 
 /*

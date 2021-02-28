@@ -863,6 +863,8 @@ void ImpulsePreview (edict_t *ent, int code)
         PMenu_Open(ent, engineer_menu, selected, 3);
 }
 
+void Cmd_Use_f (edict_t *ent, char*s);
+
 void Impulse(edict_t*ent, int code)
 {
   if (code == 'g') Cmd_Grenade_f (ent);

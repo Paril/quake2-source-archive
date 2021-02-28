@@ -269,7 +269,11 @@ typedef struct game_import_s
 
         // add commands to the server console as if they were typed in
         // for map changing, etc
+#ifdef GLOOM_SERVER_EXT
         void*    (IMPORT *AddCommandString) (const char *text);
+#else
+        void     (IMPORT *AddCommandString) (const char *text);
+#endif
 
         void    (IMPORT *DebugGraph) (float value, int color);
 } game_import_t;

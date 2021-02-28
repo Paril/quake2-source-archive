@@ -134,6 +134,7 @@ edict_t*GetChasedTargetPlayer(edict_t*ent)
 
 
 edict_t *SelectNearestDeathmatchSpawnPoint (int team, edict_t *ent);
+void JoinTeam0(edict_t *ent);
 
 void StopChasingCurrentTarget(edict_t*player)
 {

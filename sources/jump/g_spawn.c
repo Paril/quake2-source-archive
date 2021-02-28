@@ -465,7 +465,8 @@ void JumpSaveScores (void)
 		if (!from->jumpinfo)
 			continue;
 
-		fwrite (&(short)from->s.number, sizeof(short), 1, out);
+		short number = from->s.number;
+		fwrite (&number, sizeof(short), 1, out);
 		s = (unsigned char)strlen(from->jumpinfo->name);
 		fwrite (&s, sizeof(s), 1, out);
 		fwrite (from->jumpinfo->name, (size_t)s, 1, out);
