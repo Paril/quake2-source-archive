@@ -1,0 +1,142 @@
+v.08e (4.2s) 6/06/03
+-fix added for cmd_scope crash bug
+
+v.08d (4.2s)  6/04/03
+-re-added unused items to code from v.08 (was causing a crash in Windows)
+
+v.08c (4.2s)
+-removed extra models from team dlls
+-attempted fix for nade crash
+-victory pic re-added (was left out of scoreboard code by mistake)
+-changed DEVVERSION to 4.2s
+-removed "dll_version" serverinfo cvar
+
+v.08b
+-more work for Parts' animations (this wont work until new models are done/released)
+-removed quake2 maps thing
+-removed not being able to change weapons while reloading
+
+v.08 5/30/03 Fafner
+-stopped multiple copies of same v_ weapon being used for each team (might have to be removed later for new animations)
+-removed mauser tweak (should be a model change later instead)
+-added jump motion to 1st person view weapon when jumping
+-updated code to stop passworded server crash [Nick]
+-fixed slowdown when coming out of truesight on mauser
+-player cant change weapons when reloading
+-new commands for selecting weapons:
+use sniper, use pistol, use rifle, use smg, use lmg, use hmg, use rocket, use flamer.  Works for all teams.
+-fix for class menu coming up at wrong time (menu problems should be fixed)
+-increased range on medics when healing to make it easier to heal
+-non dday maps no longer crash quake 2 when loading
+-removed non dday and unused items from code
+-fixed last wounded death message crash
+
+v.07 5/25/03 Fafner
+-fix for scoreboard not coming up at beginning
+-player can press fire button to bring up team or class menu when they need it when dead
+-worked on footstep code.  Footsteps play correctly for slower classes now
+-new option for passwording teams:  allied_password, axis_password  for open squad practices.  For example if the servers sets axis_password "abcd", the player has to set password "abcd" to be able to join axis.  axis_password/allied_password "none" turns it off.
+-worked on auto select.  Team kill count now considered when selecting team.
+-crash from last version fixed
+
+
+v.06 5/18/03 Fafner (Unstable version)
+-sniper not unzooming when jumping fixed
+-bug with player having nade shot out of hand fixed
+-grenade slope bug and quirks that arose from trying to fix it should be fixed
+-throwing grenade through floor when prone fixed
+-kills should appear on server browsers/gamespy now if player_scores 1 is set
+-fixed server crashing on passworded servers [Nick]
+-removed view offset from last version
+-worked on scoreboard
+-disabled shouting when dead
+-fixed %C to work correctly
+-players can only shout once every 1/2 second
+-fixed target_explosions reporting deaths incorrectly in death message
+-stopped nades exploding after map ends
+-"force_auto_select" cvar.  player can only use auto select to join when set.
+-bug with airborne landing in water and jumping high fixed
+
+
+v.05 5/13/03 Fafner
+-raised volume on victory song
+-support for animated misc_md2's added.  Mapper adds a setting for "frames" to the misc_md2 entity for the number of frames in the model.  Also works for sprites.
+-fix for maplist crashing
+-players can join teams and pick classes at countdown at start of map
+-fixed random respawn intervals and added respawn timer
+-Fixed flamethrower making sound under water (Nick)
+-new command "objectives" for player to use to bring up objective pic
+-standing corpse when changing teams bug fixed
+-fixed delay on player model going into truesight frame
+-fixed delay on player model going from prone to standing
+-work on Parts' new animations
+-players can use variables in chat messages to print various info:
+%L prints nearest objective or map location (map location requires mapper to add "map_location" entity to their map with "message" field filled out)
+%T prints the name of any nearby teammates
+%M prints the name of nearest team medic
+example : say_team "%M, I need a medic near the %L!" = "Wade, I need a medic near the Right Pillbox!"
+%C prints the name of the player's class
+-Added horizontal view offset to players (awaiting feedback)
+-fixed 2 death sounds playing on falling death
+
+
+v.04 5/09/03 Fafner
+-raised fist/helmet damage
+-death messages indicate who last wounded a player when he suicides/falls to death/gets himself killed.
+-victory song blasting fixed
+-all level sounds turned off when victory song plays.
+-pistol no ammo animation bug fixed (Nick)
+-flame sound playing on flamethrower with no fuel fixed (Nick)
+-alternate fix for nade on slope bug (still bugged though, needs work)
+-fixed mauser not playing bolt animation when changing truesight (Nick)
+-fixed fast swimming exploit
+-changed truesight frame for player model to frame1 so firing looks better
+-attempted fix for dead usa player models appearing on gbr/rus maps
+-attempted fix for gbr map crashes
+-new cvar "extra_anims" for Parts' new animations (will be disabled on public server)
+-flamethrower slowed down when firing
+-1 second delay put on player id so name stays on screen longer
+
+
+v.03 5/03/03 Fafner
+-fixed 2nd menu crashing bug
+-helmet death message added
+-punching causes knockback
+-nade on slope bug fixed (needs testing to make sure there's no adverse effects)
+-fixed popping out of true-sight on slopes, replaced with better anti-dive code
+-put hmg bullets back to normal from last version
+-new cvar  "max_gibs"  sets the amount of gibs & debris to be on server at once.  This will stop lockups from a lot of players dying in an explosion at once and cut down on lag in general.  Default setting is max_gibs 20.
+-team icons now appear in the corner correctly in software mode
+-removed pulsing light from dropped items
+-quake 2 3.21 password code implemented
+-artillery changes:  death messages added, stopped horizontal artillery bug, artillery can be cancelled without having to look through binoculars
+-team kill messages announced as "(Friendly fire)"
+-standing hmg code implemented
+
+
+v.02b 4/28/03 Fafner
+-menu crashing fix from last version
+-getting stuck in teleporter fix
+
+
+v.02 4/27/03 Fafner
+fix for counting players per team.  Should fix auto-joining and scoreboard showing players count per team incorrectly.
+-new hmg firing code.  Regular bullets come out slow like the tracers.  Raised hmg tracer/bullet speed (awaiting feedback)
+-stamina meter bug fix.   Non-jumps no longer lower stamina.
+-tweaked player stance_view heights to line up with player models' eyes better
+-tweaked timing on grenade pin pull noises to line up with the animation correctly
+-tweaked weapon bolt/reload sounds timing
+-allied hmg first bullet fix
+-campaign_mode cvar added.  Set campaign_mode 0 to have maps always move forward.  Default is campaign_mode 1
+-dday5 goes to dday1 when allies win
+-tweaked where sniper bullets & rockets originate to match with player's eye better
+
+
+v.01 4/20/03 Fafner
+-changed "hyper3" references in code workspace to "usa"
+-Mauser raised sites to line up better
+-aim bug fix implemented.
+-scoreboard changes implemented.
+-"player_scores 1"  enables individual player scores (disabled by default)
+-explosions screwing up smg kick fixed.
+-added "dll" to serverinfo to show version number (.01).

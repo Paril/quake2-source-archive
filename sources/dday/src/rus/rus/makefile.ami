@@ -1,0 +1,49 @@
+OBJS =  rus_item.o rus_spawn.o rus_guninfo.o rus_weapon.o rus_main.o
+
+OBJSCPP = 
+
+EXE = RUSppc.dll
+
+OTHER = 
+
+CCM68K = gcc -V 2.95 -m68060 -fomit-frame-pointer -I/ade/include -s -noixemul
+
+CC603 = ppc-amigaos-gcc -V 2.95.3 -mcpu=603e -mmultiple -warpup
+CC604 = ppc-amigaos-gcc -V 2.95.3 -mcpu=604e -mmultiple -warpup
+CC750 = ppc-amigaos-gcc -V 2.95.3 -mcpu=750 -mmultiple -warpup
+
+CC = $(CC604)
+
+CODEGEN = -D_GAME_DLL -I../qcommon -I../game -I../client \
+		  -D_inline="static __inline" -D__saveds= -D__int64="long long" -DMAX_PATH=255 -DFALSE=0 -DTRUE=1 \
+		  -DNDEBUG \
+		  #-D_DEVEL \
+
+OPTIMIZE = -O3
+
+CFLAGS= $(CODEGEN) $(OPTIMIZE)
+
+LIBS = -lz -ldllppc -lppcamiga
+
+%.o : %.c
+	$(CC) $(CFLAGS) -S $< -o $*.s
+	$(CC) $(CFLAGS) -c $*.s -o $*.o
+
+%.o : %.cpp
+	$(CC) $(CFLAGS) -fno-exceptions -fno-rtti -S $< -o $*.s
+	$(CC) $(CFLAGS) -c $*.s -o $*.o
+
+ASMS = $(OBJS:.o=.s) $(OBJSCPP:.o=.s)
+
+$(EXE) : $(OBJS) $(OBJSCPP)
+	$(CC) $(OBJS) $(OBJSCPP) $(LIBS) -o $@
+
+depend : 
+	$(CC) $(CFLAGS) -MM $(OBJS:.o=.c) $(OBJSCPP:.o=.cpp) >depend
+
+clean :
+	rm $(EXE) $(OBJS) $(OBJSCPP) $(ASMS) $(OTHER) depend
+
+#DEPENDENCIES
+
+#include depend

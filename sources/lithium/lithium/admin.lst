@@ -1,0 +1,26 @@
+//
+// Admin list for Lithium II
+// 
+// This allows you to specify a list of admins for your server with
+// different access levels and passwords for each.  This provides
+// an alternate more versatile method of multi-user administration
+// then the admin_code variable does.  The format of this file is:
+// 
+//   name@ipmask level password
+//
+// The name and ipmask can each contain a wildcard at the end, or
+// only be specified as a wildcard.  The level is any setting you
+// want, granting that user access as specified with the admin_*
+// variables in your cfg file.
+//
+// Examples:
+//
+//   WhiteFang@10.0.0.* 200 arf
+//   *@10.0.0.1 100 arf123
+//   *@* 150 ruff
+//   WhiteFang@* 50 1234
+// 
+// Admins can login with "admin <password>" on the console.  Or
+// before connect with "set admin_pw <password> u", then simply
+// "admin" after connect.
+//

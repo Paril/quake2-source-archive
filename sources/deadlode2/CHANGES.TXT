@@ -1,0 +1,590 @@
+-Carl Gustav RL crashes Q2 in software mode.  * cannot duplicate *
+
+?? -Clean up INI fields, ensure common names, and remove unused variables.
+?? -weapon recoil should effect weapon angles, not view angles
+?? -time-of-day lighting, using lightstyle 12 - Sets intensity of level lights to match current time.
+?? -sort inventory, so they always show in the same order
+
+
+07/15/99: gi.Tag* redirected to DL_Tag* at end of dl_utils.c, allows debugger access and sanity checking (but slower!)
+07/15/99: old menu data is freed when opening new menu of same type
+07/15/99: client prefs are memset to 0 upon login
+07/15/99: PMenu_Open: hnd is now memset to 0 after allocation
+07/15/99: added pfgets, changed LoadMOTD to use it, did not change ini's to use it
+07/15/99: game.clients are memset to 0 after allocation, fixes game.clients[].pers.connected being true when it shouldn't be
+07/15/99: changed TagMalloc call in AddToTeamObjects, parameters were reversed
+07/15/99: changed unicastsound, uses (ent - g_edicts) instead of (ent - g_edicts - 1)
+
+** A number of other things (both minor and major)
+
+06/27/99: Players can no longer loot gibbed heads of players who were gibbed at death (as opposed to after they respawn).
+06/27/99: "Time Remaining" indicator for Timer supplies now shows the correct values.
+06/27/99: Added "ForceMOTD" option (ON/OFF) in the system.ini file, which when on, will display the MOTD menu before the main menu to connecting clients.
+06/27/99: Fixed bug which prevented the "%f" from using the flag specified in the system.ini file.
+
+06/26/99: Persistant DAMAGE effects can now specify an extra flag to wait until after an initial delay before applying damage (for smoke).
+06/26/99: All effects now show a single flag "SWAPORIGINS" which swaps the src/dest origins of the effect being applied.
+06/26/99: DAMAGE effects can now specify custom pain sound sets using the "sound" field in the effects.ini file (ie, coughing for smoke).
+06/26/99: Effects now better track the origin of the effect as well as the point at which the effect is applied to an object.
+06/26/99: Fixed a bug which would create multiple building entries (only one building) if the player was standing inside the building when it finished construction.
+06/26/99: LOOP effects now reset rotation velocities if a new model is specified for the effect (not borrowed from its parent).
+06/26/99: LOOP effects can now specify model/render effects using "health" for entity effects, and "dmgflags" for render effects.
+06/26/99: The building point display on the HUD can now show 4 digits, when carrying more than 999 building points.
+06/26/99: Knockback values from DAMAGE effect are greatly reduced, no longer pushing players around from simple damage.
+06/26/99: VArmour models now disappear off dead bodies when they are gibbed.
+
+06/25/99: Added VArmour support - players now show the armour model on the PPM for the type of armour they have the most of.
+06/25/99: Players can no longer adjust (repair/use/rotate/destroy) buildings while dead.
+06/25/99: BFG flight effect no longer targets teammates.
+06/25/99: Buildings under construction when their master is killed now properly finish, and are assigned to the objects lists, thought they will still be short on health.
+
+06/23/99: Weapons.ini properly sets a default value of 1 to rnds_chambered when the field is not specified.
+06/23/99: RADIUS damage effects now work properly with BSP brushes, so they can apply damage to func_buttons and other types.
+06/23/99: Switching ammotypes without a weapon no longer crashes a server
+06/23/99: Switching teams now runs the player/PPM through the death animations.
+06/23/99: Flashlights now turn off when the player using them dies.
+06/23/99: Cleaned up PPM hit location values (offsets for head/legs) to better sync with the DL2 ppm and not the Q2 ppm.
+06/23/99: PPM Attack animations now show a minimum of 2 frames before cycling, used to show recoil from automatic weapons, etc.
+
+06/21/99: Finished recording the new radio dictionary - 345 words.
+06/21/99: dl_target_radio now works just like the radio command.  A team mask of 0 means all teams will hear the message.
+
+06/20/99: Weapons.ini now supports sound effects for raise, drop, and reload animations in addition to fire.  they are specified using "reload_sound", "raise_sound" and "drop_sound".
+
+06/19/99: Players can no longer switch weapons during a limited use weapons reload scene, which would allow it to be reused infinately.
+06/19/99: Looting bodies no longer gives more items that the maximum value specified by the players profile.
+06/19/99: Fixed medikits to work properly, by adding extra health the players health over a fixed time.
+
+06/18/99: LOOP effects now track inidivual targets which are passed on to sub effects - LOOPs can now be used in direct weapons, which then apply the sub effects to the target - *could possibly serve as a replacement for PERSISTANT.
+06/18/99: dl_target_radio now uses the new radio que system.
+06/18/99: Added flag substitution for CTF style maps, where the dl_item_supply specifying a model of "%f" will substitute the model from the systems.ini file.
+06/18/99: Fixed a bug?? which caused the CTF flag pads to disapear when the enemy flag was captured the first time.
+
+06/17/99: DAMAGE effect no longer generates its own particle effects, instead bullet puffs are the specified/executed through combined effects in the ini files.
+06/17/99: Improved persistant damage effects to be more edict friendly.
+06/17/99: Fixed an overflow bug with obituraries which was crashing the server.
+06/17/99: Fixed some bugs with the LOOP effect which were causing edict overflows with some effects.
+
+06/16/99: Switching ammotypes for ammoless weapons no longer hangs the server.
+
+06/15/99: Weapons now drop properly when using a building during a weapon reload.
+
+06/11/99: Modified Effects to track the source origin of the effect as well as the destination of the effect, which fixed some problems with scan-line effects which fired radius damage, etc.
+
+06/10/99: Building maintenance menus only require the player to be standing near the building in order to perform maintenance actions, rather than actually looking at it.  This allows the player to rotate a mount freely without having to physically stand behind it (for wall mounts, this is nearly impossible).
+06/10/99: Corrected a bug which would prevent the buildings from firing their weapons if an ammo name was specified in the weapon_ammo[] field, rather than an ammo type.
+06/10/99: Fixed a bug which would cause "menu alt" to crash the server.
+06/10/99: Cleaned up mount rotation a little more
+06/10/99: Fixed a bug with ammonext and ammoprev which would prevent the selection of a munition, if it immediately followed the current ammo in the inventory.
+06/10/99: Fixed a bug which causes weapon reloads to switch back to the preferred ammo for that weapon, rather than the last selected ammo.
+
+06/08/99: Radio decoders now pass on enemy radio messages correctly, in addition to say_team messages.
+06/08/99: Lasergates can now have a range specified in addition to an fov, making them more flexible.
+06/08/99: Buildings.ini "fov" field now is its own field (rather then being a different name for range).
+06/08/99: Fixed a bug in which vweap state changes were not being seen between weapon changes.
+06/08/99: Disguise kits are removed from you inventory ONLY when you select an enemy uniform.
+06/08/99: Introduced a minor delay in the map voting menu which should prevent players from overflowing when its displayed at intermission.
+06/08/99: modified ID/Smartscopes to display various targeting info based on the magnification of the target rather than the distance.  Prior, reguardless of how zoomed in you were, ID info was always based on the distance to the target.
+
+06/06/99: Fixed a bug which would incorrectly report the number of frames in an MD2 is the MD2 existed, but no matching frame set was found.
+06/06/99: Fixed a bug which would cause goal items to respawn after use when the "Remove Item On Use" spawnflag was not set.
+06/06/99: dl_item_supply now displays the correct model, and model animations, defaulting to the "idle" animation set if no other frames are specified.
+
+06/01/99: Hand grenades now apply a push along the absolute Z axis (up) rather than the players relative (up), so grenades thrown straight up, go straight up.
+06/01/99: Hand grenades now apply the players velocity to themselves, ala Half-Life, so running when throwing a grenade, throws the grenade farther.
+06/01/99: Hand grenades now rotate when thrown
+06/01/99: Building now properly rotate their building boxes before determining if there there is adequate room for the building.
+
+05/27/99: Map entities can now use DL2 constants in place of thier regular numbers.
+05/27/99: PPM animations now cycle properly at random intervals, and in between state changes.
+
+05/24/99: When adding Ammoless weapons, the Armoury Menus will no longer open the Munitions menu.
+05/24/99: The "View Compatible Munitions" menu item is no longer displayed for Ammoless weapons.
+05/24/99: Players can now carry more than one "limited use" weapon, by adding it to their profile multiple times.
+05/24/99: Weapons which have no drop-frames and no reload-frames now reload properly using the reload_time, if available.
+05/24/99: Weapons can now alternately specify a Ammo variant for the base_ammo field in the weapons.ini file.  Doing so restrict that weapon to using that specific variant.
+05/24/99: Ammoless weapons are now properly supported.  For technical purposes, ammoless weapons must still specify an ammo type, but are not dependant on the player to carry the specified ammo.
+05/24/99: Limited use weapons now work properly, automatically discarding the weapon after its used, without waiting for a reload to be initiated.
+05/24/99: Sentry Guns (buildings) can now specify an ammo variant to use when they fire, using the weapon_ammo[x] field in the INI file.
+
+05/23/99: Fixed dl_target_menus to work with the menu hotkeys.
+
+** A few minor things, I don't recall - I've REALLY been slacking on my updates.  Been too busy fixing things!
+
+05/21/99: Fixed a bug which prevented submenus with the same id from showing when used with the target_menu map entity.
+05/21/99: Viewing Compatible Munitions from the Weapons menu now show the proper munitions.
+05/21/99: Fixed the ammo-types menu to display the munitions only once, and correctly display all munitions as well as compatible munitions.
+05/21/99: Weapons can now specify multiple framesets for different actions in the weapons.ini file.
+05/21/99: Fixed a bug which could cause the server to crash if you reclaimed or destroyed a sensor from the sensor menu.
+
+** A few minor things, I don't recall.
+
+05/16/99: Weapons can now specify a negative recoil, which will push the player forward when fired.
+05/16/99: Rewrote the impact damage routines to work more reliably, and with better results, particularly with the new grapple hook.
+05/16/99: Made major modifications to the grapple hook, which now performs much better under lag.
+05/16/99: Sensors can no longer be attached to water, sky or slick brushes.
+05/16/99: Fixed a bug which required weapons which had a rnds_chambered value greater than 1, from firing is there was less than rnds_chambered available in the clip.
+
+05/07/99: Added "trigger" field to buildings.ini, which specifies a default trigger to add to a building upon its completion.
+
+05/06/99: Sensor/Triggers can now directly fire effects when activated.  Sensors can fire either targets, effects, or both.
+05/06/99: Added "defaultcmd" field to supplies.ini, which is used as a default AltCmd when the player adds the item to their inventory, but does not supply an altcmd.
+05/06/99: Added "Advanced Menus" setting which enables, now disabled, menu options, such as team/player objects, etc.
+05/06/99: Added "AutoProfile" setting which will automatically spawn the player with thier last selected profile.
+05/06/99: Added "Profile Settings" menu, allows the player to change menu style, and position from the menus
+05/06/99: Added "Player Settings" menu, which moved the Armoury, and Stats off the Main menu. 
+
+05/05/99: Added extra checking for a menu_stack_overflow.
+05/05/99: Fixed the Z_Free: Bad Magic bug with menus generated with the dl_target_menu ent, which was resulting from a menu stack overflow
+05/05/99: Firepoint for most weapons raised to eye level. - if you can see it, you can likely shoot it.
+
+05/03/99: Added new model frames for the new Q2 PPM.
+05/03/99: Incorporated ammotypes.ini into the munitions.ini, eliminating the ammotypes.ini file, offering greater flexability in weapon/ammo combinations.
+
+04/25/99: Added dl_trigger_random - when triggered, fires a random target from a set of available targets.
+
+04/24/99: Map defined INI entries (effects, weapons, supplies, goalitems, etc) now maintain a seperate memory space which prevents them from being overwritten when an "sv reinit" is performed.
+04/24/99: Added dl_item_effect - used to create map specific effects outside (and independant) of the INI files.
+04/24/99: Added support for default alternate commands.  Adding new inventory items will, for most items, assign a default altcmd.
+	- Weapons assign of the 10 Q2 weapon names, to the first 10 weapons added, in the order they are added.
+	Grenades assign either gren1, gren2, or gren3 to the first 3 grenades added, in the order they are added.
+	Various other supplies are assigned the default altcmd for that specific type, reguardless of quantity or order.
+
+04/23/99: Added dl_target_effect - Fires a specified set of effects at the entities origin.
+	- "count" can be used to cause the effect to fire a set number of times before being removed.
+	"delay" can be used to set a delay time between firings.
+
+04/22/99: Added DRONE effect - a specialized effect which spawns an "intelligent" sentry similar to the Orb in DeadLode.
+	- Drones can be used a number of different ways, but were originally intended to be used in practice and training maps.
+	Drones can effectively evade both traceline and projectile weapons.  Thier targeting abilities are equally effective
+	with an average kill ratio of 7 to 1.  The effect can specify health, speed, and range, as well as a specified ammo
+	variant to be fired.  The "speed" parameter effectively determines how intelligent the drone is.  1.0 is the default
+	value, values below 1.0 will cause the drone to evade slower, and track slower, making it easier to hit, and harder for
+	itself to track targets.  Drones use the vid_decoy and proxy_decoy flags which means they can effectively be used as
+	sentry decoys.  Drones themselves will only target moving objects - as a result, while sentries can target them, they
+	cannot target sentries.
+
+04/20/99: Added dl_target_shooter - Fires a specified weapon and ammo at a specified angle, for a specified duration.
+
+04/19/99: Added dl_func_rangetarget - a destroyable, non-player-usable (but targetable) plat that when activated raises, waits, then lowers.
+
+04/18/99: Weapons can only be reloaded while idle - jams must be cleared before a reload can be done.
+04/18/99: Fixed ammonext and ammoprev, so they properly cycle through the current ammo selections
+04/18/99: Switching ammo moves any remaining ammo in the clip into the players inventory
+
+04/16/99: Slacking more on keeping track of changes/fixes
+04/16/99: Modified the MUZZLEFLASH and TEMPENTITY effects to be more flexible, and fit better within the new effect method.
+	- TempEnts of MZ's are specified as a set with the damage field, seperated by pipes (|).  Specifying multiple values
+	results in firing of a randomly selected ent/mz from the set.
+04/16/99: Added LOOP effect which applies one effect in a set at the origin over a specified duration.
+	- LOOP effects can apply a full set of effects, or a single effect from a set at each interval in the LOOPs duration.
+	Single effects from a set can be applies in order, as a sequense, or in random order.
+04/16/99: Added RADIUS effect which applies a set of effects over a specified radius.
+	- Explosions, and grenades are essentially RADIUS effects which then call the DAMAGE, PUSH, CONFUSION, BLIND, etc.
+	If bit 1 of "dmgflags" is set, RADIUS does not check for walls, applying the effect to all entities within the radius,
+	reguardless if there are solids between the the target and the effect.  RADIUS effects only apply effects to entities
+	which can take damage.  If bit 2 of dmgflags is set, RADIUS applies its effects to those entities within a FOV specified
+	by "count", in essense creating a cone, rather than a sphere.
+
+04/12/99: Changed the POINTDAMAGE effect to DAMAGE to fit better within the new effect method.
+04/12/99: Started restructuring the effects system to be even more flexable.
+	- added PUSH, CONFUSION, TINT, and BLIND effects, which effect a single target.
+	PUSH pushes a player with a specified force, but does not damage players.
+	CONFUSION causes the players view to bob, and causes the players movement to stumble, but does not damage.
+	TINT causes the players screen to temporarilily tint to a specified color, and fade out at a fixed speed.
+	BLIND causes the players screen to tint white and fade out at a specified speed.
+
+04/11/99: Added dl_trigger_timer map entity, which counts a number of seconds up or down, firing one of two targets when the count reaches 0 or its max.  Using the target changes the direction of the count (up or down).
+04/11/99: Added dl_trigger_sequence map entity, which fires each target in a list of targets, each time the entity is used.
+
+04/10/99: Added "gravity" ini field to the munitions.ini file, which can be used to determine the effects of gravity on FT_TOSS based ammo.
+04/10/99: Cleaned up some INI variable names - all "p_effect" variables are now "effect", and all "s_effect" variables have been removed.
+04/10/99: Added MODEL effect, which displays, and animates a model at the effects origin
+	- models are animated for a specified duration, looping if nessicary, or
+	for a specified number of loops through the animation sequence specified.
+04/10/99: Team Damage is applied when DAMAGE_NO_PROTECTION is used, thus allowing telefrag kills of teammates.
+04/10/99: Teleporting into buildings destroys the building.
+
+04/09/99: Changes to the profile are now written almost immediately, rather than only when the player dies.
+04/09/99: Fixed proximity bugs, yet again, and hopefully for good.
+
+04/08/99: Added dl_target_menu - a map entity which when targeted can display a menu.  The items in the menu can then fire other targets.
+
+* another small time period where I lost track of what things I had fixed - mostly minor for the DL2 beta on 04/05.
+
+04/01/99: Added extra checking for building placement to prevent buildings from being built on the sides of each other.
+04/01/99: Camera's inside a smoke cloud will now show tinted on the viewers screen.
+04/01/99: Viewing camera's now properly tracks the players view-state, switching back and forth between Scopes and cameres properly.
+04/01/99: Fixed a bug which would allow player to avoid tint-effects and offer infinite IR vision by viewing a camera while IR vision was on.
+04/01/99: Buildings now release when a player with no weapons move outside the buildings servicable area.
+04/01/99: Building attachments update thier bounding boxes as they rotate - this can sometime cause players to get stuck inside a buildings bbox.
+04/01/99: Buildings now properly rotate thier bounding boxes, both base buildings and building attachments.
+
+03/30/99: Reformated the HUD, and modified how ammo stats are displayed.
+03/30/99: Fixed a major bug, where weapons that shared ammo could result in infinite ammo for one weapon, or more seriously cause the server to crash.
+
+03/28/99: Turrets no longer automatically fire when used manually.
+03/28/99: Lasergates now properly switch states when used directly by a player.
+03/28/99: Fixed a few VWEAP issues, specifically no VWEAP model change when watching a player switch weapons when that same player is viewing a camera.
+03/28/99: Fixed some remaining minor bugs with lasergates.
+
+03/25/99: New effect "SOUND", plays the wav file specified by the effects.ini field "sound" at the effect origin.
+03/25/99: Buildings now properly rotate thier bounding boxes prior to construction, so the models don't get stuck in walls, etc.
+
+03/24/99: Changed ID/Scope behaviour to display the team icon, rather than name, an also displays the icon first (at longer ranges) and the name at closer ranges.
+03/24/99: Improved laser-gate behaviour, and fixed a bug were sensors would continue to toggle laser-gates on and off each time they were activated.
+03/24/99: Swimming in water now also clears the pusher variable which tracks who was responsible for impact kills (ie, drowning isn't the pushers kill).
+03/24/99: Removing building points properly adjusts/destroys existing buildings.
+
+03/21/99: Lasergates now properly shutdown (including audio) when thier siblings are destroyed
+03/21/99: Fixed "unknown menu item" bug, when using the hotkeys to select menu items.
+03/21/99: Buildings under remote control, properly release themselves when thier controller dies, or disconnects
+03/21/99: Fixed a number of team-damage bugs, including damaging spies, the use of dmflags, and gibbing teammates bodies.
+
+03/19/99: Pellet based weapon effects no longer move thier originator when the pellet trail intersects a water brush.
+03/19/99: Added alternate menu command (menu alt) for dropping, discarding, and viewing stats for inventory items
+
+03/18/99: Building Points are now the total quantity of all SUP_TOOLS supplies, rather than a fixed number.
+
+03/17/99: Players can no longer use the mouse and -mlook to move without encumbrance.
+03/17/99: Effects that require, but do not specify a damage field evaluate to a value of zero (rather than crashing the server).
+03/17/99: Lasergates now work with new Building Status codes.
+
+03/16/99: Added new effect "MuzzleFlash", which fires a single muzzle-flash at the effects origin.
+	Notes: dmgflags determines the multicast settings, leaving it blank, defaults to MULTICAST_PVS.
+	flags determines the muzzleflash to fire, or'ing (|) the value 0x8000 uses the MZ2_* muzzle flashes.
+03/16/99: Gravity, and Spinner effects' now display the model specified by "model" and will infinitely animate num_frames frames until the effect expires
+03/16/99: Flare, Gravity, and Spinner effects' "damage" field now determines the duration of the effect, using the "duration" field as a minimum value.
+03/16/99: Voting menu does not close after making a selecting during the intermission - this allows the players to watch the voting results.
+03/16/99: Objects menu now properly indent sub-children.
+03/16/99: New touch_type flag "DET_SKY" will cause projectiles to detonate when they touch the sky rather than disappear.
+03/16/99: Spinner effects now use the range field in effects.ini to determine the hover-height of the effect.
+
+03/14/99: Grenades no longer "tick" after being thrown.
+03/14/99: Buildings now return to idle rotations after being activated.
+03/14/99: Fixed a bug which would cause the s_use sound on buildings to loop after being used, but not properly released.
+03/14/99: Added new effect "AffectSensor" which disables, triggers, or destroys any sensors within the effects radius.
+03/14/99: Flash grenades now damage Video sensors and destroy IR Video Sensors
+03/14/99: Fixed a bug in the radio system which caused the dictionary to play all words at the same time.
+03/14/99: Added VWEAP support.
+
+03/12/99: Players who force a reload before a clip is empty, will lose any remaining ammo in the clip (applies only to weapons which use a clip (ie: flags != COUNTRELOAD).
+03/12/99: Profiles now limit players max weight to 300 units.  Ie, the weight of your profile, using the max value, rather than quantity, cannot exceed 300 units.
+03/12/99: Additem/Dropitem/Profile Clear now properly report the starting profile weight, as well as the max profile weight.
+
+03/11/99: Added support for Ammoless weapons, such as knives, and other hand-to-hand type weapons.  Use the weapons.ini flags = NOAMMO
+03/11/99: Added new weapons.ini flags param, COUNTRELOAD to showe the ammo count when reloading weapons, used primarily for clipless weapons
+03/11/99: HUD no longer shows current clip ammo while reloading weapons.
+03/11/99: Added permenant, short-range ID to HUD, with name and Team support - no scopes are required for this to work.
+03/11/99: Fixed a bug which prevented goal items from automatically returning if not picked up.
+
+03/10/99: Added goalitem animation/vweap support.
+
+========: A number of minor improvements to get the server ready for the public-beta  
+
+03/07/99: Players carrying a goal item will ALWAYS glow, reguardless if goal item uses a modelindex or not.
+03/07/99: Fixed a bug in the DRUNK flight_effect which caused it to misbehave.
+
+03/06/99: Added "dropgoal" command, used to allow the player to drop any goal items they are carrying.
+03/06/99: Server no longer crashes when a building is destroyed while a player has a menu open for that building.
+03/06/99: Buildings can no longer be built on world entities, such as the misc_satelite_dish, or similar entities.
+03/06/99: Fixed a bug which would crash the server is you used and fired a turret with a child that was still under construction.
+03/06/99: Added ping-based menu updates.  Menu updates are limited based on the players ping time.  The higher the ping rate, the less often the menu will update, reducing overflows.
+
+03/05/99: Weapons without a pic_b/pic_s set will default to weapons/w_generic(_s).
+03/05/99: Ammo variants without a pic_b/pic_s set will default to the base_ammo's pic_b/pic_s.
+03/05/99: Base ammo types without a pic_b/pic_s set will default to ammo/a_generic(_s).
+03/05/99: Fixed a number of bugs and not-so-bugs involving the new client-side packs.
+03/05/99: Buildings now properly activate thier children when they themselves are activated.
+
+03/03/99: Sensors/Triggers will now only activate buildings.  They cannot be used to fire goal items, etc.
+
+03/02/99: Fixed a weapon/animation bug which could allow semi-automatic weapons to fire more than once per animation set.
+
+02/20/99: All items are now selectable via the Inventory menu, selecting a weapon activates it, selecting an ammo switches to that type, if they are compatible.
+02/20/99: Switching weapons no longer forces a weapon drop in addition to a weapon reload.
+02/20/99: Added support for "limited use" weapons, such as the M72A2 LAW rocket.  New weapons.ini field "use_count" determines the number of reloads before the weapon is dropped from the players inventory.
+02/20/99: Added "Credits" menu to the Main menu.
+
+02/19/99: Fixed bug which prevented unfinished buildings from being activated after they were finished via the repair menu.
+
+02/17/99: Combined team and personal objects into the same object, with a team visible flag
+02/17/99: Moved building code and sensors to a true hierarhial system, allowing multiple, independant attach points.
+02/17/99: Added trigger properties menu which includes the ability to reassign a triggers target.
+02/17/99: Moved attachment rotate code to Building_think from Mount_think to be more flexible
+02/17/99: Changed all angle-handling code to use angledmod()-ed angles, allows direct == compares rather than iffy fabs(angle1 - angle2) < 0.1 compares
+02/17/99: Cleaned up INI handling code to be more generic, and reliable.
+02/17/99: array use in ini files for building attachments and other future enhancements
+02/17/99: added prefs struct to client data that is never cleared by respawn or level change, removes the need to hack InitClientPersistant()
+02/17/99: added quick memory check server command "sv memory", shows how much memory is being used up by edicts, weapons, etc.
+
+========: A bunch of stuff, particularly menu code changes that were not documented... I was feeling lazy.
+
+01/25/99: The grapple no longer slowly lowers the player to the ground when hanging.
+01/25/99: Fixed a bug which prevented health items to spawn
+01/25/99: Fixed a bug which prevented resupply pads to from appearing in CTF maps after thier first play.
+01/25/99: Supply use is limited by a debounce timer, which prevents players from throwing grenades too fast.
+01/25/99: Weapons now properly remember the munition last used.
+01/25/99: Ammoprev and Ammonext now cycle through the list properly, so binding only one is actually required.
+01/25/99: Fixed a bug which would cause 1 extra supply to be added when adding via the menu.
+01/25/99: MIRV based effect now explode along the velocity plane, if detonated in mid-air.
+01/25/99: Tripwires now unicast the "wire" effect to only those client who are within an immediate range of the wire.
+01/25/99: Tripwires "wire" effects can now be set via the supplies.ini file.
+01/25/99: Tripwires now properly delay between activation, when a "delay" variable is set.
+
+01/22/99: Fixed bug which prevented gibbing of dead player until they respawned.
+01/22/99: Added the ability to rotate buildings, from the building maintenance menu.
+
+01/20/99: Fixed a bug which prevented players using custom profile from resupplying..
+01/20/99: Selecting a second class after respawn and resupplying no longer gives the player both inventories.
+01/20/99: Fixed bug which prevented concussion and flash effects from effecting players.
+01/20/99: Modified BFG laser damages to be a 100th of the damage of the explosion, but no less than 1 point.
+01/20/99: Fixed mirv-derived effects (Spinner/MIRV/Projectile) so proper frags and obituaries are awarded on deaths.
+
+01/19/99: Fixed an menu bug that caused clients to overflow after adding new weapons.
+01/19/99: Fixed some bugs with the new INI code that prevented players w/ custom profiles from selecting system profiles.
+01/19/99: Fixed a bug which would crash the server when the map was changed.
+
+01/17/99: Adding new weapons from the armoury menu immediately opens the Ammo Variants menu, so ammo for that weapon can be added at that point.
+
+01/15/99: Implimented AltCmd command, which allows the player to view or change an exising items altcmd.
+01/15/99: Profiles can now be modified modified during play, but are not read until respawn or resupply.
+	Notes: This means you can now add/remove items to your profile at any point in the game, but the profile changes
+	are not seen until the next time the player uses a resupply pod, or respawns.  This gives a little more flexibility
+	when designing profiles, since players can add/drop items without having to suicide.  01/15/99: Modified profile/stats management to take advantage of the new INI file features.
+01/15/99: Totally revamped the INI code to support writing of INI files.
+	Notes: As a result of the new INI features, profiles are never actually written to disk until specifically requested.
+	Currently, the profile is only written to disk when the client disconnects.
+
+12/31/98: Concussion Grenades no longer effect BSP models.
+12/31/98: Finalized CTF MAP support - upto 3 of the ctf spawn-points serve as the resupply pads for CTF maps.
+
+12/30/98: Fixed overflow bug which occured on high latency connections and diagonal movement while jumping.
+12/30/98: Modified effects to be a little more generic, allowing for more flexibility and options.
+12/30/98: Added Persistant Effect which applies damage to a target at regular intervals for over a given time.
+12/30/98: Modified Effects, to be more generic and to handle persistant damage (ie Infect effect).
+12/30/98: Added extra checking to prevent multiple players from glowing from carrying the goal item.
+
+12/11/98: Traditional Video Sensors will no longer detect players inside smoke clouds, IR sensors will however.
+12/11/98: Video Sensors (including IR) now have defined limits for what light-levels targets can be seen in.
+	Notes: IR Sensors will only detect targets under a defined light level, and are only usable in poor lighting conditions.
+	What this means is, if an IR sensor is placed in a brightly lit area, it will not opperate properly.  Traditional Video
+	Sensors will only detect targets above a defined light level, and are usable in any lighting.  Both IR and Video sensors
+	can be blinded, using a variety of methods.  IR Sensors maybe damaged or destroyed by excessive light.
+12/11/98: Video Sensors can now be configured as IR capable sensors that let them see IR emitting targets.
+12/11/98: Gibbed bodies no longer glow in the IR, while dead bodies do still.
+12/11/98: Fixed bug which prevented weapons with less then 2 animation frames per set from changing states.
+
+12/10/98: Added PAK file support - DL2 can now read .ENT and .MD2 information directly from PAK files.
+12/10/98: Added dl_target_radio map entity that playes a global/team-specific radio message when activated.
+
+12/6/98:  Added "stabilization" feature which causes heavy weapons to require more time for them to stablize before they can be fired accurately, reducing "hip shots" from heavy weapons.
+
+12/4/98:  Converted the IR/Nightvision code to the no-lag version from the Rogue mission pack...
+
+12/3/98:  Added "reload_pause_frame" field to weapons.ini files, which determines if/which frame to hold the reload animations for, if the reload time is longer than the animations.
+12/3/98:  Added "fire_offset" field to weapons.ini files, which determines the source/offset for where the weapons fires from.
+12/3/98:  Added NOIDLEPAUSE flag to the weapons.ini flags field, which prevents the random pause in weapon idle animations
+12/3/98:  Added reload animation support - DL2 now looks for animation sets with the name "reload" which are played during reload scenes, rather than dropping the weapon.
+
+11/28/98: Added command-line/server var "inidir" that allows the admin to specify a directory to look for INI files in.
+11/28/98: Added "Half Damage" play mode, which reduces all damage values by 1/2.
+11/28/98: Added "Defensive Return" play mode, which allows a team to return thier own goal item by touching it.
+
+11/27/98: Added "Infinite Ammo" play mode
+11/27/98: Added "No Reload" play mode, which effectively makes reload cycles instant, though weapons are still required to drop, and raise again.
+11/27/98: Added "Elimination" play mode, which limits players to a predetermined number of "lives", and then preventing them from playing when thier lives expire.
+11/27/98: Added "Force Skins" play mode, which forces the players to use the default male/female skins, rather than allowing PPMs.
+11/27/98: Added "Team Score" play mode, which shows the team score as the players score - individual frags recorded, but not displayed.
+11/27/98: Added "Team Damage" play mode, which causes weapons to harm teammates the same as enemy players.
+11/27/98: Added "No Encumbrance" play mode, which forces the players weight to 0, reguardless of inventory.
+11/27/98: Added play-mode support which allows the admin to specify different modes of play.
+
+11/25/98: Added Spotlight building which allow for the attachment of spotlights to turrets and other buildings.
+11/25/98: Killed while controlling a building now releases the building immediately.
+11/25/98: Fixed bug where video sensors would track dead players who have not respawned.
+11/25/98: Crouching reduces damage from blast-effect weapons by 50% and knockback by 75%.
+
+11/24/98: Fixed team-damage bug, which would allow spy to kill teammates and vice-versa.
+
+11/23/98: Added the Uniform/Disguise supply item, which lets players go undercover as a member of an opposing team.
+11/23/98: Fixed the elevator bugs which would hurt players under certain circumstances.
+
+11/20/98: Modified SHRAPNEL effect to be more effective.
+11/20/98: Fixed bug which caused MIRV based effects to not award points to thier owner.
+
+11/19/98: Modified impact-damage to be more realistic, and to prevent cheats like jumping prior to impact.
+          - The new impact code verifies the differences in absolute velocities, rather than the differences
+		  in relative velocities.  As a result, attempts to negate impact damage by jumping actually causes
+		  more damage, since the you are jumping "into" the fall rather than absorbing it.
+11/19/98: Fixed a bug which allowed the player to access the Shop/Armoury menu while playing in game.
+11/19/98: Added a 1-second delay after respawning, when weapons cannot be fired.  This prevents wasting ammo when respawning.
+
+11/18/98: Fixed a bug which could crash the server if the player killed himself with his current weapon.
+
+11/17/98: Added "vweap" spawnflag to dl_item_supply, which allows vweap-capable models to be attached to players who carry goal items.
+          - If the vweap spawnflag is enabled, but the model does not support vweap animations, clients will be flooded with errors.
+		  If the vweap spawnflag is not set, the default CTF "glow" is shown for players who carry the goal item.
+
+11/16/98: Added extra checking in Inventory maintenance code to prevent crashes.
+11/16/98: Added "safe" string handling functions which should significantly reduce crashes.
+
+11/13/98: Added an "altcmd" command that allows players to bind Inventory items with an alternate command.
+11/13/98: Player Profile is not shown on the Profiles menu unless the a profile exists for that player.
+
+11/12/98: Modified IsFemale to recognize the crackhore skin as female.
+
+11/11/98: Video sensors should no longer track observers who have chosen a team, but not a class.
+11/11/98: Respawning no longer fires a round, and +jump can be used to respawn as well.
+11/11/98: Modified night scope to light players as well as buildings.
+
+11/10/98: Modified Body searching so it uses a more reliable (and a much simpler) method, which should prevent crashes.
+11/10/98: Fixed a bug with EFXBoxes, where a NULL activator would crash the server.
+
+11/9/98:  Trigger-status Icon repositioned so its now visible.  Before it was always hidden by the tools icon.
+11/9/98:  Fixed a bug which would cause the meny to hide, if it was closed by pressing the Esc key.  
+
+11/8/98:  Armour fuctions now properly handle the loss of armour points from the inventory.  This fixes a crash-bug.
+
+11/7/98:  Increased item space for INI files, and improved checking for item-space overflow.
+
+11/4/98:  Fixed a bug where attaching triggers to buildings under certain circumstances would result in a server crash.
+
+11/3/98:  Fixed map bug where goal targets with different case would prevent the goal item from returning when activated.
+
+11/2/98:  Players can no longer add goal items to thier profiles inventory.
+11/2/98:  Added Name Checking for profile names to prevent security issues with bad player names.
+11/2/98:  Players may not access (read, or write) to a profile which is password protected, without a matching passkey.
+11/2/98:  Added strict checking for inventory dependancies, which could cause the server to crash.
+
+10/30/98: Fixed weapon/frame errors which resulted from switching weapons while viewing a camera.
+10/30/98: Added a tool icon which displays next to the resource points for identification.
+10/30/98: Resource points are moved above the armour, resource points only show when the player has tools to use them.
+10/30/98: The players armour now displays on the hud.
+10/30/98: Players are no longer are forced to reload after using a building (specifically a sentry gun).
+10/30/98: Fixed a bug which caused sentry guns to have a slightly longer cyclic rate than they should have.
+
+10/28/98: Fixed a bug w/ team spawn-point selection code, which would crash the server under specific circumstances.
+
+10/23/98: Added team_mask map entity parameter to target_lasers, where the team specified is immune to laser damage.
+10/23/98: Added map entity "dl_force_lights" which is used to force lights on or off, rather than the old "toggle"
+10/23/98: Sensors now attach properly to buildings.
+10/23/98: Concussion effect now causes player to stumble, and view pitches, making aiming and movement difficult.
+          - Note: The effects of the concussion are based on the distance to the effect origin.  Movement causes the
+		  concussion effects to be amplified, making it even harder to aim or move.
+10/23/98: Cleaned up LaserGate code, fixed a few minor problems.
+
+10/22/98: Bodies now gib at -140 health, rather than -40 health.
+10/22/98: Players can no longer search gibbed heads for ammo.
+10/22/98: Grenades now use thier proper death messages.
+10/22/98: Point effects which penetrate walls now lose damage "force" exponetially based on wall thickness.
+          - This helps reduce the effect of weapons shooting through walls and killing players on the other sides.
+		  It is still possible to setup this kind of arrangement, but it is substantially less effective than before.
+10/22/98: Fixed the %p, %t, %k messages - again, hopefully.
+10/22/98: Changed sound-effects from pickup messages so only the client hears them.
+
+10/18/98: Added Laser-Gates to the Buildings Types.
+
+10/16/98: Fixed Inventory menu so supplies show proper (small) icons.
+
+10/15/98: Fixed C-4/Proxy bug - again...
+10/15/98: Added Night-Vision (non-ideal approach) to Scope abilities.
+
+10/14/98: All triggers now display an icon on the statusbar when activated.  This serves as the replacement for the following fix.
+10/14/98: Cameras no longer switch thier owner to its view when activated.
+10/14/98: Turrets now calculate thier aim based on the attach point, rather then the base, making sentries much more accurate.
+10/14/98: Fixed proximity sensor bug which caused it to shoot at targets which were blocked from its view, and no fire at those that were.
+10/14/98: Building after a previous building was destroyed during construction no longer crashes server.
+
+10/13/98: Fixed bug where proxies and vid-sensors would crash server when they activated C-4 Charges.
+10/13/98: Added ability to customize the team-skin via the system.ini file.
+10/13/98: Fixed "Floating Body" bug, the resulted when new players selected thier team, but not a class.
+10/13/98: Suiciding no longer forces an instant respawn, but instead waits for the player to press the attack button.
+10/13/98: Added respawn_delay, causing players to wait a certain time before being allowed to respawn.
+10/13/98: Player Profiles can now be enabled/disabled from the system.ini file
+10/13/98: Added auto-team support, will assign new player to either the team with the fewest player, fewest score, or randomly.
+10/12/98: Reordered commands, allowing the use of "menu *" and "putaway" while observing.
+10/12/98: Fixed bug that prevented menu from being shown after a player viewed the scores while observing
+10/12/98: Pressing esc now properly closes menus
+10/11/98: Observers/Dead player can now console chat.
+10/11/98: Fixed bug where NULL values for %k, %p, and %t in messages would cause the %(letter) to be printed as part of the message.
+10/8/98:  Added Player Profile support.  Players can now customize thier own classes.
+10/7/98:  Obituaries properly report self-inflicted push-kills as regular fall damage
+10/7/98:  Extra check done to prevent players from getting "push" credits when for falls that occur after the fact
+10/7/98:  Cleaned up Building Maintenance menu - no longer shows buildings names for each item.
+10/7/98:  Fixed bug that allows buildings to be built on water, but not under water.
+10/7/98:  %p, %t and %k now support uppercase versions which convert the appropriate string to uppercase as well.
+10/6/98:  map entity messages support %k as the team that owns an entity (not the same as %t)
+10/6/98:  map entities now support team_own, an integer which represents which team owns the entity (not same as team_mask)
+10/5/98:  building a low-profile building (camera/det) on a players foot allows them to walk on air.
+10/5/98:  if you build on someone they move choppy -- they can't move in the direction the building is attached
+10/5/98:  buildings aren't destroyed when attached to a player who dies
+10/3/98:  Fixed bug where goal items dropped under doors would be destroyed, on would not return.
+10/3/98:  dl_target_award uses "dmg" to incrementally hurt or heal targets.
+10/3/98:  dl_target_award's will no longer adjust a targets health if the target is already dead.
+10/3/98:  dl_target_award now also uses the message, team_msg, and global_msg parameters.
+10/3/98:  dl_target_award's "health" value now *sets* the targets health to the value specified.
+	  - Note: Negative health values will ALWAYS kill targets, because it forces thier health below 0.
+		  Immediate, non-gib kills can be achieved by setting the health value to "-1".  Health does not clip
+		  the players health at max_health, but instead will temporarily increase the players health above
+		  max_health.  
+10/3/98:  Fixed bug preventing activation of dl_trigger_model unless facing direction of model
+10/3/98:  Fixed bug with dl_target_resupply where specifying a "partial resupply" would reduce item quantity
+10/1/98:  Fixed bug that caused goal items to only display thier messages when initially activated
+10/1/98:  Fixed bug were goal-items on doors/lifts would fall outside world or be crushed when activated
+9/30/98:  dl_target_award's now hurt players if health is a negative value
+9/29/98:  Menus no longer reopen the current menu, causing an overflow and crash the server.
+9/29/98:  Using "Repair" from the building menu, now checks to verify the building before continuing.
+9/29/98:  Fixed "Body Double" when killed while viewing camera's
+9/29/98:  Disconnecting while viewing cameras properly removes your camera dumby
+9/28/98:  Fixed Team menu's to *hopefully* report accurate team numbers
+9/28/98:  Removed more (unused) CTF code and dependancies.
+9/28/98:  Increased knockback damage for point weapons, but amount is still minimal.
+9/28/98:  Players should be awarded proper credit for impact kills (ie, rocket blasts, etc).
+9/28/98:  Fixed dl_target_resupply so it doesn't trim health if health is above max_health
+9/28/98:  Changed dl_target_resupply so only awards health if health is less than max_health
+9/28/98:  Modified dl_target_award to give awards based on selection criteria.  
+9/28/98:  Fixed bug where buildings could be built inside of walls, and could then shoot though walls as well.
+9/25/98:  Added support for multiple/random trigger messages with parameters %p for the activators name, and %t for his team
+9/25/98:  Fixed knockback values for point effects, point effects should no longer kill players from impact damage
+9/25/98:  Fixed flash duration on grenades that were primed, but not thrown
+9/25/98:  Fixed concussion grenades, preventing them from throwing people too far
+          - Note: Concussion grenades CAN still throw players, smashing them against walls causing impact damage.
+		  However, the grenade should limit the speed at which it throws players such that while it can still kill,
+		  damage should be down to playable (and non-abusable) levels
+9/25/98:  Added ability for players to remove ANY trigger attached to thier own building
+9/25/98:  Added support for "maximum" values for player inventories, to prevent players from carrying too much
+9/25/98:  Added "percent" parameter to dl_target_resupply entity
+9/24/98:  Fixed Deathmessages to properly report kills from players and buildings.
+9/24/98:  Added a new obituary class for killing teammates (Scags) (rather than generic messages)
+9/24/98:  Added a new obituary class for buildings who kill teammates (Scags) (rather than generic messages)
+9/24/98:  Added a new obituary class for buildings who kill thier owners
+9/24/98:  Added a new Obituary variable (%d) for "device", used to report the building which was responsible for the kill.
+9/24/98:  Added WF map support with the wf_team entity parameter (which maps to the team_mask parameter)
+9/24/98:  Added team_mask support to func_plats
+9/24/98:  Added map entity parameters "team_msg" and "global_msg", which generate respective messages when activated
+9/23/98:  Triggers now do extra checking to ensure they are valid ents
+9/23/98:  Fixed a bug the caused players to sometimes get stuck when setting triggers
+9/23/98:  The "use" command, without parameters, can be used to reclaim set triggers (only by owner)
+          - Note: If a player has no triggers of the same type when reclaimed, the trigger will lose
+		  any alternate command assigned to it.  Since most of the testing classes have only 1 of each
+		  type of trigger, reclaiming the trigger will cause the alt command (ie, use sensor) invalid.
+		  In order to use the trigger, you will have to use its actual name (ie, use Video Sensor) or
+		  select it from the Inventory menu.
+9/23/98:  Observers can no longer use player commands, including "use", "radio", etc.
+9/23/98:  Fixed bug where building numbers would restart when a player respawned after death
+9/23/98:  Team-Doors can no longer be "locked" by an enemy standing in the trigger-brush
+9/23/98:  Fixed bug where players where pushed outside the level rather than killed by crushing doors
+9/23/98:  Fixed bug where closing menu's prematurely (in code) would result in bogus values for class selection
+9/22/98:  Destroying a building from the "building menu" no longer crashes server
+9/22/98:  Buildings can no longer be attached to players, unless the building.ini allows it
+9/22/98:  Modified default buildings.ini to prevent mounts from being built on walls or ceilings
+9/22/98:  Fixed reload bug where first round was reloaded instantly
+9/20/98:  Menus auto-update
+9/20/98:  Fixed a few bugs in the new menu code
+9/20/98:  Fixed adding health to sentries via menu crashes server (due to menu overflow bug)
+9/20/98:  Selecting "Repair" from building menu no longer opens a new menu
+9/19/98:  Long names cause server crash when constructing buildings...
+9/19/98:  Players start with weapons preloaded
+9/19/98:  Team Menu shows number of players per team correctly
+9/18/98:  Throw command no longer crashes server

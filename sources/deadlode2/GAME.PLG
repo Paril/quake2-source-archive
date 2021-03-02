@@ -1,0 +1,158 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: game - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP2210.TMP" with contents
+[
+/nologo /G5 /MT /W3 /GX /Zi /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /FR"../temp/" /Fp"../temp/game.pch" /YX /Fo"../temp/" /Fd"../temp/" /FD /c 
+"C:\Games\Quake2\DeadLode2\Source\dl_admin.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_buildings.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_effects.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_eval.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_ini.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_inventory.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_items.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_light.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_map.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_menus.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_pak.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_profiles.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_utils.c"
+"C:\Games\Quake2\DeadLode2\Source\dl_weapons.c"
+"C:\Games\Quake2\DeadLode2\Source\g_ai.c"
+"C:\Games\Quake2\DeadLode2\Source\g_chase.c"
+"C:\Games\Quake2\DeadLode2\Source\g_cmds.c"
+"C:\Games\Quake2\DeadLode2\Source\g_combat.c"
+"C:\Games\Quake2\DeadLode2\Source\g_ctf.c"
+"C:\Games\Quake2\DeadLode2\Source\g_func.c"
+"C:\Games\Quake2\DeadLode2\Source\g_items.c"
+"C:\Games\Quake2\DeadLode2\Source\g_main.c"
+"C:\Games\Quake2\DeadLode2\Source\g_misc.c"
+"C:\Games\Quake2\DeadLode2\Source\g_monster.c"
+"C:\Games\Quake2\DeadLode2\Source\g_phys.c"
+"C:\Games\Quake2\DeadLode2\Source\g_save.c"
+"C:\Games\Quake2\DeadLode2\Source\g_spawn.c"
+"C:\Games\Quake2\DeadLode2\Source\g_svcmds.c"
+"C:\Games\Quake2\DeadLode2\Source\g_target.c"
+"C:\Games\Quake2\DeadLode2\Source\g_trigger.c"
+"C:\Games\Quake2\DeadLode2\Source\g_utils.c"
+"C:\Games\Quake2\DeadLode2\Source\m_move.c"
+"C:\Games\Quake2\DeadLode2\Source\p_client.c"
+"C:\Games\Quake2\DeadLode2\Source\p_hud.c"
+"C:\Games\Quake2\DeadLode2\Source\p_menu.c"
+"C:\Games\Quake2\DeadLode2\Source\p_view.c"
+"C:\Games\Quake2\DeadLode2\Source\q_shared.c"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP2210.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP2211.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"../temp/gamex86.pdb" /map:"../temp/gamex86.map" /debug /machine:I386 /def:".\game.def" /out:"../gamex86.dll" /implib:"../temp/gamex86.lib" 
+\Games\Quake2\DeadLode2\temp\dl_admin.obj
+\Games\Quake2\DeadLode2\temp\dl_buildings.obj
+\Games\Quake2\DeadLode2\temp\dl_effects.obj
+\Games\Quake2\DeadLode2\temp\dl_eval.obj
+\Games\Quake2\DeadLode2\temp\dl_ini.obj
+\Games\Quake2\DeadLode2\temp\dl_inventory.obj
+\Games\Quake2\DeadLode2\temp\dl_items.obj
+\Games\Quake2\DeadLode2\temp\dl_light.obj
+\Games\Quake2\DeadLode2\temp\dl_map.obj
+\Games\Quake2\DeadLode2\temp\dl_menus.obj
+\Games\Quake2\DeadLode2\temp\dl_pak.obj
+\Games\Quake2\DeadLode2\temp\dl_profiles.obj
+\Games\Quake2\DeadLode2\temp\dl_utils.obj
+\Games\Quake2\DeadLode2\temp\dl_weapons.obj
+\Games\Quake2\DeadLode2\temp\g_ai.obj
+\Games\Quake2\DeadLode2\temp\g_chase.obj
+\Games\Quake2\DeadLode2\temp\g_cmds.obj
+\Games\Quake2\DeadLode2\temp\g_combat.obj
+\Games\Quake2\DeadLode2\temp\g_ctf.obj
+\Games\Quake2\DeadLode2\temp\g_func.obj
+\Games\Quake2\DeadLode2\temp\g_items.obj
+\Games\Quake2\DeadLode2\temp\g_main.obj
+\Games\Quake2\DeadLode2\temp\g_misc.obj
+\Games\Quake2\DeadLode2\temp\g_monster.obj
+\Games\Quake2\DeadLode2\temp\g_phys.obj
+\Games\Quake2\DeadLode2\temp\g_save.obj
+\Games\Quake2\DeadLode2\temp\g_spawn.obj
+\Games\Quake2\DeadLode2\temp\g_svcmds.obj
+\Games\Quake2\DeadLode2\temp\g_target.obj
+\Games\Quake2\DeadLode2\temp\g_trigger.obj
+\Games\Quake2\DeadLode2\temp\g_utils.obj
+\Games\Quake2\DeadLode2\temp\m_move.obj
+\Games\Quake2\DeadLode2\temp\p_client.obj
+\Games\Quake2\DeadLode2\temp\p_hud.obj
+\Games\Quake2\DeadLode2\temp\p_menu.obj
+\Games\Quake2\DeadLode2\temp\p_view.obj
+\Games\Quake2\DeadLode2\temp\q_shared.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP2211.TMP"
+<h3>Output Window</h3>
+Compiling...
+dl_admin.c
+dl_buildings.c
+dl_effects.c
+C:\Games\Quake2\DeadLode2\Source\dl_effects.c(1257) : warning C4013: 'SV_TestEntityPosition' undefined; assuming extern returning int
+dl_eval.c
+dl_ini.c
+dl_inventory.c
+dl_items.c
+dl_light.c
+dl_map.c
+dl_menus.c
+dl_pak.c
+dl_profiles.c
+dl_utils.c
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(771) : warning C4090: 'function' : different 'const' qualifiers
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(771) : warning C4024: 'gi' : different types for formal and actual parameter 1
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(787) : warning C4090: 'function' : different 'const' qualifiers
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(787) : warning C4024: 'gi' : different types for formal and actual parameter 1
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(803) : warning C4090: 'function' : different 'const' qualifiers
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(803) : warning C4024: 'gi' : different types for formal and actual parameter 1
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(830) : warning C4090: 'function' : different 'const' qualifiers
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(830) : warning C4024: 'gi' : different types for formal and actual parameter 1
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(1048) : warning C4090: 'function' : different 'const' qualifiers
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(1048) : warning C4024: 'evaluate' : different types for formal and actual parameter 1
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(1925) : warning C4090: '=' : different 'const' qualifiers
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(2098) : warning C4090: 'function' : different 'const' qualifiers
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(2098) : warning C4024: 'gi' : different types for formal and actual parameter 1
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(2099) : warning C4090: 'function' : different 'const' qualifiers
+C:\Games\Quake2\DeadLode2\Source\dl_utils.c(2099) : warning C4024: 'gi' : different types for formal and actual parameter 1
+dl_weapons.c
+g_ai.c
+g_chase.c
+g_cmds.c
+g_combat.c
+g_ctf.c
+g_func.c
+g_items.c
+g_main.c
+C:\Games\Quake2\DeadLode2\Source\g_main.c(288) : warning C4090: '=' : different 'const' qualifiers
+g_misc.c
+g_monster.c
+g_phys.c
+g_save.c
+g_spawn.c
+g_svcmds.c
+g_target.c
+g_trigger.c
+g_utils.c
+m_move.c
+p_client.c
+p_hud.c
+p_menu.c
+p_view.c
+q_shared.c
+Linking...
+   Creating library ../temp/gamex86.lib and object ../temp/gamex86.exp
+
+
+
+<h3>Results</h3>
+gamex86.dll - 0 error(s), 17 warning(s)
+</pre>
+</body>
+</html>

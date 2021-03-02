@@ -1,0 +1,82 @@
+#         D-Day: Normandy by Vipersoft
+# ************************************
+# *   $Source: /usr/local/cvsroot/dday/src/usa/makefile.ami,v $
+# *   $Revision: 1.3 $
+# *   $Date: 2002/07/24 00:16:32 $
+# *
+# ***********************************
+#
+# Copyright (C) 2002 Vipersoft
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+# 
+# See the GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#
+##############################################################################
+#
+# A special thanks goes out to Steffen Haeuser for arranging this port.
+#
+# For more information, see: http://www.hyperion-entertainment.com.
+#
+##############################################################################
+
+OBJS =  usa_item.o usa_spawn.o usa_guninfo.o usa_weapon.o usa_main.o
+
+OBJSCPP = 
+
+EXE = USAppc.dll
+
+OTHER = 
+
+CCM68K = gcc -V 2.95 -m68060 -fomit-frame-pointer -I/ade/include -s -noixemul
+
+CC603 = ppc-amigaos-gcc -V 2.95.3 -mcpu=603e -mmultiple -warpup
+CC604 = ppc-amigaos-gcc -V 2.95.3 -mcpu=604e -mmultiple -warpup
+CC750 = ppc-amigaos-gcc -V 2.95.3 -mcpu=750 -mmultiple -warpup
+
+CC = $(CC604)
+
+CODEGEN = -D_GAME_DLL -I../qcommon -I../game -I../client \
+		  -D_inline="static __inline" -D__saveds= -D__int64="long long" -DMAX_PATH=255 -DFALSE=0 -DTRUE=1 \
+		  -DNDEBUG \
+		  #-D_DEVEL \
+
+OPTIMIZE = -O3
+
+CFLAGS= $(CODEGEN) $(OPTIMIZE)
+
+LIBS = -lz -ldllppc -lppcamiga
+
+%.o : %.c
+	$(CC) $(CFLAGS) -S $< -o $*.s
+	$(CC) $(CFLAGS) -c $*.s -o $*.o
+
+%.o : %.cpp
+	$(CC) $(CFLAGS) -fno-exceptions -fno-rtti -S $< -o $*.s
+	$(CC) $(CFLAGS) -c $*.s -o $*.o
+
+ASMS = $(OBJS:.o=.s) $(OBJSCPP:.o=.s)
+
+$(EXE) : $(OBJS) $(OBJSCPP)
+	$(CC) $(OBJS) $(OBJSCPP) $(LIBS) -o $@
+
+depend : 
+	$(CC) $(CFLAGS) -MM $(OBJS:.o=.c) $(OBJSCPP:.o=.cpp) >depend
+
+clean :
+	rm $(EXE) $(OBJS) $(OBJSCPP) $(ASMS) $(OTHER) depend
+
+#DEPENDENCIES
+
+#include depend

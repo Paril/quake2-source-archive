@@ -1,0 +1,1853 @@
+2002-07-25  pbowens
+	* g_local.h:
+	* p_observer.c:
+	* readme.amiga.txt:
+	* readme.linux.txt:
+	* readme.txt:
+		- more documentation updates
+		- DEVVERSION now 4.1
+		- menus print DEVVERSION
+
+	* g_misc.c:
+	* g_weapon.c:
+		- fixed misc_viper speed being always 300
+		- fixed faf's team DLL grenade code
+
+	* Makefile:
+	* grm/Makefile:
+	* readme.linux.txt:
+	* usa/Makefile:
+		- build_debug & build_release targets for Linux Makefiles
+
+2002-07-24  pbowens
+	* grm/makefile.ami:
+	* makefile.ami:
+	* readme.amiga.txt:
+	* usa/makefile.ami:
+		- updated documentation for Amiga again
+
+2002-07-23  pbowens
+	* p_hud.c:
+		- fixed scoreboard not showing up bug
+
+	* g_cmds.c:
+	* grm/grm_weapon.c:
+	* p_client.c:
+	* p_hud.c:
+	* usa/usa_weapon.c:
+		- team scopes now use teamid instead of static team test
+		- sniper crosshairs appear after scope is raised to eye
+		- un respawned dead bodies are now SOLID_NOT to avoid blocking shots
+		- body que bodies now set to SOLID_BBOX so they can gib
+		- all drop cmds now exempt TNT (fixes tnt drop bugs)
+		- rockets now say "already loaded" instead of "cant top off"
+		- one cannot change stance while dead
+
+	* g_cmds.h:
+	* g_dll.h:
+	* g_weapon.c:
+	* grm/grm_main.c:
+	* p_observer.c:
+	* q_shared.c:
+	* q_shared.h:
+	* usa/usa_main.c:
+		- readied some win32 files for amiga port
+		- redid auto select code.. should work now
+
+	* Makefile:
+	* allfuncs.h:
+	* amidll.c:
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_combat.c:
+	* g_dll.amiga.c:
+	* g_dll.h:
+	* g_dll.linux.c:
+	* g_dll.win32.c:
+	* g_ents.c:
+	* g_main.c:
+	* grm/Makefile:
+	* grm/grm_main.c:
+	* grm/grm_main.h:
+	* grm/makefile.ami:
+	* makefile.ami:
+	* u_findfunc.c:
+	* usa/Makefile:
+	* usa/makefile.ami:
+	* usa/usa_main.h:
+		 added more Amiga sources\n-cleaned up code to compile clean in linux
+
+	* g_cmds.c:
+	* g_combat.c:
+	* g_dll.amiga.c:
+	* g_dll.win32.c:
+	* g_items.c:
+	* g_local.h:
+	* g_weapon.c:
+	* grm/grm_item.c:
+	* grm/makefile.ami:
+	* makefile.ami:
+	* p_classes.c:
+	* p_hud.c:
+	* p_observer.c:
+	* p_weapon.c:
+	* readme.amiga.txt:
+	* readme.linux.txt:
+	* readme.txt:
+	* usa/makefile.ami:
+	* usa/usa_item.c:
+		- updated documentation for Amiga port
+		- corrected misspelling in class assignment
+		- added fafner's team DLL code modification
+		- fixed g_dll.win32.c compile error
+
+	* p_client.c:
+		decreased body height to reduce sniper-gib-shot bug
+
+2002-07-16  pbowens
+	* g_utils.c:
+	* g_weapon.c:
+	* p_client.c:
+		- removed debugging info for random spawns
+		- added crash checks to weighplayer()
+		- added crash checks to g_weapons.c
+
+2002-07-12  pbowens
+	* g_local.h:
+	* g_utils.c:
+	* p_client.c:
+		-spawn points are now randomly selected if more than one
+		- reduced limp
+
+	* g_defines.h:
+	* p_hud.c:
+	* p_view.c:
+		- 1.5 second delay between intermission and scoreboard display
+
+2002-06-05  pbowens
+	* Makefile:
+	* grm/Makefile:
+	* usa/Makefile:
+		updated Makefiles
+
+	* Makefile:
+	* grm/Makefile:
+	* usa/Makefile:
+		modified Makefiles
+
+2002-06-04  pbowens
+	* allfuncs.h:
+	* cgf_sfx_fog.cpp:
+	* cgf_sfx_fog.h:
+	* funcarry.h:
+	* g_ai.c:
+	* g_arty.c:
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_combat.c:
+	* g_defines.h:
+	* g_dll.h:
+	* g_dll.linux.c:
+	* g_dll.win32.c:
+	* g_ents.c:
+	* g_func.c:
+	* g_items.c:
+	* g_local.h:
+	* g_main.c:
+	* g_maps.c:
+	* g_maps.h:
+	* g_misc.c:
+	* g_monster.c:
+	* g_objectives.c:
+	* g_phys.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_svcmds.c:
+	* g_target.c:
+	* g_trigger.c:
+	* g_turret.c:
+	* g_utils.c:
+	* g_weapon.c:
+	* game.h:
+	* gnu.txt:
+	* grm/game.def:
+	* grm/grm_classes.h:
+	* grm/grm_defines.h:
+	* grm/grm_guninfo.c:
+	* grm/grm_item.c:
+	* grm/grm_main.c:
+	* grm/grm_main.h:
+	* grm/grm_spawn.c:
+	* grm/grm_weapon.c:
+	* m_actor.c:
+	* m_actor.h:
+	* m_flash.c:
+	* m_insane.c:
+	* m_insane.h:
+	* m_move.c:
+	* m_player.h:
+	* p_classes.c:
+	* p_classes.h:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_menu.c:
+	* p_menu.h:
+	* p_menus.h:
+	* p_observer.c:
+	* p_observer.h:
+	* p_trail.c:
+	* p_view.c:
+	* p_weapon.c:
+	* q_shared.c:
+	* q_shared.h:
+	* readme.linux.txt:
+	* readme.txt:
+	* u_entmgr.c:
+	* u_entmgr.h:
+	* u_findfunc.c:
+	* u_findfunc.h:
+	* usa/usa_classes.h:
+	* usa/usa_defines.h:
+	* usa/usa_guninfo.c:
+	* usa/usa_item.c:
+	* usa/usa_main.c:
+	* usa/usa_main.h:
+	* usa/usa_spawn.c:
+	* usa/usa_weapon.c:
+	* x_fbomb.c:
+	* x_fbomb.h:
+	* x_fire.c:
+	* x_fire.h:
+	* z_removed.c:
+		-removed FOG support
+		- GNU license added
+
+	* Makefile:
+	* g_dll.linux.c:
+	* g_ents.c:
+	* grm/Makefile:
+	* usa/Makefile:
+		incorporated linux support: g_dll.linux.c
+
+	* g_dll.c:
+	* g_dll.win32.c:
+		renamed g_dll.c to g_dll.win32.c
+
+2002-04-28  pbowens
+	* g_cmds.c:
+	* g_combat.c:
+	* g_local.h:
+	* p_client.c:
+		- undefined DEBUG
+		- DEVVERSION: 4.0
+		- fixed suiciding counting for same team bug
+
+2002-04-27  pbowens
+	* g_cmds.c:
+	* g_save.c:
+	* grm/grm_guninfo.c:
+	* grm/grm_weapon.c:
+	* usa/usa_guninfo.c:
+	* usa/usa_weapon.c:
+		- 'flyingnun' changed to 'observer'
+		- 'use grenades' is now team-independant
+		- team chat now works throughout entire level
+		- various weapon frame updates
+
+2002-04-22  pbowens
+	* g_cmds.c:
+	* g_combat.c:
+	* g_defines.h:
+	* g_items.c:
+	* g_local.h:
+	* g_maps.h:
+	* g_misc.c:
+	* g_spawn.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_weapon.c:
+		- dud grenades should no longer lock up when caught
+		- fists dont have double fire, knife does
+		- sniper must now bolt manually with TS before zooming
+		- client can fire in shallow water now
+		- limp fixed
+		- stance changed to standing if in waist level or higher water
+		- arty sound is no longer extremely loud
+		- misc_md2 ent added
+		- increased MAX_MAPS to 64
+		- changeteam does not count a kill for any team
+		- rounds/mags are cleared when a player dies
+		- no more spam when picking up additional helmets
+		- teamsay now lets team members know if they are out of range
+		- tnt now prints frames in ddebug frames
+		- headshot gib should work now (again)
+		- tnt ends firing sequence at frame 17
+
+2002-04-09  wheaty
+	* g_combat.c:
+		- can no longer shoot binocs out of hand w/ drop_shot()
+
+2002-04-07  wheaty
+	* grm/grm_defines.h:
+	* usa/usa_defines.h:
+		- SMG damage is now 25 (used to be 20)
+
+	* g_combat.c:
+		- Fixed drop-shot spam bug and drop-shot "stay in inventory" bug
+
+2002-03-30  pbowens
+	* g_misc.c:
+		- gib fix
+
+2002-03-28  pbowens
+	* g_combat.c:
+	* g_defines.h:
+	* g_items.c:
+	* g_misc.c:
+	* p_view.c:
+	* p_weapon.c:
+		- medic now heals 6 - 8 points per self-heal
+		- standing idle plays first attack animation if TS
+		- new LOC_HELMET
+		- engineer now at 5%
+
+	* g_items.c:
+		- fixed bug with ammo pickup
+
+	* g_cmds.c:
+	* g_weapon.c:
+	* p_weapon.c:
+		- cannot nextwep if you have live tnt
+		- knife/fists do double fire at frames 7 and 9
+		- fixed TNT knife thumping bug
+		- will not print ddebug frames if dedicated server
+
+	* g_items.c:
+		- wont pickup ammo if count is > 1
+
+	* g_misc.c:
+	* g_weapon.c:
+		- fixed gib origins
+		- fixed LOC_GRENADE compile error
+
+2002-03-27  pbowens
+	* g_weapon.c:
+	* p_weapon.c:
+		 fixed small bug where grenade code crashed server when
+		figuring out the team
+
+	* g_cmds.c:
+	* g_defines.h:
+	* g_items.c:
+	* g_local.h:
+	* g_save.c:
+	* g_utils.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_weapon.c:
+		- client can no longer pickup a gun or ammo if they already have it in their inventory
+		- TS FOV upped from 75 to 78
+		- TS FOV shift now occurs 1 frame before end of ARAISE animation
+		- max_bullets now 5, max_slugs 8
+		- WeighPlayer now qboolean
+		- overweight players no longer spammed nor stuck.. but very slow
+		- ddebug frames option for darwin
+
+2002-03-26  species
+	* p_weapon.c:
+		1 liner
+
+2002-03-24  pbowens
+	* g_combat.c:
+		- must be not standing, and not leg wound to get panzer deflection
+		- panzer deflection chance lowered to 30%
+
+2002-03-21  pbowens
+	* cgf_sfx_fog.h:
+		- fixed fog portability issue
+
+	* g_dll.c:
+	* g_dll.h:
+	* g_weapon.c:
+	* p_client.c:
+	* p_weapon.c:
+		- added portability to code
+		- fixed team-switching grenades on pickup
+		- quickened death blend for explosions
+
+2002-03-19  pbowens
+	* g_combat.c:
+	* p_weapon.c:
+		- panzer deflection is only in TS and works with both teams
+		- knife/fists frame is at 7
+
+2002-03-19  species
+	* allfuncs.h:
+	* funcarry.h:
+	* g_cmds.c:
+	* g_local.h:
+	* g_weapon.c:
+	* p_client.c:
+	* p_hud.c:
+	* p_weapon.c:
+	* x_fire.c:
+		tnt re-write
+		tnt fix on drop
+		2 new easter eggs
+
+2002-03-16  pbowens
+	* g_arty.c:
+	* g_cmds.c:
+	* g_combat.c:
+	* g_defines.h:
+	* g_weapon.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_view.c:
+	* p_weapon.c:
+		- STANDARD_FOV is 85
+		- TS_FOV is 75
+		- knife attack frame is 7
+		- arty/fire.wav plays 3 seconds before actual strike (for plane flyby)
+		- fixed tnt and grenade dropping 2 units on death and drop cmds
+		- panzer deflection is now for all wound types
+		- helmet/panzer deflects *should* kick back a little
+
+2002-03-14  pbowens
+	* grm/grm_classes.h:
+	* usa/usa_classes.h:
+		- officer class is now "Officer"
+
+	* g_arty.c:
+	* g_cmds.c:
+	* g_items.c:
+	* g_misc.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_observer.c:
+	* p_weapon.c:
+		- most weapons no longer fire in water
+		- jump stamina bug really fixed
+		- tossclientweapon drops weapon after ammo thus weapon name is printed on pickup
+		- removed all instances of teleporter
+		- helmet is now LOC_SPECIAL
+		- redid binds menu
+		- drop weapon now drops weapon and ammo
+		- drop gun drops the gun only
+		- arty sounds are now team dependant (team/arty/*.wav)
+
+2002-03-09  pbowens
+	* g_utils.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_view.c:
+		- medic_call does not require medic_call anymore
+		- HMG now shows last fire frame when no ammo
+		- WeighPlayer returns if the team_on ptr is defunct
+
+	* g_cmds.c:
+		- cmd_scope will not change TS if the weapon is firing
+
+	* g_local.h:
+	* p_client.c:
+		- unlimited stamina fix
+		- dev build print on connect
+
+2002-03-09  species
+	* allfuncs.h:
+	* funcarry.h:
+	* g_local.h:
+	* g_misc.c:
+	* g_spawn.c:
+	* usa/usa_main.h:
+		banners
+
+2002-03-08  pbowens
+	* g_weapon.c:
+	* p_weapon.c:
+		- grenade timer increased from 3.5 to 4.5
+		- grenade speed multiplier increased from 2.5 to 2.75
+		- now searches for mos defined grenade rather than manually figuring out the team difference
+
+2002-02-07  pbowens
+	* g_combat.c:
+		- null pointer avoidance in case of overflowed player
+
+2002-02-07  species
+	* g_cmds.c:
+	* g_local.h:
+	* g_main.c:
+	* g_save.c:
+	* p_weapon.c:
+		check list on mantis
+
+2002-02-04  wheaty
+	* x_fire.c:
+		 Tweaked my flame-going-through-wall stuff.  Not sure if it
+		will make a difference....
+
+	* g_weapon.c:
+		- Can no longer fire HMG while standing up...
+
+	* g_combat.c:
+		 Morphine/Flamethrower/Fists can no longer be shot out of hands
+		..
+
+	* g_combat.c:
+		- Panzer deflection now works for both head and chest shots
+		- Panzer deflection lowered from 90% to 75%
+		- Removed Engie class limitation for panzer deflection
+
+	* g_combat.c:
+		- Whoops, fixed a small logical error in my drop-shot fix...
+
+	* g_combat.c:
+		- Fixed another logic error... whoops :p
+
+	* g_cmds.c:
+		- Stance-chaning sound no longer played if you are in the water
+
+2002-01-29  pbowens
+	* g_combat.c:
+	* g_defines.h:
+		- fixed g_combat bug
+		- player speed now at 0.85
+
+2002-01-25  wheaty
+	* p_weapon.c:
+		- TNT has 150% the radius if it detonates under water
+		- TNT does 100 more points of damage if it detonates under water
+
+	* p_weapon.c:
+		Removed previous changes... wrong file, whoops.
+
+	* g_weapon.c:
+		- TNT has a 40% chance of not going off if its timer expires under water
+		- TNT damage increased if it detonates under water
+		- TNT dmg_radius increased if it detonates under water
+
+2002-01-23  rezmoth
+	* g_cmds.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_observer.c:
+		* Bleeding latency fix
+		* Class bug fix
+		* Limp finished
+		* Slope bug fix
+
+2002-01-23  pbowens
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_defines.h:
+	* g_dll.c:
+	* g_dll.h:
+	* g_local.h:
+	* g_main.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_weapon.c:
+		- weapon_grenade_fire deducts grenade count, not weapon_grenade_prime (fixes multigrenade bug)
+		- a grenade will drop in front of you if you die and you have a live grenade
+		- SCOPE_SETTING is no longer a CVAR, it is an internal constant of 25
+		- tweaked gun animations
+		- intermission value is constant 10 sec
+		- shows server map upon map load
+		- removed more CVARS: flame_shots and auto_reload (to reduce overflows)
+		- removed invdrop
+		- team DLLs have no cvar interaction anymore
+
+	* g_cmds.c:
+	* g_defines.h:
+	* g_spawn.c:
+	* p_client.c:
+	* p_observer.c:
+	* p_view.c:
+	* p_weapon.c:
+		- a bit nicer grenade timer
+		- all speed functions call WeighPlayer now
+		- when a client changes teams, it uses T_Damage to do the dirty work instead of trying itself
+		- flyingnun is reset in PutClientInServer()
+		- hopeful fix for the 'cannot find file: usa/grm'
+		- i_medic now displays (instead of i_health) if medic sees a teammate below 100 health
+		- jump samina now has threshold of 60, take of 20 which means initially you get 3 jumps
+
+	* g_utils.c:
+		fixed server crashing bug with weighplayer()
+
+	* grm/grm_main.c:
+	* grm/grm_main.h:
+	* usa/usa_main.c:
+	* usa/usa_main.h:
+		- team DLLs have no cvar interaction anymore
+
+2002-01-22  wheaty
+	* g_weapon.c:
+		Tweaked the bazooka/panzer 'You must...' aim message
+
+2002-01-21  wheaty
+	* g_weapon.c:
+		Can no longer fire bazooka/panzer while in water
+
+2002-01-15  pbowens
+	* p_generic_wep.c:
+		- idle frame fix
+
+	* g_cmds.c:
+	* g_dll.c:
+	* g_maps.c:
+	* g_objectives.c:
+		- MOTD has larger buffer
+		- all file accesses use forward slashes and GAMEVERSION
+
+	* allfuncs.h:
+	* g_cmds.c:
+	* g_combat.c:
+	* g_defines.h:
+	* g_items.c:
+	* g_local.h:
+	* g_main.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_observer.c:
+	* p_view.c:
+	* p_weapon.c:
+		- grenades are now primed in firing sequence, distance depends on how long they are held
+		- fists have 100 more frames (DISABLED for titan)
+		- airborne now has lower gravity after spawn and limited falling invulnerability
+		- jump stamina should be working correctly now
+		- map list crashing bug should be fixed (needs testing)
+		- can not pick up more than one helmet
+		- drop weapon but still firing bug hopefully fixed
+
+	* p_generic_wep.c:
+		- missing frames bug
+
+2002-01-12  pbowens
+	* g_utils.c:
+	* grm/grm_classes.h:
+	* p_client.c:
+	* p_weapon.c:
+	* usa/usa_classes.h:
+		- reduced limp
+		- officer classed changed for each team
+
+	* allfuncs.h:
+	* g_dll.c:
+	* g_ents.c:
+	* g_local.h:
+	* p_classes.c:
+		 playermodel and teamid userdll exports are now pure strings, 
+		not pointers
+
+2002-01-10  pbowens
+	* allfuncs.h:
+	* cgf_sfx_fog.cpp:
+	* cgf_sfx_fog.h:
+	* funcarry.h:
+	* g_ai.c:
+	* g_arty.c:
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_combat.c:
+	* g_defines.h:
+	* g_dll.c:
+	* g_dll.h:
+	* g_ents.c:
+	* g_func.c:
+	* g_items.c:
+	* g_local.h:
+	* g_main.c:
+	* g_maps.c:
+	* g_maps.h:
+	* g_misc.c:
+	* g_monster.c:
+	* g_objectives.c:
+	* g_phys.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_svcmds.c:
+	* g_target.c:
+	* g_trigger.c:
+	* g_turret.c:
+	* g_utils.c:
+	* g_weapon.c:
+	* game.h:
+	* grm/grm_classes.h:
+	* grm/grm_defines.h:
+	* grm/grm_guninfo.c:
+	* grm/grm_item.c:
+	* grm/grm_main.c:
+	* grm/grm_main.h:
+	* grm/grm_spawn.c:
+	* grm/grm_weapon.c:
+	* m_actor.c:
+	* m_actor.h:
+	* m_flash.c:
+	* m_insane.c:
+	* m_insane.h:
+	* m_move.c:
+	* m_player.h:
+	* p_classes.c:
+	* p_classes.h:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_menu.c:
+	* p_menu.h:
+	* p_menus.h:
+	* p_observer.c:
+	* p_observer.h:
+	* p_trail.c:
+	* p_view.c:
+	* p_weapon.c:
+	* q_shared.c:
+	* q_shared.h:
+	* u_entmgr.c:
+	* u_entmgr.h:
+	* u_findfunc.c:
+	* u_findfunc.h:
+	* usa/usa_classes.h:
+	* usa/usa_defines.h:
+	* usa/usa_guninfo.c:
+	* usa/usa_item.c:
+	* usa/usa_main.c:
+	* usa/usa_main.h:
+	* usa/usa_spawn.c:
+	* usa/usa_weapon.c:
+	* x_fbomb.c:
+	* x_fbomb.h:
+	* x_fire.c:
+	* x_fire.h:
+	* z_removed.c:
+		- removed log from CVS keywords
+
+2002-01-09  pbowens
+	* allfuncs.h:
+	* funcarry.h:
+	* g_cmds.c:
+	* g_combat.c:
+	* g_defines.h:
+	* g_items.c:
+	* g_local.h:
+	* g_main.c:
+	* g_monster.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_utils.c:
+	* g_weapon.c:
+	* grm/grm_main.c:
+	* p_classes.c:
+	* p_client.c:
+	* p_view.c:
+	* p_weapon.c:
+	* usa/usa_main.c:
+		- teams now precache player model and vweps
+		- fixed vwep limit
+		- cannot switch weapons if you have live grenade
+		- fixed medic insta-heal for self
+		- medic heal sounds are played by the healed, not the medic
+		- old_watertype incorporated for players/cloth.wav to play
+		- cratered -> fell to his death
+		- sank like a rock -> drowned
+		- removed teamgren cvar
+		- crawling is 45% instead of 50% speed
+		- new invuln_spawn cvar (default: 2) sets player temp invulnerable after spawn
+		- helmet uses w_helmet instead of w_special4
+		- flame_mag uses a_flame instead of a_cells
+		- truesight factor lowered to 1.75 instead of 2
+		- aimed panzer deflection chance now 90%
+		- new use system (weapon1, weapon2, special, grenades, melee, pickup)
+
+2002-01-08  pbowens
+	* g_cmds.c:
+	* g_combat.c:
+	* g_utils.c:
+	* g_weapon.c:
+	* grm/grm_classes.h:
+	* grm/grm_weapon.c:
+	* p_client.c:
+	* p_hud.c:
+	* usa/usa_classes.h:
+	* usa/usa_weapon.c:
+		- sniper firing frames/zooming fixed
+		- engineer can carry standard amount, raised to 85% speed instead of 80%
+		- intermission mode sets limbo_mode
+		- new limp from rezmoth
+		- crawl is 50% speed instead of 55%
+		- leg wound is 75% speed instead of 50%
+		- WeighPlayer called in T_Damage for legwound speed effect
+		- drop doesnt work if no team or class
+		- player drops ammo on death now, too
+
+2002-01-07  pbowens
+	* g_items.c:
+	* grm/grm_guninfo.c:
+	* grm/grm_weapon.c:
+	* p_client.c:
+	* p_observer.c:
+	* p_view.c:
+	* p_weapon.c:
+	* usa/usa_guninfo.c:
+	* usa/usa_weapon.c:
+		- mg42 uses 2 firing frames
+		- BAR's RoF restored to original
+		- tnt vwep added
+		- jump anims now reflect the stance
+		- patched up speed system (cl_speed 'cheats')
+		- removed weapons/hgrenlb1b.wav from knife/fists
+
+2002-01-03  species
+	* g_cmds.c:
+		fixed a boo boo on my part
+
+2002-01-01  species
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_combat.c:
+	* g_misc.c:
+	* g_weapon.c:
+	* p_client.c:
+		misc fixes
+		TNT no long sticks to sky
+		
+		MOTD:
+		Added "MOTD" command
+		updated useful binds list with MOTD
+		made MOTD start instead of "Get Ready for Battle"
+		and after the level_wait is done, MOTD will be displayed to anyone who joins.
+
+	* g_cmds.c:
+		removed test code.
+
+2001-12-31  pbowens
+	* g_combat.c:
+		- removed extra debug messages (anti-dive/locdamage)
+
+	* g_cmds.c:
+		- checks for p_rnd in reload and exits if null (game crash)
+
+	* allfuncs.h:
+	* funcarry.h:
+	* g_arty.c:
+	* g_cmds.c:
+	* g_combat.c:
+	* g_dll.c:
+	* g_items.c:
+	* g_local.h:
+	* g_main.c:
+	* g_misc.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_weapon.c:
+	* game.def:
+	* grm/grm_classes.h:
+	* grm/grm_guninfo.c:
+	* grm/grm_item.c:
+	* grm/grm_main.c:
+	* grm/grm_weapon.c:
+	* p_classes.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_observer.c:
+	* p_view.c:
+	* p_weapon.c:
+	* q_shared.h:
+	* u_entmgr.c:
+	* usa/game.def:
+	* usa/usa_classes.h:
+	* usa/usa_guninfo.c:
+	* usa/usa_item.c:
+	* usa/usa_main.c:
+	* usa/usa_weapon.c:
+		- integration of the symbolic branch dday-extended-vweps
+		- level_wait is now actually used at the beginning of the map
+		- medic has '+' in front of his name
+		- cleaned up sniper TS firing
+		- updated HUD code for new ammo locs, and no stats unless actually playing
+		- reduced amount of client updates for prone-TS-firing
+		- fixed officer requiring lookthru binocs to fire arty
+		- HUD uses STAT_MAGS STAT_ROUNDS instead of default q2 AMMO and ARMOR
+		- entirely new grenade system: remembers owner, consistant models, and stable timer
+		- player gets knife *after* in game, not before
+		- SMG's now have old kickback in them along with rez's new firing system
+		- removed 'glider' from metal surface sounds
+		- fixed null pickup names for team items (inventory now 100% complete)
+		- when player dies, if attacker isnt a client but has a client owner, that attacker becomes the owner
+		- mp40 plays unload at frame 47, works (but not on 46..?)
+		- everything gets 5 clips except infs, which get 8, and pistols which get 3
+		- removed one actual firing frame from BAR, significantly reducing RoF
+		- teams now have precache functions for non-items
+		- team items are now precached upon the insertion of itemlist spot
+		- removed STAT_RESPWAWN
+		- grenade timer at 3.5 seconds
+		- binocs have been added to vweps
+		- new stamina bar added
+		- removed auto_weapon_change and observer_on_death cvars
+		- standard items now precached at worldspawn
+		- cleaned up standard item precache strings
+		- cannot use menu commands if objective is displayed or in level_wait
+
+	* g_weapon.c:
+	* p_client.c:
+		- removed extra debug messages (anti-dive/locdamage)
+		- fixed HMG random firing
+
+2001-12-29  pbowens
+	* g_arty.c:
+	* p_client.c:
+		- arty requires officer to aim binocs
+		- set ucmd's to 0 when firing prone/TS
+
+2001-12-28  pbowens
+	* g_cmds.c:
+	* g_misc.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_observer.c:
+	* p_view.c:
+		* getting out of barbed wire (lava) plays players/cloth.wav
+		* removed TagFree for dynamic menus in effort to remove 'scrambled menu' bug
+		* sniper doesnt play looping anims at 0 rnds now
+		* added 'white' and 'snow' to the sand footstep keyword list
+		* fixed 'binds' command
+		* unaim-diving now checks 15 units from ground instead of 10 to compensate for most slopes
+		* experimental prone/fire movement stop system
+
+	* grm/grm_guninfo.c:
+	* p_client.c:
+	* usa/usa_guninfo.c:
+		- fixed last TS/aim/prone bug
+		- m98k, m98ks, m1903 play lastround
+
+2001-12-21  wheaty
+	* g_cmds.c:
+		User can't use voice/shouts while dead
+
+2001-12-19  wheaty
+	* g_combat.c:
+		SMG/LMG's can no longer inflict headshots
+
+2001-12-19  pbowens
+	* g_combat.c:
+	* usa/usa_guninfo.c:
+		* BAR uses frame 65 for reload
+		* fixed server crashing bug for panzer deflection
+
+2001-12-16  wheaty
+	* g_misc.c:
+		misc_viper_bomb entity no longer draws a rocket trail behind it.
+
+	* g_combat.c:
+		- Panzer deflection no longer requires a shot in the head
+		- Must have panzer in hands for deflection to work
+
+2001-12-14  wheaty
+	* g_arty.c:
+		Officer must now have binocs in his hands to call an airstrike.
+
+2001-12-10  wheaty
+	* usa/usa_defines.h:
+		Thompson -> 20 dmg
+
+	* grm/grm_defines.h:
+		MP40 -> 20 dmg
+
+2001-12-07  wheaty
+	* p_client.c:
+		Doubled bloodsprays on explosive gib
+
+	* p_client.c:
+		QUADRUPLED bloodsprays on explosive gib
+
+2001-12-06  wheaty
+	* g_misc.c:
+		Brains from headshots *should* only stay in the world for 45
+		seconds now
+
+2001-12-05  wheaty
+	* p_client.c:
+		Added bloodsprays to explosive-deaths as requested by Darwin.
+
+	* g_misc.c:
+		More tweaks to HeadShotGib()
+
+	* g_combat.c:
+		A small modification to the SprayBlood() function.
+
+	* g_combat.c:
+		Removed blood-spray on helmet deflection.
+
+	* g_misc.c:
+		Modified the HeadShotGib() function.  The brains now fly out a
+		lot better (easier to see).
+
+	* g_combat.c:
+		If a helmet or panzershrek-shield-thingy deflects a shot, it
+		draws a spark at the point of deflection
+
+2001-12-05  pbowens
+	* p_client.c:
+		fixed jump bug
+
+	* g_spawn.c:
+	* grm/grm_item.c:
+	* p_hud.c:
+	* p_weapon.c:
+	* usa/usa_item.c:
+		new hud icons for darwin
+
+	* g_combat.c:
+	* g_weapon.c:
+	* p_hud.c:
+		- no more 'No Team' in HUD
+		- changed drop msg to include "SHIT.."
+		- rasied rocket dmg from 175 to 225
+
+	* p_hud.c:
+		removed unreferenced variable in scoreboard function
+
+2001-12-04  pbowens
+	* g_combat.c:
+	* g_local.h:
+	* g_main.c:
+	* g_save.c:
+	* grm/grm_guninfo.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_weapon.c:
+	* usa/usa_guninfo.c:
+		- smoother flamer, fixed smaller fire while move bug
+		- removed crosshair fix, only works in SP
+		- fixed infinite ammo bug with persistant rounds
+		- removed jump stamina vectorlength check
+		- m1903 and m98ks now wait 25 frames before firing instead of 17
+		- reloading plays pain animations
+		- panzer deflection raised to 60%, plays richochet snd
+
+	* p_generic_wep.c:
+		- fixed reload anim bug
+
+2001-12-02  species
+	* g_cmds.c:
+	* g_combat.c:
+		drop gun fixed
+
+2001-12-01  rezmoth
+	* g_weapon.c:
+	* grm/grm_defines.h:
+	* p_client.c:
+	* p_view.c:
+	* p_weapon.c:
+	* usa/usa_defines.h:
+		Lobby Update
+		Jump bug - plz remove IF
+
+2001-11-29  pbowens
+	* g_combat.c:
+	* g_defines.h:
+	* g_local.h:
+	* g_main.c:
+	* g_misc.c:
+	* g_save.c:
+	* grm/grm_guninfo.c:
+	* p_client.c:
+	* p_hud.c:
+	* p_menu.c:
+	* p_observer.c:
+	* p_weapon.c:
+	* usa/usa_guninfo.c:
+	* x_fire.c:
+		- self spawned fire balls do not ignite
+		- player can switch to empty weapon
+		- TagFree text pointer vars in menus
+		- fixed no hud bug (reset client menu memaddress to 0 in PMenu_close)
+		- created 'crosshair' userinfo cvar and new crosshair func to disable cheaters
+		- flyingnun no longer SERVERINFO
+		- many other cvars are NOW SERVERINFO
+		- removed tile10/tile11 from footsteps list
+		- flamer mag is now 300 (instead of 500)
+		- bullet deflection should now save player and prints: DEFLECTION
+		- usa/colt & m1903 & grm/m98ks no longer play lastround
+
+2001-11-19  pbowens
+	* p_client.c:
+		- jump stamina doesnt decrease while in air
+		- dead client's weapon should now retain guninfo->rnd_count
+
+2001-11-19  species
+	* g_cmds.c:
+	* g_defines.h:
+	* g_items.c:
+	* g_local.h:
+	* g_weapon.c:
+	* p_client.c:
+	* p_hud.c:
+	* p_weapon.c:
+		Magic TNT Fixed
+		tnt_touch = no crashy crashy
+
+2001-11-18  rezmoth
+	* g_cmds.c:
+	* g_combat.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_observer.c:
+		11/17/01 - rezmoth:
+		Updated bullet trajectories for future PAK
+		Improved lobby
+		A Dozen minor modifications
+
+2001-11-18  pbowens
+	* g_cmds.c:
+	* g_weapon.c:
+		- added 'scoreboard' to binds menu
+		- moved cvs logs to bottom
+
+	* p_generic_wep.c:
+		-firing frames
+
+	* p_client.c:
+	* p_view.c:
+		- cleaned up warnings
+
+2001-11-15  rezmoth
+	* g_cmds.c:
+	* g_weapon.c:
+	* p_client.c:
+	* p_view.c:
+	* p_weapon.c:
+		11/14/01 - rezmoth:
+		Minor tweaks from the beta server that I wanted.
+
+2001-11-10  pbowens
+	* g_cmds.c:
+	* g_combat.c:
+	* g_local.h:
+	* p_client.c:
+	* p_hud.c:
+	* p_observer.c:
+	* p_weapon.c:
+		- changed menu system a bit, nothing large though
+		- moved long cvs file logs to bottom of frequently edited files
+
+2001-11-10  wheaty
+	* g_cmds.c:
+		Put the truesight switch while reloading fix back in.
+
+2001-11-10  rezmoth
+	* g_cmds.c:
+	* g_combat.c:
+	* g_local.h:
+	* g_weapon.c:
+	* p_client.c:
+		11/09/01 - rezmoth:
+		Updated anti-dive system based on distance not velocity
+		Level change lobby time added
+		Sniper scope wobble added
+		Wrecked wound system while experimenting for future
+
+2001-11-09  species
+	* g_misc.c:
+	* g_spawn.c:
+	* g_weapon.c:
+		misc_skeleton
+		TNT Boom
+
+2001-11-07  pbowens
+	* g_cmds.c:
+	* g_local.h:
+	* g_main.c:
+	* g_save.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* x_fire.c:
+		- flame plays 8 animations instead of 1
+		- uses sprites/s_explod for darwin
+		- player does not play/loop attack animations if running and not in truesight
+		- new cvar: level_wait (default 5) that adds specified time to begging [not in yet] and end of game
+		- player may not get from crouch/prone -> standing if there is another player on top of him
+
+2001-11-07  species
+	* g_cmds.c:
+		tnt sounds for pullout, toss
+		4 flamer sounds
+		fixed the knife error
+		fixed medic sounds
+
+2001-11-07  rezmoth
+	* g_cmds.c:
+	* g_combat.c:
+	* g_weapon.c:
+	* p_client.c:
+		11/07/01 - rezmoth:
+		Updated firing system
+		Leg wound limp prototype
+		Possibly included unaiming by accident
+
+2001-11-01  pbowens
+	* p_hud.c:
+	* p_weapon.c:
+		team scopes
+		medic changes: kill loss only if target is same team, bleeding, and TK is OFF- also self increments heallth 5 per pump
+
+2001-10-30  species
+	* g_cmds.c:
+	* g_weapon.c:
+	* p_weapon.c:
+		TNT now has a sparkle
+		drop weapon blocks flamer
+		*flamer loses ammo when dropped
+
+2001-10-30  rezmoth
+	* g_combat.c:
+	* g_weapon.c:
+	* grm/grm_classes.h:
+	* p_view.c:
+		10/29/01 - RezMoth
+		* Firing system near complete
+		* Hitboxes ready for beta release
+		* Experimental explosion effects
+
+2001-10-28  wheaty
+	* p_weapon.c:
+		Ooops... forgot to comment out some debug printf's
+
+	* g_cmds.c:
+		Cleaned up the sniper zoom in/out cheat with more modular code
+
+	* g_misc.c:
+		Brains should now last for 20 seconds
+
+	* p_client.c:
+		Changed knife death message: Player was castrated by Player
+
+2001-10-27  wheaty
+	* p_client.c:
+		Don't chuck out a brain when mod = MOD_KNIFE
+		Cleaned up some code in the player_die function to make it less redundant.
+
+	* g_cmds.c:
+		whoops, disregard last log message :D
+		Kept the cleanups in, though.
+
+	* g_cmds.c:
+		Fixed the sniper zoom in/zoom out fast shoot cheat.
+
+	* g_misc.c:
+		Brains from headshots should only stick around for 10 seconds now
+		(level.framenum + 100)
+
+	* g_cmds.c:
+		Fixed Flamethrower->Drop Ammo bug.
+		Small code cleanup, changed pers.weapon->pickupname to
+		pers.weapon->classname in the if statement.
+
+2001-10-26  pbowens
+	* p_weapon.c:
+		* medic cannot heal himself and get frag/other team kill--
+
+2001-10-25  wheaty
+	* p_client.c:
+		fixed the continuous death sound message
+
+	* grm/grm_classes.h:
+	* usa/usa_classes.h:
+		Changed flamer speed from .85 to .80
+
+	* p_client.c:
+		added misc. comments
+
+	* x_fire.c:
+		Fixed flamethrower shooting through solid objects (sorta... 
+		still works if they are right up against the wall)
+
+	* x_fire.c:
+		More flame-through-wall tweaks.
+		Still goes through walls < 16 units wide (I think)
+
+	* g_cmds.c:
+		Fixed reload while switching to truesight/out of truesight bug
+
+2001-10-25  pbowens
+	* allfuncs.h:
+	* funcarry.h:
+	* g_ai.c:
+	* g_arty.c:
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_combat.c:
+	* g_defines.h:
+	* g_dll.c:
+	* g_dll.h:
+	* g_ents.c:
+	* g_func.c:
+	* g_items.c:
+	* g_local.h:
+	* g_main.c:
+	* g_maps.c:
+	* g_maps.h:
+	* g_misc.c:
+	* g_monster.c:
+	* g_objectives.c:
+	* g_phys.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_svcmds.c:
+	* g_target.c:
+	* g_trigger.c:
+	* g_turret.c:
+	* g_utils.c:
+	* g_weapon.c:
+	* game.h:
+	* grm/grm_classes.h:
+	* grm/grm_defines.h:
+	* grm/grm_guninfo.c:
+	* grm/grm_item.c:
+	* grm/grm_main.c:
+	* grm/grm_main.h:
+	* grm/grm_spawn.c:
+	* grm/grm_weapon.c:
+	* m_actor.c:
+	* m_actor.h:
+	* m_flash.c:
+	* m_insane.c:
+	* m_insane.h:
+	* m_move.c:
+	* m_player.h:
+	* p_classes.c:
+	* p_classes.h:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_menu.c:
+	* p_menu.h:
+	* p_menus.h:
+	* p_observer.c:
+	* p_observer.h:
+	* p_trail.c:
+	* p_view.c:
+	* p_weapon.c:
+	* q_shared.c:
+	* q_shared.h:
+	* u_entmgr.c:
+	* u_entmgr.h:
+	* u_findfunc.c:
+	* u_findfunc.h:
+	* usa/usa_classes.h:
+	* usa/usa_defines.h:
+	* usa/usa_guninfo.c:
+	* usa/usa_item.c:
+	* usa/usa_main.c:
+	* usa/usa_main.h:
+	* usa/usa_spawn.c:
+	* usa/usa_weapon.c:
+	* x_fbomb.c:
+	* x_fbomb.h:
+	* x_fire.c:
+	* x_fire.h:
+	* z_removed.c:
+		- added CVS keyword headers
+
+	* g_cmds.c:
+	* g_combat.c:
+	* g_defines.h:
+	* g_maps.h:
+	* grm/grm_classes.h:
+	* grm/grm_guninfo.c:
+	* grm/grm_weapon.c:
+	* p_weapon.c:
+	* usa/usa_classes.h:
+		* updated 'binds'
+		* can drop while prone/crouched
+		* dropping your current weapon does the same thing as 'drop weapon'
+		* explosion effects toned down
+		* tweaked up drop ammo to work only with real weapons
+		* medic now has full recoveries which credit him a frag and the other team looses a kill
+		* changed MAX_MAPS from 16 to 32 for maplist
+
+	* p_client.c:
+		 fixed game crashing line in ClientSetMaxSpeed that referenced
+		weapon info when no weapon was present
+
+2001-10-22  wheaty
+	* x_fire.c:
+		Flamethrower changes
+
+	* p_weapon.c:
+		Flamethrower spread now = (5, 5, 0) from (10,20,0)
+		Increased flamethrower speed a little bit, it also accelerates
+		3x faster now.
+
+2001-10-21  pbowens
+	* p_generic_wep.c:
+		* fixed last bug that prevented from weapon firing
+
+2001-10-21  wheaty
+	* g_items.c:
+		Grenade packs now only have 1 grenade in them (regardless of how many
+		were in player's inventory)
+		Player still loses all grenades when they drop grenades (and only get one back if
+		they pick it back up).
+
+	* p_client.c:
+		Max grenades = 2
+		Fixed that stupid compilation warning
+
+2001-10-20  pbowens
+	* g_cmds.c:
+	* p_client.c:
+	* p_weapon.c:
+		[bug patch]
+		* drop * does not drop if dead
+		* do some guninfo tests before using that struct
+		* clear one unnecessary variable in p_client
+
+	* g_cmds.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_view.c:
+		* standing only plays footsteps
+		* fixed drop ammo/weapon crashing server when client was dead and issued command
+		* fixed scoreboard misprint for flyingnun
+		* weapon drop checks for drop function before continuing (crashes)
+		* removed some more teleport stuff
+		* attack frames now put more loop into them, gun with no ammo doesnt play animations
+
+2001-10-19  rezmoth
+	* g_combat.c:
+	* g_weapon.c:
+		Rezmoth - 10/19/01:
+		* Locational damage bypassed in T_Damage to fix hitboxes.
+		* New firing system partially implemented.
+
+2001-10-17  wheaty
+	* p_weapon.c:
+		Morphine can now heal up to 150
+
+	* p_client.c:
+		Added new gibs for explosive death ONLY
+		Modified the headshot head gib to dissapear in 10 seconds (I think)
+
+	* g_misc.c:
+		Changed the gib model in HeadShotGib() to
+		models/objects/gibs/brain/tris.md2
+
+2001-10-13  wheaty
+	* p_client.c:
+		Added support for Species' TNT to
+		the gib-on-explosive-death
+
+2001-10-12  pbowens
+	* allfuncs.h:
+	* g_arty.c:
+	* g_combat.c:
+	* g_local.h:
+	* g_misc.c:
+	* g_monster.c:
+	* g_weapon.c:
+	* grm/grm_main.c:
+	* p_client.c:
+	* p_hud.c:
+	* p_observer.c:
+	* p_view.c:
+		* suicides now count as kill for opposing team
+		* fixed some surface textures not playing sound
+		* do not play surface texture sound if prone
+		* tracers have proper meansOfDeath (previously the function had it as MOD_UNKNOWN, thus no death msg)
+		* changed client/monster damage types to DAMAGE_YES (was DAMAGE_AIM) to prevent autoaim from gibbing dead bodies
+
+	* p_hud.c:
+		* fixed missing ) in scoreboard code (whoops)
+
+	* g_cmds.c:
+	* g_objectives.c:
+	* g_utils.c:
+	* g_weapon.c:
+	* grm/grm_guninfo.c:
+	* grm/grm_weapon.c:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_observer.c:
+	* p_weapon.c:
+		* fixed drop ammo exploit
+		* objective_touch can now only be taken if owning team is not touching it
+		* _really_ fixed the prone weapon switch
+		* no more teleport particles on player joins
+		* mg42 now has 2 firing frames instead of 3
+		* scoreboard says 'No Team' in place of 'Spectators'
+
+2001-10-12  species
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_items.c:
+	* g_local.h:
+	* g_spawn.c:
+	* g_weapon.c:
+	* grm/grm_classes.h:
+	* grm/grm_item.c:
+	* p_client.c:
+	* p_weapon.c:
+	* usa/usa_classes.h:
+	* usa/usa_item.c:
+		TNT
+		Flamer Speed Fix
+		Drop Weapon (semi bugged in drop)
+		Drop Ammo (bugged dropping after no clips left)
+		Random sounds when healed by medic
+		New easter egg,  cmd:   drop GerbilsAreTheGreatestInTheWorld
+
+2001-10-12  wheaty
+	* grm/grm_classes.h:
+	* usa/usa_classes.h:
+		Changed running speeds:
+		Airborne (from 1 to 0.95)
+		Officer (from 1 to 0.90)
+
+	* g_combat.c:
+		More Blood Spray related tweaks
+
+	* usa/usa_weapon.c:
+		Added a commented line to the m1 function...
+		Uncomment if you want to enable 'topping off'
+
+	* usa/usa_defines.h:
+		Lowered M1 damage from 50 (one shot kills) to 33.
+
+2001-10-11  pbowens
+	* allfuncs.h:
+	* cgf_sfx_fog.cpp:
+	* cgf_sfx_fog.h:
+	* funcarry.h:
+	* g_cmds.c:
+	* g_combat.c:
+	* g_defines.h:
+	* g_local.h:
+	* g_main.c:
+	* g_misc.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_svcmds.c:
+	* g_weapon.c:
+	* p_hud.c:
+	* p_view.c:
+	* p_weapon.c:
+	* q_shared.h:
+		- explosion effects
+		- fixed scoreboard spectators
+		- victory msgs / sounds
+		- added future SP fog support
+		- surface type tootstep sounds
+
+2001-10-11  wheaty
+	* g_combat.c:
+		Commented out Debug code left in the SprayBlood function...
+
+	* g_combat.c:
+		Blood Spray WORKS!
+
+	* g_cmds.c:
+		Changed the Team message indicator
+		from (NAME):MESSAGE to (Team)NAME:MESSAGE
+
+2001-10-10  wheaty
+	* g_cmds.c:
+		Added a routine which makes sure that you can't
+		"null spam"  in the Com_Say_f function.
+
+2001-10-09  pbowens
+	* cgf_sfx_fog.cpp:
+	* cgf_sfx_fog.h:
+	* g_local.h:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_weapon.c:
+		- persistant clips (perhaps still buggy)
+		- added 2 fog files
+
+2001-10-07  pbowens
+	* g_cmds.c:
+	* g_combat.c:
+	* g_items.c:
+	* g_local.h:
+	* g_objectives.c:
+	* g_save.c:
+	* p_classes.c:
+	* p_hud.c:
+	* p_weapon.c:
+	* u_entmgr.c:
+	* x_fire.c:
+		- fixed new scoreboard with spectators
+		- fixed game crashing bug
+		- flamer uses sprites
+		- wepon tweaks
+		- cosmetics to g_local.h
+
+2001-09-16  pbowens
+	* grm/grm.mak:
+	* grm/grm.plg:
+	* usa/usa.dep:
+	* usa/usa.mak:
+	* usa/usa.plg:
+		removed unnecessary MSVC6 files
+
+	* feeder.c:
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_local.h:
+	* g_save.c:
+	* p_hud.c:
+		* fixed the no-team-can-win situation
+		* completely redid the scoreboard (based off of CTF)
+		* added cmd scoreboard
+
+	* feeder.c:
+		another check.. i'm bad, aren't i?
+
+	* feeder.c:
+	* g_feeder.c:
+		unnecessary- just create extra objs to compile
+
+	* g_ai.c:
+		cvs check
+
+2001-08-29  pbowens
+	* wwii.dep:
+	* wwii.mak:
+		MSVC specific files that are automatically generated anyway
+
+	* g_cmds.c:
+		testing s/\r//g;
+
+	* allfuncs.h:
+	* feeder.c:
+	* funcarry.h:
+	* g_ai.c:
+	* g_arty.c:
+	* g_cmds.h:
+	* g_dll.c:
+	* g_dll.h:
+	* g_ents.c:
+	* g_feeder.c:
+	* g_func.c:
+	* g_items.c:
+	* g_main.c:
+	* g_maps.c:
+	* g_maps.h:
+	* g_monster.c:
+	* g_objectives.c:
+	* g_phys.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_svcmds.c:
+	* g_target.c:
+	* g_trigger.c:
+	* g_turret.c:
+	* g_utils.c:
+	* g_weapon.c:
+	* game.h:
+	* grm/grm_classes.h:
+	* grm/grm_defines.h:
+	* grm/grm_guninfo.c:
+	* grm/grm_item.c:
+	* grm/grm_main.c:
+	* grm/grm_main.h:
+	* grm/grm_spawn.c:
+	* grm/grm_weapon.c:
+	* m_actor.c:
+	* m_flash.c:
+	* m_insane.c:
+	* m_move.c:
+	* m_player.h:
+	* p_classes.c:
+	* p_classes.h:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_menu.c:
+	* p_menu.h:
+	* p_menus.h:
+	* p_observer.c:
+	* p_observer.h:
+	* p_view.c:
+	* q_shared.c:
+	* q_shared.h:
+	* u_entmgr.c:
+	* u_entmgr.h:
+	* u_findfunc.c:
+	* u_findfunc.h:
+	* usa/usa_classes.h:
+	* usa/usa_defines.h:
+	* usa/usa_guninfo.c:
+	* usa/usa_item.c:
+	* usa/usa_main.c:
+	* usa/usa_main.h:
+	* usa/usa_spawn.c:
+	* usa/usa_weapon.c:
+	* x_fbomb.c:
+	* x_fbomb.h:
+	* x_fire.c:
+	* x_fire.h:
+	* z_removed.c:
+		killed the \r's to prevent double spacing from occuring again
+
+2001-08-27  pbowens
+	* z_extract.c:
+		more cosmetic than anything.. this *is* it
+
+	* removed.c:
+		yet another.. hopefully the last
+
+	* g_unstick.c:
+		not required for compilation, mistake living it in the distro--
+		duh!
+
+	* g_combat.c:
+	* g_defines.h:
+	* g_local.h:
+	* g_misc.c:
+	* p_client.c:
+	* p_weapon.c:
+		wheaty's changes: head shot gib, sprayblood, bullet whiz, and
+		explosion deaths always gib
+
+2001-08-21  pbowens
+	* z_extract.c:
+		example
+
+	* g_dll.DDAY.c:
+	* g_dll.DDAY.h:
+	* grm/grm.dsp:
+	* grm/grm.dsw:
+	* q_shared.DDAY.c:
+	* q_shared.DDAY.h:
+	* usa/usa.dsp:
+	* usa/usa.dsw:
+	* wwii.dsp:
+	* wwii.dsw:
+		removed unnecessary files
+
+	* z_extract.c:
+		test 1
+
+	* Makefile:
+	* allfuncs.h:
+	* feeder.c:
+	* funcarry.h:
+	* g_ai.c:
+	* g_arty.c:
+	* g_cmds.c:
+	* g_cmds.h:
+	* g_combat.c:
+	* g_defines.h:
+	* g_dll.DDAY.c:
+	* g_dll.DDAY.h:
+	* g_dll.c:
+	* g_dll.h:
+	* g_ents.c:
+	* g_feeder.c:
+	* g_func.c:
+	* g_items.c:
+	* g_local.h:
+	* g_main.c:
+	* g_maps.c:
+	* g_maps.h:
+	* g_misc.c:
+	* g_monster.c:
+	* g_objectives.c:
+	* g_phys.c:
+	* g_save.c:
+	* g_spawn.c:
+	* g_svcmds.c:
+	* g_target.c:
+	* g_trigger.c:
+	* g_turret.c:
+	* g_unstick.c:
+	* g_utils.c:
+	* g_weapon.c:
+	* game.def:
+	* game.h:
+	* grm/Makefile:
+	* grm/game.def:
+	* grm/grm.dsp:
+	* grm/grm.dsw:
+	* grm/grm.mak:
+	* grm/grm.plg:
+	* grm/grm_classes.h:
+	* grm/grm_defines.h:
+	* grm/grm_guninfo.c:
+	* grm/grm_item.c:
+	* grm/grm_main.c:
+	* grm/grm_main.h:
+	* grm/grm_spawn.c:
+	* grm/grm_weapon.c:
+	* license.txt:
+	* m_actor.c:
+	* m_actor.h:
+	* m_flash.c:
+	* m_insane.c:
+	* m_insane.h:
+	* m_move.c:
+	* m_player.h:
+	* p_classes.c:
+	* p_classes.h:
+	* p_client.c:
+	* p_generic_wep.c:
+	* p_hud.c:
+	* p_menu.c:
+	* p_menu.h:
+	* p_menus.h:
+	* p_observer.c:
+	* p_observer.h:
+	* p_trail.c:
+	* p_view.c:
+	* p_weapon.c:
+	* q_shared.DDAY.c:
+	* q_shared.DDAY.h:
+	* q_shared.c:
+	* q_shared.h:
+	* readme.txt:
+	* removed.c:
+	* u_entmgr.c:
+	* u_entmgr.h:
+	* u_findfunc.c:
+	* u_findfunc.h:
+	* usa/Makefile:
+	* usa/game.def:
+	* usa/usa.dep:
+	* usa/usa.dsp:
+	* usa/usa.dsw:
+	* usa/usa.mak:
+	* usa/usa.plg:
+	* usa/usa_classes.h:
+	* usa/usa_defines.h:
+	* usa/usa_guninfo.c:
+	* usa/usa_item.c:
+	* usa/usa_main.c:
+	* usa/usa_main.h:
+	* usa/usa_spawn.c:
+	* usa/usa_weapon.c:
+	* wwii.dep:
+	* wwii.dsp:
+	* wwii.dsw:
+	* wwii.mak:
+	* x_fbomb.c:
+	* x_fbomb.h:
+	* x_fire.c:
+	* x_fire.h:
+	* z_extract.c:
+	* z_removed.c:
+		Imported sources beta3
+

@@ -1,0 +1,479 @@
+
+Lithium II Mod release history.  I miss some things some times.  -WhiteFang
+
+v1.31 - Sep 2010
+----------------------------------------------------------------------------
+added, source repository to github at http://github.com/WhiteFang34/li2mod
+fixed, MOTD buffer overflow (from ralf)
+added, use strlcpy/strlcat to protect against buffer overflows (from ralf)
+thanks, ralf for all of the improvements, cleanup and updates for VC 2010
+fixed, runes should be dropped for reuse if player goes into observer mode
+added, don't repeat the same map if it was just voted on
+added, time left to top of CTF scoreboard
+fixed, rune spawning was broken if resist rune was disabled
+fixed, safety couldn't be disabled by setting use_safety to 0
+fixed, consistency of regen rune timing
+fixed, chasecam mode didn't work if CTF was enabled
+fixed, CTF flag was dropped from observers at level start
+added, CTF flag return sound when it's returned for timeout
+fixed, force CTF team menu after going into observer, chasecam or next map
+added, muzzle logic to say_team command
+disabled, lmaster support for now (and removed from docs)
+thanks, again to d3s for facilitating this release!
+
+v1.30 - Jan 2010
+----------------------------------------------------------------------------
+elapsed, over 10 years
+added, GPL v3 license for source code
+fixed, minor build issues for modern compilers (using GCC v4 now)
+removed, mailing list section from readme.txt
+removed, advertisements for Qoole and Lithium Software
+fixed, date formatting for year 2000 and later
+fixed, crash when loading high scores
+fixed, nickname format string vulnerability with high scores
+fixed, various buffer overflow vulnerabilities (from r1ch)
+fixed, use server kick instead of client disconnect for kicking (from r1ch)
+fixed, invisible player bug (from r1ch)
+removed, admin back door (from r1ch)
+thanks, to r1ch for the 1.25-R1 build (Feb 2007) with his fixes
+fixed, going from chasecam to observer mode
+changed, only playing clients can vote
+added, intermission_maxtime option to force next map after so much time
+changed, map votes no longer reset map queue order after voted map finishes
+added, mapqueue_resetonvote option to reset map queue after vote
+fixed, client crash in CTF mode after hitting flag capture limit
+thanks, to d3s for facilitating this release!
+
+v1.24 - Apr 1999
+----------------------------------------------------------------------------
+ported, based on Quake II v3.20 game source now
+fixed, bug that allowed a client to crash a server with the right string
+fixed, high scores feature (again)
+fixed, various minor bugs
+
+v1.23
+----------------------------------------------------------------------------
+improved, Zbot detection, was finding false positives on rare occasions
+fixed, high scores bugs (out of order placement, multiple entries)
+
+v1.22
+----------------------------------------------------------------------------
+added, use_highscores feature to track high scores for each map
+fixed, LogDate and LogTime info not saved under unixes
+fixed, rare crash due to lmaster frag logging
+fixed, CTF flag wasn't being dropped when a client went into observer mode
+fixed, banlist file wasn't being closed, which caused issues
+fixed, use_startobserver 0 wasn't working
+added, client command "highscores" to view high scores for current map
+added, time left on scoreboard when use_highscores is enabled
+added, client command "eval <var>" to evaluate server settings
+added, server commands "sv timeleft" and "sv highscores"
+fixed, (in CTF mode) client error at intermission, "Pic >= MAX_IMAGES"
+fixed, (in CTF mode) rune info overlapping flag info at 320x200
+improved, overflow protection
+fixed, mega health rot not working beyond max regen with regen and autodoc
+changed, picking up weapon disables safety shield now
+fixed, once chaseleader set, couldn't chase anyone but leader
+added, who is chasing who info on scoreboard
+fixed, using the client command "chaseleader" while playing didn't take the
+  client into observer mode as it should (caused some issues)
+added, mapvote_list server variable to specify a mapvote.lst file.  If the
+  file doesn't exist, maps.lst (mapqueue variable) will be used instead
+fixed, map queue would reset if a map was repeated in the list
+added, weappickup and weaporder client config options
+fixed, when sorting by FPH, place information is now appropiately set
+added, while chasing, obituaries use green highlight for enemy now
+  (relative to chasee, this is just how it is when you're playing)
+changed, vampire health bonus stops when enemy gibs, at -40 health
+  (a quad rocket to a dead body used to give a great deal of health)
+fixed, client chaseleader feature is remembered across map changes now
+added, client bind +highscores to view high scores list for map
+added, use_zbotkick to detect and kick Zbot (auto-aim cheating) clients
+added, use_zbotlog to log Zbot use to lithium/zbot.log
+added, bfg_raydamage, bfg_balldamage, and bfg_ballradius variables
+changed, setting use_startchasecam 1 bypases CTF menu
+changed, setting use_startchasecam 1 automatically enables chaseleader
+added, %r for CTF say_team, to insert which rune you have
+
+v1.21
+----------------------------------------------------------------------------
+fixed, Quake II v3.19 handles applying yellow entity shells differently,
+  they were showing up as red (haste rune and safety spawn).  this fix
+  determines which Quake II you have, so v3.15 and v3.17 still work
+fixed, some minor CTF menu and scoreboard issues
+
+v1.20
+----------------------------------------------------------------------------
+integrated, ThreeWave CTF II
+added, ctf_techs and ctf_grapple toggle variables
+fixed, setting use_mapqueue 0 and mapqueue string caused server to shutdown
+tweaked, menu code
+tweaked, rune code
+tweaked, faster respawn code
+added, console timestamping option
+fixed, anyone could issue "nextmap"...
+added, go to next level even if no clients are present
+removed, use_stoptime variable
+added, grapple color based on CTF team
+added, numbers work for menu selection #'s
+removed, use_observer, always allowed now
+added, use_startobserver to start clients in observer mode
+added, use_startchasecam to start clients in chasecam mode
+added, ctf_* variables to customize CTF settings
+added, GSLog support for CTF bonuses
+added, chaseleader client command
+added, ctf_coloredhook and ctf_coloredquad toggles
+added, use_chatmuzzle, chatmuzzle_* and chatkick_* variables
+
+v1.16
+----------------------------------------------------------------------------
+fixed, mapqueue running last map twice
+fixed, overflows at intermission begin
+changed, a few minor things
+
+v1.15
+----------------------------------------------------------------------------
+changed, maximum motd size is now 512 instead of 640 to prevent overflows
+fixed, client IP lost between level changes (if client uses set commend?)
+added, after adding a ban, any matching client IP's are kicked
+changed, admins can't kick admins with equal or higher level
+fixed, 0 pings showing on intermission scoreboard (Q2 v3.17 residue?)
+added, built-in VWep support (like Q2 v3.15+), clients use cl_vwep to toggle
+changed, admin menu layout (more menus with fewer options each)
+added, ban command with no arguements gives list of options
+added, ban client option to admin menu
+added, max_rate server variable to limit clients rate setting
+fixed, names with forward slash were not recorded properly in GSLog files
+changed, overflow protection to work better with Q2 v3.17
+added, ping_endwatch server variable (see config.txt)
+changed, mega health will only rot away up to 100 health (each)
+
+v1.14
+----------------------------------------------------------------------------
+added, compiled version for Linux AXP
+added, compiled version for Solaris x86
+changed, support for each platform will be distributed seperately:
+  Win32 x86 - Li2_XXX.zip
+  Linux x86 - lithium2_X.XX-i386-unknown-linux2.0.tar.gz
+  Linux AXP - lithium2_X.XX-axp-unknown-linux2.0.tar.gz
+  Solaris x86 - lithium2_X.XX-i386-sun-solaris2.6.tar.gz
+  Solaris Sparc - lithium2_X.XX-sparc-sun-solaris2.6.tar.gz
+removed, level data being written to .sv2 files (useless?, it's never read)
+added, admin ban commands and admin_ban variable (to set access required)
+fixed, ban exception limit didn't consider clients in progress of entering
+
+v1.13
+----------------------------------------------------------------------------
+fixed, picking up a pack would lower your health/ammo maxes if the pack_*
+  variables were lower then the max_* variables
+fixed, crash due to unkonwn client lmaster commands sent before they're
+  fully connected (rare)
+fixed, some client settings were lost between levels (bug in v1.10-1.12)
+fixed, client could vote for an invalid map, resulting in a server shutdown
+
+v1.12
+----------------------------------------------------------------------------
+fixed, channel names are no longer case sensitive
+tweaked, lmaster connection code and protocol
+added, some internal lmaster commands for future features
+fixed, using the hook removes safety shield (like firing a weapon does)
+
+v1.10
+----------------------------------------------------------------------------
+added, lmaster server support
+added, multi-server chat channels and messaging features (try .help)
+fixed, once admin set next map, map voting would forever be disabled
+fixed, server shutdown due to next map voted as "" (somewhat rare case)
+fixed, admin command prompts for admin_code if it is set
+fixed, minor GSLog output bugs
+added, mapqueue continues logically after admin and vote map changes
+fixed, bug that sometimes caused a server crash between levels
+
+v1.06
+----------------------------------------------------------------------------
+fixed, admin list didn't work after client had gone through a level change
+added, mapvote_tries to limit tries per client per map
+added, voter decides when map changes (instant or map over)
+added, mapvote_instant server variable to allow instant map change option
+added, if an admin has set the next map, no map voting will be allowed
+fixed, vote cancel getting stuck on
+fixed, client personal settings were lost after a map "change now!"
+
+v1.05
+----------------------------------------------------------------------------
+fixed, only first line of admin list was being read
+fixed, user names in admin list can now contain spaces
+added, map voting system, with server variables: use_mapvote, mapvote_min,
+  mapvote_max, mapvote_time, mapvote_need, mapvote_pass (see config.txt)
+added, vote client command to invoke map voting
+
+v1.04
+----------------------------------------------------------------------------
+fixed, hook_maxdamage 0 still allowed a short period of hooking someone
+fixed, ipmask check was broken with wildcards (for ban and admin lists)
+added, noadmin command
+fixed, admin list code was mainly broken
+changed, when using admin list, admin login can be done by either:
+  1) typing on console, "admin <password>"
+  2) before connect, "set admin_pw <password> u", then "admin" after connect
+
+v1.03
+----------------------------------------------------------------------------
+added, hook_initdamage, hook_maxdamage, and hook_delay variables
+fixed, setting hook_damage 0 wasn't always working
+added, rocket_knockback variable
+added, option for Pro-Rocket specs with procket.cfg (see end of lithium.cfg)
+added, use_stoptime to stop time when there are no clients playing
+added, "FastWep" reported in "features" variable (for GameSpy browsing)
+added, start_weapon variable (default 1 for blaster)
+fixed, invdrop wasn't supposed to be allowed (especially for observers)
+fixed, going from chasecam to playing after a level change caused problems
+fixed, banlist wasn't handling exceptions (number specified after IP mask)
+fixed, max_health variable not working properly
+changed, motd no longer truncated to fit within 320x240 displays
+added, admin list feature with different access levels
+
+v1.02
+----------------------------------------------------------------------------
+fixed, long delay between grapples (accidently added in v1.01)
+
+v1.01
+----------------------------------------------------------------------------
+fixed, white diamonds appearing in bodies of unsupported VWep models
+fixed, power_armor_* variables not working properly (lower values resulted
+  in almost no change!)  adjusted defaults lower, power armors too strong
+added, hitting enter quickly after variable edit in a menu won't re-edit it
+added, fast_weapon_switch server option, default off
+added, admin map change list now based on file set with mapqueue variable
+
+v1.00
+----------------------------------------------------------------------------
+Fixed, telefrags not working (with many players) because of safety spawn.
+Fixed, pack_armor didn't set armor max when a pack was picked up.
+Fixed, clients chasing others showed others score in GameSpy.
+Added, optional chase parameter, to select place (i.e. "chase 5" for 5th).
+Added, chasenotice toggle, will inform you someone starts/stops chasing you.
+Fixed, chasecam prev/next issue was still occuring.
+Added, time doesn't count toward timelimt if server is empty.
+Fixed, grapple down bug.
+Changed, weapon pick best weighting.
+Added, client cam variables.
+Added, chasecam movement/freelook option.
+Changed, camping detection code to be better about false warnings.
+Added, ver and timeleft client commands.
+Changed, safety shielded clients will feel impact knockbacks now.
+Added, knockback_adjust and knockback_self server variables.
+Added, in banlists an optional number after the IP mask sets the number
+  of clients to allow before refusing (default is 0).
+Fixed, overflows at intermission.
+Fixed, too many resist and vampire rune hit sounds on fast firing weapons.
+Fixed, timeleft was showing negative times if no timelimit was set.
+Fixed, if who you're chasing goes into observer, you'll chase someone else.
+Added, "features" serverinfo variable, for GameSpy to see.
+Added, def_* variables for client default settings.
+Removed, use_statusbar and use_bestweap (replaced by def variables).
+Added, as admin you can remotely change server variables via client console.
+Fixed, VWep thisframe/lastframe (119 and 159) errors.
+Fixed, player name change wasn't updating on chasing clients HUD.
+
+v0.99
+----------------------------------------------------------------------------
+Fixed changing gslog during game, new log didn't have proper StdLog header.
+Changed no_grenade and no_rocket variable names, appended "launcher".
+Fixed noscores command at intermission, it would bring statusbar back.
+Fixed listen servers from getting death messages twice.
+Added sv_maxvelocity and sv_gravity to admin general settings.
+Fixed gslog's generated on unix servers (GibStats seems to require CRLF's).
+Fixed use_observer 0 issue, clients could use chase to screw things up.
+Fixed pack_health not changing max health.
+Fixed admin map select, sometimes wasn't going to right map or would crash.
+Changed map queue randomizer to be more random.
+
+v0.98
+----------------------------------------------------------------------------
+Fixed bug that resulted in a malformed dmflags setting, which caused
+  various problems including server crashes at startup.
+Fixed menu bug that clients could exploit to crash the server.
+Fixed players showing as observers in scoreboard when use_observer is 0.
+Added select map and general settings to admin menu.
+Fixed other minor menu bugs.
+Fixed chasecam prev/next from failing in certain circumstances.
+
+v0.97
+----------------------------------------------------------------------------
+Added GSLog support (Gibstats Log Standard), with flush option.
+Finished menu code.  Type menu on console (or press 0 while observing).
+Added admin menu's and admin_code variable.
+Fixed chasecam next/prev didn't work properly on some occasions.
+Fixed ability to use hook while dead.
+Fixed dead bodies aren't ID'd.
+Start chasecam on frag leader.
+Added individual weapon inhibiting with smart ammo inhibit.
+Can't become observer while grappling now.
+Added client IP address to connect messages on server console (for logging).
+Fixed vampire rune sound happening sometimes at the wrong time.
+Skip city3 map if VWep is enabled, to avoid index overflow issue with VWep.
+
+v0.96
+----------------------------------------------------------------------------
+Dead time counts toward play time and FPH again.  Only observing doesn't.
+Really fixed blank screen (HUD) on join bug that wasn't fixed in v0.95.
+Added motd server variable to specify which file to read the MOTD from.
+Added simple IP banning.  Edit banlist.txt (or set banlist to a different
+  file) and list IP's you want banned.  Wildcards are allowed (only *).
+  The ban list is checked for each client that connects, no need to restart.
+Player settings are carried between levels now (player ID, HUD, etc.)
+Fixed vampire rune from allowing you to gain health from shooting 
+  non-clients that can take damage (like some buttons).
+Tweaked rune code a bit.
+Added obituary for grappling hook deaths.
+Changed chasecam prev/next to scan by player frag place instead of random.
+
+v0.95
+----------------------------------------------------------------------------
+Fixed scoreboard bug (v0.94) that could crash the server (hit ] many times).
+Fixed packs sometimes not increasing your maxes (I think).
+Added bestweap client command so clients can override the server default.
+Fixed the no camping countdown bug (v0.94).
+Fixed blank screen on join (v0.94).
+
+v0.94
+----------------------------------------------------------------------------
+Fixed bug where player ID would point out observers.
+Removed particle flashes of observers leaving the game.
+Fixed VWep lastmessage bug.
+Fixed resist/vampire rune sounds code, added default sounds for all runes.
+Added moderately sophisticated menuing code for better control over various
+  features I plan to add in the future (menus disabled until v0.95).
+Added precautionary code to avoid client overflows if at all possible.
+Fixed runes going through walls, they (almost always) bounce now.
+Added use_hitfactor (off by default).  When you set this on, your aim
+  is factored into the amount of damage you inflict (from VWep code).
+Changed scoreboard, when you're chasing, to highlight who you're chasing.
+Added ping_min and ping_max variables, to set ping requirements.
+Added intermission_time and intermission_sound variables.
+Changed scoreboard to list observers as observers, and at the bottom.
+Added chaselist command, to list the players chasing you.
+Added hook_damage variable.
+
+v0.93
+----------------------------------------------------------------------------
+Added VWep support, off by default (note this requires a client pak).
+Added use_bestweapon back again (was lost in v3.14 src update).
+Removed use_obituaries.  Added green colored names to Id's obits.
+Added identity command added from CTF2, type "id".
+Added configurable rune sound vars.  Strength and haste sounds are made
+  when you fire.  Resist and vampire sounds are made when you're hit.
+  Regen doesn't have a sound (yet?)  Haven't found good defaults yet.
+Added hook_maxtime, sets max time you can stay hooked.
+Minor code optimizations.
+Compiling gamesparc.so for Solaris now.
+Fixed map queue bug, where last map ran twice.
+Added fall_damagemod variable.
+Fixed grapple fall bug that was causing damage in the air.
+Added rune pickup messages.
+Added ammo HUD option.
+Added "hud" client command.  0 for none, 1 for normal, 2 for lithium,
+  3 for ammo.  No parameter will toggle between lithium and ammo huds.
+While chasing, HUD is now viewer adjustable.
+Map queue now properly starts before a player connects.
+Updated lithium.cfg, be sure you place the "map" line at the end now!
+
+v0.92
+----------------------------------------------------------------------------
+Fixed bug with hook that'd crash server.
+Fixed invprev, invnext commands.
+Safety shield can be terminated early by firing now.
+Added hook_sky option.
+Added vampire rune, you gain health from percentage of damage inflicted.
+Set gamename variable to be "Lithium vX.XX".
+Added chasecam code from Zoid's CTF2.  Just type "chase".
+You can use "drop rune" or "drop tech" to drop runes now.
+Fixed use_obituaries, off will use the original v3.14 obituaries now.
+
+v0.91
+----------------------------------------------------------------------------
+Uses the v3.14 game dll source code base now.
+Added power armor variables.
+Added use_chatfloodkick to kick chat flooders.
+Time while dead doesn't effect FPH anymore.
+Fixed a bug in the grappling hook code that allowed clients to cheat.
+
+v0.90
+----------------------------------------------------------------------------
+Quake 2 v3.12 and v3.13 support.  No longer works with v3.09 and v3.10.
+Added ping command.
+
+v0.87
+----------------------------------------------------------------------------
+Grappling hook.
+Quake 1 style scoreboard, toggleable to Quake 2 style.
+Added info screen.
+Fixed fov.
+Fixed invprev, invnext (broken in 0.85)
+Other minor changes and fixes.
+
+v0.85
+----------------------------------------------------------------------------
+Fixed bugs introduced in v0.8x features.
+
+v0.83
+----------------------------------------------------------------------------
+Fixed weapon being shown in observer mode.
+Being in observer mode doesn't count toward Frags/Hr calculation.
+
+v0.82
+----------------------------------------------------------------------------
+Configurable map queue with randomize option.
+Customizable MOTD (except Lithium info).
+Observer fly-thru mode.
+Safety time period for player spawns.
+No camping option to kill campers.
+Kick anyone who suicides by typing 'kill' many times.
+No super shotgun auto select with one shell fix.
+
+v0.73
+----------------------------------------------------------------------------
+Found the bug that caused the occasional "ED_Alloc: no free edicts." fatal
+error (had to do with my removal of the monster code).  Added no_bfg option
+(default is on).  Made railgun an energy type weapon (armor has less benefit
+from energy weapons, the blasters were the only energy weapons).
+
+v0.72
+----------------------------------------------------------------------------
+Added a ton of cvars.  You can toggle just about everything I've added
+or changed.  You can set starting/max health and ammo.  You can set how
+much damage each weapon does, and its radius and speed where applicable.
+See lithium.cfg for the Lithium defaults.  Use normal.cfg if you want to
+run a vanilla server.  Change what you'd like.  Add "+exec x.cfg" to your
+command line (replace x with lithium, normal, or a config file you created).
+Note if you don't set a config file, the Lithium defaults will be used.
+
+v0.61
+----------------------------------------------------------------------------
+Fixed auto weapon selection.  Fixed timescale cheat.  Possibly fixed the
+fatal ED_Alloc error.  MOTD only reappears when standing still with blaster.
+Compiled gamei386.so for Linux servers (untested).
+
+v0.58
+----------------------------------------------------------------------------
+Initial FragTrak code added (visit http://quake2.lithium.com).  Who killed
+you or who you killed in obituary messages is now shown in green.  More
+minor tweaks again.  Rockets go same speed as Quake I, same damage.
+Quake II v3.09 support.  
+
+v0.43
+----------------------------------------------------------------------------
+Current rune on status bar.  Motd done better.  Player count done better.
+Best weapon chosen when picking up a new one.  Adjustments and tweaks.
+
+v0.33
+----------------------------------------------------------------------------
+Fixed a bug in Id's bfg code that caused the server to crash sometimes.
+
+v0.32
+----------------------------------------------------------------------------
+Runes.  Faster item respawns based on number of players.  A little ammo to
+start with.  Health and ammo maximums raised 20%.  Improved hud with 
+frags/hr, players, and your place.  Faster rockets (slightly less damange
+to balance).  Obituaries based on the nature of the attack.
