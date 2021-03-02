@@ -1,0 +1,141 @@
+--------------------Configuration: SWTC - Win32 Debug--------------------
+Begining build with project "C:\quake2\swtc\src\SWTC.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MTd /W3 /GX /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "SWTC_EXPORTS" /FR"Debug/" /Fp"Debug/SWTC.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /ZI /GZ /c "
+			"OLE Type Library Maker" with flags "/nologo /D "_DEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x1409 /d "_DEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Debug/SWTC.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib opengl32.lib glu32.lib /nologo /dll /incremental:yes /pdb:"Debug/gamex86.pdb" /debug /machine:I386 /def:".\source\game.def" /out:"..\gamex86.dll" /implib:"Debug/gamex86.lib" /pdbtype:sept "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSPB345.TMP" with contents </nologo /MTd /W3 /GX /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "SWTC_EXPORTS" /FR"Debug/" /Fp"Debug/SWTC.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /ZI /GZ /c 
+"C:\quake2\swtc\src\source\p_weapon.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB345.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSPB346.TMP" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib opengl32.lib glu32.lib /nologo /dll /incremental:yes /pdb:"Debug/gamex86.pdb" /debug /machine:I386 /def:".\source\game.def" /out:"..\gamex86.dll" /implib:"Debug/gamex86.lib" /pdbtype:sept 
+.\Debug\b_ai.obj
+.\Debug\b_spawn.obj
+.\Debug\fog.obj
+.\Debug\g_ai.obj
+.\Debug\g_chase.obj
+.\Debug\g_cmds.obj
+.\Debug\g_combat.obj
+.\Debug\g_ctf.obj
+.\Debug\g_func.obj
+.\Debug\g_items.obj
+.\Debug\g_main.obj
+.\Debug\g_misc.obj
+.\Debug\g_monster.obj
+.\Debug\g_npc_ai.obj
+.\Debug\g_phys.obj
+.\Debug\g_save.obj
+.\Debug\g_spawn.obj
+.\Debug\g_svcmds.obj
+.\Debug\g_target.obj
+.\Debug\g_trigger.obj
+.\Debug\g_utils.obj
+.\Debug\g_weapon.obj
+.\Debug\m_bird.obj
+.\Debug\m_flash.obj
+.\Debug\m_jawa.obj
+.\Debug\m_jawa2.obj
+.\Debug\m_jawa3.obj
+.\Debug\m_map.obj
+.\Debug\m_move.obj
+.\Debug\m_officer.obj
+.\Debug\m_r2.obj
+.\Debug\m_route.obj
+.\Debug\m_ske27.obj
+.\Debug\m_trooper.obj
+.\Debug\m_utils.obj
+.\Debug\m_vehicle.obj
+.\Debug\n_gonk.obj
+.\Debug\n_male.obj
+.\Debug\n_mse.obj
+.\Debug\n_officer.obj
+.\Debug\n_raptor.obj
+.\Debug\n_rat.obj
+.\Debug\n_smuggler.obj
+.\Debug\n_sparrow.obj
+.\Debug\p_cam.obj
+.\Debug\p_client.obj
+.\Debug\p_force.obj
+.\Debug\p_hud.obj
+.\Debug\p_menu.obj
+.\Debug\p_trail.obj
+.\Debug\p_view.obj
+.\Debug\p_weapon.obj
+.\Debug\q_shared.obj
+.\Debug\s_computer.obj
+.\Debug\s_conversation.obj>
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB346.TMP" 
+Compiling...
+Command line warning D4002 : ignoring unknown option '/ZI'
+Command line warning D4002 : ignoring unknown option '/GZ'
+p_weapon.c
+Linking...
+Creating temp file "C:\WINDOWS\TEMP\RSPB364.TMP" with contents </nologo /o"Debug/SWTC.bsc" 
+.\Debug\b_ai.sbr
+.\Debug\b_spawn.sbr
+.\Debug\fog.sbr
+.\Debug\g_ai.sbr
+.\Debug\g_chase.sbr
+.\Debug\g_cmds.sbr
+.\Debug\g_combat.sbr
+.\Debug\g_ctf.sbr
+.\Debug\g_func.sbr
+.\Debug\g_items.sbr
+.\Debug\g_main.sbr
+.\Debug\g_misc.sbr
+.\Debug\g_monster.sbr
+.\Debug\g_npc_ai.sbr
+.\Debug\g_phys.sbr
+.\Debug\g_save.sbr
+.\Debug\g_spawn.sbr
+.\Debug\g_svcmds.sbr
+.\Debug\g_target.sbr
+.\Debug\g_trigger.sbr
+.\Debug\g_utils.sbr
+.\Debug\g_weapon.sbr
+.\Debug\m_bird.sbr
+.\Debug\m_flash.sbr
+.\Debug\m_jawa.sbr
+.\Debug\m_jawa2.sbr
+.\Debug\m_jawa3.sbr
+.\Debug\m_map.sbr
+.\Debug\m_move.sbr
+.\Debug\m_officer.sbr
+.\Debug\m_r2.sbr
+.\Debug\m_route.sbr
+.\Debug\m_ske27.sbr
+.\Debug\m_trooper.sbr
+.\Debug\m_utils.sbr
+.\Debug\m_vehicle.sbr
+.\Debug\n_gonk.sbr
+.\Debug\n_male.sbr
+.\Debug\n_mse.sbr
+.\Debug\n_officer.sbr
+.\Debug\n_raptor.sbr
+.\Debug\n_rat.sbr
+.\Debug\n_smuggler.sbr
+.\Debug\n_sparrow.sbr
+.\Debug\p_cam.sbr
+.\Debug\p_client.sbr
+.\Debug\p_force.sbr
+.\Debug\p_hud.sbr
+.\Debug\p_menu.sbr
+.\Debug\p_trail.sbr
+.\Debug\p_view.sbr
+.\Debug\p_weapon.sbr
+.\Debug\q_shared.sbr
+.\Debug\s_computer.sbr
+.\Debug\s_conversation.sbr>
+Creating command line "bscmake.exe @C:\WINDOWS\TEMP\RSPB364.TMP" 
+Creating browse info file...
+
+
+
+gamex86.dll - 0 error(s), 2 warning(s)

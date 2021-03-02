@@ -1,0 +1,101 @@
+
+- Duel mod sounded good on paper, but in implementation turned out to be a bad idea. It slows downs and further complicates gameplay that is already close to the limit with lightsabers, weapons, and Force powers. It also causes the lightsaber to be a weaker weapon, when it should rightfully be stronger than anything else in the game. My main goal with duel mode was to allow players to use the lightsaber in an "action mode" if they wished to avoid the strategy associated with "full" combat, but it turns out that this was accomplished better by the initial implementation of the saber controls. Players can randomly move and punch fire and still be a formidable opponent, but the player who steps back, considers, and strikes with the right attack at the right time is the one who will emerge victorious. The running saber attack animation references were also removed for this reason.
+
+- Fixed several of the SpawnEmptyClip calls which were pointing to the wrong models.
+
+- The Beam Tube really needs to have a continuous sound, rather than just one sound played when the player lifts his finger from the trigger. Moved the sound call so that this occurs.
+
+- The Stormtrooper Rifle's sound wasn't being specified, fixed this.
+
+- Fixed the error which was mixing up the Force and normal jump sounds.
+
+- Stopped the game from trying to spawn the CTF flag and tech models when CTF wasn't active.
+
+- Changed the item_flag entities in g_items.c to point to a_jawa.md2 an a_ewok.md2.
+
+- Changed timers for both the TD and the secondary missile tube fire. (p_weapon.c and g_weapon.c)
+
+- Increased TD blast radius slightly. (p_weapon.c)
+
+- Set up run animations to display for backward movement as well as forward. (p_view.c)
+
+- Commented out automatic chasecam for the lightsaber, until a solution can be found to prevent the jittering on respawn.
+
+- Commented out limiting !ent->deadflag if on G_SetClientFrame() in p_view.c, as this was stopping the full death animation from playing.
+-> UPDATE: replaced with a player health test to re-implement this effect.
+
+- Added the player's respawn explosion effect to Bot_respawn (b_spawn.c).
+
+- Added additional !self->is_bot test to line 1266 in p_client.c. This looks goofy, but for the moment works around the bots' inability to respawn if they go through the falling logic.
+
+- Fixed logic error with weapon switching in b_ai.c. Test for current weapon was being done before ammo test, which was the cause of the overflow crash.
+
+- Specified correct MOD for force lightning.
+
+- Added !ent->client->pers.clipammo[weap] condition test to Weapon_Generic, line 1132. This prevents the reload command from calling NoAmmoWeaponChange() when there is still ammo left in the last clip.
+
+- Moved sound calls for the missile tube and wrist rocket firing to prevent them from playing while player was reloading.
+
+- Added proper reload sequence display to the wrist rocket (updated v_model as a result), and adjusted the fire frame number, since it was stopping slightly short of the end of the sequence.
+
+- Added if(trooper) test to Blaster_Fire in p_weapon.c to differentiate blaster pistol and trooper rifle fire sounds.
+
+- Fixed incorrect missile tube and wrist rocket ammo pickups. The cause was the entries for AMMO_CMISS and AMMO_BMISS being switched around in Add_Ammo (g_item.c). Removed the ammo add hacks for these weapons from Pickup_Weapon as well (p_weapon.c).
+
+- Replaced if(self->spawnflags & 1) test with if(mod == MOD_RIFLE) in fire_blaster (g_weapon.c) for blocked bolts. At this point the bolt has already been removed, so there are no spawnflags to test (in other words, the colors on blocked bolts are right now).
+
+- Fixed blaster pistol MOD (case MOD_BLASTER was missing an ending break in p_client.c).
+
+- Moved MOD test in Grenade_Explode (g_weapon.c), so that the correct message was displayed for the "grenade rockets".
+
+- Forced chasecam to turn on for players on death, because it just looks so damn cool. (p_client.c).
+
+- Moved Bot_Turn_To_Goal() call below Bot_Find_Roam_Goal() call in Bot_AI_Think to stop the constant jittering back and forth.
+
+- Changed TossClientWeapon test so it would only ignore a weapon that had *no* ammo, rather than requiring at least one full clip.
+
+- Implemented reload animations
+
+- In weapon_generic, changed the call to reload(ent) to occur on FRAME_RELOAD_FIRST, so the sound and empty clip spawn were in sync with the reload animations, rather than being played after them.
+
+
+todo
+----------
++ Fix "oldplayer" bug!
+- Increase rate of Force experience growth
+- Allow at least one hit on all weapons
+
+-> saberonly: either test weapon and switch to saber or display "game type will be changed for next level load" message
++ set up auto-reload as a client-side option.
+-> fix walk speed (first person mode looks jittery)
+-> force delay and animation loops to play before wrist rocket secondary fire
+-> have bodies sink into floor, AHL-style? Or fade away?
+-> camera jitters after death in saberonly mode, and when trying to duck in duel mode
+-> try to implement basic Force powers in the bots
+-> fix zoom movement bug (seems to loop control input...)
+-> absolutely stop player movement when sniper is active (just have ground entity check, or better yet, drop player to ground. The rest is automatic, so no error messages).
+-> Bots need to learn how to recover from falling (correctly!)
+-> Make lag-intensive/new effect options client-side (i.e. newrespawn 0 = old teleport effect)
+-> Finish implementing Choke (and animations)
+-> bots need help with blocking crouched swings
+-> look into all models/objects/ references
+-> (gfx) touch-ups on HUD
+-> (sfx) increase volume on throw and wrocket sounds
+-> need to stop fire function and animations from being called when the clip is empty
++ fov 0 is from zoom_factor being replaced by ps.fov...
+-> add light Heal sound
+-> check on levitate sounds
+-> check on saber and levitate loop (& increase volume!)
+-> look into Force system level ups and downs, and implement sounds where necessary (lvlup and lvldown)
+-> bots need to do a trace to check for obstacles in their path before shooting and navigate around if necessary (especially troublesome for explosive weapons)
+-> add respawn explosion to initial bot spawn
+-> bots need to prioritize items higher (pick up and switch weapons more intelligently)
+-> implement lightpain and chokepain/chokedeath anims
+-> add weapon pickup message?
+
+
+notes
+----------
+- play with Rip's cool new gravity and particle fountain ents -- add to .fgd
+- falling stuff is in p_client.c (kind of whack sometimes right now)
+- precache reload sounds?
