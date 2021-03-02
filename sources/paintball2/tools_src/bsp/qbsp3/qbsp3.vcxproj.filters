@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f1a9eba4-560c-454b-aabf-2e07aa88e846}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7e32fdaa-7081-4304-84d6-22f41d0f8e04}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{0cf5fd61-b6a7-47ec-9670-09c13679dba2}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="brushbsp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\bspfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\cmdlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="faces.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\lbmlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="leakfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\mathlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\parsecfg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\polylib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="portals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="prtfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qbsp3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\scriplib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="textures.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\threads.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="writebsp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\quake2\utils3\common\bspfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\quake2\utils3\common\cmdlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\quake2\utils3\common\lbmlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\quake2\utils3\common\mathlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\parsecfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\quake2\utils3\common\polylib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qbsp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\quake2\utils3\common\qfiles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\quake2\utils3\common\scriplib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\quake2\utils3\common\threads.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

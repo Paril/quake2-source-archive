@@ -1,0 +1,56 @@
+#!/bin/sh
+
+# You must make this file executable in order to run.  Type 'chmod +x pb2-dedicated.run'
+# http://digitalpaint.planetquake.gamespy.com/
+
+BIN="pb2-ded"
+DIR="."
+CFGEXEC="server.cfg"
+script=$0
+count=0
+xterm_loop=
+nox11=n
+initargs="$@"
+
+while [ -L "$script" ]  
+do
+    script=`perl -e "print readlink(\"$script\"), \"\n\""`
+    count=`expr $count + 1`
+    if [ $count -gt 100 ]  
+    then
+        echo "Too many symbolic links"
+        exit 1
+    fi
+done
+
+
+if test "$nox11" = "n"; then
+    if tty -s; then # Do we have a terminal?
+:
+    else
+        if test x"$DISPLAY" != x -a x"$xterm_loop" = x; then # No, but do we have X?
+            if xset q > /dev/null 2>&1; then # Check for valid DISPLAY variable
+                GUESS_XTERMS="aterm Eterm konsole gnome-terminal xterm rxvt kvt"
+                for a in $GUESS_XTERMS; do
+                    if type $a >/dev/null 2>&1; then
+                        XTERM=$a
+                        break
+                    fi
+                done
+                chmod a+x $0 || echo Please add execution rights on $0
+                if test `echo "$0" | cut -c1` = "/"; then # Spawn a terminal!
+                    exec $XTERM -title "$label" -e "$0" --xwin "$initargs"
+                else
+                    exec $XTERM -title "$label" -e "./$0" --xwin "$initargs"
+                fi
+            fi
+        fi
+    fi
+fi
+
+GAME_DIR=`dirname $script`
+
+cd $GAME_DIR
+cd $DIR
+
+exec ./$BIN +exec $CFGEXEC "$@"

@@ -1,0 +1,74 @@
+=========================================
+
+Changes to the ref_gl OpenGL renderer
+
+=========================================
+
+* Defaults to trilinear filtering (looks nicer :)
+* 32bit colour specified in PFD (instead of 24bit)
+* 24bit Z, 8bit stencil
+* Loads targas instead of other image formats where available
+	- JPeg override added
+	- Override looks for targa, then jpeg, then what was specified
+* Entity shadows use stencil buffer
+* Lowered shadows closer to the ground
+* Dont rotate shadows on ungodly axis'
+* Texture scripting
+	- flushes all scripts not marked as safe on map change (previous maps scripts not kept in memory)
+	- reloads all scripts on map change
+	- scripts marked as safe not flushed
+	- Some code by Heffo
+		- Subdivide function
+		- Vertex warp
+		- .cin streaming
+	- Some code by Vic
+		- Rotate
+		- Cleaned up code some
+* Vertex arrays
+	- On all drawing functions in gl_draw.c
+	- On alias models
+	- Renders with scripting
+	- (Thanks to Q1 Twilight Project)
+* Continuous frame exporting
+	- Chews up HD space like mad
+* Simple OpenGL state manager to avoid some unneccessary state changes
+* Texture shader waterwarp on supported hardware
+* Missing-texture image isnt a small crappy dot anymore
+* ARB Texture compression
+	- Heffo
+* JPEG texture loading
+	- JPEG screenshots
+	- Heffo
+* Fixed model shell rendering
+* Targa particles
+* Planar shadows arent drawn when they are above the view origin
+* Motion Blur
+* Smoother dynamic light falloff
+	- Guy Paddock
+* Stainmaps
+	- Lord Havocs 'Dark Places'
+		- Q2 port by Discoloda
+	- 'gl_stainmaps' Cvar
+	- Fixed up a bit by myself, help from Lord Havoc
+	- No longer affects entity lighting
+* Texture shader water not so bright anymore
+* Hardware gammaramp
+* Fixed 256x256 texture dimension limitation
+	- Maximum texture size is 4096 or the video cards limit, whichever is lower
+* Control framerate for cl_animdump
+* Renderer now recognises the SURF_NODRAW surface flag
+
+
+=========================================
+
+To do... will I ever do these???
+
+=========================================
+
+* Cubic envmaps for scripts
+* Volumetric fog
+* Improve shadows
+* fill the map list in the multiplayer menu from all maps in .pak files and the /maps folder
+* mods menu
+* fix cl_animdump to export to jpegs as well
+* Actually do some of what I put in here

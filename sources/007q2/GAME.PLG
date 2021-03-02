@@ -1,0 +1,86 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: game - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "F:\DOCUME~1\ION_PU~1\LOCALS~1\Temp\RSPF6.tmp" with contents
+[
+/nologo /G5 /MT /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"c:\bondsrc\release/game.pch" /YX /Fo"c:\bondsrc\release/" /Fd"c:\bondsrc\release/" /FD /c 
+"D:\BONDSRC\p_client.c"
+]
+Creating command line "cl.exe @F:\DOCUME~1\ION_PU~1\LOCALS~1\Temp\RSPF6.tmp" 
+Creating temporary file "F:\DOCUME~1\ION_PU~1\LOCALS~1\Temp\RSPF7.tmp" with contents
+[
+kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"c:\quake2\007q2/gamex86.pdb" /machine:I386 /def:".\game.def" /out:"D:\007q2\base007\gamex86.dll" /implib:"c:\quake2\007q2/gamex86.lib" 
+c:\bondsrc\release\bot.obj
+c:\bondsrc\release\g_ai.obj
+c:\bondsrc\release\g_chase.obj
+c:\bondsrc\release\g_cloak.obj
+c:\bondsrc\release\g_cmds.obj
+c:\bondsrc\release\g_combat.obj
+c:\bondsrc\release\g_func.obj
+c:\bondsrc\release\g_items.obj
+c:\bondsrc\release\g_main.obj
+c:\bondsrc\release\g_misc.obj
+c:\bondsrc\release\g_model.obj
+c:\bondsrc\release\g_monster.obj
+c:\bondsrc\release\g_phys.obj
+c:\bondsrc\release\g_save.obj
+c:\bondsrc\release\g_spawn.obj
+c:\bondsrc\release\g_svcmds.obj
+c:\bondsrc\release\g_target.obj
+c:\bondsrc\release\g_teamdm.obj
+c:\bondsrc\release\g_trigger.obj
+c:\bondsrc\release\g_turret.obj
+c:\bondsrc\release\g_utils.obj
+c:\bondsrc\release\g_weapon.obj
+c:\bondsrc\release\m_actor.obj
+c:\bondsrc\release\m_berserk.obj
+c:\bondsrc\release\m_boss2.obj
+c:\bondsrc\release\m_boss3.obj
+c:\bondsrc\release\m_boss31.obj
+c:\bondsrc\release\m_boss32.obj
+c:\bondsrc\release\m_brain.obj
+c:\bondsrc\release\m_chick.obj
+c:\bondsrc\release\m_flash.obj
+c:\bondsrc\release\m_flipper.obj
+c:\bondsrc\release\m_float.obj
+c:\bondsrc\release\m_flyer.obj
+c:\bondsrc\release\m_gladiator.obj
+c:\bondsrc\release\m_gunner.obj
+c:\bondsrc\release\m_hover.obj
+c:\bondsrc\release\m_infantry.obj
+c:\bondsrc\release\m_insane.obj
+c:\bondsrc\release\m_medic.obj
+c:\bondsrc\release\m_move.obj
+c:\bondsrc\release\m_mutant.obj
+c:\bondsrc\release\m_parasite.obj
+c:\bondsrc\release\m_soldier.obj
+c:\bondsrc\release\m_supertank.obj
+c:\bondsrc\release\m_tank.obj
+c:\bondsrc\release\p_client.obj
+c:\bondsrc\release\p_hud.obj
+c:\bondsrc\release\P_menu.obj
+c:\bondsrc\release\p_trail.obj
+c:\bondsrc\release\p_view.obj
+c:\bondsrc\release\p_weapon.obj
+c:\bondsrc\release\q_shared.obj
+c:\bondsrc\release\scanner.obj
+]
+Creating command line "link.exe @F:\DOCUME~1\ION_PU~1\LOCALS~1\Temp\RSPF7.tmp"
+<h3>Output Window</h3>
+Compiling...
+p_client.c
+Linking...
+   Creating library c:\quake2\007q2/gamex86.lib and object c:\quake2\007q2/gamex86.exp
+
+
+
+<h3>Results</h3>
+gamex86.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

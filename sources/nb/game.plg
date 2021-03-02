@@ -1,0 +1,17 @@
+--------------------Configuration: game - Win32 Release--------------------
+Begining build with project "C:\Quake2\neuralbotsrc\game.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /G5 /MT /W3 /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp".\release/game.pch" /YX /Fo".\release/" /Fd".\release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"..\game.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\gamex86.pdb" /machine:I386 /def:".\game.def" /out:"..\release\gamex86.dll" /implib:"..\gamex86.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+
+
+
+gamex86.dll - 0 error(s), 0 warning(s)

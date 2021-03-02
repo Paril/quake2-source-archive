@@ -1,0 +1,204 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: lazarus - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\THEDEF~1\LOCALS~1\Temp\RSP4B.tmp" with contents
+[
+/nologo /G5 /MT /W3 /GX /O2 /I "c:\3dfx\sdk\glide2x\src\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /FR".\release/" /Fp".\release/lazarus.pch" /YX /Fo".\release/" /Fd".\release/" /FD /c 
+"C:\games\quake2\src\game\g_items.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\THEDEF~1\LOCALS~1\Temp\RSP4B.tmp" 
+Creating temporary file "C:\DOCUME~1\THEDEF~1\LOCALS~1\Temp\RSP4E.tmp" with contents
+[
+kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\release/kmq2gamex86.pdb" /machine:I386 /def:".\lazarus.def" /out:"../../baseq2/kmq2gamex86.dll" /implib:"..\release/kmq2gamex86.lib" 
+.\release\acebot_ai.obj
+.\release\acebot_cmds.obj
+.\release\acebot_compress.obj
+.\release\acebot_items.obj
+.\release\acebot_movement.obj
+.\release\acebot_nodes.obj
+.\release\acebot_spawn.obj
+.\release\g_ai.obj
+.\release\g_camera.obj
+.\release\g_chase.obj
+.\release\g_cmds.obj
+.\release\g_combat.obj
+.\release\g_crane.obj
+.\release\g_ctf.obj
+.\release\g_fog.obj
+.\release\g_func.obj
+.\release\g_items.obj
+.\release\g_jetpack.obj
+.\release\g_lights.obj
+.\release\g_lock.obj
+.\release\g_main.obj
+.\release\g_misc.obj
+.\release\g_model.obj
+.\release\g_monster.obj
+.\release\g_moreai.obj
+.\release\g_mtrain.obj
+.\release\g_patchplayermodels.obj
+.\release\g_pendulum.obj
+.\release\g_phys.obj
+.\release\g_reflect.obj
+.\release\g_save.obj
+.\release\g_spawn.obj
+.\release\g_svcmds.obj
+.\release\g_target.obj
+.\release\g_thing.obj
+.\release\g_tracktrain.obj
+.\release\g_trigger.obj
+.\release\g_turret.obj
+.\release\g_utils.obj
+.\release\g_vehicle.obj
+.\release\g_weapon.obj
+.\release\km_cvar.obj
+.\release\m_actor.obj
+.\release\m_actor_weap.obj
+.\release\m_berserk.obj
+.\release\m_boss2.obj
+.\release\m_boss3.obj
+.\release\m_boss31.obj
+.\release\m_boss32.obj
+.\release\m_brain.obj
+.\release\m_chick.obj
+.\release\m_flash.obj
+.\release\m_flipper.obj
+.\release\m_float.obj
+.\release\m_flyer.obj
+.\release\m_gladiator.obj
+.\release\m_gunner.obj
+.\release\m_hover.obj
+.\release\m_infantry.obj
+.\release\m_insane.obj
+.\release\m_medic.obj
+.\release\m_move.obj
+.\release\m_mutant.obj
+.\release\m_parasite.obj
+.\release\m_soldier.obj
+.\release\m_supertank.obj
+.\release\m_tank.obj
+.\release\p_chase.obj
+.\release\p_client.obj
+.\release\p_hud.obj
+.\release\p_menu.obj
+.\release\p_text.obj
+.\release\p_trail.obj
+.\release\p_view.obj
+.\release\p_weapon.obj
+.\release\q_shared.obj
+.\release\gamex86.res
+]
+Creating command line "link.exe @C:\DOCUME~1\THEDEF~1\LOCALS~1\Temp\RSP4E.tmp"
+<h3>Output Window</h3>
+Compiling...
+g_items.c
+C:\games\quake2\src\game\g_items.c(2478) : warning C4047: 'initializing' : 'int ' differs in levels of indirection from 'void *'
+C:\games\quake2\src\game\g_items.c(3371) : warning C4013: 'SpawnDamage' undefined; assuming extern returning int
+C:\games\quake2\src\game\g_items.c(3579) : warning C4113: 'void (__cdecl *)(struct edict_s *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *)'
+C:\games\quake2\src\game\g_items.c(3863) : warning C4113: 'void (__cdecl *)(struct edict_s *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *)'
+C:\games\quake2\src\game\g_items.c(3950) : warning C4113: 'void (__cdecl *)(struct edict_s *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *)'
+C:\games\quake2\src\game\g_items.c(3970) : warning C4101: 'org' : unreferenced local variable
+C:\games\quake2\src\game\g_items.c(4178) : warning C4113: 'void (__cdecl *)(struct edict_s *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *)'
+C:\games\quake2\src\game\g_items.c(4277) : warning C4047: '=' : 'int ' differs in levels of indirection from 'void *'
+C:\games\quake2\src\game\g_items.c(4459) : warning C4113: 'void (__cdecl *)(struct edict_s *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *)'
+C:\games\quake2\src\game\g_items.c(4461) : warning C4113: 'void (__cdecl *)(struct edict_s *,struct edict_s *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *)'
+C:\games\quake2\src\game\g_items.c(4612) : warning C4113: 'void (__cdecl *)(struct edict_s *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *)'
+C:\games\quake2\src\game\g_items.c(4672) : warning C4113: 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *,int ,float *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *)'
+C:\games\quake2\src\game\g_items.c(4760) : warning C4113: 'void (__cdecl *)(struct edict_s *)' differs in parameter lists from 'void (__cdecl *)(struct edict_s *,struct edict_s *,struct edict_s *)'
+Linking...
+   Creating library ..\release/kmq2gamex86.lib and object ..\release/kmq2gamex86.exp
+Creating temporary file "C:\DOCUME~1\THEDEF~1\LOCALS~1\Temp\RSP52.tmp" with contents
+[
+/nologo /o"..\release/lazarus.bsc" 
+.\release\acebot_ai.sbr
+.\release\acebot_cmds.sbr
+.\release\acebot_compress.sbr
+.\release\acebot_items.sbr
+.\release\acebot_movement.sbr
+.\release\acebot_nodes.sbr
+.\release\acebot_spawn.sbr
+.\release\g_ai.sbr
+.\release\g_camera.sbr
+.\release\g_chase.sbr
+.\release\g_cmds.sbr
+.\release\g_combat.sbr
+.\release\g_crane.sbr
+.\release\g_ctf.sbr
+.\release\g_fog.sbr
+.\release\g_func.sbr
+.\release\g_items.sbr
+.\release\g_jetpack.sbr
+.\release\g_lights.sbr
+.\release\g_lock.sbr
+.\release\g_main.sbr
+.\release\g_misc.sbr
+.\release\g_model.sbr
+.\release\g_monster.sbr
+.\release\g_moreai.sbr
+.\release\g_mtrain.sbr
+.\release\g_patchplayermodels.sbr
+.\release\g_pendulum.sbr
+.\release\g_phys.sbr
+.\release\g_reflect.sbr
+.\release\g_save.sbr
+.\release\g_spawn.sbr
+.\release\g_svcmds.sbr
+.\release\g_target.sbr
+.\release\g_thing.sbr
+.\release\g_tracktrain.sbr
+.\release\g_trigger.sbr
+.\release\g_turret.sbr
+.\release\g_utils.sbr
+.\release\g_vehicle.sbr
+.\release\g_weapon.sbr
+.\release\km_cvar.sbr
+.\release\m_actor.sbr
+.\release\m_actor_weap.sbr
+.\release\m_berserk.sbr
+.\release\m_boss2.sbr
+.\release\m_boss3.sbr
+.\release\m_boss31.sbr
+.\release\m_boss32.sbr
+.\release\m_brain.sbr
+.\release\m_chick.sbr
+.\release\m_flash.sbr
+.\release\m_flipper.sbr
+.\release\m_float.sbr
+.\release\m_flyer.sbr
+.\release\m_gladiator.sbr
+.\release\m_gunner.sbr
+.\release\m_hover.sbr
+.\release\m_infantry.sbr
+.\release\m_insane.sbr
+.\release\m_medic.sbr
+.\release\m_move.sbr
+.\release\m_mutant.sbr
+.\release\m_parasite.sbr
+.\release\m_soldier.sbr
+.\release\m_supertank.sbr
+.\release\m_tank.sbr
+.\release\p_chase.sbr
+.\release\p_client.sbr
+.\release\p_hud.sbr
+.\release\p_menu.sbr
+.\release\p_text.sbr
+.\release\p_trail.sbr
+.\release\p_view.sbr
+.\release\p_weapon.sbr
+.\release\q_shared.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\THEDEF~1\LOCALS~1\Temp\RSP52.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+kmq2gamex86.dll - 0 error(s), 13 warning(s)
+</pre>
+</body>
+</html>
