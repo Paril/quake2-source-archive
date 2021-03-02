@@ -1,7 +1,5 @@
 #include "g_local.h"
-void Leper_Effects(edict_t *ent);
-void Leper_NoLegs(edict_t *ent);
-void Leper_NoArms(edict_t *ent);
+
 static void P_ProjectSource (gclient_t *client, vec3_t point, vec3_t distance, vec3_t forward, vec3_t right, vec3_t result)
 {
 	vec3_t	_distance;

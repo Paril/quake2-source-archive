@@ -1,0 +1,64 @@
+*** g_save.c	Sat Jan 12 14:22:34 2002
+--- work:Q2/action/g_save.c	Wed Dec 26 12:09:06 2001
+***************
+*** 1,33 ****
+- /*
+-  * $Header: /LicenseToKill/src/g_save.c 7     2/11/99 12:57 Riever $
+-  *
+-  * $Log: /LicenseToKill/src/g_save.c $
+-  * 
+-  * 7     2/11/99 12:57 Riever
+-  * Fog header file and call included.
+-  * 
+-  * 6     21/10/99 8:15 Riever
+-  * Added ltk_showpath CVAR to toggle display of bot path selection
+-  * information.
+-  * 
+-  * 5     16/10/99 8:47 Riever
+-  * Added ltk_chat CVAR to turn on/ off chatting for bots.
+-  * 
+-  * 4     17/09/99 6:04 Riever
+-  * Updated to 1.52 source code
+-  * 
+-  * 3     14/09/99 8:03 Riever
+-  * Added ltk_skill cvar
+-  * 
+-  * 2     13/09/99 19:52 Riever
+-  * Added headers
+-  *
+-  */
+  #include "g_local.h"
+  #include "cgf_sfx_glass.h"
+- // CGF_FOG ADD
+- #include	"acesrc/cgf_sfx_fog.h"
+- // CGF_FOG END
+  
+  field_t fields[] = {
+          {"classname", FOFS(classname), F_LSTRING},
+--- 1,5 ----
+*************** void InitGame (void)
+*** 248,258 ****
+          bholelimit = gi.cvar ("bholelimit", "0", 0);
+          splatlimit = gi.cvar ("splatlimit", "0", 0);
+  
+- //ACEBOT ADD - RiEvEr
+- 		ltk_skill = gi.cvar( "ltk_skill", "10", 0);
+- 		ltk_showpath = gi.cvar( "ltk_showpath", "0", 0);
+- 		ltk_chat = gi.cvar( "ltk_chat", "1", 0);
+- //ACEBOT END
+          // william for CGF (glass fx)
+          CGF_SFX_InstallGlassSupport();
+  
+--- 220,225 ----
+*************** void InitGame (void)
+*** 282,290 ****
+          globals.edicts = g_edicts;
+          globals.max_edicts = game.maxentities;
+  
+- // CGF_FOG ADD
+- 		CGF_SFX_InstallFogSupport();
+- // CGF_FOG END
+          // initialize all clients for this game
+          game.maxclients = maxclients->value;
+          game.clients = gi.TagMalloc (game.maxclients * sizeof(game.clients[0]), TAG_GAME);
+--- 249,254 ----

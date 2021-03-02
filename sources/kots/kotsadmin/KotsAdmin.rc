@@ -1,0 +1,301 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\KotsAdmin.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\KotsAdmin.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_KOTSADMIN_DIALOG DIALOGEX 0, 0, 321, 207
+STYLE DS_3DLOOK | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "KOTS Administrator 4.0 - http://www.planetquake.com/nightbreed"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&About",ID_ABOUT,264,7,50,14
+    PUSHBUTTON      "&Options",IDC_OPTIONS,264,26,50,14
+    PUSHBUTTON      "&Update",IDC_UPDATE,264,45,50,14
+    PUSHBUTTON      "&Close",IDOK,264,64,50,14
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,7,245,193
+    EDITTEXT        IDC_STATUS,261,121,53,22,ES_CENTER | ES_MULTILINE | 
+                    ES_READONLY | NOT WS_TABSTOP
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 336, 169
+STYLE DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_BITPLACE,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,
+                    4,1,324,134
+END
+
+IDD_USER DIALOG DISCARDABLE  0, 0, 210, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Info"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,7,95,64,14
+    PUSHBUTTON      "Reset Password",IDC_RESET,73,95,64,14
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,7,196,83
+    PUSHBUTTON      "Delete Player",IDC_DELETE,139,95,64,14
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 396, 250
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "KOTS Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Kots data folder:",IDC_STATIC,7,7,103,9
+    EDITTEXT        IDC_EDIT2,7,18,188,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Browse...",IDC_DATADIR,198,18,41,12
+    CONTROL         "Run Once (at app launch and when OK is hit on this dialog)",
+                    IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,7,39,220,12
+    CONTROL         "Update page every:",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,7,54,76,12
+    EDITTEXT        IDC_EDIT1,87,54,25,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,113,52,11,
+                    15
+    LTEXT           "minutes (1-120)",IDC_STATIC,119,56,56,8
+    GROUPBOX        "HTML Options",IDC_STATIC,7,72,234,85
+    CONTROL         "Enable HTML Generation",IDC_EHTML,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,84,96,10
+    CONTROL         "Split main page",IDC_SPLIT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,97,63,10
+    EDITTEXT        IDC_EDIT10,79,96,37,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,117,95,11,
+                    15
+    LTEXT           "players per page",IDC_STATIC,123,97,57,10
+    EDITTEXT        IDC_EDIT11,50,112,37,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,88,110,11,
+                    15
+    LTEXT           "pages (0 means all)",IDC_STATIC,94,113,122,10
+    LTEXT           "Create HTML in this folder (kotsdata.htm):",IDC_STATIC,
+                    15,130,133,9
+    EDITTEXT        IDC_EDIT3,15,141,170,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Browse...",IDC_OUTFILE,189,141,41,12
+    LTEXT           "Extra HTML added at the end of the file:",IDC_STATIC,7,
+                    161,132,9
+    EDITTEXT        IDC_HTML,7,175,382,48,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    CONTROL         "Enable FTP",IDC_EFTP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,251,22,130,10
+    LTEXT           "Server:",IDC_STATIC,251,36,61,8
+    EDITTEXT        IDC_EDIT4,251,49,130,12,ES_AUTOHSCROLL
+    LTEXT           "User Name:",IDC_STATIC,251,65,61,8
+    EDITTEXT        IDC_EDIT5,251,78,130,12,ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,251,94,61,8
+    EDITTEXT        IDC_EDIT6,251,107,130,12,ES_AUTOHSCROLL
+    LTEXT           "Folder:",IDC_STATIC,251,123,61,8
+    EDITTEXT        IDC_EDIT7,251,136,130,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,143,229,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,202,229,50,14
+    GROUPBOX        "FTP Options",IDC_STATIC,243,7,146,150
+    LTEXT           "Generate",IDC_STATIC,16,113,34,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "KotsAdmin MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "KotsAdmin\0"
+            VALUE "LegalCopyright", "Copyright (C) 1999\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "KotsAdmin.EXE\0"
+            VALUE "ProductName", "KotsAdmin Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_KOTSADMIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 328
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_USER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 389
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SPLASH              BITMAP  DISCARDABLE     "res\\splash.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About KotsAdmin..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\KotsAdmin.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

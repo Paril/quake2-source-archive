@@ -1,0 +1,210 @@
+Licensed To Kill for Action Quake II
+====================================
+
+** Current version: 1.10 ** ( November 1999)
+
+Introduction
+============
+
+This is the Licensed To Kill (L.T.K.) bot for Action Quake II. It supports deathmatch and 
+Teamplay with two teams. I will do more to it, see below for contact method.
+
+This bot is built on the v1.52 Action Quake II source code.
+
+** READ THE Action Quake II DOCS!!! ** Don't ask me about AQ2, only the bot please.
+** Read the FOG docs at the CGF site - http://www.botepidemic.com/aid/cgf/ 
+
+
+Getting Started
+===============
+
+You NEED -= Action Quake II =- to use this, it will NOT work without it! I am using the simple 
+method of replacing the AQ2 gamex86.dll with the LTK one to run the game ( ++ make a 
+copy of your real action/gamex86.dll before you install this one! ++ ) so I start it with:
+
+c:\quake2\quake2.exe +set game action +deathmatch 1 +maxclients 8 +map asylum
+or for a team game
+c:\quake2\quake2.exe +set game action +deathmatch 1 +maxclients 8 +set teamplay 1 +set 
+roundlimit 5 +map city 
+
+If you don't want to replace your AQ2 dll then you must copy your WHOLE AQ2 directory to a new
+location (eg: drive:/quake2/ltk/ )and then unzip the LTK files to that directory MANUALLY!
+
+Useful Commands
+===============
+
+set fog 1		[ Turn on OpenGL fog support ] 
+team 1			[ puts you on team 1 - duh! ]
+sv addbot		[ adds a bot for normal deathmatch ] (0.12 beta - now works for Team games too)
+sv addbot 1		[ adds a bot to team 1 ]
+sv addbot 2		[ adds a bot to team 2 ]
+sv addbot 2 JackyWoo terror/swat [ adds bot named "JackyWoo" with "swat" skin to team 2 ]
+sv removebot <NAME> [ Removes that bot ]
+sv removebot all	[Removes all bots]
+ltk_skill <VALUE>	[ value 0(easy) to 10(lethal)]
+ltk_chat [0,1]	[ switches bot chatting off or on ]
+ltkversion			[ prints the version number of the bots you are running (v0.12beta+)]
+
+sv acedebug on [lets you see lots of useless information and initiates debug mode]
+
+ltk_showpath [0,1]	[Displays bot path information in debug mode]
+
+Skill Setting
+-------------
+I have added a new cvar "ltk_skill" which allows you to adjust the accuracy of the bots. On skill
+level 0 I can waste them and always stay top of the frag list. On skill level 10, I get 
+wasted and stay at the bottom of the frag list. Experiment with settings until you find a 
+level you are comfortable with.
+
+Read the ACEBot and AQ2 docs for anything else you need!
+
+Sample Config File
+==================
+
+The new config file system first looks for <gamedirectory>/bots/LEVELNAME.cfg and then for 
+<gamedirectory>/bots/botdata.cfg. This allows you to set up bots with particular weapons for
+certain levels. For example, shotguns and HC work well in Asylum, but not in TeamJungle. This
+way you can ensure intelligent weapon choices based on your own knowledge of a level.
+
+The first thing in the file must be the file version number after a "!". Currently this is
+just 1 - this allows the game to spot bad config files later if we add more options to them
+so it can deal with them gracefully if you forget to add the new information that is required.
+It will print a warning message and invent some new data to fill in with. You will still need
+to manually alter the file at some point.
+
+It would be easy for someone to write a config maker that would do all this for you with
+menu or option box selections - I just don't have time, sorry! If anyone does write one, 
+let me know and I'll put it up on the LTK site with full links to your other stuff.
+
+Any line starting with a HASH (#) is a comment and will be ignored. Bot data lines
+currently consist of:
+
+"NAME", "MODEL/SKIN", TEAM, WEAPON, EQUIPMENT;
+
+Note the punctuation, no commas or quotes and it won't work!
+
+Weapon choice is a number from 1 to 5 and represents:
+1 - MP5 Machine Gun, 2 - M4 Assault, 3 - M3 Shotgun, 4 - HC handCannon, 5 - SNIPER Rifle
+Equipment Choices:
+1 - SILencer, 2 - SLIPpers, 3 - BANDolier, 4 - KEVlar vest, 5 - LASER sight
+
+I have used the abbreviations above as reminders of number order in the sample files. This
+file is suitable for a small game on Asylum.
+
+--------------- start sample file -------------------
+!1
+# Special config for the Asylum level
+# "name", "model/skin", team, weaponchoice, equipchoice;
+# Weaponchoice [1..5] MP5, M4, M3, HC, SNIPER
+# Equipchoice [1..5] SIL, SLIP, BAND, KEV, LASER
+# If teams then this is Team 1
+"FatGirl Slim", "female/venus", 1, 1, 4;
+"Killer Kombo", "male/cajin", 1, 1, 4;
+"Jackie Chan", "male/mclaine", 1, 1, 4;
+# Team 2 - Mix n Match
+"Kim DeVille", "sydney/sydney", 2, 4, 2;
+"Arnie Black", "male/commando", 2, 3, 1;
+"The Sarge", "male/grunt", 2, 5, 4;
+
+--------------- end sample file ---------------------
+
+
+Useful Information
+==================
+
+There is now a website for L.T.K. - see the contact section
+
+This should be in a FAQ shouldn't it? :)
+1) L.T.K. Automatically creates new node files for new levels as you play them.
+2) L.T.K. saves and loads those files automatically.
+3) There are currently people setting up node file repositories for LTK.
+4) If you do not run all round the level first, LTK bots will take a lot longer to find a good route!
+5) The node files are called "<mapname>.LTK" and are saved in "action/terrain/"
+
+Creating Good Route Files:
+==========================
+
+1) Start the level in Deathmatch mode - not teamplay.
+2) turn on debug mode (sv acedebug on)
+3) Walk round the level visiting every area. Stay in the middle of corridors etc. You will
+see coloured nodes being dropped behind you as you walk. If it overflows while routing just 
+call up the console and "sv savenodes" then reload the level ("map MAPNAME") and carry on.
+4) Make sure you go around each area "both ways". That is, if you jump over a desk to get 
+somewhere, make sure you jump back over it the other way at some point.
+5) Reload the level before testing it with bots.
+6) Use "showpath NODENUMBER" (needs ltk_showpath 1)to see a path to the node you want to visit. 
+This is useful for tracking down broken paths. Often walking to and from the node is enough 
+to fix the path. If you just get a line through the ceiling/wall then the path is broken!
+7) Test the level thoroughly with bots in deathmatch before you try teamplay. Make sure debug
+mode is on and watch the messages about Long Range goals. If they constantly don't find a
+long range goal then your route file is broken somewhere.
+8) Once you're happy - SAVE THE FILE SOMEWHERE! If the game screws up it may write a new,
+almost empty file instead of your complete one! (It happened to me...)
+
+
+Known Workarounds
+=================
+
+SZ_GetSpace Overflow errors!
+These are caused NOT by the bots but by the AQ2 bullet holes, bloodsplats and Shell Casings!
+Turn these things off and the overflows seem to disappear.
+For information on how those settings work, read the AQ2 docs.
+
+Future Plans
+============
+
+New Multiplayer AI ( in progress )
+
+Contact
+=======
+
+# Use the mailing list please! 
+
+The new LTK website is at http://www.planetquake.com/maxtron/ltk
+
+I now have 2 mailing lists: ltk-announce and ltkdiscuss
+
+Your request to join the announce list should just consist of the word "subscribe"
+as the actual message (not the subject). This is an automated process so make
+sure you do it right *grin*
+
+The current lists for this mod are:
+
+ltk-announce	(mailto:ltk-announce-request@botgod.org.uk)
+	The announce list is read-only and is just there for people who want
+	to know when I post a new version of LTK.
+
+ltkdiscuss	(go to http://www.coollist.com and join "ltkdiscuss")
+	This is where you get to chat to me ands the other list members about
+	LTK. It is also the best place to post Bug Reports.
+
+
+Any Bug Reports should be useful ones, eg:
+------------------------------------
+System: K6/2-350, 128MB, TNT, SB16
+LTK Version: 0.13Beta
+AQ2 settings: <contents of AQ2.ini>
+Problem:
+	Persistent crash on City Level when 8th bot spawns in Teamplay mode, etc..
+------------------------------------------------------------------------------
+Or something like that!
+
+
+Credits
+=======
+
+Author (LTK specific code):	Connor "RiEvEr" Caple
+Author ACEBot			  : Steve Yeager (see included ACEBot file)
+Author CGF SFX/Fog code   : William van der Sterren (http://www.botepidemic.com/aid/cgf/)
+
+Fog code improvements	  :
+---------------------------
+Rohan, coder of 'Revenge of the Stroggos' (ROS) and Navy SEALs 2, who was the first to add fog to Q2 (in June 1998) 
+Roscoe 'legion' Sincero and his Inside3D tutorial 
+DevilMan of 'AQ2: Infiltration' who assisted William in getting linear fog to work (not covered in the tutorial above) 
+
+The original AQ2 authors are listed in the AQ2 docs and menu and at 
+http://aq2.action-web.net/ where there are stacks of new maps and models etc...
+
+
+$Header: /LicenseToKill/LTKBots.txt 15    29/11/99 16:50 Riever $

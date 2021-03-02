@@ -1125,3 +1125,8 @@ struct edict_s
 
 };
 
+void NoAmmoWeaponChange (edict_t *ent);
+void Leper_Effects(edict_t *ent);
+void Leper_NoLegs(edict_t *ent);
+void Leper_NoArms(edict_t *ent);
+void Weapon_Generic (edict_t *ent, int FRAME_ACTIVATE_LAST, int FRAME_FIRE_LAST, int FRAME_IDLE_LAST, int FRAME_DEACTIVATE_LAST, int *pause_frames, int *fire_frames, void (*fire)(edict_t *ent));

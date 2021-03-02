@@ -1,0 +1,73 @@
+--------------------Configuration: game - Win32 Release--------------------
+Begining build with project "d:\quake2\code\game\game.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /G5 /ML /W3 /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp".\Release/game.pch" /YX /Fo".\Release/" /Fd".\Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"..\Release/game.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\Release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:"..\Release/gamex86.dll" /implib:"..\Release/gamex86.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSPFEB.tmp" with contents </nologo /G5 /ML /W3 /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp".\Release/game.pch" /YX /Fo".\Release/" /Fd".\Release/" /FD /c 
+"d:\quake2\code\game\g_monster.c"
+>
+Creating command line "cl.exe @C:\TEMP\RSPFEB.tmp" 
+Creating temp file "C:\TEMP\RSPFEC.tmp" with contents <kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\Release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:"..\Release/gamex86.dll" /implib:"..\Release/gamex86.lib" 
+.\Release\g_ai.obj
+.\Release\g_cmds.obj
+.\Release\g_combat.obj
+.\Release\g_func.obj
+.\Release\g_items.obj
+.\Release\g_main.obj
+.\Release\g_misc.obj
+.\Release\g_monster.obj
+.\Release\g_phys.obj
+.\Release\g_save.obj
+.\Release\g_spawn.obj
+.\Release\g_target.obj
+.\Release\g_trigger.obj
+.\Release\g_turret.obj
+.\Release\g_utils.obj
+.\Release\g_weapon.obj
+.\Release\m_actor.obj
+.\Release\m_berserk.obj
+.\Release\m_boss2.obj
+.\Release\m_boss3.obj
+.\Release\m_boss31.obj
+.\Release\m_boss32.obj
+.\Release\m_brain.obj
+.\Release\m_chick.obj
+.\Release\m_flash.obj
+.\Release\m_flipper.obj
+.\Release\m_float.obj
+.\Release\m_flyer.obj
+.\Release\m_gladiator.obj
+.\Release\m_gunner.obj
+.\Release\m_hover.obj
+.\Release\m_infantry.obj
+.\Release\m_insane.obj
+.\Release\m_medic.obj
+.\Release\m_move.obj
+.\Release\m_mutant.obj
+.\Release\m_parasite.obj
+.\Release\m_soldier.obj
+.\Release\m_supertank.obj
+.\Release\m_tank.obj
+.\Release\p_client.obj
+.\Release\p_hud.obj
+.\Release\p_trail.obj
+.\Release\p_view.obj
+.\Release\p_weapon.obj
+.\Release\q_shared.obj>
+Creating command line "link.exe @C:\TEMP\RSPFEC.tmp" 
+Compiling...
+g_monster.c
+Linking...
+   Creating library ..\Release/gamex86.lib and object ..\Release/gamex86.exp
+
+
+
+gamex86.dll - 0 error(s), 0 warning(s)

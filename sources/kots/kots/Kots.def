@@ -1,0 +1,7 @@
+; Kots.def : Declares the module parameters for the DLL.
+
+LIBRARY      "gamex86"
+DESCRIPTION  'gamex86 Windows Dynamic Link Library'
+
+EXPORTS
+	GetGameAPI

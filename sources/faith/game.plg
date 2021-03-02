@@ -1,0 +1,135 @@
+--------------------Configuration: game - Win32 Release--------------------
+Begining build with project "E:\Quake2\ctf\game\game.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /G5 /ML /W3 /GX /Zd /Ot /Ow /Oi /Oy /Ob1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp".\Release/game.pch" /YX /Fo".\Release/" /Fd".\Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o".\Release/game.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:".\Release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:".\Release/gamex86.dll" /implib:".\Release/gamex86.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP1F4.tmp" with contents </nologo /G5 /ML /W3 /GX /Zd /Ot /Ow /Oi /Oy /Ob1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp".\Release/game.pch" /YX /Fo".\Release/" /Fd".\Release/" /FD /c 
+"E:\Quake2\ctf\game\g_combat.c"
+>
+Creating command line "cl.exe @C:\TEMP\RSP1F4.tmp" 
+Creating temp file "C:\TEMP\RSP1F5.tmp" with contents <kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:".\Release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:".\Release/gamex86.dll" /implib:".\Release/gamex86.lib" 
+.\Release\g_ai.obj
+.\Release\g_chase.obj
+.\Release\g_cmds.obj
+.\Release\g_combat.obj
+.\Release\g_ctf.obj
+.\Release\g_func.obj
+.\Release\g_items.obj
+.\Release\g_main.obj
+.\Release\g_misc.obj
+.\Release\g_monster.obj
+.\Release\g_phys.obj
+.\Release\g_save.obj
+.\Release\g_spawn.obj
+.\Release\g_svcmds.obj
+.\Release\g_target.obj
+.\Release\g_trigger.obj
+.\Release\g_utils.obj
+.\Release\g_weapon.obj
+.\Release\m_move.obj
+.\Release\p_client.obj
+.\Release\p_hud.obj
+.\Release\p_menu.obj
+.\Release\p_trail.obj
+.\Release\p_view.obj
+.\Release\p_weapon.obj
+.\Release\q_shared.obj>
+Creating command line "link.exe @C:\TEMP\RSP1F5.tmp" 
+Compiling...
+g_combat.c
+Linking...
+   Creating library .\Release/gamex86.lib and object .\Release/gamex86.exp
+
+
+
+gamex86.dll - 0 error(s), 0 warning(s)
+--------------------Configuration: game - Win32 Debug--------------------
+Begining build with project "E:\Quake2\ctf\game\game.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /G5 /MLd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "BUILDING_REF_GL" /FR".\Debug/" /Fp".\Debug/game.pch" /YX /Fo".\Debug/" /Fd".\Debug/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "_DEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "_DEBUG" "
+			"Browser Database Maker" with flags "/nologo /o".\Debug/game.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:".\Debug/gamex86.pdb" /debug /machine:I386 /def:".\game.def" /out:".\Debug/gamex86.dll" /implib:".\Debug/gamex86.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\TEMP\RSP1F7.tmp" with contents </nologo /G5 /MLd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "BUILDING_REF_GL" /FR".\Debug/" /Fp".\Debug/game.pch" /YX /Fo".\Debug/" /Fd".\Debug/" /FD /c 
+"E:\Quake2\ctf\game\g_combat.c"
+>
+Creating command line "cl.exe @C:\TEMP\RSP1F7.tmp" 
+Creating temp file "C:\TEMP\RSP1F8.tmp" with contents <kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:".\Debug/gamex86.pdb" /debug /machine:I386 /def:".\game.def" /out:".\Debug/gamex86.dll" /implib:".\Debug/gamex86.lib" 
+.\Debug\g_ai.obj
+.\Debug\g_chase.obj
+.\Debug\g_cmds.obj
+.\Debug\g_combat.obj
+.\Debug\g_ctf.obj
+.\Debug\g_func.obj
+.\Debug\g_items.obj
+.\Debug\g_main.obj
+.\Debug\g_misc.obj
+.\Debug\g_monster.obj
+.\Debug\g_phys.obj
+.\Debug\g_save.obj
+.\Debug\g_spawn.obj
+.\Debug\g_svcmds.obj
+.\Debug\g_target.obj
+.\Debug\g_trigger.obj
+.\Debug\g_utils.obj
+.\Debug\g_weapon.obj
+.\Debug\m_move.obj
+.\Debug\p_client.obj
+.\Debug\p_hud.obj
+.\Debug\p_menu.obj
+.\Debug\p_trail.obj
+.\Debug\p_view.obj
+.\Debug\p_weapon.obj
+.\Debug\q_shared.obj>
+Creating command line "link.exe @C:\TEMP\RSP1F8.tmp" 
+Compiling...
+g_combat.c
+Linking...
+   Creating library .\Debug/gamex86.lib and object .\Debug/gamex86.exp
+Creating temp file "C:\TEMP\RSP1FA.tmp" with contents </nologo /o".\Debug/game.bsc" 
+.\Debug\g_ai.sbr
+.\Debug\g_chase.sbr
+.\Debug\g_cmds.sbr
+.\Debug\g_combat.sbr
+.\Debug\g_ctf.sbr
+.\Debug\g_func.sbr
+.\Debug\g_items.sbr
+.\Debug\g_main.sbr
+.\Debug\g_misc.sbr
+.\Debug\g_monster.sbr
+.\Debug\g_phys.sbr
+.\Debug\g_save.sbr
+.\Debug\g_spawn.sbr
+.\Debug\g_svcmds.sbr
+.\Debug\g_target.sbr
+.\Debug\g_trigger.sbr
+.\Debug\g_utils.sbr
+.\Debug\g_weapon.sbr
+.\Debug\m_move.sbr
+.\Debug\p_client.sbr
+.\Debug\p_hud.sbr
+.\Debug\p_menu.sbr
+.\Debug\p_trail.sbr
+.\Debug\p_view.sbr
+.\Debug\p_weapon.sbr
+.\Debug\q_shared.sbr>
+Creating command line "bscmake.exe @C:\TEMP\RSP1FA.tmp" 
+Creating browse info file...
+
+
+
+gamex86.dll - 0 error(s), 0 warning(s)

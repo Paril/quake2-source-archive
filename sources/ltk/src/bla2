@@ -1,0 +1,202 @@
+*** g_main.c	Sat Jan 12 14:22:28 2002
+--- work:Q2/action/g_main.c	Wed Dec 26 12:52:10 2001
+***************
+*** 1,30 ****
+- /*
+-  * $Header: /LicenseToKill/src/g_main.c 6     21/10/99 8:15 Riever $
+-  *
+-  * $Log: /LicenseToKill/src/g_main.c $
+-  * 
+-  * 6     21/10/99 8:15 Riever
+-  * Added ltk_showpath CVAR to toggle display of bot path selection
+-  * information.
+-  * 
+-  * 5     16/10/99 8:47 Riever
+-  * Added ltk_chat CVAR to turn on/ off chatting for bots.
+-  * 
+-  * 4     17/09/99 6:04 Riever
+-  * Updated to 1.52 source code
+-  * 
+-  * 3     14/09/99 21:53 Riever
+-  * Used safe_bprintf method for all source files
+-  * 
+-  * 2     14/09/99 8:04 Riever
+-  * Added ltk_skill cvar (0 to 10)
+-  * 
+-  * 2     13/09/99 19:52 Riever
+-  * Added headers
+-  *
+-  */
+  
+  #include "g_local.h"
+  
+  game_locals_t   game;
+  level_locals_t  level;
+--- 1,6 ----
+  
+  #include "g_local.h"
++ #include "dll.h"
+  
+  game_locals_t   game;
+  level_locals_t  level;
+*************** cvar_t  *sv_shelloff;
+*** 108,118 ****
+  cvar_t  *bholelimit;
+  cvar_t  *splatlimit;
+  
+- //ACEBOT ADD - RiEvEr
+- cvar_t	*ltk_skill;
+- cvar_t	*ltk_showpath;
+- cvar_t	*ltk_chat;
+- //ACEBOT END
+  
+  void SpawnEntities (char *mapname, char *entities, char *spawnpoint);
+  void ClientThink (edict_t *ent, usercmd_t *cmd);
+--- 84,89 ----
+*************** void G_RunFrame (void);
+*** 137,145 ****
+  void ShutdownGame (void)
+  {
+          gi.dprintf ("==== ShutdownGame ====\n");
+- // ACEBOT ADD
+- 		ACECM_Store();
+- // ACEBOT END
+  
+          gi.FreeTags (TAG_LEVEL);
+          gi.FreeTags (TAG_GAME);
+--- 108,113 ----
+*************** void EndDMLevel (void)
+*** 253,261 ****
+  {
+          edict_t *ent;
+          char *nextmapname = NULL;
+! // ACEBOT ADD
+! 		ACECM_Store();
+! // ACEBOT END
+          // stay on same level flag
+          if ((int)dmflags->value & DF_SAME_LEVEL)
+          {
+--- 221,227 ----
+  {
+          edict_t *ent;
+          char *nextmapname = NULL;
+! 
+          // stay on same level flag
+          if ((int)dmflags->value & DF_SAME_LEVEL)
+          {
+*************** void EndDMLevel (void)
+*** 299,305 ****
+  
+          if (level.nextmap != NULL)
+          {
+!                 safe_bprintf(PRINT_HIGH, "Next map in rotation is %s.\n",
+                          level.nextmap);
+          }
+  //FIREBLADE
+--- 265,271 ----
+  
+          if (level.nextmap != NULL)
+          {
+!                 gi.bprintf(PRINT_HIGH, "Next map in rotation is %s.\n",
+                          level.nextmap);
+          }
+  //FIREBLADE
+*************** void CheckDMRules (void)
+*** 339,345 ****
+                  {
+                          if (level.time >= timelimit->value*60)
+                          {
+!                                 safe_bprintf (PRINT_HIGH, "Timelimit hit.\n");
+                                  EndDMLevel ();
+                                  return;
+                          }
+--- 305,311 ----
+                  {
+                          if (level.time >= timelimit->value*60)
+                          {
+!                                 gi.bprintf (PRINT_HIGH, "Timelimit hit.\n");
+                                  EndDMLevel ();
+                                  return;
+                          }
+*************** void CheckDMRules (void)
+*** 357,363 ****
+  
+                          if (cl->resp.score >= fraglimit->value)
+                          {
+!                                 safe_bprintf (PRINT_HIGH, "Fraglimit hit.\n");
+                                  EndDMLevel ();
+                                  return;
+                          }
+--- 323,329 ----
+  
+                          if (cl->resp.score >= fraglimit->value)
+                          {
+!                                 gi.bprintf (PRINT_HIGH, "Fraglimit hit.\n");
+                                  EndDMLevel ();
+                                  return;
+                          }
+*************** void G_RunFrame (void)
+*** 456,464 ****
+                  if (i > 0 && i <= maxclients->value)
+                  {
+                          ClientBeginServerFrame (ent);
+! // ACEBOT_ADD
+! 			//continue;
+! // ACEBOT_END
+                  }
+  
+                  G_RunEntity (ent);
+--- 422,428 ----
+                  if (i > 0 && i <= maxclients->value)
+                  {
+                          ClientBeginServerFrame (ent);
+!                         continue;
+                  }
+  
+                  G_RunEntity (ent);
+*************** void CheckNeedPass (void)
+*** 505,507 ****
+--- 469,511 ----
+  	}
+  }
+  //FROM 3.20 END
++ 
++ 
++ void* __saveds dllFindResource(int id, char *pType)
++ {
++     return NULL;
++ }
++ 
++ void* __saveds dllLoadResource(void *pHandle)
++ {
++     return NULL;
++ }
++ 
++ void __saveds dllFreeResource(void *pHandle)
++ {
++     return;
++ }
++ 
++ dll_tExportSymbol DLL_ExportSymbols[]=
++ {
++     {dllFindResource,"dllFindResource"},
++     {dllLoadResource,"dllLoadResource"},
++     {dllFreeResource,"dllFreeResource"},
++    {(void *)GetGameAPI,"GetGameAPI"},
++    {0,0}
++ };
++ 
++ dll_tImportSymbol DLL_ImportSymbols[]=
++ {
++ 	{0,0,0,0}
++ };
++ 
++ int __saveds DLL_Init(void)
++ {
++     return 1L;
++ }
++ 
++ void __saveds DLL_DeInit(void)
++ {
++ }
++ 

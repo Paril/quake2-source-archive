@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioUserFile
+	ProjectType="Visual C++"
+	Version="9.00"
+	ShowAllFiles="false"
+	>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			>
+			<DebugSettings
+				Command="c:\quake2\egl.exe"
+				WorkingDirectory="c:\quake2\"
+				CommandArguments="+set game hideandseek +set deathmatch 1 +map dark005"
+				Attach="false"
+				DebuggerType="3"
+				Remote="1"
+				RemoteMachine="PARIL-CSUERJ735"
+				RemoteCommand=""
+				HttpUrl=""
+				PDBPath=""
+				SQLDebugging=""
+				Environment=""
+				EnvironmentMerge="true"
+				DebuggerFlavor="0"
+				MPIRunCommand=""
+				MPIRunArguments=""
+				MPIRunWorkingDirectory=""
+				ApplicationCommand=""
+				ApplicationArguments=""
+				ShimCommand=""
+				MPIAcceptMode=""
+				MPIAcceptFilter=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			>
+			<DebugSettings
+				Command=""
+				WorkingDirectory=""
+				CommandArguments=""
+				Attach="false"
+				DebuggerType="3"
+				Remote="1"
+				RemoteMachine="PARIL-CSUERJ735"
+				RemoteCommand=""
+				HttpUrl=""
+				PDBPath=""
+				SQLDebugging=""
+				Environment=""
+				EnvironmentMerge="true"
+				DebuggerFlavor=""
+				MPIRunCommand=""
+				MPIRunArguments=""
+				MPIRunWorkingDirectory=""
+				ApplicationCommand=""
+				ApplicationArguments=""
+				ShimCommand=""
+				MPIAcceptMode=""
+				MPIAcceptFilter=""
+			/>
+		</Configuration>
+	</Configurations>
+</VisualStudioUserFile>

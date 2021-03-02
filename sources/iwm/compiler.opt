@@ -1,0 +1,5 @@
+-I$src_folder
+-I$src_folder/bot
+-I$src_folder/editor
+-I$src_folder/features
+-I$src_folder/weapons

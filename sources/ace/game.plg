@@ -1,0 +1,151 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: game - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP12F5.TMP" with contents
+[
+/nologo /G5 /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "BUILDING_REF_GL" /FR".\Temp/" /Fp".\Temp/game.pch" /YX /Fo".\Temp/" /Fd".\Temp/" /FD /c 
+"C:\Quake2\Ace\src\acesrc\acebot_movement.c"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP12F5.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP12F6.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:".\Debug/gamex86.pdb" /debug /machine:I386 /def:".\game.def" /out:"../gamex86.dll" /implib:".\Debug/gamex86.lib" 
+.\Temp\acebot_ai.obj
+.\Temp\acebot_cmds.obj
+.\Temp\acebot_items.obj
+.\Temp\acebot_movement.obj
+.\Temp\acebot_nodes.obj
+.\Temp\acebot_spawn.obj
+.\Temp\g_ai.obj
+.\Temp\g_chase.obj
+.\Temp\g_cmds.obj
+.\Temp\g_combat.obj
+.\Temp\g_ctf.obj
+.\Temp\g_func.obj
+.\Temp\g_items.obj
+.\Temp\g_main.obj
+.\Temp\g_misc.obj
+.\Temp\g_monster.obj
+.\Temp\g_phys.obj
+.\Temp\g_save.obj
+.\Temp\g_spawn.obj
+.\Temp\g_svcmds.obj
+.\Temp\g_target.obj
+.\Temp\g_trigger.obj
+.\Temp\g_turret.obj
+.\Temp\g_utils.obj
+.\Temp\g_weapon.obj
+.\Temp\m_actor.obj
+.\Temp\m_berserk.obj
+.\Temp\m_boss2.obj
+.\Temp\m_boss3.obj
+.\Temp\m_boss31.obj
+.\Temp\m_boss32.obj
+.\Temp\m_brain.obj
+.\Temp\m_chick.obj
+.\Temp\m_flash.obj
+.\Temp\m_flipper.obj
+.\Temp\m_float.obj
+.\Temp\m_flyer.obj
+.\Temp\m_gladiator.obj
+.\Temp\m_gunner.obj
+.\Temp\m_hover.obj
+.\Temp\m_infantry.obj
+.\Temp\m_insane.obj
+.\Temp\m_medic.obj
+.\Temp\m_move.obj
+.\Temp\m_mutant.obj
+.\Temp\m_parasite.obj
+.\Temp\m_soldier.obj
+.\Temp\m_supertank.obj
+.\Temp\m_tank.obj
+.\Temp\p_client.obj
+.\Temp\p_hud.obj
+.\Temp\p_menu.obj
+.\Temp\p_trail.obj
+.\Temp\p_view.obj
+.\Temp\p_weapon.obj
+.\Temp\q_shared.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP12F6.TMP"
+<h3>Output Window</h3>
+Compiling...
+acebot_movement.c
+Linking...
+LINK : warning LNK4075: ignoring /EDITANDCONTINUE due to /INCREMENTAL:NO specification
+   Creating library .\Debug/gamex86.lib and object .\Debug/gamex86.exp
+Creating temporary file "C:\WINDOWS\TEMP\RSP1320.TMP" with contents
+[
+/nologo /o".\Debug/game.bsc" 
+.\Temp\acebot_ai.sbr
+.\Temp\acebot_cmds.sbr
+.\Temp\acebot_items.sbr
+.\Temp\acebot_movement.sbr
+.\Temp\acebot_nodes.sbr
+.\Temp\acebot_spawn.sbr
+.\Temp\g_ai.sbr
+.\Temp\g_chase.sbr
+.\Temp\g_cmds.sbr
+.\Temp\g_combat.sbr
+.\Temp\g_ctf.sbr
+.\Temp\g_func.sbr
+.\Temp\g_items.sbr
+.\Temp\g_main.sbr
+.\Temp\g_misc.sbr
+.\Temp\g_monster.sbr
+.\Temp\g_phys.sbr
+.\Temp\g_save.sbr
+.\Temp\g_spawn.sbr
+.\Temp\g_svcmds.sbr
+.\Temp\g_target.sbr
+.\Temp\g_trigger.sbr
+.\Temp\g_turret.sbr
+.\Temp\g_utils.sbr
+.\Temp\g_weapon.sbr
+.\Temp\m_actor.sbr
+.\Temp\m_berserk.sbr
+.\Temp\m_boss2.sbr
+.\Temp\m_boss3.sbr
+.\Temp\m_boss31.sbr
+.\Temp\m_boss32.sbr
+.\Temp\m_brain.sbr
+.\Temp\m_chick.sbr
+.\Temp\m_flash.sbr
+.\Temp\m_flipper.sbr
+.\Temp\m_float.sbr
+.\Temp\m_flyer.sbr
+.\Temp\m_gladiator.sbr
+.\Temp\m_gunner.sbr
+.\Temp\m_hover.sbr
+.\Temp\m_infantry.sbr
+.\Temp\m_insane.sbr
+.\Temp\m_medic.sbr
+.\Temp\m_move.sbr
+.\Temp\m_mutant.sbr
+.\Temp\m_parasite.sbr
+.\Temp\m_soldier.sbr
+.\Temp\m_supertank.sbr
+.\Temp\m_tank.sbr
+.\Temp\p_client.sbr
+.\Temp\p_hud.sbr
+.\Temp\p_menu.sbr
+.\Temp\p_trail.sbr
+.\Temp\p_view.sbr
+.\Temp\p_weapon.sbr
+.\Temp\q_shared.sbr]
+Creating command line "bscmake.exe @C:\WINDOWS\TEMP\RSP1320.TMP"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+gamex86.dll - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,7 +1,7 @@
 #include "g_local.h"
 #include "m_player.h"
 
-extern char *leper_statusbar =
+char *leper_statusbar =
 "yb	-24 "
 
 // health number

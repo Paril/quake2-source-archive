@@ -68,6 +68,8 @@ qboolean LeperPickUpLeg (edict_t *ent, edict_t *other)
 			return true;
 		}
 	}
+
+	return false;
 }
 qboolean LeperPickUpGoldenLeg (edict_t *ent, edict_t *other)
 {
@@ -98,6 +100,8 @@ qboolean LeperPickUpGoldenLeg (edict_t *ent, edict_t *other)
 			return true;
 		}
 	}
+
+	return false;
 }
 qboolean LeperPickUpHead (edict_t *ent, edict_t *other)
 {

@@ -1,0 +1,96 @@
+--------------------Configuration: game - Win32 Release--------------------
+Begining build with project "C:\matrixquake\quake2\game.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /G5 /MT /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /FR".\release/" /Fp".\release/game.pch" /YX /Fo".\release/" /Fd".\release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "NDEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"..\release/game.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:"c:\quake2\matrix\gamex86.dll" /implib:"..\release/gamex86.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP2004.TMP" with contents </nologo /G5 /MT /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /FR".\release/" /Fp".\release/game.pch" /YX /Fo".\release/" /Fd".\release/" /FD /c 
+"C:\matrixquake\quake2\g_spawn.c"
+>
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP2004.TMP" 
+Creating temp file "C:\WINDOWS\TEMP\RSP2005.TMP" with contents <kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:"c:\quake2\matrix\gamex86.dll" /implib:"..\release/gamex86.lib" 
+.\release\g_ai.obj
+.\release\g_chase.obj
+.\release\g_cmds.obj
+.\release\g_combat.obj
+.\release\g_func.obj
+.\release\g_items.obj
+.\release\g_main.obj
+.\release\g_misc.obj
+.\release\g_monster.obj
+.\release\g_phys.obj
+.\release\g_save.obj
+.\release\g_spawn.obj
+.\release\g_svcmds.obj
+.\release\g_target.obj
+.\release\g_trigger.obj
+.\release\g_turret.obj
+.\release\g_utils.obj
+.\release\g_weapon.obj
+.\release\m_actor.obj
+.\release\m_berserk.obj
+.\release\m_boss2.obj
+.\release\m_boss3.obj
+.\release\m_boss31.obj
+.\release\m_boss32.obj
+.\release\m_brain.obj
+.\release\m_chick.obj
+.\release\m_flash.obj
+.\release\m_flipper.obj
+.\release\m_float.obj
+.\release\m_flyer.obj
+.\release\m_gladiator.obj
+.\release\m_gunner.obj
+.\release\m_hover.obj
+.\release\m_infantry.obj
+.\release\m_insane.obj
+.\release\m_medic.obj
+.\release\m_move.obj
+.\release\m_mutant.obj
+.\release\m_parasite.obj
+.\release\m_soldier.obj
+.\release\m_supertank.obj
+.\release\m_tank.obj
+.\release\Matrix_Autobuy.obj
+.\release\matrix_cam.obj
+.\release\matrix_cmds.obj
+.\release\matrix_findtarget.obj
+.\release\matrix_gweap.obj
+.\release\matrix_items.obj
+.\release\matrix_kungfu.obj
+.\release\matrix_locadam.obj
+.\release\matrix_main.obj
+.\release\matrix_match.obj
+.\release\matrix_menu.obj
+.\release\matrix_misc.obj
+.\release\matrix_movement.obj
+.\release\matrix_pweap.obj
+.\release\matrix_spells.obj
+.\release\matrix_stamina.obj
+.\release\matrix_tank.obj
+.\release\matrix_team.obj
+.\release\p_chase.obj
+.\release\p_client.obj
+.\release\p_hud.obj
+.\release\p_menu.obj
+.\release\p_trail.obj
+.\release\p_view.obj
+.\release\p_weapon.obj
+.\release\q_shared.obj>
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP2005.TMP" 
+Compiling...
+g_spawn.c
+C:\matrixquake\quake2\g_spawn.c(796) : error C2039: 'noweapons' : is not a member of 'spawn_temp_t'
+C:\matrixquake\quake2\g_spawn.c(797) : error C2065: 'YOUR_GLOBAL_VARIABLE' : undeclared identifier
+Error executing cl.exe.
+
+
+
+gamex86.dll - 2 error(s), 0 warning(s)

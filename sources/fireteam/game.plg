@@ -1,0 +1,166 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: game - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPA250.TMP" with contents
+[
+/nologo /G5 /MT /W3 /GX /Zd /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fr".\release/" /Fp".\release/game.pch" /YX /Fo".\release/" /Fd".\release/" /FD /c 
+"D:\usr\dev\ft\g_cmds.c"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPA250.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA251.TMP" with contents
+[
+kernel32.lib user32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:".\release/gamex86.pdb" /machine:I386 /def:".\game.def" /out:"d:\quake2\fireteam\gamex86.dll" /implib:".\release/gamex86.lib" 
+.\release\g_ai.obj
+.\release\G_airstrike.obj
+.\release\g_chase.obj
+.\release\g_cmds.obj
+.\release\g_combat.obj
+.\release\g_ctf.obj
+.\release\g_func.obj
+.\release\G_helpers.obj
+.\release\g_items.obj
+.\release\g_main.obj
+.\release\g_misc.obj
+.\release\G_monster.obj
+.\release\g_phys.obj
+.\release\g_save.obj
+.\release\g_spawn.obj
+.\release\g_svcmds.obj
+.\release\g_target.obj
+.\release\G_trigger.obj
+.\release\g_turret.obj
+.\release\g_utils.obj
+.\release\g_weapon.obj
+.\release\m_actor.obj
+.\release\M_berserk.obj
+.\release\m_boss2.obj
+.\release\m_boss3.obj
+.\release\m_boss31.obj
+.\release\m_boss32.obj
+.\release\m_brain.obj
+.\release\m_chick.obj
+.\release\m_flash.obj
+.\release\M_flipper.obj
+.\release\m_float.obj
+.\release\m_flyer.obj
+.\release\M_gladiator.obj
+.\release\m_gunner.obj
+.\release\m_hover.obj
+.\release\M_infantry.obj
+.\release\m_insane.obj
+.\release\m_medic.obj
+.\release\m_move.obj
+.\release\m_mutant.obj
+.\release\M_parasite.obj
+.\release\M_soldier.obj
+.\release\M_supertank.obj
+.\release\m_tank.obj
+.\release\P_c4.obj
+.\release\P_cam.obj
+.\release\P_classes.obj
+.\release\P_client.obj
+.\release\P_dead.obj
+.\release\P_flashlight.obj
+.\release\P_gasgrenade.obj
+.\release\p_hud.obj
+.\release\P_jet.obj
+.\release\P_laser.obj
+.\release\P_medic.obj
+.\release\p_menu.obj
+.\release\P_save.obj
+.\release\p_trail.obj
+.\release\p_view.obj
+.\release\p_weapon.obj
+.\release\q_devels.obj
+.\release\q_shared.obj
+.\release\X_radio.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPA251.TMP"
+<h3>Output Window</h3>
+Compiling...
+g_cmds.c
+Linking...
+   Creating library .\release/gamex86.lib and object .\release/gamex86.exp
+Creating temporary file "C:\WINDOWS\TEMP\RSPA284.TMP" with contents
+[
+/nologo /o".\release/game.bsc" 
+.\release\g_ai.sbr
+.\release\G_airstrike.sbr
+.\release\g_chase.sbr
+.\release\g_cmds.sbr
+.\release\g_combat.sbr
+.\release\g_ctf.sbr
+.\release\g_func.sbr
+.\release\G_helpers.sbr
+.\release\g_items.sbr
+.\release\g_main.sbr
+.\release\g_misc.sbr
+.\release\G_monster.sbr
+.\release\g_phys.sbr
+.\release\g_save.sbr
+.\release\g_spawn.sbr
+.\release\g_svcmds.sbr
+.\release\g_target.sbr
+.\release\G_trigger.sbr
+.\release\g_turret.sbr
+.\release\g_utils.sbr
+.\release\g_weapon.sbr
+.\release\m_actor.sbr
+.\release\M_berserk.sbr
+.\release\m_boss2.sbr
+.\release\m_boss3.sbr
+.\release\m_boss31.sbr
+.\release\m_boss32.sbr
+.\release\m_brain.sbr
+.\release\m_chick.sbr
+.\release\m_flash.sbr
+.\release\M_flipper.sbr
+.\release\m_float.sbr
+.\release\m_flyer.sbr
+.\release\M_gladiator.sbr
+.\release\m_gunner.sbr
+.\release\m_hover.sbr
+.\release\M_infantry.sbr
+.\release\m_insane.sbr
+.\release\m_medic.sbr
+.\release\m_move.sbr
+.\release\m_mutant.sbr
+.\release\M_parasite.sbr
+.\release\M_soldier.sbr
+.\release\M_supertank.sbr
+.\release\m_tank.sbr
+.\release\P_c4.sbr
+.\release\P_cam.sbr
+.\release\P_classes.sbr
+.\release\P_client.sbr
+.\release\P_dead.sbr
+.\release\P_flashlight.sbr
+.\release\P_gasgrenade.sbr
+.\release\p_hud.sbr
+.\release\P_jet.sbr
+.\release\P_laser.sbr
+.\release\P_medic.sbr
+.\release\p_menu.sbr
+.\release\P_save.sbr
+.\release\p_trail.sbr
+.\release\p_view.sbr
+.\release\p_weapon.sbr
+.\release\q_devels.sbr
+.\release\q_shared.sbr
+.\release\X_radio.sbr]
+Creating command line "bscmake.exe @C:\WINDOWS\TEMP\RSPA284.TMP"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+gamex86.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

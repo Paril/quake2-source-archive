@@ -1,0 +1,74 @@
+--------------------Configuration: game - Win32 Debug--------------------
+Begining build with project "C:\quake2\code\game\game.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /G5 /MTd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "BUILDING_REF_GL" /Fp".\Debug/game.pch" /YX /Fo".\Debug/" /Fd".\Debug/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "_DEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /d "_DEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"..\Debug/game.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\Debug/gamex86.pdb" /debug /machine:I386 /def:".\game.def" /out:"..\Debug/gamex86.dll" /implib:"..\Debug/gamex86.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "D:\TEMP\RSP4B.tmp" with contents </nologo /G5 /MTd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "BUILDING_REF_GL" /Fp".\Debug/game.pch" /YX /Fo".\Debug/" /Fd".\Debug/" /FD /c 
+"C:\quake2\code\game\p_view.c"
+>
+Creating command line "cl.exe @D:\TEMP\RSP4B.tmp" 
+Creating temp file "D:\TEMP\RSP4C.tmp" with contents <kernel32.lib user32.lib gdi32.lib winmm.lib /nologo /base:"0x20000000" /subsystem:windows /dll /incremental:no /pdb:"..\Debug/gamex86.pdb" /debug /machine:I386 /def:".\game.def" /out:"..\Debug/gamex86.dll" /implib:"..\Debug/gamex86.lib" 
+.\Debug\g_ai.obj
+.\Debug\g_cmds.obj
+.\Debug\g_combat.obj
+.\Debug\g_func.obj
+.\Debug\g_items.obj
+.\Debug\g_main.obj
+.\Debug\g_misc.obj
+.\Debug\g_monster.obj
+.\Debug\g_phys.obj
+.\Debug\g_save.obj
+.\Debug\g_spawn.obj
+.\Debug\g_svcmds.obj
+.\Debug\g_target.obj
+.\Debug\g_trigger.obj
+.\Debug\g_turret.obj
+.\Debug\g_utils.obj
+.\Debug\g_weapon.obj
+.\Debug\m_actor.obj
+.\Debug\m_berserk.obj
+.\Debug\m_boss2.obj
+.\Debug\m_boss3.obj
+.\Debug\m_boss31.obj
+.\Debug\m_boss32.obj
+.\Debug\m_brain.obj
+.\Debug\m_chick.obj
+.\Debug\m_flash.obj
+.\Debug\m_flipper.obj
+.\Debug\m_float.obj
+.\Debug\m_flyer.obj
+.\Debug\m_gladiator.obj
+.\Debug\m_gunner.obj
+.\Debug\m_hover.obj
+.\Debug\m_infantry.obj
+.\Debug\m_insane.obj
+.\Debug\m_medic.obj
+.\Debug\m_move.obj
+.\Debug\m_mutant.obj
+.\Debug\m_parasite.obj
+.\Debug\m_soldier.obj
+.\Debug\m_supertank.obj
+.\Debug\m_tank.obj
+.\Debug\p_client.obj
+.\Debug\p_hud.obj
+.\Debug\p_trail.obj
+.\Debug\p_view.obj
+.\Debug\p_weapon.obj
+.\Debug\q_shared.obj>
+Creating command line "link.exe @D:\TEMP\RSP4C.tmp" 
+Compiling...
+p_view.c
+Linking...
+   Creating library ..\Debug/gamex86.lib and object ..\Debug/gamex86.exp
+
+
+
+gamex86.dll - 0 error(s), 0 warning(s)
