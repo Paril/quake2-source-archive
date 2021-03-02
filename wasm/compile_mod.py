@@ -6,11 +6,17 @@ import hashlib
 from string import Template
 import re
 import shutil
+import multiprocessing
+
+def compile_file(modname, compile_args, c_args, cpp_args, path):
+	obj_file = f'../bin/{modname}/obj/{path.name}-{hashlib.md5(str(path).encode()).hexdigest()}'
+	log = open(f'{obj_file}.txt', 'w')
+	subprocess.run([ 'clang' ] + compile_args + (c_args if path.suffix == '.c' else cpp_args) + [ '-o', f'{obj_file}.o', path ], stderr=log)
+	log.close()
+	return obj_file
 
 def compile(modname, debug):
-	
 	compile_args = [
-	'-v',
 		'-c',
 		'--target=wasm32-wasi',
 		'--sysroot=wasi-sysroot',
@@ -118,20 +124,30 @@ def compile(modname, debug):
 		patch_folder = src_folder.joinpath('src')
 		print('Applying patches...')
 		subprocess.run([ 'git', 'apply', '../wasm.patch' ], cwd=patch_folder)
-	
-	os.makedirs(f'../bin/{modname}/obj', 0o777, True)
 
 	errfile = f'../bin/{modname}.stderr'
 
+	print(f'Cleaning {modname}:{debug}...')
+
 	if os.path.exists(errfile):
 		os.remove(errfile)
+	
+	objs_path = Path(f'../bin/{modname}/obj')
+
+	if objs_path.exists():
+		shutil.rmtree(Path(f'../bin/{modname}/obj'))
+	
+	os.makedirs(str(objs_path), 0o777, True)
+	
+	outfile = Path(f'../bin/{modname}/game.wasm')
+	
+	if outfile.exists():
+		os.remove(outfile)
 
 	if (additional_compile_args := load_and_expand(f'../sources/{modname}/compiler.opt')) != False:
 		compile_args += additional_compile_args
 
 	err = open(errfile, 'a')
-	
-	obj_files = []
 
 	term = shutil.get_terminal_size((80, 20))
 	print(f'Compiling {modname}:{debug}...')
@@ -139,26 +155,27 @@ def compile(modname, debug):
 	all_paths = (c_files + cpp_files)
 	all_paths.sort()
 
-	for path in all_paths:
-		obj_file = f'../bin/{modname}/obj/{path.name}-{hashlib.md5(str(path).encode()).hexdigest()}.o'
-		obj_files.append(obj_file)
-		sys.stdout.write(("\r%s..." % path.name).ljust(term.columns))
-		sys.stdout.flush()
-		subprocess.run([ 'clang' ] + compile_args + (c_args if path.suffix == '.c' else cpp_args) + [ '-o', obj_file, path ], stderr=err)
+	results = []
 
-	sys.stdout.write('\n')
-	sys.stdout.flush()
+	with multiprocessing.Pool(max(1, multiprocessing.cpu_count() - 1)) as pool:
+		for path in all_paths:
+			results.append(pool.apply_async(compile_file, (modname, compile_args, c_args, cpp_args, path)))
+		obj_files = [ result.get() for result in results ]
 
 	if patch_file.exists():
 		patch_folder = src_folder.joinpath('src')
 		print('Reverting patches...')
 		subprocess.run([ 'git', 'apply', '-R', '../wasm.patch' ], cwd=patch_folder)
 
-	print(f'Linking {modname}:{debug}...')
-	subprocess.run([ 'wasm-ld' ] + linker_args + obj_files + linker_postfix, stderr=err)
+	for path in map(lambda f : Path(f'{f}.txt'), obj_files):
+		if not path.exists() or not os.stat(path).st_size:
+			continue
+		with open(path, "r") as fr: 
+			err.writelines(l for l in fr)
+		err.flush()
 
-	print(f'Cleaning {modname}:{debug}...')
-	shutil.rmtree(Path(f'../bin/{modname}/obj'))
+	print(f'Linking {modname}:{debug}...')
+	subprocess.run([ 'wasm-ld' ] + linker_args + list(map(lambda f : f'{f}.o', obj_files)) + linker_postfix, stderr=err)
 
 	elen = err.tell()
 	err.close()
@@ -173,6 +190,11 @@ def compile(modname, debug):
 		for line in lines:
 			if line.find("error:") != -1 or line.find("warning:") != -1:
 				print('  ' + line.strip())
+
+	if outfile.exists():
+		print(str(outfile) + ' compiled successfully');
+	else:
+		print('Linking failed; see errors above, or error file in bin.');
 	
 if __name__ == "__main__":
 	compile(sys.argv[1], (sys.argv[2].lower() == 'debug') if len(sys.argv) > 2 else True)
