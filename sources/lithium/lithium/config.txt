@@ -1,0 +1,149 @@
+These settings may be changed on the server console at any time.  See
+lithium.cfg for defaults.  Include a "set" prefix before settings when
+used in a config file.  Hope this helps.  -WhiteFang
+
+admin_code         sets the admin code, 0 to disable (max 5 digits)
+
+use_runes          enables runes
+use_packs          enables packes
+use_hook           enables grappling hook
+use_safety         enables safety spawn period
+use_startobserver  enables starting clients in observer mode
+use_startchasecam  enables starting clients in chasecam mode
+use_suicidekick    enables kicking clients to mass suicide
+use_chatmuzzle     enables muzzling clients who chat too much
+use_chatkick       enables kicking clients who chat too much
+use_zbotkick       enables Zbot detection and kicking
+use_zbotlog        enables Zbot logging to zbot.log
+use_hitfactor      enables aim to be factored into damage inflicted
+use_nocamp         enables no camping check
+use_gslog          enables GSLog frag logging (Gibstats Standard Log)
+use_mapqueue       enables map queueing
+use_mapvote        enables map voting
+use_highscores     enables high scores tracking feature
+use_lmaster        enables communication with lithium master server
+
+ctf                enables ThreeWave CTF II
+ctf_techs          enables ThreeWave CTF II Techs
+ctf_grapple        enables ThreeWave CTF II Grapple
+ctf_coloredhook    enables lithium hook to be colored as per clients team
+ctf_coloredquad    enables quad shell to be colored as per clients team
+
+timestamp          specify how many minutes between console timestamps
+
+mapqueue           sets plain text file to read for map cycling
+map_random         enables random map queue order
+
+motd               sets plain text file to read for MOTD
+banlist            sets plain text file to read for IP banning
+
+adminlist          sets admin list file
+admin_map          sets admin level required to change maps
+admin_kick         sets admin level required to kick clients
+admin_dmflags      sets admin level required to change dmflags
+admin_uses         sets admin level required to change use_* variables
+admin_vars         sets admin level required to change all variables
+
+gslog              sets GSLog output file
+gslog_flush        enables instant logging
+
+def_bestweapon     sets default client bestweapon on/off
+def_id             sets default client player id on/off
+def_hud            sets default client HUD
+                   (0 = none, 1 = normal, 2 = lithium, 3 = ammo)
+def_scores         sets default client scoreboard layout
+                   (0 = old, 1 = by frags, 2 = by FPH)
+
+fast_respawn       sets how much faster items respawn, as more players join
+fast_minpbound     always figure at least this many players for fast_respawn
+fast_maxpbound     never figure more then this many players for fast_respawn
+
+fast_wep           how fast weapon switching is (0 = stock Q2,
+                   1 = old Lithium II, 2 = new default, 3+ = even faster)
+
+max_rate           maximum rate setting the server will allow a client to have
+
+safety_time        time the safety spawn shield lasts
+knockback_adjust   knockback adjustment (impact knockbacks multiplied by this)
+knockback_self     knockback adjustment for self inflicted impacts
+                   (use this to modify rocket jumping height)
+fall_damagemod     fall damage modifier (fall damage multiplied by this)
+
+rune_flags         determines which runes will show in the game, add these:
+                   1 = resist, 2 = strength, 4 = haste, 8 = regen, 16 = vampire
+rune_spawn         chance a rune will spawn from another item respawning
+rune_perplayer     sets runes per player that will appear in map
+rune_life          seconds a rune will stay around before disappearing
+rune_min           sets minimum number of runes to be in the game
+rune_max           sets maximum number of runes to be in the game
+rune_resist        sets how much damage is divided by with resist rune
+rune_strength      sets how much damage is multiplied by with strength rune
+rune_regen         sets how fast health is gained back
+rune_regenmax      sets maximum health that can be gained from regen rune
+rune_vampire       sets percentage of health gained from damage inflicted
+rune_vampiremax    sets maximum health that can be gained from vampire rune
+rune_*_sound       sets sounds for runes
+
+pack_spawn         chance a pack will spawn from another item respawning
+pack_life          seconds a pack will stay around before disappearing
+
+hook_speed         sets how fast the hook shoots out
+hook_pullspeed     sets how fast the hook pulls a player
+hook_sky           enables hooking to the sky
+hook_maxtime       sets max time you can stay hooked
+hook_damage        sets damage hook does to other players
+hook_initdamage    sets damage done on initial hooking
+hook_maxdamage     sets maximum damage that can be done by the hook
+hook_delay         sets delay in between hook shots
+
+ping_watch         seconds after client joins to start checking their ping
+ping_endwatch      seconds after client joins to end checking their ping
+ping_min           minimum average ping allowed, or client is kicked
+ping_max           maximum average ping allowed, or client is kicked
+
+chatmuzzle_says    \ if client chatmuzzle_says within chatmuzzle_time,
+chatmuzzle_time    / client will be muzzled for chatmuzzle_holdtime
+chatmuzzle_holdtime 
+
+chatkick_says      \ if client chatkick_says within chatkick_time,
+chatkick_time      / client will be kicked for chatting too much
+chatkick_muzzles   kick client needing to be muzzled this many times
+
+mapvote_min        minimum clients before map voting is allowed
+mapvote_max        maximum clients before map voting is allowed
+mapvote_time       time a map vote can last, in seconds
+mapvote_need       percent of clients required to vote
+mapvote_pass       percent of yes votes required to pass the vote
+mapvote_tries      sets tries a client has to set map vote (reset each map)
+mapvote_instant    allows instant map change option if enabled
+
+intermission_time  minimum time the intermission will last
+intermission_sound sound to play during intermission
+
+camp_threshold     sets movement required to not be camping
+camp_time          seconds a player has before getting a camping warning
+camp_warn          seconds a player has after warned, or be killed
+
+dropweapammo       percentage of default ammo gained from a dropped weapon
+
+jacket_armor       sets pickup amount, max amount, normal resist, energy resist
+combat_armor       sets pickup amount, max amount, normal resist, energy resist
+body_armor         sets pickup amount, max amount, normal resist, energy resist
+shard_armor        sets amount of armor gained from armor shards
+
+power_armor_screen sets damage saved per cell
+power_armor_shield sets damage saved per cell
+
+start_*            starting settings
+max_*              maximum settings
+pack_*             maximum settings if a player gets a pack
+no_*               inhibit (disable) items, only takes effect after map change
+
+*_damage           sets damage the weapon does per projectile
+*_speed            sets speed of projectile fired
+*_count            sets how many projectiles are fired
+*_hspread          sets the horizontal spread radius of projectiles
+*_vspread          sets the vertical spread radius of projectiles
+*_radius           sets the explosion radius
+*_damage2          sets max random extra damage
+*_rdamage          sets radius damage

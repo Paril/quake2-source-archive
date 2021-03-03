@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Paintball2
+Comment=Paintball 2
+Exec=paintball2
+#Icon=/usr/local/share/paintball2/paintball2.png
+Icon=/usr/local/games/paintball22/paintball2.png
+Type=Application

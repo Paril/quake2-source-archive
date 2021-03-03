@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qbsp3", "qbsp3\qbsp3.vcxproj", "{5095CCBC-579A-4E7B-83B6-81743B38A2F2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qrad3", "qrad3\qrad3.vcxproj", "{3A838DC5-E6E3-4B93-AAB8-7F814BFC4FD1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qvis3", "qvis3\qvis3.vcxproj", "{8E0EDA6F-AEF3-41E3-A8F9-861603C5264F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release PPro|Win32 = Release PPro|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5095CCBC-579A-4E7B-83B6-81743B38A2F2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5095CCBC-579A-4E7B-83B6-81743B38A2F2}.Debug|Win32.Build.0 = Debug|Win32
+		{5095CCBC-579A-4E7B-83B6-81743B38A2F2}.Release PPro|Win32.ActiveCfg = Release|Win32
+		{5095CCBC-579A-4E7B-83B6-81743B38A2F2}.Release PPro|Win32.Build.0 = Release|Win32
+		{5095CCBC-579A-4E7B-83B6-81743B38A2F2}.Release|Win32.ActiveCfg = Release|Win32
+		{5095CCBC-579A-4E7B-83B6-81743B38A2F2}.Release|Win32.Build.0 = Release|Win32
+		{3A838DC5-E6E3-4B93-AAB8-7F814BFC4FD1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3A838DC5-E6E3-4B93-AAB8-7F814BFC4FD1}.Debug|Win32.Build.0 = Debug|Win32
+		{3A838DC5-E6E3-4B93-AAB8-7F814BFC4FD1}.Release PPro|Win32.ActiveCfg = Release PPro|Win32
+		{3A838DC5-E6E3-4B93-AAB8-7F814BFC4FD1}.Release PPro|Win32.Build.0 = Release PPro|Win32
+		{3A838DC5-E6E3-4B93-AAB8-7F814BFC4FD1}.Release|Win32.ActiveCfg = Release|Win32
+		{3A838DC5-E6E3-4B93-AAB8-7F814BFC4FD1}.Release|Win32.Build.0 = Release|Win32
+		{8E0EDA6F-AEF3-41E3-A8F9-861603C5264F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E0EDA6F-AEF3-41E3-A8F9-861603C5264F}.Debug|Win32.Build.0 = Debug|Win32
+		{8E0EDA6F-AEF3-41E3-A8F9-861603C5264F}.Release PPro|Win32.ActiveCfg = Release|Win32
+		{8E0EDA6F-AEF3-41E3-A8F9-861603C5264F}.Release PPro|Win32.Build.0 = Release|Win32
+		{8E0EDA6F-AEF3-41E3-A8F9-861603C5264F}.Release|Win32.ActiveCfg = Release|Win32
+		{8E0EDA6F-AEF3-41E3-A8F9-861603C5264F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

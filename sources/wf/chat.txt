@@ -1,0 +1,445 @@
+# Eraser Bot chat data
+#
+#	Thanks to Meanstryk for the additions
+#	->	http://www.planetquake.com/ramshackle
+#	Also thanks to Shawn "Benighted1" Lisk for more additions
+#	->  kclisk@bright.net
+#
+# OK, here's the deal. Bot's can say one of the following things:
+#
+# 1. Greetings
+#
+#  When a bot joins a team, or you join a bot's team, they'll usually
+#  say hi. This depends on what they're doing at the time. If they're
+#  not in battle, they'll usually give you a nice, warm welcome.
+#
+# 2. Insults
+#
+#  Ahh, the insult. What would Quake be without the old fashioned
+#  insult. I bot will insult you randomly, depending on the status of
+#  the game, so this section is divided into a few sub-sections:
+#
+#		a. The General Insults
+#
+#			Just your average, all-purpose insult.
+#
+#		b. Kicking your Ass
+#
+#			The bot will use these insults when he's beating you,
+#			so these
+#			won't make much sense if he's losing.
+#
+#		c. Losing
+#
+#			The bot is losing, but has just killed you. A come-
+#			back is imminent.
+#
+# 3. Come-backs
+#
+#  I personally don't like being told to wipe the floor after I messed up.
+#  Bots don't take to insults too well either, especially the good ones
+#  who have an ego to defend.
+#
+# 4. TEAMPLAY: Help!
+#
+#  Some variations on the standard Help me, I'm in trouble! Note that if 
+#  the bot is near an item such as the Rocket-Launcher, or Quad damage, 
+#  they'll add a "Near the Rocket-Launcher!" to the end of the chat line.
+#
+# 5. TEAMPLAY: Drop item
+#
+#  Bot's will let others (on their team) know if they have excess items.
+#  This provides some variety on they way they let you know.
+#
+# 6. TEAMPLAY: Let's Group!
+#
+#  A bot may decide he's going to coordinate an attack. If so, he will issue
+#  one of these statements to the rest of his team, following by a location
+#  specifier, like "I'm near the Rocket-Launcher". He will generally wait a
+#  few second in that area, and then proceed. Other bot's will try to get to
+#  the leader Bot in time, and will then follow him around the level.
+#
+#  Bot's will generally try to garner up a nice supply of weapons and ammo 
+#  before doing this.
+#
+#
+# NOTE: where you see a %s, that means a string goes there. All strings
+#       must appear in the same order for each section.
+#
+
+-- Greetings
+Yo!
+Wassup!
+Hey.
+Hi.
+Greetings
+Eh.
+I'm back!
+Oi!
+Welcome aboard.
+Everyone aboard?  Let's rock.
+'sup bro?
+Howdy.
+Konnichiwa!
+You better not suck.
+Wait... what color am I?
+Yull!
+What da deallie yo?
+Be fruitiful and frag a lot.
+Let's get it on!
+Who's going to lose to me today?
+Anarchists of the world unite!
+To the Bat Cave!
+Let the show begin.
+Anyone up for slapping the criminal element around?
+Make 'em say 'ugggggh'!
+Last one to kill a bad guy buys the beer.
+Lets rock and roll!
+I love the smell of BFG blasts in the morning!
+G'day mate.
+Let's see what you can do.
+Present!
+Here!
+Nice night for a furball!
+Eh mon!
+Crap, where's a depot!?
+I'm feelin' saucy today.
+Kick it!
+
+-- Insults (general)
+Geez, are you ok?
+Ouch, that HAD to hurt!
+Who da man!
+Yeh punk!
+You all banged up!
+Can anyone here play this game?
+Waiter! Come clean up this mess!
+Take my advice, or I'll spank you without pants
+Need a band-aid %s?
+Boo-Ya!!!
+Hey everyone, %s is a camping whore. 
+Everyone line up single file... I'll get the railgun. 
+Sorry %s.  This is a NO BREATHING zone.  
+Hey %s, drop to the console and type KILL.
+Damn %s, it should be illegal to suck so bad.
+Excuse me while I urinate on your corpse, %s.
+Hey %s... found your spleen.
+Stick to Duke Nukem %s.
+Eww, I stepped on %s's severed ear!
+You want some more %s?  
+That was just a sample %s.
+Nice try %s... A for effort.
+Thanks for the frag %s.
+Just give up %s. 
+How pathetic.
+Wow, what a shot.  I rule. 
+Sorry %s, didn't see you there. :)
+That's right... run... wuss....
+Why'd ya try to run %s?
+Just like a deer in headlights.
+Bahahaha!
+Man %s... I pity you. I really do.
+Someone ELSE kill %s for a change.
+Yeah %s... you're my favorite.
+What do you call that shit %s?
+Learn from that.
+Your corpse made a fine screenshot %s.
+I have now been added to %s's shitlist.
+You weren't doing anything anyway %s.
+Oh get up... you aint hurt!  :)
+Lovely chalk outline %s.
+Next time %s... move.
+Stick to observer mode %s.
+Love those death animations %s... you too apparently.
+Damn %s, you smell just like roast chicken.
+I love the sound of crunching bone. :)
+Nice pain WAVs %s. 
+Burn baby burn.
+Dude, %s... your skin blows.
+Hey everyone, %s wasn't wearing clean underwear!
+Instant karma, %s.
+24/7, %s
+Does your face hurt, %s? Well, its killin' me!
+Ooh, thats gotta hurt!
+B-b-b-b-Bad to the bone!
+Oh my god, they killed %s! You basterds!
+Bull's Eye!
+I bet that hurt!
+Come meet my 2x4.
+%s was fragged again everyone!
+Step right up to be knocked right down!
+Clean up in isle seven...%s's remains in isle seven.
+%s's dead, Jim!
+Keep the change %s.
+Oh, I'm gooood.
+%s...there's no reason to act like that!
+Anyone got a spachula?
+Danger, %s Robinson, danger!
+Excuse me, is the circus in town?
+Terminated.
+%s's loss is my gain!
+BOOM, baby!
+You move like peanut butter, %s!
+
+-- Insults (kicking ass)
+You gonna start playing or what?
+Keeping practising, %s
+Your in my house now %s!
+Ain't nobody stoppin me!
+Gun wounds again?
+Try strafing sometime %s.
+Can I be killed? I'm beginning to wonder.
+Next time, make me work for it %s.
+Am I a giant or did everyone else shrink?
+Why do you people even bother?
+Next time %s, don't bother dodging. Why prolong your agony?
+What happened %s?  >:)
+Mental note to self: Find server with better opponents.
+Christ people... try playing with a mouse. 
+Nobody can touch me in this level. 
+It *hurts* to be this kick-ass!  It *hurts*!
+I'm like the freaking energizer bunny over here.
+Why do they ALWAYS try to run??
+Just like cuttin' down weeds.
+BANG said the gun, SPLATTER said %s.
+Get the hell out of my way!
+Play dead %s... good boy.
+Step right up to get knocked right down!
+That's right, one free asskicking with every purchase.
+Did I get your attention %s?
+Am I evil?  Why, yes I am.
+Some people just don't die well.
+Hey look, I can chat while running full tilt!
+Hey %s, don't hate me just because you suck.
+BOW DOWN!
+Interception by %s!
+He shoots... he SCORES!
+You should see a doctor about that %s.
+Thank you, come again.
+Down boy...
+I'm such a bastard. :)
+Hope you have death and dismemberment insurance %s.
+Boy, I'm gonna send this demo to Meanstryk. :)
+Sorry sir, but thank you for playing.
+Come on in %s... the slaughter's fine. 
+Ha! %s smeared like a red crayon!
+Hi %s... I'm the enemy.
+Making people feel bad feels SO good.
+Sorry %s.  Time to respawn.
+Another one bites the dust.
+Someone had better dig a mass grave.
+Can't pay the bills, but damnit, this I can do.
+What the fuck you think YOU'RE doin' %s?
+Come share with me my hurtful thoughts. 
+Ha!  Somedays it really pays to be a bot.
+You should stick to Chess %s.
+Its frag time. Do you know where you're skill is %s?
+Walk into the light, %s!
+Oh, I just remembered; %s's boring, and my guns work.
+He chose...poorly.
+I'm immortal!...So far.
+Nothing can stop me now.
+I must be butter cause I'm on a roll!
+DEATH FROM ABOVE!!!
+I'm not even working up a sweat, %s!
+I'd trash talk, but I'm too tired...*yawn*
+%s...I'm your father!
+One small frag for me, one big head wound for you!
+All too easy.
+Come strong or don't come at all!
+Damnit %s! You messed my hair up!
+
+-- Insults (losing, coming back)
+It's pay-back time!
+Elvis has left the building!
+Time to change your diaper %s
+Who gave %s the nerve to get killed here?
+Oops... did I do that?  Sorry, man.
+Nice spine there %s.
+That looks like it's going to stain.
+What... a... mess.
+In your face bitch... in your face.
+Look out man, I'm back in my zone.  Watch your ass!
+NOW who has the big gun mother-fucker?!?
+Oh, no wonder... I had the safety on...
+Better run %s... my lag is letting up. 
+Hey %s... ya shoulda zigged when ya zagged. 
+Hey nice catch %s!  
+Look out %s, I'm just getting warmed up.
+Looks like there's a new lawman in town, eh %s?
+Getting tired there %s?
+Okay %s, I have your punk-ass figured.
+Killing you appears to be habit forming %s. 
+How the fuck do you like it %s?
+Oooh! That felt so good!
+Not such a badass now, eh %s?
+No more Mr. Nice Guy.
+Oh man, you've had it now.
+Now THAT is what I'm talkin' about.
+Feel that?  That's my foot in your ass.
+Get used to it %s.
+Anyone else hear the theme from Rocky?
+Your time's up %s.
+Okay, now I start playing for real.
+Hurt much?
+Remember me %s?
+My how the mighty have fallen.
+Here's where you get off %s.
+Merry Christmas!
+This aint no petting zoo, %s.
+Ever hear of the golden rule %s?
+Your bullying days are over %s.
+Now the shoe's on the other foot.
+Wanna try for two out of three %s?
+Hehehe!
+Hah!
+That's what I THOUGHT... loser.
+Memento Mori.
+The man who dies with the most toys still dies!
+I'd give you the finger, but you shot them off.
+Your meaty skull is beautiful to me, %s.
+You all saw him...he had a gun!
+I'm not gonna kill ya. Like hell I'm not!
+Use the Farse, puke!
+Ah...the joy of deathmatch.
+Where's your crown, King Nothing?
+Chill %s.
+I'm spittin' on your corpse, %s!
+SCOOOOOOOOOOOOOOOOORE!
+Exit light, enter night %s.
+Respect my authoritay!
+
+-- Come-backs
+Screw you %s
+I'll be back mutha-fucker!
+I ain't even started yet.
+Make the most of it %s.
+Yeh? Well fuck you asshole!
+Ahh, piss off!
+Yadda yadda...
+Wipe the shuga from yer chin, %s
+Don't make me come over there %s.
+Okay %s, you and me, after school.
+Why do you have to be such an asshole?
+Skin that smokewagon!  Bring it on bitch!
+One of these days I'm gonna catch your ass typing.  
+From now on %s, you're my bitch. Bend over.   
+My boot. %'s ass. Perfect fit.
+Fuck off.
+Bite me.
+You aint shit!
+Talk your shit over here %s.
+I got somethin' for your ass %s.
+I'll be your huckleberry.
+You gonna do something other than talk?
+You talkin' to me?
+You don't want none of this %s.
+This isn't IRC.  Less talk and more play.
+You're so full of shit %s.
+Okay %s, let's dance.
+Come learn to die. 
+Shut up %s.
+Shut the FUCK up.
+Damned phonejack.
+Lllaaaagggg!
+I had TIME to kill, now I have SOMEONE to kill.
+Don't let your mouth overload your ass %s.
+You best hush %s.
+I aint playin' with you %s.
+Come on %s.  Let's go!  You afraid?
+You're such a lamer %s.
+%s --you whore.
+What?  You think you can play now? 
+You don't want none of this %s.
+Idiot.
+Someone needs to get laid.
+I'll have my way with your mom after I kill her %s!
+%s seems to care; about what, I have no idea.
+The answer is cold in my hand, %s.
+I ain't gonna waste my hate on you, %s.
+I'll see you in hell %s.
+I do not want this...
+Ahh, shiiit.
+Its all a conspiricy!
+My God, are you still talking!?
+Its not my fault- my gamma correction is screwy!
+Next time %s...next time.
+Bull! It was freindly fire!
+Well aren't you full of piss and vinegar.
+By this time, my lungs were aching for air.
+You'd better bite down on a BFG and pray for lock jaw, %s.
+My keyboard's missing a few keys.
+Does the phrase, 'Nut Case' mean anything to you, %s?
+You need to grow up, %s!
+I'm going to use you for a raft next time we meet, %s!
+I think a retreat is in order...
+
+-- TEAMPLAY: Help!
+Ahh!! Under heavy fire near the %s!! Heeelp!!!
+I need backup at the %s!!
+Backup requested, near the %s!
+I'm seeing my life flash before my eyes by the %s!
+Charlie is all over the %s.
+All are invited to the %s.  Enemy already in attendance.
+Bring mop and bucket to %s. I'm about to splatter messily. 
+A little help here?  I'm at the %s.
+Visit the %s.  See enemy is natural habitat.  
+Outnumbered. Dying.  By %s.
+The %s area is in a world of hurt, and so am I.
+The enemy has control of the %s area.  Recover.
+Experiencing substanial pain near the %s.
+Hating life by the %s. 
+I'm about to become a stain near the %s.
+Enemy seems to want %s very badly.
+Heavy resistance near the %s.  
+Come help me out over at the %s before I soil myself.
+Aaarrggh! %s Death... the horror... the horror
+zzzt- help! zzt...over zzzt-fizz %s!
+The Man is opressin' me by the %s!
+Get busy child! I'm by the %s.
+Damnit, they're all over me by the %s!
+
+-- TEAMPLAY: Drop Item (not implemented yet)
+Hey guys, need a %s? I'm near the %s!
+I have a %s to spare, near the %s!
+I've just dropped a %s, near the %s!
+Free %s!  It's by the %s.
+Anyone want a %s? Come to the %s.
+There's a %s available by the %s.
+Come get the %s over by the %s.
+Be advised: %s available near %s.
+How'd I get so many %ss? Anyone want one?  I'm by the %s.
+There's a %s by the %s.  Come get it before enemy does.
+Someone come get this %s by the %s.
+I don't need this %s; anyone want it?  By %s.
+Surplus %s avaiable near %s.
+There's a %s in the open over here near the %s.
+Anyone want a %s?  I already have one.  It's near the %s.
+I'm dropping a %s near the %s.
+Shiny new %s, hardly used, available near %s.
+Grab this %s someone, near the %s.
+Prevent enemy from getting the %s near the %s. 
+Dropped %s near %s. 
+
+-- TEAMPLAY: Let's Group!
+Calling all units! Group at the %s!
+Attack formation at the %s!
+Calling all squadron members to the %s!
+Hey guys, I'm over at the %s!
+Come protect the %s!
+Everyone get your asses over to the %s!
+Meeting at %s.  Attendance mandatory.
+Forming attack group at %s.
+Regroup at the %s.
+Preparing attack run near %s.
+Fall back to %s.
+Proceed to %s and await further instruction.
+Gather near %s.
+Everyone join me at the %s.
+Meet me at the %s. Forming attack party.
+Let's get our shit together people.  Group at %s.
+Launching attack run from the %s.
+Everyone avilable please report to the %s.
+Everyone...attack from the %s!
+Our next organized attack will be from the %s. Hurry!
+Group by the %s.

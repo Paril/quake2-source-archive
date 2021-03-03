@@ -1,0 +1,53 @@
+ref number for editing the bots.cfg
+makes bots pick thier favorite weapon the most
+make sure you edit in the right place...
+
+       #                          WF3.4
+       2 :Shotgun                 :All
+       3 :Super Shotgun           :Recon
+       4 :MachineGun              :Cyborg
+       5 :ChainGun                :Gunner
+       6 :GrenadeLauncher         :none    class10 file?
+       7 :RocketLauncher          :Marine
+       8 :RailGun                 :Recon
+       9 :HyperBlaster            :Marine
+       0 :BFG10k                  :None
+      10 :SniperRifle             :Sniper  /not done yet
+      11 :LightningGun            :Cyborg
+      12 :InfectedDartLauncher    :Nurse
+      13 :PulseCannon             :Gunner
+      14 :TeslaCoil               :Engineer
+      15 :FlameThrower            :Arsonist
+      16 :PelletRocketLauncher    :Marine
+      17 :NapalmRocketLauncher    :Arsonist
+      18 :ClusterRocketlauncher   :Cyborg
+      19 :Needler                 :Nurse
+      20 :SHC                     :Arsonist
+      21 :HandGrenades /Normal    :All
+      22 :ArmorDartLauncher       :WF Engineer
+      23 :AK47                    :Merc
+      24 :Pistol                  :Merc
+      xx :FlareGun                :Arsonist   /not done yet
+      xx :MegaChainGun            :Gunner     /not done yet
+      xx :TranquilizerDart        :Spy        /not done yet
+      xx :Knife                   :Spy/Merc   /not done yet
+      xx :Stinger                 :Merc       /not done yet
+//////////////////////////////////////////////////////////////////////////
+To add items to maps
+ ie type ctf_item item_armor_combat and where you are standing combat armor
+will be there next time you load the map,unsure if you need to have bot_calc_nodes 1,but it does save this to the rtz file so you might,to remove all items type clear_items.if the level is already routed and you have to
+turn on bot_calc_nodes to drop these make sure you turn it back off after you
+drop something otherwise when you move you'll be adding extra routing info,
+if this is the inital routing of a map dont worry about it.
+
+partial list of dropable items:
+item_armor_combat
+item_armor_body
+ammo_slugs
+ammo_rockets
+ammo_grenades
+ammo_cells
+ammo_shells
+ammo_bullets
+
+weapons will not work they are removed automatically from maps.....

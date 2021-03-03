@@ -1,0 +1,40 @@
+============
+OpenTDM TODO
+============
+
+Minor
+-----
+Force to spectator idle players in warmup.
+
+Get free as in speech .wav files for hit sounds.
+
+Web configs creation.
+
+Votable hit sounds as well as per-player config.
+
+Normal
+------
+Variable scoreboards, player can choose which they prefer. Default to some
+similar to gxmod / battle or whatever people vote on.
+
+Preferences system tied to guid, looks up preferenes (team name, skin, score
+board style, hitsounds, etc) from opentdm.net.
+
+Preserve teams on match end / map change (this will be more work than it seems
+due to the teamplayers setup).
+
+Use teamplayers instead of current clients for scoreboard and any other match
+related info.
+
+tdm_drop command, enhanced version of drop with minimum ammo ammounts and
+other preferences. eg, tdm_drop rl 15 5 rg 10 cg 150 would mean
+item <min_ammo_before_drop> [<ammo_to_drop>], item... and the first matching
+one gets picked. Possibly values as % too to account for ammo pack.
+Maybe even an intelligent version where if a teammate needs slugs and you hit
+your drop RG bind, it finds the nearest friendly and doesn't drop the weapon
+if they already have one, but maybe that's going too far?
+
+Big
+---
+Web stats system. End of match, stats for players with a guid are POSTed with
+libcurl to opentdm.net for some horribly big nasty stats / ranking system.

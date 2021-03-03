@@ -1,0 +1,1 @@
+qboolean weapon_is_inhibited(char *classname);
