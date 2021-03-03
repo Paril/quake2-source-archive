@@ -1,0 +1,54 @@
+ source/g_main.c   | 2 --
+ source/p_client.c | 2 +-
+ source/tng_irc.h  | 8 ++++++++
+ 3 files changed, 9 insertions(+), 3 deletions(-)
+
+diff --git a/source/g_main.c b/source/g_main.c
+index 4a8f869..271fb01 100644
+--- a/source/g_main.c
++++ b/source/g_main.c
+@@ -456,8 +456,6 @@ cvar_t *warmup;
+ cvar_t *round_begin;
+ cvar_t *spectator_hud;
+ 
+-cvar_t *jump;			// jumping mod
+-
+ void SpawnEntities (char *mapname, char *entities, char *spawnpoint);
+ void ClientThink (edict_t * ent, usercmd_t * cmd);
+ qboolean ClientConnect (edict_t * ent, char *userinfo);
+diff --git a/source/p_client.c b/source/p_client.c
+index 924d3f6..93d151a 100644
+--- a/source/p_client.c
++++ b/source/p_client.c
+@@ -602,7 +602,7 @@ void SP_info_player_deathmatch(edict_t * self)
+ The deathmatch intermission point will be at one of these
+ Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
+ */
+-void SP_info_player_intermission(void)
++void SP_info_player_intermission(edict_t *self)
+ {
+ }
+ 
+diff --git a/source/tng_irc.h b/source/tng_irc.h
+index a07e7fa..161e1f1 100644
+--- a/source/tng_irc.h
++++ b/source/tng_irc.h
+@@ -13,6 +13,7 @@
+ //
+ //-----------------------------------------------------------------------------
+ 
++#ifndef TNG_NO_IRC
+ #define IRC_SERVER  	"irc.barrysworld.com"
+ #define IRC_PORT    	"6667"
+ #define IRC_CHANNEL 	""
+@@ -97,3 +98,10 @@ void IRC_exit       (void);
+ void IRC_printf     (int type, char *fmt, ... );
+ void IRC_poll       (void);
+ void SVCmd_ircraw_f (void);
++#else
++#define IRC_init()
++#define IRC_exit()
++#define IRC_printf(...)
++#define IRC_poll()
++#define SVCmd_ircraw_f()
++#endif

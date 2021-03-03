@@ -7,3 +7,6 @@
 [submodule "sources/vortex/src"]
 	path = sources/vortex/src
 	url = https://github.com/zardoru/vrxcl.git
+[submodule "sources/action/src"]
+	path = sources/action/src
+	url = https://github.com/aq2-tng/aq2-tng
