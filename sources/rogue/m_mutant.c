@@ -658,8 +658,6 @@ qboolean mutant_blocked (edict_t *self, float dist)
 
 	if(blocked_checkplat (self, dist))
 		return true;
-
-	return false;	// Knightmare- warning fix
 }
 //ROGUE
 //================

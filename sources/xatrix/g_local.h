@@ -1130,8 +1130,6 @@ struct edict_s
 	moveinfo_t		moveinfo;
 	monsterinfo_t	monsterinfo;
 
-	char		*musictrack;	// Knightmare- for specifying OGG or CD track
-
 	// RAFAEL
 	int			orders;
 };

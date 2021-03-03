@@ -1745,26 +1745,8 @@ static void func_clock_reset (edict_t *self)
 	}
 }
 
-// Skuller's hack to fix crash on exiting biggun
-typedef struct zhead_s {
-   struct zhead_s	*prev, *next;
-   short			magic;
-   short			tag;         // for group free
-   int				size;
-} zhead_t;
-
 static void func_clock_format_countdown (edict_t *self)
 {
-	zhead_t *z = ( zhead_t * )self->message - 1;
-	int size = z->size - sizeof (zhead_t);
-
-	if (size < CLOCK_MESSAGE_SIZE) {
-		gi.TagFree (self->message);
-		self->message = gi.TagMalloc (CLOCK_MESSAGE_SIZE, TAG_LEVEL);
-		//gi.dprintf ("WARNING: func_clock_format_countdown: self->message is too small: %i\n", size);
-	} 
-	// end Skuller's hack
-
 	if (self->style == 0)
 	{
 		Com_sprintf (self->message, CLOCK_MESSAGE_SIZE, "%2i", self->health);

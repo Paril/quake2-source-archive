@@ -10,3 +10,6 @@
 [submodule "sources/action/src"]
 	path = sources/action/src
 	url = https://github.com/aq2-tng/aq2-tng
+[submodule "sources/_quake2"]
+	path = sources/_quake2
+	url = https://github.com/id-Software/Quake-2

@@ -82,6 +82,20 @@ def compile(modname, debug):
 
 	src_folder = Path(f'../sources/{modname}')
 
+	source_location_file = src_folder.joinpath('source_location.opt')
+
+	if source_location_file.exists():
+		source_path = src_folder.joinpath('src')
+
+		if not source_path.exists():
+			with open(source_location_file, 'r') as content_file:
+				source_location = content_file.read()
+				os.symlink(Path(source_location), source_path, True)
+
+		src_files_path = source_path.resolve()
+	else:
+		src_files_path = src_folder
+
 	exclude_re_file = src_folder.joinpath('exclude.opt')
 	exclude_re = None
 	
@@ -91,7 +105,7 @@ def compile(modname, debug):
 
 	excluded = 0
 
-	for path in { p.resolve() for p in src_folder.rglob("**/*") if p.suffix in [ ".c", ".cc", ".cpp" ] }:
+	for path in { p.resolve() for p in src_files_path.rglob("**/*") if p.suffix in [ ".c", ".cc", ".cpp" ] }:
 		if exclude_re != None and exclude_re.search(str(path)):
 			excluded += 1
 		elif path.suffix == '.c':
@@ -121,9 +135,9 @@ def compile(modname, debug):
 	patch_file = src_folder.joinpath('wasm.patch')
 
 	if patch_file.exists():
-		patch_folder = src_folder.joinpath('src')
+		patch_folder = src_folder.joinpath('src').resolve()
 		print('Applying patches...')
-		subprocess.run([ 'git', 'apply', '../wasm.patch' ], cwd=patch_folder)
+		subprocess.run([ 'git', 'apply', patch_file.resolve() ], cwd=patch_folder)
 
 	errfile = f'../bin/{modname}.stderr'
 
@@ -131,7 +145,7 @@ def compile(modname, debug):
 
 	if os.path.exists(errfile):
 		os.remove(errfile)
-	
+
 	objs_path = Path(f'../bin/{modname}/obj')
 
 	if objs_path.exists():
@@ -149,7 +163,6 @@ def compile(modname, debug):
 
 	err = open(errfile, 'a')
 
-	term = shutil.get_terminal_size((80, 20))
 	print(f'Compiling {modname}:{debug}...')
 	
 	all_paths = (c_files + cpp_files)
@@ -163,9 +176,8 @@ def compile(modname, debug):
 		obj_files = [ result.get() for result in results ]
 
 	if patch_file.exists():
-		patch_folder = src_folder.joinpath('src')
 		print('Reverting patches...')
-		subprocess.run([ 'git', 'apply', '-R', '../wasm.patch' ], cwd=patch_folder)
+		subprocess.run([ 'git', 'apply', '-R', patch_file.resolve() ], cwd=patch_folder)
 
 	for path in map(lambda f : Path(f'{f}.txt'), obj_files):
 		if not path.exists() or not os.stat(path).st_size:

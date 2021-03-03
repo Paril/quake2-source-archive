@@ -4,3 +4,5 @@
 /wasm/wasi-sysroot
 /wasm/__pycache__
 /wasm/libclang_rt.builtins-wasm32.a
+/sources/baseq2/src
+/sources/ctf/src

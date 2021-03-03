@@ -1027,12 +1027,7 @@ void SP_worldspawn (edict_t *ent)
 	gi.configstring (CS_SKYAXIS, va("%f %f %f",
 		st.skyaxis[0], st.skyaxis[1], st.skyaxis[2]) );
 
-	// Knightmare- if a named soundtrack is specified, play it instead of from CD
-	if (ent->musictrack && strlen(ent->musictrack))
-		gi.configstring (CS_CDTRACK, ent->musictrack);
-	else
-		gi.configstring (CS_CDTRACK, va("%i", ent->sounds) );
-	// end Knightmare
+	gi.configstring (CS_CDTRACK, va("%i", ent->sounds) );
 
 	gi.configstring (CS_MAXCLIENTS, va("%i", (int)(maxclients->value) ) );
 

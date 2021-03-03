@@ -1,0 +1,71 @@
+ game/g_items.c  | 6 +++---
+ game/g_turret.c | 4 ++--
+ game/m_boss31.c | 2 +-
+ game/p_client.c | 2 +-
+ 4 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/game/g_items.c b/game/g_items.c
+index e81e835..06f15c5 100644
+--- a/game/g_items.c
++++ b/game/g_items.c
+@@ -40,9 +40,9 @@ gitem_armor_t jacketarmor_info	= { 25,  50, .30, .00, ARMOR_JACKET};
+ gitem_armor_t combatarmor_info	= { 50, 100, .60, .30, ARMOR_COMBAT};
+ gitem_armor_t bodyarmor_info	= {100, 200, .80, .60, ARMOR_BODY};
+ 
+-static int	jacket_armor_index;
+-static int	combat_armor_index;
+-static int	body_armor_index;
++int	jacket_armor_index;
++int	combat_armor_index;
++int	body_armor_index;
+ static int	power_screen_index;
+ static int	power_shield_index;
+ 
+diff --git a/game/g_turret.c b/game/g_turret.c
+index 0153fd9..f9862d7 100644
+--- a/game/g_turret.c
++++ b/game/g_turret.c
+@@ -271,7 +271,7 @@ Must NOT be on the team with the rest of the turret parts.
+ Instead it must target the turret_breach.
+ */
+ 
+-void infantry_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage);
++void infantry_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point);
+ void infantry_stand (edict_t *self);
+ void monster_use (edict_t *self, edict_t *other, edict_t *activator);
+ 
+@@ -292,7 +292,7 @@ void turret_driver_die (edict_t *self, edict_t *inflictor, edict_t *attacker, in
+ 	self->target_ent->owner = NULL;
+ 	self->target_ent->teammaster->owner = NULL;
+ 
+-	infantry_die (self, inflictor, attacker, damage);
++	infantry_die (self, inflictor, attacker, damage, point);
+ }
+ 
+ qboolean FindTarget (edict_t *self);
+diff --git a/game/m_boss31.c b/game/m_boss31.c
+index 7c91d99..290f722 100644
+--- a/game/m_boss31.c
++++ b/game/m_boss31.c
+@@ -28,7 +28,7 @@ jorg
+ #include "g_local.h"
+ #include "m_boss31.h"
+ 
+-extern SP_monster_makron (edict_t *self);
++void SP_monster_makron (edict_t *self);
+ qboolean visible (edict_t *self, edict_t *other);
+ 
+ static int	sound_pain1;
+diff --git a/game/p_client.c b/game/p_client.c
+index 80e444d..3665ff3 100644
+--- a/game/p_client.c
++++ b/game/p_client.c
+@@ -168,7 +168,7 @@ void SP_info_player_coop(edict_t *self)
+ The deathmatch intermission point will be at one of these
+ Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
+ */
+-void SP_info_player_intermission(void)
++void SP_info_player_intermission(edict_t *self)
+ {
+ }
+ 

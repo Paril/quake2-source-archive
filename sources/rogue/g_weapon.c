@@ -646,7 +646,7 @@ void fire_rail (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick
 	vec3_t		end;
 	trace_t		tr;
 	edict_t		*ignore;
-	int			mask, i=0;
+	int			mask;
 	qboolean	water;
 
 	VectorMA (start, 8192, aimdir, end);
@@ -654,7 +654,7 @@ void fire_rail (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick
 	ignore = self;
 	water = false;
 	mask = MASK_SHOT|CONTENTS_SLIME|CONTENTS_LAVA;
-	while (ignore && i<256)	// Knightmare- fix infinite loop bug
+	while (ignore)
 	{
 		tr = gi.trace (from, NULL, NULL, end, ignore, mask);
 
@@ -678,7 +678,6 @@ void fire_rail (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int kick
 		}
 
 		VectorCopy (tr.endpos, from);
-		i++;	// Knightmare added
 	}
 
 	// send gun puff / flash

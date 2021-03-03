@@ -249,12 +249,7 @@ void chick_pain (edict_t *self, edict_t *other, float kick, int damage)
 	float	r;
 
 	if (self->health < (self->max_health / 2))
-	{	// Knightmare- show right pain skin for beta class
-		if ( !strcmp(self->classname, "monster_chick_heat") )
-			self->s.skinnum = 2;
-		else
-			self->s.skinnum = 1;
-	}
+		self->s.skinnum = 1;
 
 	if (level.time < self->pain_debounce_time)
 		return;

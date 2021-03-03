@@ -34,7 +34,7 @@ static void SP_FixCoopSpots (edict_t *self)
 		VectorSubtract(self->s.origin, spot->s.origin, d);
 		if (VectorLength(d) < 384)
 		{
-			if ((!self->targetname) || stricmp(self->targetname, spot->targetname) != 0)
+			if ((!self->targetname) || Q_stricmp(self->targetname, spot->targetname) != 0)
 			{
 //				gi.dprintf("FixCoopSpots changed %s at %s targetname from %s to %s\n", self->classname, vtos(self->s.origin), self->targetname, spot->targetname);
 				self->targetname = spot->targetname;
@@ -52,7 +52,7 @@ static void SP_CreateCoopSpots (edict_t *self)
 {
 	edict_t	*spot;
 
-	if(stricmp(level.mapname, "security") == 0)
+	if(Q_stricmp(level.mapname, "security") == 0)
 	{
 		spot = G_Spawn();
 		spot->classname = "info_player_coop";
@@ -90,7 +90,7 @@ void SP_info_player_start(edict_t *self)
 {
 	if (!coop->value)
 		return;
-	if(stricmp(level.mapname, "security") == 0)
+	if(Q_stricmp(level.mapname, "security") == 0)
 	{
 		// invoke one of our gross, ugly, disgusting hacks
 		self->think = SP_CreateCoopSpots;
@@ -123,20 +123,20 @@ void SP_info_player_coop(edict_t *self)
 		return;
 	}
 
-	if((stricmp(level.mapname, "jail2") == 0)   ||
-	   (stricmp(level.mapname, "jail4") == 0)   ||
-	   (stricmp(level.mapname, "mine1") == 0)   ||
-	   (stricmp(level.mapname, "mine2") == 0)   ||
-	   (stricmp(level.mapname, "mine3") == 0)   ||
-	   (stricmp(level.mapname, "mine4") == 0)   ||
-	   (stricmp(level.mapname, "lab") == 0)     ||
-	   (stricmp(level.mapname, "boss1") == 0)   ||
-	   (stricmp(level.mapname, "fact3") == 0)   ||
-	   (stricmp(level.mapname, "biggun") == 0)  ||
-	   (stricmp(level.mapname, "space") == 0)   ||
-	   (stricmp(level.mapname, "command") == 0) ||
-	   (stricmp(level.mapname, "power2") == 0) ||
-	   (stricmp(level.mapname, "strike") == 0))
+	if((Q_stricmp(level.mapname, "jail2") == 0)   ||
+	   (Q_stricmp(level.mapname, "jail4") == 0)   ||
+	   (Q_stricmp(level.mapname, "mine1") == 0)   ||
+	   (Q_stricmp(level.mapname, "mine2") == 0)   ||
+	   (Q_stricmp(level.mapname, "mine3") == 0)   ||
+	   (Q_stricmp(level.mapname, "mine4") == 0)   ||
+	   (Q_stricmp(level.mapname, "lab") == 0)     ||
+	   (Q_stricmp(level.mapname, "boss1") == 0)   ||
+	   (Q_stricmp(level.mapname, "fact3") == 0)   ||
+	   (Q_stricmp(level.mapname, "biggun") == 0)  ||
+	   (Q_stricmp(level.mapname, "space") == 0)   ||
+	   (Q_stricmp(level.mapname, "command") == 0) ||
+	   (Q_stricmp(level.mapname, "power2") == 0) ||
+	   (Q_stricmp(level.mapname, "strike") == 0))
 	{
 		// invoke one of our gross, ugly, disgusting hacks
 		self->think = SP_FixCoopSpots;
@@ -149,7 +149,7 @@ void SP_info_player_coop(edict_t *self)
 The deathmatch intermission point will be at one of these
 Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
 */
-void SP_info_player_intermission(edict_t *ent)
+void SP_info_player_intermission(edict_t *self)
 {
 }
 
@@ -1137,8 +1137,6 @@ void PutClientInServer (edict_t *ent)
 	int		i;
 	client_persistant_t	saved;
 	client_respawn_t	resp;
-	// Knightmare- added fix to keep same player model
-    char				userinfo[MAX_INFO_STRING];
 
 	// find a spawn point
 	// do it before setting health back up, so farthest
@@ -1182,9 +1180,6 @@ void PutClientInServer (edict_t *ent)
 	{
 		memset (&resp, 0, sizeof(resp));
 	}
-	// Knightmare- added fix to keep same player model
-	memcpy (userinfo, client->pers.userinfo, sizeof(userinfo));
-	ClientUserinfoChanged (ent, userinfo);
 
 	// clear everything but the persistant data
 	saved = client->pers;
@@ -1291,10 +1286,6 @@ void PutClientInServer (edict_t *ent)
 	// force the current weapon up
 	client->newweapon = client->pers.weapon;
 	ChangeWeapon (ent);
-
-	// Knightmare- added Paril's fix for this getting reset after map changes
-	if (!ent->client->pers.connected)
-		ent->client->pers.connected = true;
 }
 
 /*

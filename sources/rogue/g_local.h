@@ -21,16 +21,13 @@
 
 //==================================================================
 
-#ifndef _WIN32
-//#include <nan.h>
+#ifndef min
 #define min(a,b) ((a) < (b) ? (a) : (b))
+#endif
+#ifndef max
 #define max(a,b) ((a) > (b) ? (a) : (b))
-#ifdef __sun__
-#define _isnan(a) (NaN((a)))
-#else
-#define _isnan(a) ((a)==NAN)
 #endif
-#endif
+#define _isnan isnan
 
 //==================================================================
 
@@ -39,7 +36,7 @@
 #define	FALL_TIME		0.3
 
 // ROGUE- id killed this weapon
-//#define	KILL_DISRUPTOR	1	// Knightmare- re-enabled this due to public interest
+#define	KILL_DISRUPTOR	1
 // rogue
 
 // edict->spawnflags
@@ -1373,8 +1370,6 @@ struct edict_s
 	// common data blocks
 	moveinfo_t		moveinfo;
 	monsterinfo_t	monsterinfo;
-
-	char		*musictrack;	// Knightmare- for specifying OGG or CD track
 
 //=========
 //ROGUE
