@@ -34,7 +34,7 @@ void AQ_GlobalInit()
 {
    FILE *theFile;
    cvar_t *game = gi.cvar("game", "", 0);
-   char *motd = &globals.AQ_motd;
+   char *motd = globals.AQ_motd;
    char inData[256];
    char fileName[MAX_QPATH];
    int n, limit;
@@ -1312,6 +1312,8 @@ void AQ_Give (edict_t *ent)
                gi.sound(ent, CHAN_ITEM, gi.soundindex ("flyer/flyatck1.wav"), 1, ATTN_NORM, 0);
          }
 }
+
+void Recall2Init (edict_t *ent);
 
 // Initialization of data ONLY at pickup (rather than at every passive activation/shutdown)
 void AQ_Special_Activate (edict_t *ent, int type)

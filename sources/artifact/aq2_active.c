@@ -20,6 +20,23 @@
 
 //TODO: why does this function have to go after where it's called? crashes otherwise. this is the prototype, since it's going after
 void AQ_LaserThinkGo (edict_t *ent);
+void AQ_Blink (edict_t *ent);
+void AQ_Bubble_Push (edict_t *ent);
+void AQ_Change_Flight_Speed (edict_t *ent);
+void AQ_Spawn_Radio_Cannister (edict_t *ent);
+void AQ_GWell (edict_t *ent);
+void AQ_Recall (edict_t *ent);
+void AQ_Recall2 (edict_t *ent);
+void AQ_Explode_Start (edict_t *ent);
+void AQ_Death_Spot (edict_t *ent);
+void AQ_Ice_Trap (edict_t *ent);
+void AQ_Hologram (edict_t *ent);
+void AQ_Haste_Jump (edict_t *ent);
+void AQ_Shield_Activate (edict_t *ent);
+void AQ_EPA_Jump (edict_t *ent);
+void AQ_Toggle_Orb (edict_t *ent);
+void AQ_Teleport_Tank (edict_t *ent);
+void AQ_Shuffle (edict_t *ent);
 
 // A player pressed The Button. Activate the appropriate effect.
 void AQ_Active_Effect (edict_t *ent)
@@ -82,6 +99,9 @@ void AQ_Active_Effect (edict_t *ent)
 }
 
 // Effects ******************************************
+
+void AQ_GWell_Kill (edict_t *self);
+void AQ_GWell_Spawn (edict_t *ent);
 
 // Make the gravity well appear, make the gravity well dissapear.
 void AQ_GWell (edict_t *ent)
@@ -316,7 +336,7 @@ void AQ_Recall2 (edict_t *ent)
    VectorCopy (temp, artifact->aVector);
 }
 
-AQ_TeleTempEnt (vec3_t origin)
+void AQ_TeleTempEnt (vec3_t origin)
 {
    edict_t *temp;
 
@@ -404,7 +424,10 @@ void AQ_Earthquake (edict_t *ent)
    gi.linkentity (quake);
 }
 
-AQ_Explode_Think (edict_t *ent)
+void AQ_Explode (edict_t *ent);
+void AQ_Bomb_Think (edict_t *ent);
+
+void AQ_Explode_Think (edict_t *ent)
 {
    // The regular thinking func for following the owner
    AQ_Bomb_Think (ent);
@@ -424,8 +447,10 @@ AQ_Explode_Think (edict_t *ent)
    }
 }
 
+void AQ_Big_Boom (vec3_t location);
+
 // The effect for Divine Wind going off.
-AQ_Explode (edict_t *ent)
+void AQ_Explode (edict_t *ent)
 {
    AQ_Held_Artifact *artifact = &(ent->client->pers.AQ_Info[AQ_KAMIKAZE]);
 
@@ -1485,7 +1510,7 @@ int AQ_IsGoodSpot (vec3_t pos, edict_t *ent)
 // Locates a valid random location in the level to blink to
 vec3_t* AQ_BlinkLoc (edict_t *ent)
 {
-   vec3_t gotoLoc;
+   static vec3_t gotoLoc;
    int n, isGood;
    
    // Find a location

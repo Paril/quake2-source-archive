@@ -17,6 +17,22 @@
 
 #include "g_local.h"
 
+void AQ_Sword_Spawn (edict_t *ent);
+void AQ_Zap_Spawn (edict_t *ent);
+void AQ_Shub_Spawn (edict_t *ent);
+void AQ_Spiky_Spawn (edict_t *ent);
+void AQ_Bomb_Spawn (edict_t *ent);
+void AQ_Death_Spot_Init (edict_t *ent);
+void AQ_Ice_Trap_Init (edict_t *ent);
+void AQ_Hologram_Init (edict_t *ent);
+void AQ_Flight_Trail (edict_t *ent);
+void AQ_Give_Weapons (edict_t *ent);
+void AQ_Head_Spawn (edict_t *ent);
+void AQ_Cloak (edict_t *ent);
+void AQ_Death_Orb_Spawn (edict_t *ent);
+void AQ_Tank_Spawn (edict_t *ent);
+void AQ_Radio_Init (edict_t *ent);
+
 // Starts up the passive effect of a single artifact
 void AQ_Passive_Start (edict_t *ent, int type)
 {
@@ -84,6 +100,16 @@ void AQ_Passive_Start (edict_t *ent, int type)
    // If firewalk, clear the ent reference
    else if (type == AQ_FIREWALK) artifact->aEnt = NULL;
 }
+
+void AQ_Camo_Stop (edict_t *self);
+void AQ_Remove_Tank (edict_t *self);
+void AQ_GWell_Kill (edict_t *self);
+void AQ_Shub_Kill (edict_t *self);
+void AQ_Spiky_Kill (edict_t *self);
+void AQ_Shield_Deactivate (edict_t *self);
+void AQ_Spawn_Radio_Cannister (edict_t *self);
+void AQ_Weird_Death (edict_t *self);
+void AQ_Kill_Death_Orb (edict_t *ent);
 
 // Shuts down the passive effect of a single artifact
 void AQ_Passive_Shutdown (edict_t *ent, int type)
@@ -186,6 +212,20 @@ void AQ_Passive_Think (edict_t *ent)
             AQ_Passive_Effect (ent, n);
 }
 
+void AQ_Regen (edict_t *ent);
+void AQ_Berserk (edict_t *ent);
+void AQ_Camo (edict_t *ent);
+void AQ_Give_Ammo (edict_t *ent);
+void AQ_Repel (edict_t *ent);
+void AQ_Cloak_Think (edict_t *ent);
+void AQ_Shield_Passive (edict_t *ent);
+void AQ_Tank_Update (edict_t *ent);
+void AQ_Impact_Think (edict_t *ent);
+void AQ_Jumpy_Think (edict_t *ent);
+void AQ_Electric_Think (edict_t *ent);
+void AQ_FireWalk_Think (edict_t *ent);
+void AQ_Weird_Think (edict_t *ent);
+
 // Actually sends the execution of an ongoing passive effect to the right function.
 void AQ_Passive_Effect (edict_t *ent, int type)
 {
@@ -217,7 +257,7 @@ void AQ_Health_Flash (edict_t *ent)
 }
 
 // Recharges health and armour for regen
-AQ_Regen (edict_t *ent)
+void AQ_Regen (edict_t *ent)
 {
    AQ_Held_Artifact *artifact = &(ent->client->pers.AQ_Info[AQ_REGEN]);
    int armor_index;
@@ -239,7 +279,7 @@ AQ_Regen (edict_t *ent)
 }
 
 // Haste sound
-AQ_Haste (edict_t *ent)
+void AQ_Haste (edict_t *ent)
 {
    AQ_Held_Artifact *artifact = &(ent->client->pers.AQ_Info[AQ_HASTE]);
 
@@ -253,7 +293,7 @@ AQ_Haste (edict_t *ent)
 }
 
 // Resist sound
-AQ_Resist (edict_t *ent)
+void AQ_Resist (edict_t *ent)
 {
    AQ_Held_Artifact *artifact = &(ent->client->pers.AQ_Info[AQ_RESIST]);
 
@@ -305,7 +345,7 @@ void AQ_Berserk (edict_t *ent)
 }
 
 // Deactivation of camo
-AQ_Camo_Stop (edict_t *ent)
+void AQ_Camo_Stop (edict_t *ent)
 {
    AQ_Held_Artifact *artifact = &(ent->client->pers.AQ_Info[AQ_CAMO]);
 
@@ -318,7 +358,7 @@ AQ_Camo_Stop (edict_t *ent)
 }
 
 // Thinking for camoflague artifact. Invisible, not invisible, etc...
-AQ_Camo (edict_t *ent)
+void AQ_Camo (edict_t *ent)
 {
    AQ_Held_Artifact *artifact = &(ent->client->pers.AQ_Info[AQ_CAMO]);
 
@@ -1263,7 +1303,8 @@ void AQ_Tank_Defeated (edict_t *self)
 mframe_t aq_tank_frames_death1 [] =
 { ai_move, -7, NULL, ai_move, -2, NULL, ai_move, -2, NULL, ai_move, 1, NULL, ai_move, 3, NULL, 	ai_move, 6, NULL, ai_move, 1, NULL, ai_move, 1, NULL, ai_move, 2, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, -2, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, -3, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, -4, NULL, ai_move, -6, NULL, ai_move, -4, NULL, ai_move, -5, NULL, ai_move, -7, NULL, ai_move, -15, AQ_tank_thud, ai_move, -5, NULL, ai_move, 0, NULL, ai_move, 0, NULL, ai_move, 0, NULL};
 mmove_t aq_tank_death = {222, 253, aq_tank_frames_death1, AQ_Tank_Defeated};
-AQ_Tank_Die (edict_t *ent)
+
+	void AQ_Tank_Die (edict_t *ent, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
 {
    gi.sound (ent, CHAN_VOICE, gi.soundindex ("tank/death.wav"), 1, ATTN_NORM, 0);
    ent->deadflag = DEAD_DYING;
@@ -1272,7 +1313,7 @@ AQ_Tank_Die (edict_t *ent)
 }
 
 // Spawns a Tank Helper
-AQ_Tank_Spawn (edict_t *ent)
+void AQ_Tank_Spawn (edict_t *ent)
 {
    AQ_Held_Artifact *artifact = &(ent->client->pers.AQ_Info[AQ_HELPER]);
    edict_t *tank;

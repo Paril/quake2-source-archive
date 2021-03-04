@@ -223,6 +223,12 @@ void AQ_Give();
 void AQ_BecomeExplosion1();
 float AQ_Nearest_DMSpawn(vec3_t location);
 float AQ_Nearest_TeleDest(vec3_t location);
+void AQ_HUD_Num (edict_t *ent);
+void AQ_Special_Activate (edict_t *ent, int type);
+void AQ_Remove_ALL_Playthings();
+void AQ_LevelInit();
+void AQ_Remove_Playthings (edict_t *owner);
+void AQ_Client_Startup (edict_t *ent);
 
 // "aq2_passive.c" ***
 
@@ -233,10 +239,21 @@ void AQ_Passive_Effect();
 void AQ_GWell_Think();
 void AQ_GWell_Touch();
 void AQ_Impact_Touch (edict_t *ent, edict_t *other);
+void AQ_Strength (edict_t *ent);
+void AQ_Haste (edict_t *ent);
+void AQ_UnCloak (edict_t *ent);
+void AQ_Health_Flash (edict_t *ent);
+void AQ_EPA_Liquid(edict_t *ent);
+void AQ_Vampire (edict_t *ent, edict_t *victim, int amount);
+void AQ_VengBack (edict_t *ent, edict_t *attacker, int damage, int knockback, int origMOD);
+int AQ_EPA_Damage(edict_t *targ, edict_t *attacker, edict_t *inflictor, int damageStart, int mod);
+void AQ_Resist (edict_t *ent);
 
 // "aq2_active.c" ***
 
 void AQ_Active_Effect();
+void AQ_Death_Explode (edict_t *ent);
+void AQ_TeleTempEnt (vec3_t origin);
 
 #endif
 
