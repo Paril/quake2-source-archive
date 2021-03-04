@@ -1,0 +1,203 @@
+ ctf/g_ctf.c    |  7 +++----
+ ctf/g_ctf.h    |  2 +-
+ ctf/g_items.c  |  6 +++---
+ ctf/g_spawn.c  |  2 +-
+ ctf/g_target.c |  4 ++--
+ ctf/p_client.c | 36 ++++++++++++++++++------------------
+ ctf/p_weapon.c |  4 ++--
+ 7 files changed, 30 insertions(+), 31 deletions(-)
+
+diff --git a/ctf/g_ctf.c b/ctf/g_ctf.c
+index 1fcf0d5..cf0c3bb 100644
+--- a/ctf/g_ctf.c
++++ b/ctf/g_ctf.c
+@@ -872,13 +872,12 @@ void CTFDeadDropFlag(edict_t *self)
+ 	}
+ }
+ 
+-qboolean CTFDrop_Flag(edict_t *ent, gitem_t *item)
++void CTFDrop_Flag(edict_t *ent, gitem_t *item)
+ {
+ 	if (rand() & 1) 
+ 		gi.cprintf(ent, PRINT_HIGH, "Only lusers drop flags.\n");
+ 	else
+ 		gi.cprintf(ent, PRINT_HIGH, "Winners don't drop flags.\n");
+-	return false;
+ }
+ 
+ static void CTFFlagThink(edict_t *ent)
+@@ -3126,10 +3125,10 @@ int CTFUpdateJoinMenu(edict_t *ent)
+ 	}
+ 
+ 	if (ctf_forcejoin->string && *ctf_forcejoin->string) {
+-		if (stricmp(ctf_forcejoin->string, "red") == 0) {
++		if (Q_stricmp(ctf_forcejoin->string, "red") == 0) {
+ 			joinmenu[jmenu_blue].text = NULL;
+ 			joinmenu[jmenu_blue].SelectFunc = NULL;
+-		} else if (stricmp(ctf_forcejoin->string, "blue") == 0) {
++		} else if (Q_stricmp(ctf_forcejoin->string, "blue") == 0) {
+ 			joinmenu[jmenu_red].text = NULL;
+ 			joinmenu[jmenu_red].SelectFunc = NULL;
+ 		}
+diff --git a/ctf/g_ctf.h b/ctf/g_ctf.h
+index 5ab400d..8893732 100644
+--- a/ctf/g_ctf.h
++++ b/ctf/g_ctf.h
+@@ -115,7 +115,7 @@ void CTFAssignSkin(edict_t *ent, char *s);
+ void CTFAssignTeam(gclient_t *who);
+ edict_t *SelectCTFSpawnPoint (edict_t *ent);
+ qboolean CTFPickup_Flag(edict_t *ent, edict_t *other);
+-qboolean CTFDrop_Flag(edict_t *ent, gitem_t *item);
++void CTFDrop_Flag(edict_t *ent, gitem_t *item);
+ void CTFEffects(edict_t *player);
+ void CTFCalcScores(void);
+ void SetCTFStats(edict_t *ent);
+diff --git a/ctf/g_items.c b/ctf/g_items.c
+index 56fe2e6..ca408a9 100644
+--- a/ctf/g_items.c
++++ b/ctf/g_items.c
+@@ -40,9 +40,9 @@ gitem_armor_t jacketarmor_info	= { 25,  50, .30, .00, ARMOR_JACKET};
+ gitem_armor_t combatarmor_info	= { 50, 100, .60, .30, ARMOR_COMBAT};
+ gitem_armor_t bodyarmor_info	= {100, 200, .80, .60, ARMOR_BODY};
+ 
+-static int	jacket_armor_index;
+-static int	combat_armor_index;
+-static int	body_armor_index;
++int	jacket_armor_index;
++int	combat_armor_index;
++int	body_armor_index;
+ static int	power_screen_index;
+ static int	power_shield_index;
+ 
+diff --git a/ctf/g_spawn.c b/ctf/g_spawn.c
+index 7ebad56..910a128 100644
+--- a/ctf/g_spawn.c
++++ b/ctf/g_spawn.c
+@@ -587,7 +587,7 @@ void SpawnEntities (char *mapname, char *entities, char *spawnpoint)
+ 		entities = ED_ParseEdict (entities, ent);
+ 		
+ 		// yet another map hack
+-		if (!stricmp(level.mapname, "command") && !stricmp(ent->classname, "trigger_once") && !stricmp(ent->model, "*27"))
++		if (!Q_stricmp(level.mapname, "command") && !Q_stricmp(ent->classname, "trigger_once") && !Q_stricmp(ent->model, "*27"))
+ 			ent->spawnflags &= ~SPAWNFLAG_NOT_HARD;
+ 
+ 		// remove things (except the world) from different skill levels or deathmatch
+diff --git a/ctf/g_target.c b/ctf/g_target.c
+index 3296a24..ab04824 100644
+--- a/ctf/g_target.c
++++ b/ctf/g_target.c
+@@ -176,7 +176,7 @@ void SP_target_secret (edict_t *ent)
+ 	ent->svflags = SVF_NOCLIENT;
+ 	level.total_secrets++;
+ 	// map bug hack
+-	if (!stricmp(level.mapname, "mine3") && ent->s.origin[0] == 280 && ent->s.origin[1] == -2048 && ent->s.origin[2] == -624)
++	if (!Q_stricmp(level.mapname, "mine3") && ent->s.origin[0] == 280 && ent->s.origin[1] == -2048 && ent->s.origin[2] == -624)
+ 		ent->message = "You have found a secret area.";
+ }
+ 
+@@ -309,7 +309,7 @@ void SP_target_changelevel (edict_t *ent)
+ 	}
+ 
+ 	// ugly hack because *SOMEBODY* screwed up their map
+-   if((stricmp(level.mapname, "fact1") == 0) && (stricmp(ent->map, "fact3") == 0))
++   if((Q_stricmp(level.mapname, "fact1") == 0) && (Q_stricmp(ent->map, "fact3") == 0))
+ 	   ent->map = "fact3$secret1";
+ 
+ 	ent->use = use_target_changelevel;
+diff --git a/ctf/p_client.c b/ctf/p_client.c
+index f77cf10..d57e694 100644
+--- a/ctf/p_client.c
++++ b/ctf/p_client.c
+@@ -53,7 +53,7 @@ static void SP_FixCoopSpots (edict_t *self)
+ 		VectorSubtract(self->s.origin, spot->s.origin, d);
+ 		if (VectorLength(d) < 384)
+ 		{
+-			if ((!self->targetname) || stricmp(self->targetname, spot->targetname) != 0)
++			if ((!self->targetname) || Q_stricmp(self->targetname, spot->targetname) != 0)
+ 			{
+ //				gi.dprintf("FixCoopSpots changed %s at %s targetname from %s to %s\n", self->classname, vtos(self->s.origin), self->targetname, spot->targetname);
+ 				self->targetname = spot->targetname;
+@@ -71,7 +71,7 @@ static void SP_CreateCoopSpots (edict_t *self)
+ {
+ 	edict_t	*spot;
+ 
+-	if(stricmp(level.mapname, "security") == 0)
++	if(Q_stricmp(level.mapname, "security") == 0)
+ 	{
+ 		spot = G_Spawn();
+ 		spot->classname = "info_player_coop";
+@@ -109,7 +109,7 @@ void SP_info_player_start(edict_t *self)
+ {
+ 	if (!coop->value)
+ 		return;
+-	if(stricmp(level.mapname, "security") == 0)
++	if(Q_stricmp(level.mapname, "security") == 0)
+ 	{
+ 		// invoke one of our gross, ugly, disgusting hacks
+ 		self->think = SP_CreateCoopSpots;
+@@ -142,20 +142,20 @@ void SP_info_player_coop(edict_t *self)
+ 		return;
+ 	}
+ 
+-	if((stricmp(level.mapname, "jail2") == 0)   ||
+-	   (stricmp(level.mapname, "jail4") == 0)   ||
+-	   (stricmp(level.mapname, "mine1") == 0)   ||
+-	   (stricmp(level.mapname, "mine2") == 0)   ||
+-	   (stricmp(level.mapname, "mine3") == 0)   ||
+-	   (stricmp(level.mapname, "mine4") == 0)   ||
+-	   (stricmp(level.mapname, "lab") == 0)     ||
+-	   (stricmp(level.mapname, "boss1") == 0)   ||
+-	   (stricmp(level.mapname, "fact3") == 0)   ||
+-	   (stricmp(level.mapname, "biggun") == 0)  ||
+-	   (stricmp(level.mapname, "space") == 0)   ||
+-	   (stricmp(level.mapname, "command") == 0) ||
+-	   (stricmp(level.mapname, "power2") == 0) ||
+-	   (stricmp(level.mapname, "strike") == 0))
++	if((Q_stricmp(level.mapname, "jail2") == 0)   ||
++	   (Q_stricmp(level.mapname, "jail4") == 0)   ||
++	   (Q_stricmp(level.mapname, "mine1") == 0)   ||
++	   (Q_stricmp(level.mapname, "mine2") == 0)   ||
++	   (Q_stricmp(level.mapname, "mine3") == 0)   ||
++	   (Q_stricmp(level.mapname, "mine4") == 0)   ||
++	   (Q_stricmp(level.mapname, "lab") == 0)     ||
++	   (Q_stricmp(level.mapname, "boss1") == 0)   ||
++	   (Q_stricmp(level.mapname, "fact3") == 0)   ||
++	   (Q_stricmp(level.mapname, "biggun") == 0)  ||
++	   (Q_stricmp(level.mapname, "space") == 0)   ||
++	   (Q_stricmp(level.mapname, "command") == 0) ||
++	   (Q_stricmp(level.mapname, "power2") == 0) ||
++	   (Q_stricmp(level.mapname, "strike") == 0))
+ 	{
+ 		// invoke one of our gross, ugly, disgusting hacks
+ 		self->think = SP_FixCoopSpots;
+@@ -168,7 +168,7 @@ void SP_info_player_coop(edict_t *self)
+ The deathmatch intermission point will be at one of these
+ Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
+ */
+-void SP_info_player_intermission(void)
++void SP_info_player_intermission(edict_t *self)
+ {
+ }
+ 
+diff --git a/ctf/p_weapon.c b/ctf/p_weapon.c
+index 907bd19..6e45a6a 100644
+--- a/ctf/p_weapon.c
++++ b/ctf/p_weapon.c
+@@ -23,7 +23,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ #include "m_player.h"
+ 
+ 
+-static qboolean	is_quad;
++qboolean	is_quad;
+ static byte		is_silenced;
+ 
+ 
+@@ -554,7 +554,7 @@ void Weapon_Generic (edict_t *ent, int FRAME_ACTIVATE_LAST, int FRAME_FIRE_LAST,
+ 		fire_frames, fire);
+ 
+ 	// run the weapon frame again if hasted
+-	if (stricmp(ent->client->pers.weapon->pickup_name, "Grapple") == 0 &&
++	if (Q_stricmp(ent->client->pers.weapon->pickup_name, "Grapple") == 0 &&
+ 		ent->client->weaponstate == WEAPON_FIRING)
+ 		return;
+ 
