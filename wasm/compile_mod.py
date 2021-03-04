@@ -103,10 +103,18 @@ def compile(modname, debug):
 		with open(exclude_re_file, 'r') as content_file:
 			exclude_re = re.compile(content_file.read())
 
+	include_re_file = src_folder.joinpath('include.opt')
+	include_re = None
+	
+	if include_re_file.exists():
+		with open(include_re_file, 'r') as content_file:
+			include_re = re.compile(content_file.read())
+
 	excluded = 0
 
 	for path in { p.resolve() for p in src_files_path.rglob("**/*") if p.suffix in [ ".c", ".cc", ".cpp" ] }:
-		if exclude_re != None and exclude_re.search(str(path)):
+		path_str = str(path).replace('\\', '/')
+		if (exclude_re != None and exclude_re.search(path_str)) or (include_re != None and not include_re.search(path_str)):
 			excluded += 1
 		elif path.suffix == '.c':
 			c_files.append(path)
@@ -124,13 +132,12 @@ def compile(modname, debug):
 		with open(path, 'r') as content_file:
 			content = content_file.read()
 
-		return Template(content).substitute(src_folder=str(src_folder)).split('\n')
+		src_folder_resolved = str(source_path.resolve() if source_path is not None else src_folder)
+
+		return Template(content).substitute(src_folder=src_folder_resolved).split('\n')
 
 	debug = 'Debug' if debug else 'Release'
-	print('Found ' + str(len(c_files)) + ' C files and ' + str(len(cpp_files)) + ' C++ files')
-
-	if excluded:
-		print('Excluding ' + str(excluded))
+	print('Found ' + str(len(c_files)) + ' C files and ' + str(len(cpp_files)) + ' C++ files' + (', excluding ' + str(excluded)) if excluded else '')
 
 	patch_file = src_folder.joinpath('wasm.patch')
 

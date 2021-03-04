@@ -13,6 +13,6 @@
 [submodule "sources/_quake2"]
 	path = sources/_quake2
 	url = https://github.com/id-Software/Quake-2
-[submodule "sources/spaq/src"]
-	path = sources/spaq/src
-	url = https://github.com/Paril/spaq2-pe.git
+[submodule "sources/_q2pro"]
+	path = sources/_q2pro
+	url = https://github.com/skullernet/q2pro.git
