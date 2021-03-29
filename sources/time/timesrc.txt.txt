@@ -1,0 +1,6 @@
+This source is provided as is. I will probably not answer any questions on it.
+I'm releasing it to the public domain in case anyone wants to add to the
+mod or possibly learn anything. I'm not responsible for any damages resulting
+from this, yadda yadda. All the places where source is added are marked
+by // TIME. The main files that are changed are p_client, g_local.h, and
+q_shared.h
