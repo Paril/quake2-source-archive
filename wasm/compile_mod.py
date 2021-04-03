@@ -51,10 +51,9 @@ def compile(modname, debug):
 	linker_args = [
 		'--no-entry',
 		'-mwasm32',
-		'-Lwasi-sysroot/lib/wasm32-wasi',
 		'wasi-sysroot/lib/wasm32-wasi/libc.a',
 		'wasi-sysroot/lib/wasm32-wasi/crt1-reactor.o',
-		'libclang_rt.builtins-wasm32.a',
+		'wasi-sysroot/lib/wasm32-wasi/libclang_rt.builtins-wasm32.a',
 		'--stack-first',
 		'-zstack-size=8388608',
 		'--initial-memory=100663296',
@@ -77,7 +76,7 @@ def compile(modname, debug):
 		'-std=c++20',
 	]
 	
-	c_files = [ Path('./quake2-wasm/game/wasm.c') ]
+	c_files = [ Path('./quake2-wasm/game/g_wasm.c') ]
 	cpp_files = []
 
 	src_folder = Path(f'../sources/{modname}')

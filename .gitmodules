@@ -16,6 +16,3 @@
 [submodule "sources/_q2pro"]
 	path = sources/_q2pro
 	url = https://github.com/skullernet/q2pro.git
-[submodule "sources/spaq/src"]
-	path = sources/spaq/src
-	url = https://github.com/Paril/spaq2-pe
