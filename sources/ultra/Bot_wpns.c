@@ -83,9 +83,11 @@
 
 int	aborted_fire;
 
-int	is_quad;
-int	is_double;
-int is_quadfire;
+extern qboolean	is_quad;
+extern qboolean is_double;
+extern qboolean is_quadfire;
+
+extern byte P_DamageModifier(edict_t *ent);
 
 void	bot_FireWeapon(edict_t	*self)
 {

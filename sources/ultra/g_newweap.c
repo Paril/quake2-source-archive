@@ -1397,7 +1397,7 @@ void nuke_bounce (edict_t *ent, edict_t *other, cplane_t *plane, csurface_t *sur
 }
 
 
- extern byte P_DamageModifier(edict_t *ent);
+extern byte P_DamageModifier(edict_t *ent);
 
 void fire_nuke (edict_t *self, vec3_t start, vec3_t aimdir, int speed)
 {

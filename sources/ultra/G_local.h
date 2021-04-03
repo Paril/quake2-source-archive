@@ -1000,14 +1000,14 @@ edict_t *PlayerTrail_VisibleTrailInRange(edict_t *ent1, edict_t *ent2, float ran
 edict_t *bot_PickBestTrail (edict_t *self, edict_t *target, int recurse_depth);
 edict_t *bot_TouchedTrail(edict_t *ent, edict_t *targ);
 
-qboolean nodes_done;		// used to determine whether or not to enable node calculation
-edict_t	*check_nodes_done;	// after 20 mins of play, this ent checks if we should turn off node calc. at set intervals
+extern qboolean nodes_done;		// used to determine whether or not to enable node calculation
+extern edict_t	*check_nodes_done;	// after 20 mins of play, this ent checks if we should turn off node calc. at set intervals
 
 //edict_t *last_trail_dropped;
-qboolean	loaded_trail_flag;
+extern qboolean	loaded_trail_flag;
 
 #define		TRAIL_LENGTH			750
-edict_t		*trail[TRAIL_LENGTH];			// the actual trail!
+extern edict_t		*trail[TRAIL_LENGTH];			// the actual trail!
 
 #define		TRAIL_TELEPORT_SOURCE	1
 
@@ -1023,7 +1023,7 @@ void InitClientResp (gclient_t *client);
 void InitBodyQue (void);
 void ClientBeginServerFrame (edict_t *ent);
 
-float	last_trail_time;
+extern float	last_trail_time;
 
 //
 // g_player.c
@@ -1079,7 +1079,7 @@ void SaveClientData (void);
 void FetchClientEntData (edict_t *ent);
 
 //#define	BOT_FRAMETIME	0.1
-double	bot_frametime;
+extern double	bot_frametime;
 
 //
 // g_chase.c
@@ -1089,11 +1089,11 @@ void ChaseNext(edict_t *ent);
 void ChasePrev(edict_t *ent);
 void GetChaseTarget(edict_t *ent);
 
-int max_bots;
-float	last_bot_spawn;
-int bot_male_names_used;
-int bot_female_names_used;
-int bot_count;
+extern int max_bots;
+extern float	last_bot_spawn;
+extern int bot_male_names_used;
+extern int bot_female_names_used;
+extern int bot_count;
 
 #define	MAX_BOT_FEMALE_NAMES		10
 #define	MAX_BOT_MALE_NAMES			15
@@ -1257,8 +1257,8 @@ struct bot_team_s
 
 typedef struct bot_team_s bot_team_t;
 
-bot_team_t	*bot_teams[MAX_TEAMS];
-int			total_teams;
+extern bot_team_t	*bot_teams[MAX_TEAMS];
+extern int			total_teams;
 // END Teamplay structure
 //========================================================================================
 
@@ -1440,7 +1440,7 @@ typedef struct
 } routes_t;
 
 #define MAX_PATHS	24			// each node cannot see more than MAX_PATHS nodes
-edict_t	*the_client;			// points to the first client to enter the game (used for debugging)
+extern edict_t	*the_client;			// points to the first client to enter the game (used for debugging)
 
 struct edict_s
 {
@@ -1700,24 +1700,24 @@ struct edict_s
 	edict_t		*laser;
 };
 
-int	num_players;
-edict_t *players[MAX_CLIENTS];		// pointers to all players in the game
-edict_t	*weapons_head;				// pointers to all weapons in the game (use node_target and last_goal to traverse forward/back)
-edict_t	*health_head;
-edict_t	*bonus_head;				// armour, Quad, etc
-edict_t	*ammo_head;
+extern int	num_players;
+extern edict_t *players[MAX_CLIENTS];		// pointers to all players in the game
+extern edict_t	*weapons_head;				// pointers to all weapons in the game (use node_target and last_goal to traverse forward/back)
+extern edict_t	*health_head;
+extern edict_t	*bonus_head;				// armour, Quad, etc
+extern edict_t	*ammo_head;
 
 // the following are just faster ways of accessing FindItem("item_name"), set in Worldspawn
-gitem_t	*item_shells, *item_cells, *item_rockets, *item_grenades, *item_slugs, *item_bullets;
-gitem_t	*item_shotgun, *item_hyperblaster, *item_supershotgun, *item_grenadelauncher, *item_chaingun, *item_railgun, *item_machinegun, *item_bfg10k, *item_rocketlauncher, *item_blaster;
-gitem_t *item_proxlauncher, *item_disruptor, *item_etfrifle, *item_chainfist, *item_plasmabeam, *item_rounds, *item_flechettes, *item_tesla, *item_prox, *item_shockwave;
+extern gitem_t	*item_shells, *item_cells, *item_rockets, *item_grenades, *item_slugs, *item_bullets;
+extern gitem_t	*item_shotgun, *item_hyperblaster, *item_supershotgun, *item_grenadelauncher, *item_chaingun, *item_railgun, *item_machinegun, *item_bfg10k, *item_rocketlauncher, *item_blaster;
+extern gitem_t *item_proxlauncher, *item_disruptor, *item_etfrifle, *item_chainfist, *item_plasmabeam, *item_rounds, *item_flechettes, *item_tesla, *item_prox, *item_shockwave;
 
-bot_info_t	*botinfo_list;
-int			total_bots;		// number of bots read in from bots.cfg
+extern bot_info_t	*botinfo_list;
+extern int			total_bots;		// number of bots read in from bots.cfg
 
-bot_info_t	*teambot_list;	// bots that were generated solely for teamplay
+extern bot_info_t	*teambot_list;	// bots that were generated solely for teamplay
 
-qboolean paused;			// fake a paused game during deathmatch
+extern qboolean paused;			// fake a paused game during deathmatch
 
 //ZOID
 #include "g_ctf.h"

@@ -2004,6 +2004,10 @@ static void Trap_Think (edict_t *ent)
 		
 }
 
+static void Trap_Die(edict_t *self, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
+{
+	Trap_Explode(self);
+}
 
 // RAFAEL
 void fire_trap (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int speed, float timer, float damage_radius, qboolean held)
@@ -2045,7 +2049,7 @@ void fire_trap (edict_t *self, vec3_t start, vec3_t aimdir, int damage, int spee
 	//added by ScarFace
 	trap->health = trap_health->value;  
 	trap->takedamage = DAMAGE_YES;
-	trap->die = Trap_Explode;
+	trap->die = Trap_Die;
 	//end ScarFace
 
 	if (timer <= 0.0)

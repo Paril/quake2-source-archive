@@ -455,7 +455,7 @@ cvar_t	*use_rogueplats;
 cvar_t	*grapple_mdl;
 cvar_t	*grapple_spin;
 
-cvar_t	*strong_mines;
+extern cvar_t	*strong_mines;
 cvar_t	*hook_style;
 
 cvar_t	*invisible_dmstarts;

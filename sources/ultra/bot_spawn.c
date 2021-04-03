@@ -80,7 +80,42 @@
 #include "aj_startmax.h"	// AJ
 #include "aj_statusbars.h"
 
-qboolean ClientConnect (edict_t *ent, char *userinfo, qboolean loadgame);
+bot_team_t	*bot_teams[MAX_TEAMS];
+int			total_teams;
+
+qboolean nodes_done;		// used to determine whether or not to enable node calculation
+edict_t	*check_nodes_done;	// after 20 mins of play, this ent checks if we should turn off node calc. at set intervals
+
+qboolean	loaded_trail_flag;
+
+#define		TRAIL_LENGTH			750
+edict_t		*trail[TRAIL_LENGTH];			// the actual trail!
+
+double	bot_frametime;
+
+bot_info_t	*botinfo_list;
+int			total_bots;		// number of bots read in from bots.cfg
+
+bot_info_t	*teambot_list;	// bots that were generated solely for teamplay
+
+int max_bots;
+float	last_bot_spawn;
+int bot_male_names_used;
+int bot_female_names_used;
+int bot_count;
+
+char	*bot_chat_text[NUM_CHAT_SECTIONS][MAX_CHAT_PER_SECTION];
+int		bot_chat_count[NUM_CHAT_SECTIONS];
+float	last_bot_chat[NUM_CHAT_SECTIONS];
+
+int		num_view_weapons;
+char	view_weapon_models[64][64];
+
+int		spawn_bots;
+int		roam_calls_this_frame;
+int		bestdirection_callsthisframe;
+
+qboolean ClientConnect (edict_t *ent, char *userinfo);
 
 // BEGIN: SABIN code
 edict_t *bot_GetLastFreeClient (void)
@@ -361,7 +396,7 @@ edict_t *spawn_bot (char *botname)
     EntityListAdd(bot);
     ///Q2 Camera End
 
-	ClientConnect (bot, userinfo, false);
+	ClientConnect (bot, userinfo);
 
 	if (ctf->value)
 	{

@@ -4310,11 +4310,11 @@ int CTFUpdateJoinMenu(edict_t *ent)
 
 	if (ctf_forcejoin->string && *ctf_forcejoin->string) 
 	{
-		if (stricmp(ctf_forcejoin->string, "red") == 0) 
+		if (Q_stricmp(ctf_forcejoin->string, "red") == 0) 
 		{
 			joinmenu[6].text = NULL;
 			joinmenu[6].SelectFunc = NULL;
-		} else if (stricmp(ctf_forcejoin->string, "blue") == 0) {
+		} else if (Q_stricmp(ctf_forcejoin->string, "blue") == 0) {
 			joinmenu[4].text = NULL;
 			joinmenu[4].SelectFunc = NULL;
 		}
@@ -4572,19 +4572,19 @@ int TTCTFUpdateJoinMenu(edict_t *ent)
 
 	if (ctf_forcejoin->string && *ctf_forcejoin->string) 
 	{
-		if (stricmp(ctf_forcejoin->string, "red") == 0) 
+		if (Q_stricmp(ctf_forcejoin->string, "red") == 0) 
 		{
 			joinmenu[6].text = NULL;
 			joinmenu[6].SelectFunc = NULL;
 			joinmenu[8].text = NULL;
 			joinmenu[8].SelectFunc = NULL;
-		} else if (stricmp(ctf_forcejoin->string, "blue") == 0) 
+		} else if (Q_stricmp(ctf_forcejoin->string, "blue") == 0) 
 		{
 			joinmenu[4].text = NULL;
 			joinmenu[4].SelectFunc = NULL;
 			joinmenu[8].text = NULL;
 			joinmenu[8].SelectFunc = NULL;
-		} else if (stricmp(ctf_forcejoin->string, "green") == 0) 
+		} else if (Q_stricmp(ctf_forcejoin->string, "green") == 0) 
 		{
 			joinmenu[4].text = NULL;
 			joinmenu[4].SelectFunc = NULL;

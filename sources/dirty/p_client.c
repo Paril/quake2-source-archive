@@ -158,7 +158,7 @@ void SP_info_player_coop(edict_t *self)
 The deathmatch intermission point will be at one of these
 Use 'angles' instead of 'angle', so you can set pitch or roll as well as yaw.  'pitch yaw roll'
 */
-void SP_info_player_intermission(void)
+void SP_info_player_intermission(edict_t *self)
 {
 }
 
@@ -2993,7 +2993,8 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
                                         Cmd_WeapLast_f (ent);
 
                                 // Dirty
-                                if ((int)junk->value > 8)
+                                // Paril: junk has nothing to do with movement
+                                /*if ((int)junk->value > 8)
                                 {
                                         j = 100 - ent->weight;
                                         
@@ -3002,7 +3003,7 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
                                         else
                                                 ent->velocity[2] += i;
 
-                                }
+                                }*/
                                 // Dirty
                                 ent->action |= A_JUMPED; // Dirty
                         }
@@ -3013,11 +3014,11 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
                                         if ((ent->client->weaponstate == WEAPON_READY) && (Grab_n_Climb (ent)))
                                                 ent->client->hanging = true;
                                 }
-                                else if (ucmd->upmove > 0)
+                                else if (ucmd->upmove < 0)
                                 {
-                                        if (!(client->ps.pmove.pm_flags & PMF_JUMP_HELD))
+                                        if (!(ent->action & A_WANT_FLIP))
                                         {
-                                                ent->client->ps.pmove.pm_flags |= PMF_JUMP_HELD;
+                                                ent->action |= A_WANT_FLIP;
 
                                                 if (JumpBack (ent))
                                                 {
@@ -3038,7 +3039,7 @@ void ClientThink (edict_t *ent, usercmd_t *ucmd)
                                         }
                                 }
                                 else
-                                        client->ps.pmove.pm_flags &= ~PMF_JUMP_HELD;
+                                      ent->action &= ~A_WANT_FLIP;
                         }
                 }
                 // Dirty

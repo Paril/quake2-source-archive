@@ -40,6 +40,9 @@ typedef enum {false, true}	qboolean;
 #define NULL ((void *)0)
 #endif
 
+#ifndef max
+#define max(a, b) ((a) > (b) ? (a) : (b))
+#endif
 
 // angle indexes
 #define	PITCH				0		// up / down

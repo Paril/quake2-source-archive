@@ -17,6 +17,17 @@ gitem_armor_t jacketarmor_info	= { 25,  65000, .30, .00, ARMOR_JACKET};
 gitem_armor_t combatarmor_info	= { 50, 65000, .60, .30, ARMOR_COMBAT};
 gitem_armor_t bodyarmor_info	= {100, 65000, .80, .60, ARMOR_BODY};
 
+edict_t	*weapons_head;				// pointers to all weapons in the game (use node_target and last_goal to traverse forward/back)
+edict_t	*health_head;
+edict_t	*bonus_head;				// armour, Quad, etc
+edict_t	*ammo_head;
+
+// the following are just faster ways of accessing FindItem("item_name"), set in Worldspawn
+gitem_t	*item_shells, *item_cells, *item_rockets, *item_grenades, *item_slugs, *item_bullets;
+gitem_t	*item_shotgun, *item_hyperblaster, *item_supershotgun, *item_grenadelauncher, *item_chaingun, *item_railgun, *item_machinegun, *item_bfg10k, *item_rocketlauncher, *item_blaster;
+gitem_t *item_proxlauncher, *item_disruptor, *item_etfrifle, *item_chainfist, *item_plasmabeam, *item_rounds, *item_flechettes, *item_tesla, *item_prox, *item_shockwave;
+
+
 void Weapon_Blaster (edict_t *ent);
 void Weapon_Shotgun (edict_t *ent);
 void Weapon_SuperShotgun (edict_t *ent);

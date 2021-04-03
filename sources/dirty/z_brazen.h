@@ -366,6 +366,7 @@ void GibClient (edict_t *ent, int damage);
 #define A_RIGHTFLIP     4
 #define A_LEFTFLIP      8
 #define A_JUMPED        16 // Dirty - Matrix mode part
+#define A_WANT_FLIP     32 // Dirty - Paril fix
 
 void CreateBodyInventory (edict_t *ent);
 void CopyToBodyQue (edict_t *ent);

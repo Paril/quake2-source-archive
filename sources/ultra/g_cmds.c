@@ -1345,6 +1345,7 @@ void FlagPath(edict_t *ent, int ctf_team)
 	flagpath_type++;
 }
 
+void Cmd_RuneCount_f (edict_t *ent);
 
 /*
 =================

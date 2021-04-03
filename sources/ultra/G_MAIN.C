@@ -740,6 +740,7 @@ Advances the world by 0.1 seconds
 ================
 */
 void ClientUserinfoChanged (edict_t *ent, char *userinfo);
+void CheckNumRunes (void);
 
 qboolean execed_launcher_cfg=false;
 

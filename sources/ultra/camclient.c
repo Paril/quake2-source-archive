@@ -45,6 +45,8 @@
 #include "camclient.h"
 #include "extra.h"
 
+sPlayerList *pTempFind;
+
 enum { 
     CAM_FOLLOW_MODE,
     CAM_NORMAL_MODE};
@@ -696,7 +698,7 @@ CameraFollowThink(edict_t *ent, usercmd_t *ucmd)
     vec3_t
         vCameraOffset;
 // Ridah, changed this so we keep tracking the same player until a new player is selected
-	if (ent->client->pTarget || (ent->client->pTarget = PlayerToFollow(ent)) != NULL)
+	if (ent->client->pTarget || (ent->client->pTarget = PlayerToFollow()) != NULL)
     {
         //
         // Just keep looking for action!
@@ -776,7 +778,7 @@ CameraNormalThink(edict_t *ent, usercmd_t *ucmd)
                 ent->last_move_time = 0;
             }
         }
-        else if ((ent->client->pTarget = PlayerToFollow(ent)) != NULL)
+        else if ((ent->client->pTarget = PlayerToFollow()) != NULL)
         {
             //
             // Just keep looking for action!

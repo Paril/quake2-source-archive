@@ -306,7 +306,7 @@ void ThreeTeamCTFScoreboardMessage (edict_t *ent, edict_t *killer)
 	int		sorted[3][MAX_CLIENTS];
 	int		sortedscores[3][MAX_CLIENTS];
 	int		score, total[3], totalscore[3];
-	int		last[2];
+	int		last[3];
 	gclient_t	*cl;
 	edict_t		*cl_ent;
 	int team;

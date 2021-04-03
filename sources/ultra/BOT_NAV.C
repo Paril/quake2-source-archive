@@ -95,7 +95,7 @@ Set ideal_yaw accordingly
 #define		TRACE_DIST		256
 void	botRoamFindBestDirection(edict_t	*self)
 {
-	float		best_dist=0, this_dist, best_yaw;
+	float		best_dist=0, this_dist=0, best_yaw;
 	int		i;
 	vec3_t	dir, dest, angle, this_angle;
 	vec3_t	mins;

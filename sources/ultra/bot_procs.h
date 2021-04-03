@@ -21,9 +21,9 @@
 
 #define	SIGHT_FIRE_DELAY	0.8		// so bot's don't fire straight away after sighting an enemy
 
-int		spawn_bots;
-int		roam_calls_this_frame;
-int		bestdirection_callsthisframe;
+extern int		spawn_bots;
+extern int		roam_calls_this_frame;
+extern int		bestdirection_callsthisframe;
 
 // ---- BOT CHAT DATA ----
 
@@ -39,12 +39,12 @@ int		bestdirection_callsthisframe;
 #define	NUM_CHAT_SECTIONS		8
 #define	MAX_CHAT_PER_SECTION	64
 
-char	*bot_chat_text[NUM_CHAT_SECTIONS][MAX_CHAT_PER_SECTION];
-int		bot_chat_count[NUM_CHAT_SECTIONS];
-float	last_bot_chat[NUM_CHAT_SECTIONS];
+extern char	*bot_chat_text[NUM_CHAT_SECTIONS][MAX_CHAT_PER_SECTION];
+extern int		bot_chat_count[NUM_CHAT_SECTIONS];
+extern float	last_bot_chat[NUM_CHAT_SECTIONS];
 
-int		num_view_weapons;
-char	view_weapon_models[64][64];
+extern int		num_view_weapons;
+extern char	view_weapon_models[64][64];
 
 // -----------------------
 
@@ -72,7 +72,7 @@ int CanStand(edict_t	*self);
 int		CanSee(edict_t *self, edict_t *targ);
 int		CanReach(edict_t *self, edict_t *targ);
 
-int	botdebug;
+extern int	botdebug;
 void botDebugPrint(char *msg, ...);
 
 // bot_wpns.c

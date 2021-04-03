@@ -655,7 +655,7 @@ void SpawnEntities (char *mapname, char *entities, char *spawnpoint)
 		entities = ED_ParseEdict (entities, ent);
 		
 		// yet another map hack
-		if (!stricmp(level.mapname, "command") && !stricmp(ent->classname, "trigger_once") && !stricmp(ent->model, "*27"))
+		if (!Q_stricmp(level.mapname, "command") && !Q_stricmp(ent->classname, "trigger_once") && !Q_stricmp(ent->model, "*27"))
 			ent->spawnflags &= ~SPAWNFLAG_NOT_HARD;
 
 		// ROGUE
@@ -920,6 +920,7 @@ char *dm_statusbar =
 
 extern qboolean	respawn_flag;
 extern int num_dm_spots;
+int	botdebug;
 
 /*QUAKED worldspawn (0 0 0) ?
 
