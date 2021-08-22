@@ -11,7 +11,7 @@ import multiprocessing
 def compile_file(modname, compile_args, c_args, cpp_args, path):
 	obj_file = f'../bin/{modname}/obj/{path.name}-{hashlib.md5(str(path).encode()).hexdigest()}'
 	log = open(f'{obj_file}.txt', 'w')
-	subprocess.run([ 'clang' ] + compile_args + (c_args if path.suffix == '.c' else cpp_args) + [ '-o', f'{obj_file}.o', path ], stderr=log)
+	subprocess.run([ 'clang' ] + compile_args + (c_args if path.suffix.lower() == '.c' else cpp_args) + [ '-o', f'{obj_file}.o', path ], stderr=log)
 	log.close()
 	return obj_file
 
@@ -69,6 +69,8 @@ def compile(modname, debug):
 	]
 	
 	c_args = [
+		'-xc',
+		'-std=gnu17'
 	]
 	
 	cpp_args = [
@@ -82,6 +84,8 @@ def compile(modname, debug):
 	src_folder = Path(f'../sources/{modname}')
 
 	source_location_file = src_folder.joinpath('source_location.opt')
+
+	source_path = None
 
 	if source_location_file.exists():
 		source_path = src_folder.joinpath('src')
@@ -111,11 +115,11 @@ def compile(modname, debug):
 
 	excluded = 0
 
-	for path in { p.resolve() for p in src_files_path.rglob("**/*") if p.suffix in [ ".c", ".cc", ".cpp" ] }:
+	for path in { p.resolve() for p in src_files_path.rglob("**/*") if p.suffix.lower() in [ ".c", ".cc", ".cpp" ] }:
 		path_str = str(path).replace('\\', '/')
 		if (exclude_re != None and exclude_re.search(path_str)) or (include_re != None and not include_re.search(path_str)):
 			excluded += 1
-		elif path.suffix == '.c':
+		elif path.suffix.lower() == '.c':
 			c_files.append(path)
 		else:
 			cpp_files.append(path)
@@ -131,12 +135,12 @@ def compile(modname, debug):
 		with open(path, 'r') as content_file:
 			content = content_file.read()
 
-		src_folder_resolved = str(source_path.resolve() if source_path is not None else src_folder)
+		src_folder_resolved = str(src_files_path)
 
 		return Template(content).substitute(src_folder=src_folder_resolved).split('\n')
 
 	debug = 'Debug' if debug else 'Release'
-	print('Found ' + str(len(c_files)) + ' C files and ' + str(len(cpp_files)) + ' C++ files' + (', excluding ' + str(excluded)) if excluded else '')
+	print(f'Found {str(len(c_files))} C files and {str(len(cpp_files))} C++ files' + ((', excluding ' + str(excluded)) if excluded else ''))
 
 	patch_file = src_folder.joinpath('wasm.patch')
 
