@@ -1,0 +1,139 @@
+---
+name: Build mod
+
+on:
+  workflow_call:
+    inputs:
+      target_name:
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      target_name:
+        required: true
+        type: string
+
+env:
+  WASI_SDK_URL: https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-25/wasi-sdk-25.0-x86_64-linux.deb
+  CROSS_COMPILE_PACKAGES: libc6-dev-armhf-cross libgcc-s1-armhf-cross libgcc-13-dev-armhf-cross libc6-dev-i386-cross libgcc-s1-i386-cross libgcc-13-dev-i386-cross
+  # Workaround for missing compiled library in the WASI SDK
+  LIBCLANG_RT_BUILTINS_WASM32_A_URL: http://cdn.jsdelivr.net/gh/jedisct1/libclang_rt.builtins-wasm32.a/precompiled/llvm-19/libclang_rt.builtins-wasm32.a
+
+jobs:
+  build:
+    name: ${{ matrix.target.platform }} ${{ matrix.target.arch }}
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - runner: ubuntu-latest
+            platform: wasm
+            arch: wasm
+          - runner: macos-latest
+            platform: darwin
+            arch: aarch64
+          - runner: macos-13
+            platform: darwin
+            arch: x86_64
+          - runner: ubuntu-latest
+            platform: linux
+            arch: x86
+          - runner: ubuntu-latest
+            platform: linux
+            arch: x86_64
+          - runner: ubuntu-24.04-arm
+            platform: linux
+            arch: aarch64
+          - runner: ubuntu-24.04-arm
+            platform: linux
+            arch: armhf
+          - runner: windows-latest
+            platform: windows
+            arch: x86
+          - runner: windows-latest
+            platform: windows
+            arch: x86_64
+    runs-on: ${{ matrix.target.runner }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          ref: ${{ github.ref }}
+
+      # WASM build
+      - name: Install WASI SDK
+        if: matrix.target.arch == 'wasm'
+        run: |
+          curl -LO ${{ env.WASI_SDK_URL }} && \
+          sudo dpkg -i wasi-sdk-*-x86_64-linux.deb && \
+          rm *.deb && \
+          sudo curl -L ${{ env.LIBCLANG_RT_BUILTINS_WASM32_A_URL }} \
+            --output /opt/wasi-sdk/share/wasi-sysroot/lib/wasm32-wasi/libclang_rt.builtins-wasm32.a && \
+          ln -s /opt/wasi-sdk/share/wasi-sysroot wasm/wasi-sysroot
+      - name: Build ${{ inputs.target_name }} wasm
+        if: matrix.target.arch == 'wasm'
+        run: |
+          export PATH=$PATH:/opt/wasi-sdk/bin/ && \
+          cd wasm && \
+          python3 compile_mod.py ${{ inputs.target_name }}
+
+      # Native build
+      - name: Set cmake generator
+        if: matrix.target.arch != 'wasm'
+        shell: bash
+        run: |
+          if [[ ${{ runner.os }} == "Windows" ]]; then
+            export CMAKE_GENERATOR="Makefile" >> $GITHUB_ENV
+          else
+            export CMAKE_GENERATOR="Ninja" >> $GITHUB_ENV
+          fi
+      - name: Install 32bit cross-compilation libs
+        if: (matrix.target.arch == 'x86' || matrix.target.arch == 'armhf') && matrix.target.platform == 'linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ${{ env.CROSS_COMPILE_PACKAGES }}
+      - name: Build ${{ inputs.target_name }} ${{ matrix.target.platform }} ${{ matrix.target.arch }}
+        id: build
+        if: matrix.target.arch != 'wasm'
+        uses: threeal/cmake-action@v2.1.0
+        with:
+          generator: ${{ env.CMAKE_GENERATOR }}
+          cxx-compiler: clang++
+          c-compiler: clang
+          build-dir: build
+          build-args: --target ${{ inputs.target_name }}
+          options: |
+            Q2_BUILD_ARCH=${{ matrix.target.arch }}
+            CMAKE_BUILD_TYPE=RelWithDebInfo
+
+      - name: Find build output path
+        shell: bash
+        run: |
+          if [[ -z "${{ steps.build.outputs.build-dir }}" ]]; then
+            export ARTIFACT_PATH=$(pwd)/bin/${{ inputs.target_name }}
+          else
+            export ARTIFACT_PATH=${{ steps.build.outputs.build-dir }}/bin/${{ inputs.target_name }}
+          fi
+
+          mkdir -p $ARTIFACT_PATH/${{ matrix.target.platform }}
+
+          if [[ "${{ matrix.target.platform }}" == "windows" ]]; then
+            mv build/Debug/* $ARTIFACT_PATH/${{ matrix.target.platform }}/
+          elif [[ "${{ matrix.target.platform }}" == "wasm" ]]; then
+            find . -type f -name "game.wasm" -exec mv '{}' $ARTIFACT_PATH/${{ matrix.target.platform }}/ \;
+            rm -rf bin/ctc/obj
+          fi
+
+          echo ARTIFACT_PATH=$ARTIFACT_PATH >> $GITHUB_ENV
+          echo $ARTIFACT_PATH
+          ls -la $ARTIFACT_PATH/${{ matrix.target.platform }}
+          if [[ "${{ matrix.target.platform }}" == "linux" ]]; then
+            file $ARTIFACT_PATH/${{ matrix.target.platform }}/game${{ matrix.target.arch }}.so
+          fi
+
+      - name: Store builds
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.target_name }}-${{ matrix.target.platform }}-${{ matrix.target.arch }}
+          path: ${{ env.ARTIFACT_PATH }}

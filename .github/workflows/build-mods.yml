@@ -1,0 +1,105 @@
+---
+name: Build mods
+
+on:
+  workflow_dispatch:
+    inputs:
+      mods:
+        type: string
+        description: mod names to build (empty for all)
+  push:
+    paths:
+      - "sources/*"
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  builds:
+    name: Collect targets
+    runs-on: ubuntu-latest
+    outputs:
+      mods: ${{ steps.builds.outputs.modlist }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+      - name: Get changed files
+        if: ${{ github.event_name }} == "push"
+        id: changed_files_action
+        uses: tj-actions/changed-files@v45
+        with:
+          files: sources/*
+      - name: Get list of mods to build
+        id: builds
+        run: |
+          # Figure out which manifests need building
+          if [[ "${{ github.event_name }}" == "push" || "${{ github.event_name }}" == "pull_request" ]]; then
+            export MODS="${{ steps.changed_files_action.outputs.all_changed_files }}"
+          elif [[ "${{ inputs.mods }}" != "" ]]; then
+            export MODS="${{ inputs.mods }}"
+          fi
+          echo "::group::Mods"
+          echo "MODLIST=$(python3 get_mod_list.py)" >> $GITHUB_OUTPUT
+          echo $MODLIST | jq
+          echo "::endgroup::"
+
+  build-mod:
+      name: ${{ matrix.target }} 
+      needs: builds
+      strategy:
+        fail-fast: false
+        matrix:
+          target: ${{ fromJson(needs.builds.outputs.mods) }}
+      uses: ./.github/workflows/build-mod.yml
+      with:
+        target_name: ${{ matrix.target }}
+
+  assemble-release:
+    name: Assemble release for ${{ matrix.target }}
+    if: always()
+    needs: [builds, build-mod]
+    strategy:
+      matrix:
+        target: ${{ fromJson(needs.builds.outputs.mods) }}
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge artifacts for ${{ matrix.target }}
+        if: ${{ github.ref != 'refs/heads/main' }}
+        uses: actions/upload-artifact/merge@v4
+        with:
+          pattern: ${{ matrix.target }}-*
+          name: ${{ matrix.target }}-${github_sha_short}
+      - name: Download artifacts for ${{ matrix.target }}
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: actions/download-artifact@v4
+        with:
+          pattern: ${{ matrix.target }}-*
+          merge-multiple: true
+          path: build
+      - name: Create merged artifact
+        if: ${{ github.ref == 'refs/heads/main' }}
+        shell: bash
+        run: |
+          export github_sha_hash=${{ github.sha }}
+          export github_sha_short="${github_sha_hash:0:7}"
+          echo "COMMIT_SHORT=$github_sha_short" >> $GITHUB_ENV
+          cd build
+          tar cvzf ${{ matrix.target }}-${github_sha_short}.tar.gz *
+      - name: Create release
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: ncipollo/release-action@bcfe5470707e8832e12347755757cec0eb3c22af
+        with:
+          allowUpdates: true
+          artifactErrorsFailBuild: true
+          artifacts: build/${{ matrix.target }}-${{ env.COMMIT_SHORT }}.tar.gz
+          commit: ${{ github.sha }}
+          tag: ${{ env.COMMIT_SHORT }}
+          name: ${{ matrix.target }} ${{ env.COMMIT_SHORT }}
+          generateReleaseNotes: true
+          removeArtifacts: true
+          replacesArtifacts: true
+          makeLatest: true

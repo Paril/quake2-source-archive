@@ -1041,7 +1041,9 @@ void ShowGun(edict_t *ent)
 	ent->s.skinnum |= n;
 }
 */
+#ifndef WIN32
 #include <unistd.h>
+#endif
 
 // 
 void ShowGun(edict_t *ent)
